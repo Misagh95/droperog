@@ -1,6 +1,6 @@
 [
   {
-    "id": "crnk_mrq5am9p_0d1s79",
+    "id": "crnk_mrq5nbim_2p5235",
     "name": "Pascal",
     "description": "Rating: 2/1000 | $15.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -15,10 +15,10 @@
     ],
     "links": {},
     "discoveredAt": 1784220653351,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339854
   },
   {
-    "id": "rss_mrq5alyj_jbkuhi",
+    "id": "rss_mrq5nbpt_vme9nu",
     "name": "Nado x xStocks: one deposit, two potential airdrops",
     "description": "$INK is confirmed. The xStocks airdrop isn&#8217;t, at least not yet. But a single deposit on Nado can farm points toward both at the same time, which makes this one of the more capital-efficient double-dips in the Hyperliquid-adjacent ecosystem right now.\n\n\n\nHere&#8217;s the mechanic, and why the w",
     "source": "web_scrape",
@@ -33,10 +33,10 @@
     "scamFlags": [],
     "links": {},
     "discoveredAt": 1784135092000,
-    "lastChecked": 1784365746859
+    "lastChecked": 1784366340113
   },
   {
-    "id": "crnk_mrq5am9p_ehutuh",
+    "id": "crnk_mrq5nbim_14ldeu",
     "name": "tren.ch",
     "description": "Rating: 11/1000 | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -51,10 +51,10 @@
     ],
     "links": {},
     "discoveredAt": 1784129355520,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339854
   },
   {
-    "id": "crnk_mrq5am9p_j6m0ot",
+    "id": "crnk_mrq5nbim_cyp89q",
     "name": "Koto Trade",
     "description": "Rating: 2/1000 | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -69,10 +69,10 @@
     ],
     "links": {},
     "discoveredAt": 1784126622201,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339855
   },
   {
-    "id": "cr_mrq5am4w_svittd",
+    "id": "cr_mrq5nbef_tlwd78",
     "name": "WISHBONE",
     "description": "WISHBONE (WISHBONE)",
     "source": "web_scrape",
@@ -92,10 +92,10 @@
       "chain": "unknown"
     },
     "discoveredAt": 1783927727000,
-    "lastChecked": 1784365747088
+    "lastChecked": 1784366339703
   },
   {
-    "id": "cr_mrq5am4w_xrsjjv",
+    "id": "cr_mrq5nbef_s6lo27",
     "name": "TENDIES",
     "description": "TENDIES (TENDIES)",
     "source": "web_scrape",
@@ -115,10 +115,10 @@
       "chain": "unknown"
     },
     "discoveredAt": 1783910325000,
-    "lastChecked": 1784365747088
+    "lastChecked": 1784366339703
   },
   {
-    "id": "crnk_mrq5am9p_hy7xza",
+    "id": "crnk_mrq5nbim_8xtgcr",
     "name": "AFK Fishing",
     "description": "Rating: 25/1000 | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -133,10 +133,10 @@
     ],
     "links": {},
     "discoveredAt": 1783448768114,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339854
   },
   {
-    "id": "ad_mrq5anen_1lytqw",
+    "id": "ad_mrq5nbfq_fyafs3",
     "name": "Ondo Perps",
     "description": "Trade perpetual futures on U.S. stocks, ETFs & commodities 24/7 with up to 20x leverage.  | Categories: Perps, RWA | Funding: Undisclosed | Tasks: Trade Perps",
     "source": "web_scrape",
@@ -151,10 +151,10 @@
       "website": "https://app.ondoperps.xyz/?ref=8ARDF7"
     },
     "discoveredAt": 1783406017283,
-    "lastChecked": 1784365748735
+    "lastChecked": 1784366339750
   },
   {
-    "id": "crnk_mrq5am9o_x6hvqh",
+    "id": "crnk_mrq5nbim_86dzcu",
     "name": "TxFlow",
     "description": "Rating: 8/1000 | Tasks: Trading | Effort: 30pts / 20min",
     "source": "web_scrape",
@@ -169,10 +169,10 @@
     ],
     "links": {},
     "discoveredAt": 1782998846296,
-    "lastChecked": 1784365747260
+    "lastChecked": 1784366339854
   },
   {
-    "id": "ad_mrq5anen_8zubco",
+    "id": "ad_mrq5nbfq_sc3s9e",
     "name": "Arcus",
     "description": "24/7 stock token trading with zero fees today,  join the waitlist to trade Perpetuals with leverage | Categories: DEX, Perps | Funding: Undisclosed | Tasks: Join the waitlist, Trade Spot",
     "source": "web_scrape",
@@ -189,10 +189,10 @@
       "website": "https://waitlist.arcus.xyz/s/ALPHA"
     },
     "discoveredAt": 1782979137692,
-    "lastChecked": 1784365748735
+    "lastChecked": 1784366339750
   },
   {
-    "id": "ad_mrq5anen_9u0bun",
+    "id": "ad_mrq5nbfq_q5hx7q",
     "name": "xStocks",
     "description": "Pioneering tokenized equities. Over 100 tokenized stocks and ETFs available onchain and on centralized exchanges. | Categories: DeFi, RWA | Funding: $12.7M | Tasks: Join xPoints, Hold xStocks, Buy xStocks on Solana, Provide Liquidity, Lend on Loopscale",
     "source": "web_scrape",
@@ -210,10 +210,10 @@
       "website": "https://defi.xstocks.fi/points?ref=ALPHADROPS"
     },
     "discoveredAt": 1782711629118,
-    "lastChecked": 1784365748735
+    "lastChecked": 1784366339750
   },
   {
-    "id": "ad_mrq5anen_77zclp",
+    "id": "ad_mrq5nbfq_kmrpay",
     "name": "Tori Finance",
     "description": "Tori Finance is a yield protocol that brings institutional-grade, market-neutral yield strategies on-chain. | Categories: DeFi, Stablecoin | Funding: Undisclosed | Tasks: Pre-Deposit ",
     "source": "web_scrape",
@@ -228,10 +228,10 @@
       "website": "https://app.tori.finance/earn?referral=S8YU2"
     },
     "discoveredAt": 1782049062358,
-    "lastChecked": 1784365748735
+    "lastChecked": 1784366339750
   },
   {
-    "id": "cr_mrq5am4w_btap7e",
+    "id": "cr_mrq5nbef_xh6o8t",
     "name": "Re Protocol",
     "description": "Re Protocol (RE)",
     "source": "web_scrape",
@@ -251,10 +251,10 @@
       "chain": "unknown"
     },
     "discoveredAt": 1781786056000,
-    "lastChecked": 1784365747088
+    "lastChecked": 1784366339703
   },
   {
-    "id": "ad_mrq5anen_m4wcvx",
+    "id": "ad_mrq5nbfq_m04utu",
     "name": "Nansen",
     "description": "Trade Everything Onchain with AI | Categories: Perps, AI, Tools/Infra | Funding: $88.2 | Tasks: Trade Perps, Complete tasks",
     "source": "web_scrape",
@@ -271,10 +271,10 @@
       "website": "https://app.nansen.ai/welcome?ref=6wKbfqsVzM4"
     },
     "discoveredAt": 1781523712028,
-    "lastChecked": 1784365748735
+    "lastChecked": 1784366339750
   },
   {
-    "id": "crnk_mrq5am9p_j8xunz",
+    "id": "crnk_mrq5nbim_tjm9dm",
     "name": "Checkpoint",
     "description": "Rating: 22/1000 | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -289,10 +289,10 @@
     ],
     "links": {},
     "discoveredAt": 1780934482894,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339854
   },
   {
-    "id": "crnk_mrq5am9p_791gtm",
+    "id": "crnk_mrq5nbim_v5gy5m",
     "name": "AIW3",
     "description": "Rating: 0/1000 | $2.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -307,10 +307,10 @@
     ],
     "links": {},
     "discoveredAt": 1779812367025,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339854
   },
   {
-    "id": "crnk_mrq5am9p_ii1m8z",
+    "id": "crnk_mrq5nbin_xeszpw",
     "name": "STRATO",
     "description": "Rating: 24/1000 | $52.2M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -325,10 +325,10 @@
     ],
     "links": {},
     "discoveredAt": 1779474164552,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339855
   },
   {
-    "id": "crnk_mrq5am9p_uvgufa",
+    "id": "crnk_mrq5nbim_c0whgf",
     "name": "Imperial",
     "description": "Rating: 9/1000 | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -343,10 +343,10 @@
     ],
     "links": {},
     "discoveredAt": 1778786238532,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339854
   },
   {
-    "id": "crnk_mrq5am9p_67brih",
+    "id": "crnk_mrq5nbim_924l70",
     "name": "JTX",
     "description": "Rating: 28/1000 | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -361,10 +361,10 @@
     ],
     "links": {},
     "discoveredAt": 1778256673292,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339854
   },
   {
-    "id": "crnk_mrq5am9p_o3hvzh",
+    "id": "crnk_mrq5nbim_759a5c",
     "name": "Canopy Network",
     "description": "Rating: 70/1000 | $8.5M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -379,10 +379,10 @@
     ],
     "links": {},
     "discoveredAt": 1771258323830,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339854
   },
   {
-    "id": "crnk_mrq5am9p_2xygw2",
+    "id": "crnk_mrq5nbim_joc4kc",
     "name": "Robinhood Chain",
     "description": "Rating: 158/1000 | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -397,10 +397,10 @@
     ],
     "links": {},
     "discoveredAt": 1770900358677,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339854
   },
   {
-    "id": "crnk_mrq5am9o_nsz43f",
+    "id": "crnk_mrq5nbim_t2f9jz",
     "name": "Monaco",
     "description": "Rating: 75/1000 | Tasks: Testnet, Trading, Fill The Form | Effort: 0pts / 25min",
     "source": "web_scrape",
@@ -415,10 +415,10 @@
     ],
     "links": {},
     "discoveredAt": 1770895151980,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339854
   },
   {
-    "id": "crnk_mrq5am9o_ba96ns",
+    "id": "crnk_mrq5nbim_xo3q11",
     "name": "Surf",
     "description": "Rating: 62/1000 | $15.0M raised | Tasks: Social, Fill The Form, Ambassador program, Getting a role | Effort: 0pts / 46min",
     "source": "web_scrape",
@@ -433,10 +433,10 @@
     ],
     "links": {},
     "discoveredAt": 1765465119828,
-    "lastChecked": 1784365747260
+    "lastChecked": 1784366339854
   },
   {
-    "id": "crnk_mrq5am9p_ft57lf",
+    "id": "crnk_mrq5nbim_cpgtqb",
     "name": "Forte",
     "description": "Rating: 385/1000 | $910.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -451,10 +451,10 @@
     ],
     "links": {},
     "discoveredAt": 1757929933489,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339854
   },
   {
-    "id": "crnk_mrq5am9p_y01wts",
+    "id": "crnk_mrq5nbim_vo55ev",
     "name": "Hylo",
     "description": "Rating: 48/1000 | $1.8M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -469,10 +469,10 @@
     ],
     "links": {},
     "discoveredAt": 1753116504997,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339854
   },
   {
-    "id": "crnk_mrq5am9p_2ebzdi",
+    "id": "crnk_mrq5nbim_c1c93z",
     "name": "Ducat",
     "description": "Rating: 116/1000 | $4.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -487,10 +487,10 @@
     ],
     "links": {},
     "discoveredAt": 1748352835290,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339854
   },
   {
-    "id": "crnk_mrq5am9o_mdx17w",
+    "id": "crnk_mrq5nbim_ysbfo4",
     "name": "Perpl",
     "description": "Rating: 64/1000 | $9.5M raised | Tasks: Trading, Getting a role, Social, Wallet Airdrop Status, Fill The Form, Mainnet | Effort: 80pts / 80min",
     "source": "web_scrape",
@@ -505,10 +505,10 @@
     ],
     "links": {},
     "discoveredAt": 1747237151013,
-    "lastChecked": 1784365747260
+    "lastChecked": 1784366339854
   },
   {
-    "id": "crnk_mrq5am9o_mshi4b",
+    "id": "crnk_mrq5nbim_ilri8m",
     "name": "T-Rex",
     "description": "Rating: 224/1000 | $17.0M raised | Tasks: Social, Predictions, Bounty Platforms, Fill The Form, Mint NFT, Ambassador program, Getting a role | Effort: 0pts / 33min",
     "source": "web_scrape",
@@ -523,10 +523,10 @@
     ],
     "links": {},
     "discoveredAt": 1746796590673,
-    "lastChecked": 1784365747260
+    "lastChecked": 1784366339854
   },
   {
-    "id": "crnk_mrq5am9p_3qec10",
+    "id": "crnk_mrq5nbin_51ng1e",
     "name": "N1 (Prev. Layer N)",
     "description": "Rating: 107/1000 | $7.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -541,6 +541,6 @@
     ],
     "links": {},
     "discoveredAt": 1745247768016,
-    "lastChecked": 1784365747261
+    "lastChecked": 1784366339855
   }
 ]
