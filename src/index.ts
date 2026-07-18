@@ -1,7 +1,7 @@
 import { CoinRankingSource } from './sources/coinranking';
-import { CoinGeckoSource } from './sources/coingecko';
 import { RSSSource } from './sources/rss';
 import { TwitterSource } from './sources/twitter';
+import { AlphaDropsSource } from './sources/alphadrops';
 import { CryptoRankSource } from './sources/cryptorank';
 import { TrustChecker } from './trustChecker';
 import { loadConfig } from './config';
@@ -10,10 +10,10 @@ import { emojiForStatus, chainToEmoji, bar, truncate, getTimeAgo } from './utils
 
 export class DroperOG {
   private coinranking: CoinRankingSource;
-  private coingecko: CoinGeckoSource;
   private rss: RSSSource;
   private twitter: TwitterSource;
   private cryptorank: CryptoRankSource;
+  private alphadrops: AlphaDropsSource;
   private trustChecker: TrustChecker;
   private config = loadConfig();
   projects: AirdropProject[] = [];
@@ -21,7 +21,6 @@ export class DroperOG {
 
   constructor(apiKey?: string) {
     this.coinranking = new CoinRankingSource(apiKey);
-    this.coingecko = new CoinGeckoSource();
     this.rss = new RSSSource([
       'https://airdrops.io/feed/',
     ]);
@@ -31,6 +30,7 @@ export class DroperOG {
       'airdrops_king',
     ]);
     this.cryptorank = new CryptoRankSource();
+    this.alphadrops = new AlphaDropsSource();
     this.trustChecker = new TrustChecker();
   }
 
@@ -41,14 +41,15 @@ export class DroperOG {
 
     console.log('  🔍 Scanning sources...\n');
 
-    const [coinRanking, rss, twitter, cryptoRank] = await Promise.all([
+    const [coinRanking, rss, twitter, cryptoRank, alphaDrops] = await Promise.all([
       this.scrapeWithLog('CoinRanking', () => this.coinranking.fetchNewCoins(100)),
       this.scrapeWithLog('RSS', () => this.rss.fetchAll()),
       this.scrapeWithLog('Twitter', () => this.twitter.fetchLatest()),
       this.scrapeWithLog('CryptoRank', () => this.cryptorank.fetchAirdrops()),
+      this.scrapeWithLog('AlphaDrops', () => this.alphadrops.fetchAirdrops()),
     ]);
 
-    let allProjects = [...coinRanking, ...rss, ...twitter, ...cryptoRank];
+    let allProjects = [...coinRanking, ...rss, ...twitter, ...cryptoRank, ...alphaDrops];
 
     // Deduplicate
     const seen = new Set<string>();
