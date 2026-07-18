@@ -1,4 +1,3 @@
-import { CoinRankingSource } from './sources/coinranking';
 import { RSSSource } from './sources/rss';
 import { TwitterSource } from './sources/twitter';
 import { AlphaDropsSource } from './sources/alphadrops';
@@ -9,7 +8,6 @@ import { AirdropProject, SearchFilter } from './types';
 import { emojiForStatus, chainToEmoji, bar, truncate, getTimeAgo } from './utils';
 
 export class DroperOG {
-  private coinranking: CoinRankingSource;
   private rss: RSSSource;
   private twitter: TwitterSource;
   private cryptorank: CryptoRankSource;
@@ -20,7 +18,6 @@ export class DroperOG {
   knownIds = new Set<string>();
 
   constructor(apiKey?: string) {
-    this.coinranking = new CoinRankingSource(apiKey);
     this.rss = new RSSSource([
       'https://airdrops.io/feed/',
     ]);
@@ -41,15 +38,14 @@ export class DroperOG {
 
     console.log('  🔍 Scanning sources...\n');
 
-    const [coinRanking, rss, twitter, cryptoRank, alphaDrops] = await Promise.all([
-      this.scrapeWithLog('CoinRanking', () => this.coinranking.fetchNewCoins(100)),
+    const [rss, twitter, cryptoRank, alphaDrops] = await Promise.all([
       this.scrapeWithLog('RSS', () => this.rss.fetchAll()),
       this.scrapeWithLog('Twitter', () => this.twitter.fetchLatest()),
       this.scrapeWithLog('CryptoRank', () => this.cryptorank.fetchAirdrops()),
       this.scrapeWithLog('AlphaDrops', () => this.alphadrops.fetchAirdrops()),
     ]);
 
-    let allProjects = [...coinRanking, ...rss, ...twitter, ...cryptoRank, ...alphaDrops];
+    let allProjects = [...rss, ...twitter, ...cryptoRank, ...alphaDrops];
 
     // Deduplicate
     const seen = new Set<string>();
@@ -176,7 +172,8 @@ export class DroperOG {
   printSummary(): void {
     const total = this.projects.length;
     const trusted = this.projects.filter(p => p.trustScore >= 70).length;
-    const upcoming = this.projects.filter(p => p.status === 'upcoming').length;
+    const potential = this.projects.filter(p => p.status === 'potential').length;
+    const confirmed = this.projects.filter(p => p.status === 'confirmed').length;
     const active = this.projects.filter(p => p.status === 'active').length;
 
     console.log(`\n${'='.repeat(36)}`);
@@ -184,14 +181,15 @@ export class DroperOG {
     console.log(`${'='.repeat(36)}`);
     console.log(`  Total:     ${total}`);
     console.log(`  Trusted:   ${trusted} ✅`);
-    console.log(`  Upcoming:  ${upcoming} 🆕`);
+    console.log(`  Potential: ${potential} 💎`);
+    console.log(`  Confirmed: ${confirmed} ✅`);
     console.log(`  Active:    ${active} 🟢`);
     console.log(`${'='.repeat(36)}\n`);
   }
 }
 
 async function main() {
-  const app = new DroperOG(process.env.COINRANKING_API_KEY);
+  const app = new DroperOG();
   const args = process.argv.slice(2);
 
   if (args.includes('--once')) {

@@ -5,7 +5,7 @@ export interface AirdropProject {
   source: 'web_scrape' | 'twitter' | 'blockchain' | 'manual';
   sourceUrl: string;
   chains: string[];
-  status: 'upcoming' | 'active' | 'ended' | 'claimed' | 'unknown';
+  status: 'upcoming' | 'active' | 'ended' | 'claimed' | 'unknown' | 'potential' | 'confirmed';
   trustScore: number;
   scamFlags: string[];
   links: ProjectLinks;

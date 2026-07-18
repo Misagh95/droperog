@@ -1,11 +1,20 @@
 const DATA_URL = 'https://raw.githubusercontent.com/Misagh95/droperog/main/docs/data/projects.json';
 
-const state = { projects: [], filtered: [], chainFilter: 'all', statusFilter: 'all' };
+const state = { projects: [], filtered: [], chainFilter: 'all', statusFilter: 'all', viewFilter: 'all' };
+
+const NEW_MS = 3 * 24 * 60 * 60 * 1000; // "New" = within 3 days
 
 const chainEmoji = c => ({ ethereum: '⟠', solana: '◎', base: '🔵', arbitrum: '🔴', optimism: '🟠', polygon: '🟣', bsc: '🟡', avalanche: '🔺', ton: '💎' } [c] || '❓');
 
 const statusBadge = s => {
-  const m = { active: ['🟢', 'Active'], upcoming: ['🆕', 'Upcoming'], ended: ['🔴', 'Ended'], unknown: ['❓', 'Unknown'] };
+  const m = {
+    potential: ['💎', 'Potential'],
+    confirmed: ['✅', 'Confirmed'],
+    active: ['🟢', 'Active'],
+    upcoming: ['🆕', 'Upcoming'],
+    ended: ['🔴', 'Ended'],
+    unknown: ['❓', 'Unknown'],
+  };
   const [e, t] = m[s] || ['❓', s];
   return `<span class="badge badge-${s}">${e} ${t}</span>`;
 };
@@ -28,13 +37,18 @@ function timeAgo(ts) {
   return `${d}d ago`;
 }
 
+function isNew(p) {
+  return (Date.now() - p.discoveredAt) < NEW_MS;
+}
+
 function render() {
   const list = document.getElementById('project-list');
   const count = document.getElementById('count');
   let items = state.filtered;
 
   if (state.chainFilter !== 'all') items = items.filter(p => p.chains.includes(state.chainFilter) || p.chains.includes('unknown'));
-  if (state.statusFilter !== 'all') items = items.filter(p => p.status === state.statusFilter);
+  if (state.viewFilter === 'new') items = items.filter(isNew);
+  else if (state.statusFilter !== 'all') items = items.filter(p => p.status === state.statusFilter);
 
   items.sort((a, b) => b.discoveredAt - a.discoveredAt);
   count.textContent = `${items.length} airdrops`;
@@ -89,9 +103,17 @@ function filterByChain(chain) {
   render();
 }
 
+function setView(view) {
+  state.viewFilter = state.viewFilter === view ? 'all' : view;
+  document.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.dataset.view === state.viewFilter));
+  render();
+}
+
 function filterByStatus(status) {
   state.statusFilter = state.statusFilter === status ? 'all' : status;
+  state.viewFilter = 'all';
   document.querySelectorAll('.status-btn').forEach(b => b.classList.toggle('active', b.dataset.status === state.statusFilter));
+  document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
   render();
 }
 
@@ -105,7 +127,7 @@ function search(q) {
 document.addEventListener('DOMContentLoaded', () => {
   load();
   document.getElementById('search').addEventListener('input', e => search(e.target.value));
-  setInterval(load, 300000); // auto-refresh every 5min
+  setInterval(load, 300000);
 });
 
 if ('serviceWorker' in navigator) {

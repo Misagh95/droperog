@@ -20,6 +20,8 @@ header .sub { font-size: 12px; color: #64748b; -webkit-text-fill-color: #64748b;
 .badge { padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 600; }
 .badge-active { background: #052e16; color: #22c55e; }
 .badge-upcoming { background: #1c1917; color: #eab308; }
+.badge-potential { background: #1a1035; color: #a855f7; }
+.badge-confirmed { background: #052e16; color: #22c55e; }
 .badge-ended { background: #2c1010; color: #ef4444; }
 .badge-unknown { background: #1e1e3a; color: #94a3b8; }
 .card-body { display: flex; flex-direction: column; gap: 6px; }

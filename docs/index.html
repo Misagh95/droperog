@@ -26,6 +26,13 @@
   </div>
 
   <div class="toolbar" style="margin-top:4px">
+    <button class="chip view-btn active" data-view="all" onclick="setView('all')">📋 All</button>
+    <button class="chip view-btn" data-view="new" onclick="setView('new')">🆕 New (3d)</button>
+    <button class="chip status-btn" data-status="potential" onclick="filterByStatus('potential')">💎 Potential</button>
+    <button class="chip status-btn" data-status="confirmed" onclick="filterByStatus('confirmed')">✅ Confirmed</button>
+  </div>
+
+  <div class="toolbar" style="margin-top:4px">
     <button class="chip chain-btn active" data-chain="all" onclick="filterByChain('all')">🌐 All</button>
     <button class="chip chain-btn" data-chain="ethereum" onclick="filterByChain('ethereum')">⟠ ETH</button>
     <button class="chip chain-btn" data-chain="solana" onclick="filterByChain('solana')">◎ SOL</button>
@@ -35,9 +42,9 @@
   </div>
 
   <div class="toolbar" style="margin-top:4px">
-    <button class="chip status-btn active" data-status="all" onclick="filterByStatus('all')">📋 All</button>
-    <button class="chip status-btn" data-status="upcoming" onclick="filterByStatus('upcoming')">🆕 Upcoming</button>
     <button class="chip status-btn" data-status="active" onclick="filterByStatus('active')">🟢 Active</button>
+    <button class="chip status-btn" data-status="upcoming" onclick="filterByStatus('upcoming')">🆕 Upcoming</button>
+    <button class="chip status-btn" data-status="ended" onclick="filterByStatus('ended')">🔴 Ended</button>
   </div>
 
   <div id="loading">

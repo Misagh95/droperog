@@ -114,6 +114,8 @@ export function emojiForStatus(status: string): string {
   const map: Record<string, string> = {
     upcoming: '🆕',
     active: '🟢',
+    potential: '💎',
+    confirmed: '✅',
     ended: '🔴',
     claimed: '✅',
     unknown: '❓',

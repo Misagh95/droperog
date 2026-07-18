@@ -121,8 +121,8 @@ export class CryptoRankSource {
 
   private mapStatus(s: string | null): AirdropProject['status'] {
     switch (s?.toUpperCase()) {
-      case 'CONFIRMED': return 'active';
-      case 'POTENTIAL': return 'upcoming';
+      case 'CONFIRMED': return 'confirmed';
+      case 'POTENTIAL': return 'potential';
       case 'DISTRIBUTED': return 'ended';
       default: return 'unknown';
     }
