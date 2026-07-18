@@ -55,9 +55,9 @@ async function main() {
   }
   await telegram.notifySummary(summary.total, summary.trusted, summary.newCount);
 
-  // Update state
+  // Update state — save ALL known IDs, not just new ones
   const updatedState: State = {
-    knownIds: [...new Set([...state.knownIds, ...allProjects.map(p => p.id)])],
+    knownIds: [...app.knownIds],
     totalProjects: summary.total,
     lastRun: new Date().toISOString(),
   };

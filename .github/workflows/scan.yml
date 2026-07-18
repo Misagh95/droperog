@@ -5,14 +5,15 @@ on:
     - cron: '0 */2 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   scan:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-node@v4
         with:
@@ -27,10 +28,8 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
-      - name: Save state
-        run: |
-          git config user.name "droperog-bot"
-          git config user.email "bot@droperog.dev"
-          git add data/state.json
-          git diff --staged --quiet || git commit -m "📊 Update scan state [skip ci]"
-          git push
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: '📊 Update scan state [skip ci]'
+          file_pattern: data/state.json
+          skip_dirty_check: true
