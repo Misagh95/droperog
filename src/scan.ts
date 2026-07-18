@@ -49,13 +49,19 @@ async function main() {
     newCount: newProjects.length,
   };
 
-  // Notify
-  if (newProjects.length > 0) {
-    await telegram.notifyNewProjects(newProjects);
-  }
-  await telegram.notifySummary(summary.total, summary.trusted, summary.newCount);
+  const isFirstRun = state.knownIds.length === 0;
 
-  // Update state — save ALL known IDs, not just new ones
+  // Notify — skip first run (just builds state)
+  if (!isFirstRun) {
+    if (newProjects.length > 0) {
+      await telegram.notifyNewProjects(newProjects);
+    }
+    await telegram.notifySummary(summary.total, summary.trusted, summary.newCount);
+  } else {
+    console.log(`  First run — state initialized with ${app.knownIds.size} IDs. No notifications sent.`);
+  }
+
+  // Update state — save ALL known IDs
   const updatedState: State = {
     knownIds: [...app.knownIds],
     totalProjects: summary.total,

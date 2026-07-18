@@ -124,10 +124,12 @@ npm run dev       # Run via ts-node (dev mode)
 
 ## 🗺️ Roadmap
 
-- [ ] 📬 Telegram / Discord bot notifications
+- [x] 📬 Telegram bot notifications
+- [x] 🤖 GitHub Actions auto-scanner (every 2h)
+- [x] 🧠 First-run state build (no spam)
 - [ ] 💰 On-chain balance verification for claim eligibility
+- [ ] 🔍 DeFiLlama & more source integrations
 - [ ] 📊 Historical trust-score tracking
-- [ ] 🔍 DeFiLlama & other source integrations
 
 ---
 
