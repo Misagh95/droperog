@@ -41,15 +41,14 @@ export class DroperOG {
 
     console.log('  🔍 Scanning sources...\n');
 
-    const [coinRanking, coinGecko, rss, twitter, cryptoRank] = await Promise.all([
+    const [coinRanking, rss, twitter, cryptoRank] = await Promise.all([
       this.scrapeWithLog('CoinRanking', () => this.coinranking.fetchNewCoins(100)),
-      this.scrapeWithLog('CoinGecko', () => this.coingecko.fetchAirdropCandidates()),
       this.scrapeWithLog('RSS', () => this.rss.fetchAll()),
       this.scrapeWithLog('Twitter', () => this.twitter.fetchLatest()),
       this.scrapeWithLog('CryptoRank', () => this.cryptorank.fetchAirdrops()),
     ]);
 
-    let allProjects = [...coinRanking, ...coinGecko, ...rss, ...twitter, ...cryptoRank];
+    let allProjects = [...coinRanking, ...rss, ...twitter, ...cryptoRank];
 
     // Deduplicate
     const seen = new Set<string>();

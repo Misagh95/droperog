@@ -6,7 +6,7 @@
 
 <h1 align="center">🪂 DroperOG</h1>
 <p align="center"><b>Multi-Source Airdrop Hunter & Trust Scanner</b></p>
-<p align="center">Scans CoinGecko 🦎 · CryptoRank 📊 · RSS 📰 · Twitter 🐦 · CoinRanking 🔗<br>in real-time to surface <b>new legitimate airdrop opportunities</b>.</p>
+<p align="center">Scans CryptoRank 📊 · RSS 📰 · Twitter 🐦 · CoinRanking 🔗<br>in real-time to surface <b>new legitimate airdrop opportunities</b>.</p>
 
 ---
 
@@ -14,7 +14,7 @@
 
 | Feature | Description |
 |---------|-------------|
-| 🔍 **5 Sources** | CoinGecko (trending + search), CryptoRank (NEXT_DATA), RSS feeds (airdrops.io), Twitter (Nitter), CoinRanking API |
+| 🔍 **4 Sources** | CryptoRank (NEXT_DATA), RSS feeds (airdrops.io), Twitter (Nitter), CoinRanking API |
 | 🤖 **Trust Scoring** | Auto-calculates trust (0-100%) — flags scams, fake giveaways, suspicious patterns |
 | 🔗 **Chain Detection** | Extracts chains (Ethereum, Solana, Arbitrum, Base, etc.) from project data |
 | 🆕 **New-Project Alerts** | Tracks what's already seen, highlights brand-new finds |
