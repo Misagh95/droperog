@@ -79,6 +79,7 @@ async function load() {
   } catch { state.projects = []; }
   document.getElementById('loading').classList.add('hidden');
   state.filtered = [...state.projects];
+  document.getElementById('last-update').textContent = new Date().toLocaleTimeString();
   render();
 }
 
@@ -104,6 +105,7 @@ function search(q) {
 document.addEventListener('DOMContentLoaded', () => {
   load();
   document.getElementById('search').addEventListener('input', e => search(e.target.value));
+  setInterval(load, 300000); // auto-refresh every 5min
 });
 
 if ('serviceWorker' in navigator) {
