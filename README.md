@@ -5,47 +5,47 @@
 </p>
 
 <h1 align="center">🪂 DroperOG</h1>
-<p align="center"><b>شکارچی چندمنبعی ایردراپ — با اسکنر اعتماد خودکار</b></p>
-<p align="right">اسکن می‌کند AlphaDrops 🅰️ · CryptoRank 📊 · RSS 📰 · Twitter 🐦 را<br>در لحظه برای یافتن <b>ایردراپ‌های معتبر جدید</b>.</p>
+<p align="center"><b>Multi-Source Airdrop Hunter & Trust Scanner</b></p>
+<p align="center">Scans AlphaDrops 🅰️ · CryptoRank 📊 · RSS 📰 · Twitter 🐦<br>in real-time to surface <b>new legitimate airdrop opportunities</b>.</p>
 
 ---
 
-## ✨ قابلیت‌ها
+## ✨ Features
 
-| قابلیت | توضیح |
-|--------|-------|
-| 🔍 **۴ منبع** | AlphaDrops (REST API)، CryptoRank (API رسمی، ۷۲۹+ پروژه)، RSS (airdrops.io)، Twitter (Nitter) |
-| 🤖 **امتیاز اعتماد** | محاسبه خودکار اعتماد (۰-۱۰۰٪) — تشخیص کلاهبرداری، تبلیغات جعلی، الگوهای مشکوک |
-| 🔗 **تشخیص زنجیر** | استخراج زنجیرها (Ethereum، Solana، Arbitrum، Base و...) از داده پروژه |
-| 🆕 **هشدار پروژه جدید** | تشخیص پروژه‌های دیده‌نشده و نمایش فقط جدیدها |
-| 🧹 **فیلتر نویز** | حذف کوین‌های معروف، اسپم و نتایج نامرتبط |
-| ⏱️ **بروزرسانی خودکار** | هر ۲ ساعت یکبار توسط GitHub Actions |
-| 📱 **PWA موبایل** | داشبورد قابل نصب روی هوم‌صفحه گوشی |
+| Feature | Description |
+|---------|-------------|
+| 🔍 **4 Sources** | AlphaDrops (REST API), CryptoRank (official API, 729+ projects), RSS (airdrops.io), Twitter (Nitter) |
+| 🤖 **Trust Scoring** | Auto-calculates trust (0-100%) — flags scams, fake giveaways, suspicious patterns |
+| 🔗 **Chain Detection** | Extracts chains (Ethereum, Solana, Arbitrum, Base, etc.) from project data |
+| 🆕 **New-Project Alerts** | Tracks what's already seen, highlights brand-new finds |
+| 🧹 **Noise Filtering** | Filters out old projects (>6mo), spam, and irrelevant results |
+| ⏱️ **Auto-Refresh** | Runs on GitHub Actions every 2 hours |
+| 📱 **PWA Dashboard** | Installable mobile dashboard with filters & sorting |
 
-## 🚀 شروع سریع
+## 🚀 Quick Start
 
 ```bash
 git clone https://github.com/Misagh95/droperog.git
 cd droperog
 npm install
 
-# اجرای یکبار
+# Run once
 npm run dev -- --once
 
-# یا اجرای پیوسته
+# Or run in auto-refresh mode
 npm run dev
 ```
 
-### ⚙️ متغیرهای محیطی
+### ⚙️ Environment Variables
 
-فایل `.env.example` → `.env` کپی کن و تنظیم کن:
+Copy `.env.example` → `.env` and optionally set:
 
 ```env
-TELEGRAM_BOT_TOKEN=توکن_ربات_تت
-TELEGRAM_CHAT_ID=آیدی_چت_تلگرام
+TELEGRAM_BOT_TOKEN=your_bot_token
+TELEGRAM_CHAT_ID=your_chat_id
 ```
 
-## 📸 خروجی نمونه
+## 📸 Output Preview
 
 ```
 ========================================================
@@ -63,78 +63,76 @@ TELEGRAM_CHAT_ID=آیدی_چت_تلگرام
      ├─ Trust: ███████░░░ 72%
      ├─ Chain: ❓
      ├─ Status: potential
-     ├─ Link: https://cryptorank.io/drophunting/txflow
+     ├─ Link: https://cryptorank.io/price/txflow
      ├─ Found: 1d ago
      ╰─ ✅ No red flags
      📝 Rating: 8/1000 | Tasks: Trading | Effort: 30pts / 20min
 
-  📊 Total tracked: 715 projects
+  📊 Total tracked: 159 projects
 ```
 
-## 🧠 معماری
+## 🧠 Architecture
 
 ```
 src/
-├── index.ts           # هماهنگ‌کننده — اجرای همه منابع، dedup، نمایش
-├── config.ts          # تنظیمات، تایمرها، اکانت‌های توییتر، RPCها
-├── types.ts           # تمام اینترفیس‌های TypeScript
-├── utils.ts           # توابع کمکی (ایموجی زنجیر، time ago و...)
-├── trustChecker.ts    # موتور تشخیص کلاهبرداری و امتیاز اعتماد
-├── telegram.ts        # ارسال نوتیفیکیشن به تلگرام
-├── scan.ts            # نقطه ورود GitHub Actions
+├── index.ts           # Orchestrator — runs all sources, dedup, display
+├── config.ts          # Toggles, intervals, Twitter accounts, RPCs
+├── types.ts           # All TypeScript interfaces
+├── utils.ts           # Formatting helpers (chain emojis, time ago, etc.)
+├── trustChecker.ts    # Scam detection & trust scoring engine
+├── telegram.ts        # Telegram notification sender
+├── scan.ts            # GitHub Actions entry point
 └── sources/
-    ├── alphadrops.ts  # AlphaDrops API (۱۵۶+ ایردراپ)
-    ├── cryptorank.ts  # CryptoRank API (۷۲۹+ پروژه، با pagination)
-    ├── rss.ts         # خوراک RSS/Atom
-    └── twitter.ts     # Twitter Scraper از طریق Nitter
+    ├── alphadrops.ts  # AlphaDrops API (156+ airdrops)
+    ├── cryptorank.ts  # CryptoRank API (729+ projects, paginated)
+    ├── rss.ts         # RSS/Atom feed parser
+    └── twitter.ts     # Nitter-based Twitter scraper
 ```
 
-## 🛡️ محاسبه امتیاز اعتماد
+## 🛡️ Trust Score Breakdown
 
-| فاکتور | امتیاز |
-|--------|--------|
-| 🔢 ریتینگ > ۱۰۰ | +۱۵ |
-| 🔢 ریتینگ > ۵۰ | +۱۰ |
-| 💰 جذب سرمایه دارد | +۱۰ |
-| 🏦 پشتوانه VC دارد | +۱۰ |
-| 🔗 لینک کلیم دارد | +۵ |
-| 🐦 امتیاز توییتر > ۱K | +۵ |
-| ✅ وضعیت CONFIRMED | +۱۰ |
-| ❌ الگوی کلاهبرداری | ❌ افت به ۰–۳۰ |
+| Factor | Bonus |
+|--------|-------|
+| 🔢 Rating > 100 | +15 pts |
+| 🔢 Rating > 50 | +10 pts |
+| 💰 Has fundraising | +10 pts |
+| 🏦 Has VC backing | +10 pts |
+| 🔗 Has claim link | +5 pts |
+| 🐦 Twitter score > 1K | +5 pts |
+| ✅ CONFIRMED status | +10 pts |
+| ❌ Scam pattern match | ❌ Drops to 0-30 |
 
-## 🔧 دستورات
+## 🔧 Commands
 
 ```bash
-npm run build     # کامپایل TypeScript → dist/
-npm start         # اجرای نسخه کامپایل شده
-npm run dev       # اجرا با ts-node (حالت توسعه)
+npm run build     # Compile TypeScript → dist/
+npm start         # Run compiled version
+npm run dev       # Run via ts-node (dev mode)
+npm run scan      # Run scanner once (used by GitHub Actions)
 ```
 
-## 📱 PWA (داشبورد موبایل)
+## 📦 Dependencies
 
-بعد از فعال کردن GitHub Pages درSettings > Pages > main > /docs:
+- `axios` — HTTP requests
+- `rss-parser` — RSS/Atom feeds
+- `ethers` — Blockchain RPC (planned)
+- `dotenv` — Environment variables
 
-```
-https://misagh95.github.io/droperog/
-```
+## 🗺️ Roadmap
 
-می‌تونی ذخیره کنی رو هوم‌صفحه گوشی (Add to Home Screen) — مثل یه اپ واقعی کار می‌کنه.
-
-## 🗺️ نقشه راه
-
-- [x] 📬 نوتیفیکیشن تلگرام
-- [x] 🤖 اسکنر خودکار GitHub Actions (هر ۲ ساعت)
-- [x] 🧠 اولین اجرا بیصدا (بدون اسپم)
-- [x] 📱 داشبورد PWA برای موبایل
-- [ ] 💰 بررسی آن‌چین برای احراز Eligibility
-- [ ] 🔍 منابع بیشتر (DeFiLlama و...)
-- [ ] 📊 ردیابی تاریخچه امتیاز اعتماد
+- [x] 📬 Telegram bot notifications
+- [x] 🤖 GitHub Actions auto-scanner (every 2h)
+- [x] 🧠 First-run state build (no spam)
+- [x] 📱 PWA dashboard for mobile
+- [ ] 💰 On-chain balance verification for claim eligibility
+- [ ] 🔍 DeFiLlama & more source integrations
+- [ ] 📊 Historical trust-score tracking
 
 ---
 
 <p align="center">
-  🪂 <b>شکار خوبی داشته باشی!</b> 🪂
+  🪂 <b>Happy Hunting!</b> 🪂
 </p>
 <p align="center">
-  <sub>ساخته شده توسط <a href="https://github.com/Misagh95">@Misagh95</a> · مشارکت خوش‌آمد است!</sub>
+  <sub>Built by <a href="https://github.com/Misagh95">@Misagh95</a> · Contributions welcome!</sub>
 </p>
