@@ -5,47 +5,47 @@
 </p>
 
 <h1 align="center">🪂 DroperOG</h1>
-<p align="center"><b>Multi-Source Airdrop Hunter & Trust Scanner</b></p>
-<p align="center">Scans AlphaDrops 🅰️ · CryptoRank 📊 · RSS 📰 · Twitter 🐦 · CoinRanking 🔗<br>in real-time to surface <b>new legitimate airdrop opportunities</b>.</p>
+<p align="center"><b>شکارچی چندمنبعی ایردراپ — با اسکنر اعتماد خودکار</b></p>
+<p align="right">اسکن می‌کند AlphaDrops 🅰️ · CryptoRank 📊 · RSS 📰 · Twitter 🐦 را<br>در لحظه برای یافتن <b>ایردراپ‌های معتبر جدید</b>.</p>
 
 ---
 
-## ✨ Features
+## ✨ قابلیت‌ها
 
-| Feature | Description |
-|---------|-------------|
-| 🔍 **5 Sources** | AlphaDrops (REST API), CryptoRank (NEXT_DATA), RSS feeds (airdrops.io), Twitter (Nitter), CoinRanking API |
-| 🤖 **Trust Scoring** | Auto-calculates trust (0-100%) — flags scams, fake giveaways, suspicious patterns |
-| 🔗 **Chain Detection** | Extracts chains (Ethereum, Solana, Arbitrum, Base, etc.) from project data |
-| 🆕 **New-Project Alerts** | Tracks what's already seen, highlights brand-new finds |
-| 🧹 **Noise Filtering** | Filters out established coins, spam, and irrelevant results |
-| ⏱️ **Auto-Refresh** | Runs on a configurable interval (default: 20 min) |
+| قابلیت | توضیح |
+|--------|-------|
+| 🔍 **۴ منبع** | AlphaDrops (REST API)، CryptoRank (API رسمی، ۷۲۹+ پروژه)، RSS (airdrops.io)، Twitter (Nitter) |
+| 🤖 **امتیاز اعتماد** | محاسبه خودکار اعتماد (۰-۱۰۰٪) — تشخیص کلاهبرداری، تبلیغات جعلی، الگوهای مشکوک |
+| 🔗 **تشخیص زنجیر** | استخراج زنجیرها (Ethereum، Solana، Arbitrum، Base و...) از داده پروژه |
+| 🆕 **هشدار پروژه جدید** | تشخیص پروژه‌های دیده‌نشده و نمایش فقط جدیدها |
+| 🧹 **فیلتر نویز** | حذف کوین‌های معروف، اسپم و نتایج نامرتبط |
+| ⏱️ **بروزرسانی خودکار** | هر ۲ ساعت یکبار توسط GitHub Actions |
+| 📱 **PWA موبایل** | داشبورد قابل نصب روی هوم‌صفحه گوشی |
 
-## 🚀 Quick Start
+## 🚀 شروع سریع
 
 ```bash
-# Clone & install
 git clone https://github.com/Misagh95/droperog.git
 cd droperog
 npm install
 
-# Run once
+# اجرای یکبار
 npm run dev -- --once
 
-# Or run in auto-refresh mode
+# یا اجرای پیوسته
 npm run dev
 ```
 
-### ⚙️ Environment Variables
+### ⚙️ متغیرهای محیطی
 
-Copy `.env.example` → `.env` and optionally set:
+فایل `.env.example` → `.env` کپی کن و تنظیم کن:
 
 ```env
-# CoinRanking API key (optional — without it, falls back to rate-limited access)
-COINRANKING_API_KEY=your_key_here
+TELEGRAM_BOT_TOKEN=توکن_ربات_تت
+TELEGRAM_CHAT_ID=آیدی_چت_تلگرام
 ```
 
-## 📸 Output Preview
+## 📸 خروجی نمونه
 
 ```
 ========================================================
@@ -53,89 +53,88 @@ COINRANKING_API_KEY=your_key_here
 ========================================================
 
   🔍 Scanning sources...
-  ✓ CoinRanking: 3 projects
-  ✓ CoinGecko: 17 projects
+  ✓ CryptoRank: 729 projects
   ✓ RSS: 10 projects
-  ✓ Twitter: 13 projects
-  ✓ CryptoRank: 20 projects
+  ✓ AlphaDrops: 6 projects
 
-  🆕 20 New Projects Found!
+  🆕 3 New Projects Found!
 
-  🆕 TxFlow 🌐
+  💎 TxFlow 🌐
      ├─ Trust: ███████░░░ 72%
      ├─ Chain: ❓
-     ├─ Status: upcoming
+     ├─ Status: potential
      ├─ Link: https://cryptorank.io/drophunting/txflow
-     ├─ Found: 15d ago
+     ├─ Found: 1d ago
      ╰─ ✅ No red flags
      📝 Rating: 8/1000 | Tasks: Trading | Effort: 30pts / 20min
 
-  📊 Total tracked: 41 projects
-  🔄 Auto-check every 20 minutes.
+  📊 Total tracked: 715 projects
 ```
 
-## 🧠 Architecture
+## 🧠 معماری
 
 ```
 src/
-├── index.ts           # Orchestrator — runs all sources, dedup, display
-├── config.ts          # Toggles, intervals, Twitter accounts, RPCs
-├── types.ts           # All TypeScript interfaces
-├── utils.ts           # Formatting helpers (chain emojis, time ago, etc.)
-├── trustChecker.ts    # Scam detection & trust scoring engine
-├── scrapers/
-│   └── scraper.ts     # Generic web scraper utilities
+├── index.ts           # هماهنگ‌کننده — اجرای همه منابع، dedup، نمایش
+├── config.ts          # تنظیمات، تایمرها، اکانت‌های توییتر، RPCها
+├── types.ts           # تمام اینترفیس‌های TypeScript
+├── utils.ts           # توابع کمکی (ایموجی زنجیر، time ago و...)
+├── trustChecker.ts    # موتور تشخیص کلاهبرداری و امتیاز اعتماد
+├── telegram.ts        # ارسال نوتیفیکیشن به تلگرام
+├── scan.ts            # نقطه ورود GitHub Actions
 └── sources/
-    ├── alphadrops.ts  # AlphaDrops API (156+ airdrops, structured data)
-    ├── coinranking.ts # CoinRanking API (new coins)
-    ├── cryptorank.ts  # CryptoRank drophunting (NEXT_DATA)
-    ├── rss.ts         # RSS/Atom feed parser
-    └── twitter.ts     # Nitter-based Twitter scraper
+    ├── alphadrops.ts  # AlphaDrops API (۱۵۶+ ایردراپ)
+    ├── cryptorank.ts  # CryptoRank API (۷۲۹+ پروژه، با pagination)
+    ├── rss.ts         # خوراک RSS/Atom
+    └── twitter.ts     # Twitter Scraper از طریق Nitter
 ```
 
-## 🛡️ Trust Score Breakdown
+## 🛡️ محاسبه امتیاز اعتماد
 
-| Factor | Bonus |
-|--------|-------|
-| 🔢 Rating > 100 | +15 pts |
-| 🔢 Rating > 50 | +10 pts |
-| 💰 Has fundraising | +10 pts |
-| 🏦 Has VC backing | +10 pts |
-| 🔗 Has claim link | +5 pts |
-| 🐦 Twitter score > 1K | +5 pts |
-| ✅ CONFIRMED status | +10 pts |
-| ❌ Scam pattern match | ❌ Drops to 0–30 |
+| فاکتور | امتیاز |
+|--------|--------|
+| 🔢 ریتینگ > ۱۰۰ | +۱۵ |
+| 🔢 ریتینگ > ۵۰ | +۱۰ |
+| 💰 جذب سرمایه دارد | +۱۰ |
+| 🏦 پشتوانه VC دارد | +۱۰ |
+| 🔗 لینک کلیم دارد | +۵ |
+| 🐦 امتیاز توییتر > ۱K | +۵ |
+| ✅ وضعیت CONFIRMED | +۱۰ |
+| ❌ الگوی کلاهبرداری | ❌ افت به ۰–۳۰ |
 
-## 🔧 Commands
+## 🔧 دستورات
 
 ```bash
-npm run build     # Compile TypeScript → dist/
-npm start         # Run compiled version
-npm run dev       # Run via ts-node (dev mode)
+npm run build     # کامپایل TypeScript → dist/
+npm start         # اجرای نسخه کامپایل شده
+npm run dev       # اجرا با ts-node (حالت توسعه)
 ```
 
-## 📦 Dependencies
+## 📱 PWA (داشبورد موبایل)
 
-- `axios` — HTTP requests
-- `cheerio` — HTML parsing (fallback)
-- `rss-parser` — RSS/Atom feeds
-- `ethers` — Blockchain RPC (planned)
-- `dotenv` — Environment variables
+بعد از فعال کردن GitHub Pages درSettings > Pages > main > /docs:
 
-## 🗺️ Roadmap
+```
+https://misagh95.github.io/droperog/
+```
 
-- [x] 📬 Telegram bot notifications
-- [x] 🤖 GitHub Actions auto-scanner (every 2h)
-- [x] 🧠 First-run state build (no spam)
-- [ ] 💰 On-chain balance verification for claim eligibility
-- [ ] 🔍 DeFiLlama & more source integrations
-- [ ] 📊 Historical trust-score tracking
+می‌تونی ذخیره کنی رو هوم‌صفحه گوشی (Add to Home Screen) — مثل یه اپ واقعی کار می‌کنه.
+
+## 🗺️ نقشه راه
+
+- [x] 📬 نوتیفیکیشن تلگرام
+- [x] 🤖 اسکنر خودکار GitHub Actions (هر ۲ ساعت)
+- [x] 🧠 اولین اجرا بیصدا (بدون اسپم)
+- [x] 📱 داشبورد PWA برای موبایل
+- [ ] 💰 بررسی آن‌چین برای احراز Eligibility
+- [ ] 🔍 منابع بیشتر (DeFiLlama و...)
+- [ ] 📊 ردیابی تاریخچه امتیاز اعتماد
 
 ---
 
 <p align="center">
-  🪂 <b>Happy Hunting!</b> 🪂
+  🪂 <b>شکار خوبی داشته باشی!</b> 🪂
 </p>
 <p align="center">
-  <sub>Built by <a href="https://github.com/Misagh95">@Misagh95</a> · Contributions welcome!</sub>
+  <sub>ساخته شده توسط <a href="https://github.com/Misagh95">@Misagh95</a> · مشارکت خوش‌آمد است!</sub>
 </p>
