@@ -16,8 +16,8 @@ export class DroperOG {
   private cryptorank: CryptoRankSource;
   private trustChecker: TrustChecker;
   private config = loadConfig();
-  private projects: AirdropProject[] = [];
-  private knownIds = new Set<string>();
+  projects: AirdropProject[] = [];
+  knownIds = new Set<string>();
 
   constructor(apiKey?: string) {
     this.coinranking = new CoinRankingSource(apiKey);
