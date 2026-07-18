@@ -69,6 +69,15 @@ async function main() {
   };
   saveState(updatedState);
   console.log(`\nState saved: ${updatedState.knownIds.length} known IDs`);
+
+  // Save project list for PWA
+  const docsDir = path.join(__dirname, '..', 'docs', 'data');
+  if (!fs.existsSync(docsDir)) fs.mkdirSync(docsDir, { recursive: true });
+  fs.writeFileSync(
+    path.join(docsDir, 'projects.json'),
+    JSON.stringify(app.projects, null, 2)
+  );
+  console.log(`Projects saved for PWA: ${app.projects.length} projects`);
 }
 
 main().catch(err => {

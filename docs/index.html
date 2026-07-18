@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a1a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>DroperOG — Airdrop Hunter</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="https://img.icons8.com/fluency/48/parachute.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <div>
+      <h1><span>🪂</span> DroperOG</h1>
+      <div class="sub">Multi-Source Airdrop Hunter</div>
+    </div>
+    <span id="count">Loading...</span>
+  </header>
+
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search projects...">
+  </div>
+
+  <div class="toolbar" style="margin-top:4px">
+    <button class="chip chain-btn active" data-chain="all" onclick="filterByChain('all')">🌐 All</button>
+    <button class="chip chain-btn" data-chain="ethereum" onclick="filterByChain('ethereum')">⟠ ETH</button>
+    <button class="chip chain-btn" data-chain="solana" onclick="filterByChain('solana')">◎ SOL</button>
+    <button class="chip chain-btn" data-chain="base" onclick="filterByChain('base')">🔵 Base</button>
+    <button class="chip chain-btn" data-chain="arbitrum" onclick="filterByChain('arbitrum')">🔴 Arb</button>
+    <button class="chip chain-btn" data-chain="bsc" onclick="filterByChain('bsc')">🟡 BSC</button>
+  </div>
+
+  <div class="toolbar" style="margin-top:4px">
+    <button class="chip status-btn active" data-status="all" onclick="filterByStatus('all')">📋 All</button>
+    <button class="chip status-btn" data-status="upcoming" onclick="filterByStatus('upcoming')">🆕 Upcoming</button>
+    <button class="chip status-btn" data-status="active" onclick="filterByStatus('active')">🟢 Active</button>
+  </div>
+
+  <div id="loading">
+    <div class="spinner"></div>
+    Scanning sources...
+  </div>
+
+  <div id="project-list"></div>
+
+  <footer>
+    🪂 <a href="https://github.com/Misagh95/droperog" target="_blank">DroperOG</a> &mdash; Find legit airdrops
+  </footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
