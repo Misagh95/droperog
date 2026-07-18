@@ -47,6 +47,14 @@ export class DroperOG {
 
     let allProjects = [...rss, ...twitter, ...cryptoRank, ...alphaDrops];
 
+    // Filter projects older than 6 months
+    const sixMonthsAgo = Date.now() - 180 * 24 * 60 * 60 * 1000;
+    const before = allProjects.length;
+    allProjects = allProjects.filter(p => p.discoveredAt >= sixMonthsAgo);
+    if (allProjects.length < before) {
+      console.log(`  🗑️ Removed ${before - allProjects.length} projects older than 6 months`);
+    }
+
     // Deduplicate
     const seen = new Set<string>();
     allProjects = allProjects.filter(p => {

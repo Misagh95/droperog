@@ -1,6 +1,6 @@
 const DATA_URL = 'https://raw.githubusercontent.com/Misagh95/droperog/main/docs/data/projects.json';
 
-const state = { projects: [], filtered: [], chainFilter: 'all', statusFilter: 'all', viewFilter: 'all' };
+const state = { projects: [], filtered: [], chainFilter: 'all', statusFilter: 'all', viewFilter: 'all', sortOrder: 'newest' };
 
 const NEW_MS = 3 * 24 * 60 * 60 * 1000; // "New" = within 3 days
 
@@ -50,7 +50,8 @@ function render() {
   if (state.viewFilter === 'new') items = items.filter(isNew);
   else if (state.statusFilter !== 'all') items = items.filter(p => p.status === state.statusFilter);
 
-  items.sort((a, b) => b.discoveredAt - a.discoveredAt);
+  if (state.sortOrder === 'newest') items.sort((a, b) => b.discoveredAt - a.discoveredAt);
+  else items.sort((a, b) => a.discoveredAt - b.discoveredAt);
   count.textContent = `${items.length} airdrops`;
 
   if (!items.length) {
@@ -114,6 +115,12 @@ function filterByStatus(status) {
   state.viewFilter = 'all';
   document.querySelectorAll('.status-btn').forEach(b => b.classList.toggle('active', b.dataset.status === state.statusFilter));
   document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+  render();
+}
+
+function setSort(order) {
+  state.sortOrder = order;
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.toggle('active', b.dataset.sort === state.sortOrder));
   render();
 }
 

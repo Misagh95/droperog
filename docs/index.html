@@ -47,6 +47,12 @@
     <button class="chip status-btn" data-status="ended" onclick="filterByStatus('ended')">🔴 Ended</button>
   </div>
 
+  <div class="toolbar" style="margin-top:4px">
+    <span class="label" style="font-size:12px;color:#64748b;padding:6px 0">Sort:</span>
+    <button class="chip sort-btn active" data-sort="newest" onclick="setSort('newest')">🕐 Newest</button>
+    <button class="chip sort-btn" data-sort="oldest" onclick="setSort('oldest')">🕐 Oldest</button>
+  </div>
+
   <div id="loading">
     <div class="spinner"></div>
     Scanning sources...

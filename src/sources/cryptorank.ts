@@ -108,7 +108,7 @@ export class CryptoRankSource {
       name,
       description,
       source: 'web_scrape',
-      sourceUrl: `https://cryptorank.io/drophunting/${item.coin?.key || item.key}`,
+      sourceUrl: `https://cryptorank.io/price/${item.coin?.key || item.key}`,
       chains,
       status,
       trustScore,
