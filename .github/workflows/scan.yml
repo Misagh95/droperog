@@ -37,5 +37,5 @@ jobs:
           git add data/state.json docs/data/projects.json
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "📊 Update scan state [skip ci]"
-          git pull --rebase origin main
+          git pull --rebase -X theirs origin main
           git push
