@@ -49,6 +49,7 @@ export class CoinGeckoSource {
         const results = await this.searchKeyword(keyword);
         for (const coin of results) {
           if (this.cache.has(coin.id)) continue;
+          if (this.isEstablished(coin)) continue;
           this.cache.add(coin.id);
 
           const detail = await this.getCoinDetails(coin.id);
@@ -88,6 +89,7 @@ export class CoinGeckoSource {
       const trending = await this.getTrending();
       for (const coin of trending) {
         if (this.cache.has(coin.id)) continue;
+        if (this.isEstablished(coin)) continue;
         this.cache.add(coin.id);
 
         const allText = `${coin.name} ${coin.symbol}`.toLowerCase();
@@ -146,22 +148,46 @@ export class CoinGeckoSource {
     }
   }
 
+  private establishedIds = new Set([
+    'bitcoin', 'ethereum', 'solana', 'litecoin', 'ripple',
+    'cardano', 'polkadot', 'dogecoin', 'avalanche-2', 'avalanche',
+    'chainlink', 'polygon', 'tron', 'toncoin', 'stellar',
+    'vechain', 'internet-computer', 'near', 'aptos', 'cronos',
+    'algorand', 'injective-protocol', 'ondo-finance', 'ondo',
+    'pudgy-penguins', 'uniswap', 'aave', 'maker', 'compound',
+    'hyperliquid', 'virtual-protocol', 'virtuals-protocol',
+    'arbitrum', 'optimism', 'cosmos', 'atom',
+    'the-sandbox', 'decentraland', 'immutable-x', 'flow',
+    'hedera-hashgraph', 'filecoin', 'theta-token', 'fetch-ai',
+    'the-graph', 'apecoin', 'gala', 'axie-infinity',
+    'toshi', 'toshi-token',
+    'the-black-bull',
+    'cash-cat', 'cashcat',
+    'akedo', 'ake',
+    'adi-token', 'adi',
+    'lab', 'lab-token',
+    'orchid-protocol', 'oxt',
+    'aerodrome-finance',
+    'injective',
+  ]);
+
+  private isEstablished(coin: { id: string; name: string; symbol: string }): boolean {
+    const id = coin.id.toLowerCase();
+    const name = coin.name.toLowerCase();
+    const symbol = coin.symbol.toLowerCase();
+    for (const e of this.establishedIds) {
+      if (id === e || id.includes(e) || name.includes(e) || symbol === e) return true;
+    }
+    return false;
+  }
+
   private async getTrending(): Promise<CoinGeckoCoin[]> {
     const res = await axios.get<{ coins: { item: CoinGeckoCoin }[] }>(`${API_BASE}/search/trending`, {
       headers: { 'Accept': 'application/json' },
       timeout: 10000,
     });
 
-    const SKIP_COINS = new Set([
-      'bitcoin', 'ethereum', 'solana', 'litecoin', 'ripple',
-      'cardano', 'polkadot', 'dogecoin', 'avalanche', 'chainlink',
-      'polygon', 'tron', 'toncoin', 'stellar', 'vechain',
-      'internet-computer', 'near', 'aptos', 'cronos', 'algorand',
-    ]);
-
-    return (res.data?.coins || [])
-      .map(c => c.item)
-      .filter(c => !SKIP_COINS.has(c.id));
+    return (res.data?.coins || []).map(c => c.item);
   }
 
   private extractLinks(coin: CoinDetails): AirdropProject['links'] {
