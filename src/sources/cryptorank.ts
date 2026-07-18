@@ -14,61 +14,68 @@ interface CryptoRankItem {
     icon: string;
     totalRaise: number | null;
     funds: Array<{ slug: string; name: string }>;
-    twitterScore: { twitterScore: number; followersCount: number | null };
+    twitterScore: { twitterScore: number; followersCount: number | null; twitterAccountId: number };
   };
   activityTypes: string[];
+  activityPoints: number;
   status: string | null;
   statusUpdatedAt: string;
   createdAt: string;
   rewardType: string;
+  noActiveTask: boolean;
   cost: number;
   time: number;
 }
 
-interface NextData {
-  props?: {
-    pageProps?: {
-      fallbackTableData?: {
-        data: CryptoRankItem[];
-        count: number;
-      };
-    };
-  };
+interface ApiResponse {
+  data: CryptoRankItem[];
+  count: number;
 }
+
+const MAX_PAGE_SIZE = 100;
+const API_BASE = 'https://api.cryptorank.io/v0/drop-hunting/activities/table/public';
 
 export class CryptoRankSource {
   async fetchAirdrops(): Promise<AirdropProject[]> {
     try {
-      const html = await this.fetchPage('https://cryptorank.io/drophunting');
-      const items = this.extractItems(html);
-      return items.map(item => this.toProject(item));
+      const allItems = await this.fetchAllPages();
+      return allItems.map(item => this.toProject(item));
     } catch (err: any) {
       console.error(`  [CryptoRank] Error: ${err.message}`);
       return [];
     }
   }
 
-  private async fetchPage(url: string): Promise<string> {
-    const res = await axios.get(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml',
-      },
-      timeout: 15000,
-    });
-    return res.data;
+  private async fetchAllPages(): Promise<CryptoRankItem[]> {
+    let offset = 0;
+    let total = 0;
+    const all: CryptoRankItem[] = [];
+
+    do {
+      const res = await axios.get<ApiResponse>(API_BASE, {
+        params: { limit: MAX_PAGE_SIZE, offset },
+        timeout: 20000,
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+          'Origin': 'https://cryptorank.io',
+          'Referer': 'https://cryptorank.io/',
+        },
+      });
+
+      const { data, count } = res.data;
+      all.push(...data);
+      total = count;
+      offset += data.length;
+
+      if (data.length < MAX_PAGE_SIZE) break;
+      await this.delay(400);
+    } while (offset < total);
+
+    return all;
   }
 
-  private extractItems(html: string): CryptoRankItem[] {
-    const match = html.match(/__NEXT_DATA__[^>]*>(.*?)<\/script>/s);
-    if (!match) return [];
-
-    try {
-      const json: NextData = JSON.parse(match[1]);
-      return json.props?.pageProps?.fallbackTableData?.data ?? [];
-    } catch {
-      return [];
-    }
+  private delay(ms: number): Promise<void> {
+    return new Promise(r => setTimeout(r, ms));
   }
 
   private toProject(item: CryptoRankItem): AirdropProject {
@@ -84,6 +91,7 @@ export class CryptoRankSource {
 
     const description = [
       `Rating: ${rating}/1000`,
+      item.coin?.key,
       fundsRaised,
       activities ? `Tasks: ${activities}` : '',
       `Effort: ${item.cost || 0}pts / ${item.time || 0}min`,
