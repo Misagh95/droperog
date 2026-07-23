@@ -1,8 +1,8 @@
 [
   {
-    "id": "crnk_mrxwal8u_cjznrw",
+    "id": "crnk_mry03frt_sry7dd",
     "name": "Cambria",
-    "description": "Rating: 1/1000 | cambria | $3.5M raised | Tasks: Wallet Airdrop Status | Effort: 0pts / 5min",
+    "description": "Rating: 2/1000 | cambria | $3.5M raised | Tasks: Wallet Airdrop Status | Effort: 0pts / 5min",
     "source": "web_scrape",
     "sourceUrl": "https://cryptorank.io/price/cambria",
     "chains": [
@@ -15,10 +15,10 @@
     ],
     "links": {},
     "discoveredAt": 1784831672780,
-    "lastChecked": 1784834358798
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8u_iaki47",
+    "id": "crnk_mry03frt_9cf982",
     "name": "StripChain",
     "description": "Rating: 4/1000 | stripchain | $10.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -33,10 +33,10 @@
     ],
     "links": {},
     "discoveredAt": 1784745403424,
-    "lastChecked": 1784834358798
+    "lastChecked": 1784840743577
   },
   {
-    "id": "rss_mrxwahng_jvd954",
+    "id": "rss_mry03c4b_0cpr4l",
     "name": "Best crypto testnets to farm right now: 6 free airdrop plays",
     "description": "Testnet farming is the only corner of airdrop hunting where the capital requirement is genuinely zero. No bridge risk, no locked deposits, no liquidation. Just time, a wallet, and consistency.\n\n\n\nRight now the testnet field is unusually strong: one project has a confirmed airdrop with 50% of supply ",
     "source": "web_scrape",
@@ -50,10 +50,10 @@
     "scamFlags": [],
     "links": {},
     "discoveredAt": 1784643500000,
-    "lastChecked": 1784834354141
+    "lastChecked": 1784840738843
   },
   {
-    "id": "crnk_mrxwal8u_n00unc",
+    "id": "crnk_mry03frt_edo1c9",
     "name": "Enjin Coin",
     "description": "Rating: 1/1000 | enjin-coin | $74.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -68,10 +68,10 @@
     ],
     "links": {},
     "discoveredAt": 1784572394868,
-    "lastChecked": 1784834358798
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8u_xw75xc",
+    "id": "crnk_mry03frt_b7q5yh",
     "name": "Skew",
     "description": "Rating: 5/1000 | skew-trade | $33.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -86,12 +86,12 @@
     ],
     "links": {},
     "discoveredAt": 1784568569873,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_8ftk73",
+    "id": "crnk_mry03frt_ifxd6v",
     "name": "Aave",
-    "description": "Rating: 3/1000 | aave | $49.3M raised | Effort: 0pts / 0min",
+    "description": "Rating: 4/1000 | aave | $49.3M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
     "sourceUrl": "https://cryptorank.io/price/aave",
     "chains": [
@@ -104,10 +104,10 @@
     ],
     "links": {},
     "discoveredAt": 1784556801975,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "ad_mrxwahg8_yd93us",
+    "id": "ad_mry03c2q_p6my56",
     "name": "Perpl",
     "description": "Fully onchain perps orderbook on Monad | Categories: Perps | Funding: $9.5M | Tasks: Trade Perps, $1M Volume",
     "source": "web_scrape",
@@ -122,10 +122,10 @@
       "website": "https://app.perpl.xyz/trade?ref=TqkXu4vNCSF"
     },
     "discoveredAt": 1784392025149,
-    "lastChecked": 1784834353880
+    "lastChecked": 1784840738786
   },
   {
-    "id": "crnk_mrxwal8v_c99kct",
+    "id": "crnk_mry03frt_pebfof",
     "name": "Pascal",
     "description": "Rating: 4/1000 | pascal | $15.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -140,10 +140,10 @@
     ],
     "links": {},
     "discoveredAt": 1784220653351,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "rss_mrxwahnh_yuouwv",
+    "id": "rss_mry03c4b_l8xuvx",
     "name": "Nado x xStocks: one deposit, two potential airdrops",
     "description": "$INK is confirmed. The xStocks airdrop isn&#8217;t, at least not yet. But a single deposit on Nado can farm points toward both at the same time, which makes this one of the more capital-efficient double-dips in the Hyperliquid-adjacent ecosystem right now.\n\n\n\nHere&#8217;s the mechanic, and why the w",
     "source": "web_scrape",
@@ -158,10 +158,10 @@
     "scamFlags": [],
     "links": {},
     "discoveredAt": 1784135092000,
-    "lastChecked": 1784834354141
+    "lastChecked": 1784840738843
   },
   {
-    "id": "crnk_mrxwal8v_watfc1",
+    "id": "crnk_mry03frt_110c14",
     "name": "tren.ch",
     "description": "Rating: 14/1000 | tren-ch | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -176,10 +176,10 @@
     ],
     "links": {},
     "discoveredAt": 1784129355520,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_7f20eo",
+    "id": "crnk_mry03frt_06pow9",
     "name": "Koto Trade",
     "description": "Rating: 2/1000 | koto-trade | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -194,10 +194,10 @@
     ],
     "links": {},
     "discoveredAt": 1784126622201,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_u32xhl",
+    "id": "crnk_mry03frt_xr73mb",
     "name": "Sats Terminal",
     "description": "Rating: 15/1000 | sats-terminal | $1.7M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -212,10 +212,10 @@
     ],
     "links": {},
     "discoveredAt": 1783968049273,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_g65cly",
+    "id": "crnk_mry03frt_2ijq9h",
     "name": "Hudi",
     "description": "Rating: 9/1000 | hudi-trade | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -230,10 +230,10 @@
     ],
     "links": {},
     "discoveredAt": 1783967397205,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_94zw00",
+    "id": "crnk_mry03fru_zxy6el",
     "name": "Touchmarket",
     "description": "Rating: 8/1000 | touch-market | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -248,10 +248,10 @@
     ],
     "links": {},
     "discoveredAt": 1783608857693,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_xwyhft",
+    "id": "crnk_mry03fru_9czner",
     "name": "wisp",
     "description": "Rating: 13/1000 | wisp | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -266,10 +266,10 @@
     ],
     "links": {},
     "discoveredAt": 1783608012886,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_3zyy7i",
+    "id": "crnk_mry03fru_93rwsm",
     "name": "KOR Protocol",
     "description": "Rating: 46/1000 | kor-protocol | $7.5M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -284,10 +284,10 @@
     ],
     "links": {},
     "discoveredAt": 1783451360678,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8u_2swvqz",
+    "id": "crnk_mry03frt_s7hh07",
     "name": "AFK Fishing",
     "description": "Rating: 28/1000 | afk-fishing | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -302,10 +302,10 @@
     ],
     "links": {},
     "discoveredAt": 1783448768114,
-    "lastChecked": 1784834358798
+    "lastChecked": 1784840743577
   },
   {
-    "id": "ad_mrxwahg8_txu25v",
+    "id": "ad_mry03c2q_jsqp7k",
     "name": "Ondo Perps",
     "description": "Trade perpetual futures on U.S. stocks, ETFs & commodities 24/7 with up to 20x leverage.  | Categories: Perps, RWA | Funding: Undisclosed | Tasks: Trade Perps",
     "source": "web_scrape",
@@ -320,10 +320,10 @@
       "website": "https://app.ondoperps.xyz/?ref=8ARDF7"
     },
     "discoveredAt": 1783406017283,
-    "lastChecked": 1784834353880
+    "lastChecked": 1784840738786
   },
   {
-    "id": "crnk_mrxwal8v_hgp4kw",
+    "id": "crnk_mry03fru_9tw4ui",
     "name": "Osero",
     "description": "Rating: 33/1000 | osero | $13.5M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -338,10 +338,10 @@
     ],
     "links": {},
     "discoveredAt": 1783113196583,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_z1f7dn",
+    "id": "crnk_mry03fru_ie8cij",
     "name": "TrueCurrent",
     "description": "Rating: 5/1000 | truecurrent | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -356,10 +356,10 @@
     ],
     "links": {},
     "discoveredAt": 1783110562760,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8u_0qhd5r",
+    "id": "crnk_mry03frt_1phs8t",
     "name": "Arcus",
     "description": "Rating: 11/1000 | arcus | Tasks: Fill The Form, Trading | Effort: 20pts / 11min",
     "source": "web_scrape",
@@ -374,10 +374,10 @@
     ],
     "links": {},
     "discoveredAt": 1783107179184,
-    "lastChecked": 1784834358798
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_dngyxk",
+    "id": "crnk_mry03frt_4n0fpl",
     "name": "TxFlow",
     "description": "Rating: 9/1000 | txflow | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -392,10 +392,10 @@
     ],
     "links": {},
     "discoveredAt": 1782998846296,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_j42mie",
+    "id": "crnk_mry03fru_zl6kf2",
     "name": "world.xyz",
     "description": "Rating: 31/1000 | world-xyz | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -410,10 +410,10 @@
     ],
     "links": {},
     "discoveredAt": 1782934335247,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "ad_mrxwahg8_a1p2xt",
+    "id": "ad_mry03c2q_yupgb2",
     "name": "xStocks",
     "description": "Pioneering tokenized equities. Over 100 tokenized stocks and ETFs available onchain and on centralized exchanges. | Categories: DeFi, RWA | Funding: $12.7M | Tasks: Join xPoints, Hold xStocks, Buy xStocks on Solana, Provide Liquidity, Lend on Loopscale",
     "source": "web_scrape",
@@ -431,10 +431,10 @@
       "website": "https://defi.xstocks.fi/points?ref=ALPHADROPS"
     },
     "discoveredAt": 1782711629118,
-    "lastChecked": 1784834353880
+    "lastChecked": 1784840738786
   },
   {
-    "id": "crnk_mrxwal8v_td1141",
+    "id": "crnk_mry03fru_6mh2lu",
     "name": "Onyx Odds",
     "description": "Rating: 34/1000 | onyx-odds | $20.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -449,10 +449,10 @@
     ],
     "links": {},
     "discoveredAt": 1782487665711,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_j40qz9",
+    "id": "crnk_mry03fru_zlvp7c",
     "name": "fomo",
     "description": "Rating: 3/1000 | fomo-trading | $94.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -467,10 +467,10 @@
     ],
     "links": {},
     "discoveredAt": 1782403103141,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_zjy9ha",
+    "id": "crnk_mry03fru_x9nkpd",
     "name": "Flipper",
     "description": "Rating: 9/1000 | flipper | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -485,10 +485,10 @@
     ],
     "links": {},
     "discoveredAt": 1782401983289,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_sxpnmz",
+    "id": "crnk_mry03fru_01yyn0",
     "name": "Sovra",
     "description": "Rating: 22/1000 | sovra | $2.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -503,10 +503,10 @@
     ],
     "links": {},
     "discoveredAt": 1782297559300,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_y4thaq",
+    "id": "crnk_mry03frt_eqlkmu",
     "name": "TurboFlow",
     "description": "Rating: 4/1000 | surf-protocol | $9.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -521,10 +521,10 @@
     ],
     "links": {},
     "discoveredAt": 1782233211673,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_t93ilz",
+    "id": "crnk_mry03fru_mqsn7f",
     "name": "Tori Finance",
     "description": "Rating: 6/1000 | tori-finance | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -539,10 +539,10 @@
     ],
     "links": {},
     "discoveredAt": 1782231220203,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_meb260",
+    "id": "crnk_mry03fru_9hedsg",
     "name": "PeakAI",
     "description": "Rating: 11/1000 | peakai | $2.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -557,10 +557,10 @@
     ],
     "links": {},
     "discoveredAt": 1781885371050,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_29ja9c",
+    "id": "crnk_mry03fru_q5sxvo",
     "name": "Astros",
     "description": "Rating: 3/1000 | astros-2 | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -575,10 +575,10 @@
     ],
     "links": {},
     "discoveredAt": 1781651270880,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_mtheb4",
+    "id": "crnk_mry03fru_7tfqim",
     "name": "Tplus",
     "description": "Rating: 27/1000 | tplus | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -593,10 +593,10 @@
     ],
     "links": {},
     "discoveredAt": 1781649995682,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_ev234j",
+    "id": "crnk_mry03fru_nh018n",
     "name": "SEKAI",
     "description": "Rating: 19/1000 | sekai-2 | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -611,10 +611,10 @@
     ],
     "links": {},
     "discoveredAt": 1781649460851,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "ad_mrxwahg8_3mdf9a",
+    "id": "ad_mry03c2q_cclycm",
     "name": "Nansen",
     "description": "Trade Everything Onchain with AI | Categories: Perps, AI, Tools/Infra | Funding: $88.2 | Tasks: Trade Perps, Complete tasks",
     "source": "web_scrape",
@@ -631,10 +631,10 @@
       "website": "https://app.nansen.ai/welcome?ref=6wKbfqsVzM4"
     },
     "discoveredAt": 1781523712028,
-    "lastChecked": 1784834353880
+    "lastChecked": 1784840738786
   },
   {
-    "id": "crnk_mrxwal8v_4v3i25",
+    "id": "crnk_mry03fru_dln7i0",
     "name": "Pear",
     "description": "Rating: 15/1000 | pear-trade | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -649,10 +649,10 @@
     ],
     "links": {},
     "discoveredAt": 1781220731775,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_rje1ro",
+    "id": "crnk_mry03fru_xezq18",
     "name": "Interstate",
     "description": "Rating: 6/1000 | interstate | $4.5M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -667,10 +667,10 @@
     ],
     "links": {},
     "discoveredAt": 1781219873855,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_7ou5tq",
+    "id": "crnk_mry03fru_twxamz",
     "name": "ArcNova",
     "description": "Rating: 47/1000 | arcnova | $15.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -685,10 +685,10 @@
     ],
     "links": {},
     "discoveredAt": 1781217961639,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_q5wxw3",
+    "id": "crnk_mry03fru_4fqf27",
     "name": "Barter",
     "description": "Rating: 17/1000 | barter-defi | $3.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -703,10 +703,10 @@
     ],
     "links": {},
     "discoveredAt": 1781131751345,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_cldbsk",
+    "id": "crnk_mry03fru_t5zl4f",
     "name": "Injective",
     "description": "Rating: 24/1000 | injective-protocol | $59.7M raised | Tasks: Ambassador program | Effort: 0pts / 10min",
     "source": "web_scrape",
@@ -721,10 +721,10 @@
     ],
     "links": {},
     "discoveredAt": 1780954551632,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_ehhhni",
+    "id": "crnk_mry03frt_2b7z4l",
     "name": "Checkpoint",
     "description": "Rating: 22/1000 | checkpoint | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -739,10 +739,10 @@
     ],
     "links": {},
     "discoveredAt": 1780934482894,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_c07aop",
+    "id": "crnk_mry03fru_ojl3kr",
     "name": "Superluminal",
     "description": "Rating: 19/1000 | superluminal | Tasks: Fill The Form | Effort: 0pts / 1min",
     "source": "web_scrape",
@@ -757,10 +757,10 @@
     ],
     "links": {},
     "discoveredAt": 1780933118758,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_w5ov7l",
+    "id": "crnk_mry03fru_0dkx4n",
     "name": "Totalis",
     "description": "Rating: 3/1000 | totalis | $500.0K raised | Tasks: Predictions, Getting a role | Effort: 10pts / 25min",
     "source": "web_scrape",
@@ -775,10 +775,10 @@
     ],
     "links": {},
     "discoveredAt": 1780696067297,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_qteqv2",
+    "id": "crnk_mry03fru_sit101",
     "name": "Cysic",
     "description": "Rating: 11/1000 | cysic | $18.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -793,10 +793,10 @@
     ],
     "links": {},
     "discoveredAt": 1780691308357,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_954f9h",
+    "id": "crnk_mry03fru_drwny7",
     "name": "Divvy",
     "description": "Rating: 12/1000 | divvy | $2.2M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -811,10 +811,10 @@
     ],
     "links": {},
     "discoveredAt": 1780517513302,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_d99dnf",
+    "id": "crnk_mry03fru_fi2pp7",
     "name": "ChimpX AI",
     "description": "Rating: 10/1000 | chimp-exchange | $3.4M raised | Tasks: Ambassador program, Social, Bounty Platforms, Trading | Effort: 2pts / 26min",
     "source": "web_scrape",
@@ -829,10 +829,10 @@
     ],
     "links": {},
     "discoveredAt": 1780515190769,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_u8j8yq",
+    "id": "crnk_mry03fru_w480gl",
     "name": "Ekiden",
     "description": "Rating: 23/1000 | ekiden | $2.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -847,10 +847,10 @@
     ],
     "links": {},
     "discoveredAt": 1780499518018,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8u_drzert",
+    "id": "crnk_mry03frt_0h8maf",
     "name": "Clasho",
     "description": "Rating: 16/1000 | clasho | Tasks: Bounty Platforms, Social, Fill The Form | Effort: 0pts / 15min",
     "source": "web_scrape",
@@ -865,10 +865,10 @@
     ],
     "links": {},
     "discoveredAt": 1780418817251,
-    "lastChecked": 1784834358798
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_kx45kz",
+    "id": "crnk_mry03fru_2aq0cs",
     "name": "Xeffy",
     "description": "Rating: 35/1000 | xeffy | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -883,10 +883,10 @@
     ],
     "links": {},
     "discoveredAt": 1780328283103,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_sxzkjb",
+    "id": "crnk_mry03fru_t41omu",
     "name": "Cycles",
     "description": "Rating: 12/1000 | cycles | $8.7M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -901,10 +901,10 @@
     ],
     "links": {},
     "discoveredAt": 1780077854930,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_ake0ol",
+    "id": "crnk_mry03fru_4auufq",
     "name": "Hypernova",
     "description": "Rating: 19/1000 | hypernova | $3.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -919,10 +919,10 @@
     ],
     "links": {},
     "discoveredAt": 1780074972303,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_cqh6mw",
+    "id": "crnk_mry03fru_5s7ivf",
     "name": "Bonk",
     "description": "Rating: 32/1000 | bonk-new | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -937,10 +937,10 @@
     ],
     "links": {},
     "discoveredAt": 1779816810999,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_ihs1l0",
+    "id": "crnk_mry03frt_z0yl8w",
     "name": "AIW3",
     "description": "Rating: 1/1000 | aiw-3 | $2.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -955,10 +955,10 @@
     ],
     "links": {},
     "discoveredAt": 1779812367025,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_1qnyar",
+    "id": "crnk_mry03fru_aljpft",
     "name": "KuCoin Token",
     "description": "Rating: 12/1000 | kucoin-shares | $205.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -973,10 +973,10 @@
     ],
     "links": {},
     "discoveredAt": 1779811409330,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8u_c0cscl",
+    "id": "crnk_mry03frt_745d1z",
     "name": "Boost (RabbitHole)",
     "description": "Rating: 47/1000 | boost | $21.6M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -991,10 +991,10 @@
     ],
     "links": {},
     "discoveredAt": 1779728497107,
-    "lastChecked": 1784834358798
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_ugsvg3",
+    "id": "crnk_mry03fru_rtojbm",
     "name": "PopDEX",
     "description": "Rating: 17/1000 | popde | $30.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1009,10 +1009,10 @@
     ],
     "links": {},
     "discoveredAt": 1779727676891,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_bk5e77",
+    "id": "crnk_mry03frt_qwrn0q",
     "name": "STRATO",
     "description": "Rating: 25/1000 | strato | $52.2M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1027,10 +1027,10 @@
     ],
     "links": {},
     "discoveredAt": 1779474164552,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_a2q7q3",
+    "id": "crnk_mry03fru_mh1im2",
     "name": "K25.ai",
     "description": "Rating: 33/1000 | k-25-ai | $6.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1045,10 +1045,10 @@
     ],
     "links": {},
     "discoveredAt": 1779465705304,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_udjk49",
+    "id": "crnk_mry03fru_8se7ym",
     "name": "Grove",
     "description": "Rating: 5/1000 | grove-finance | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1063,10 +1063,10 @@
     ],
     "links": {},
     "discoveredAt": 1779386212663,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_axrlxx",
+    "id": "crnk_mry03fru_hnisqm",
     "name": "Tangent",
     "description": "Rating: 1/1000 | tangent-finance | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1081,10 +1081,10 @@
     ],
     "links": {},
     "discoveredAt": 1779381979054,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_h2h1hl",
+    "id": "crnk_mry03fru_a9ri8x",
     "name": "Tomoland",
     "description": "Rating: 15/1000 | tomoland | $2.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1099,10 +1099,10 @@
     ],
     "links": {},
     "discoveredAt": 1779295820352,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_fssc4y",
+    "id": "crnk_mry03fru_d2ko17",
     "name": "Trepa",
     "description": "Rating: 15/1000 | trepa | $670.0K raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1117,10 +1117,10 @@
     ],
     "links": {},
     "discoveredAt": 1779124053183,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_bzpvqf",
+    "id": "crnk_mry03fru_q3spwq",
     "name": "Nof1",
     "description": "Rating: 22/1000 | nof-1 | $15.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1135,10 +1135,10 @@
     ],
     "links": {},
     "discoveredAt": 1779090068899,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_fjfeu8",
+    "id": "crnk_mry03frt_pgp78l",
     "name": "Imperial",
     "description": "Rating: 9/1000 | imperial | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1153,10 +1153,10 @@
     ],
     "links": {},
     "discoveredAt": 1778786238532,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_m9s049",
+    "id": "crnk_mry03fru_mrfc9k",
     "name": "Charms AI",
     "description": "Rating: 10/1000 | charms-ai | $1.5M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1171,10 +1171,10 @@
     ],
     "links": {},
     "discoveredAt": 1778700877524,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_paukrl",
+    "id": "crnk_mry03fru_oojdti",
     "name": "Aurus",
     "description": "Rating: 22/1000 | aurus-sol | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1189,10 +1189,10 @@
     ],
     "links": {},
     "discoveredAt": 1778516169003,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_a5pq6q",
+    "id": "crnk_mry03fru_rzwazu",
     "name": "Slush",
     "description": "Rating: 24/1000 | slush-wallet | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1207,10 +1207,10 @@
     ],
     "links": {},
     "discoveredAt": 1778514762928,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_dj7hor",
+    "id": "crnk_mry03fru_fjx41z",
     "name": "Hash",
     "description": "Rating: 24/1000 | hash-mining | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1225,10 +1225,10 @@
     ],
     "links": {},
     "discoveredAt": 1778501473880,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_fdk6md",
+    "id": "crnk_mry03frt_yvebud",
     "name": "JTX",
     "description": "Rating: 28/1000 | jtx-trade | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1243,10 +1243,10 @@
     ],
     "links": {},
     "discoveredAt": 1778256673292,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_ueknli",
+    "id": "crnk_mry03fru_tx46l7",
     "name": "Caster",
     "description": "Rating: 21/1000 | caster | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1261,10 +1261,10 @@
     ],
     "links": {},
     "discoveredAt": 1778094142859,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_d9x7bg",
+    "id": "crnk_mry03fru_hfobsn",
     "name": "Elastics",
     "description": "Rating: 23/1000 | elastics | $2.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1279,10 +1279,10 @@
     ],
     "links": {},
     "discoveredAt": 1778093056273,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_1ylvtt",
+    "id": "crnk_mry03fru_eghzxd",
     "name": "Shift",
     "description": "Rating: 34/1000 | shiftrwa | $500.0K raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1297,10 +1297,10 @@
     ],
     "links": {},
     "discoveredAt": 1778007651127,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_7g133n",
+    "id": "crnk_mry03fru_ojgv1v",
     "name": "HertzFlow",
     "description": "Rating: 29/1000 | hertzflow | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1315,10 +1315,10 @@
     ],
     "links": {},
     "discoveredAt": 1778006021377,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_7mxvpb",
+    "id": "crnk_mry03fru_o5yih9",
     "name": "Exponent",
     "description": "Rating: 22/1000 | exponent | $7.1M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1333,10 +1333,10 @@
     ],
     "links": {},
     "discoveredAt": 1777913885295,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_janrg5",
+    "id": "crnk_mry03fru_25k8eb",
     "name": "Spout Finance",
     "description": "Rating: 7/1000 | spout-finance | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1351,10 +1351,10 @@
     ],
     "links": {},
     "discoveredAt": 1777652038593,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_05m5ts",
+    "id": "crnk_mry03fru_tvjh9q",
     "name": "Fortune Protocol",
     "description": "Rating: 7/1000 | fortune-protocol | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1369,10 +1369,10 @@
     ],
     "links": {},
     "discoveredAt": 1777565900356,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_0ipk9r",
+    "id": "crnk_mry03fru_gul6nk",
     "name": "Netrun",
     "description": "Rating: 58/1000 | netrun | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1387,10 +1387,10 @@
     ],
     "links": {},
     "discoveredAt": 1777394840682,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_lfcw32",
+    "id": "crnk_mry03fru_joht7j",
     "name": "Sushi",
     "description": "Rating: 3/1000 | sushi | $3.3M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1405,10 +1405,10 @@
     ],
     "links": {},
     "discoveredAt": 1777311259785,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_k4w61s",
+    "id": "crnk_mry03fru_dvh7dw",
     "name": "Janus DeFi",
     "description": "Rating: 10/1000 | janus-defi | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1423,10 +1423,10 @@
     ],
     "links": {},
     "discoveredAt": 1776961382053,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_hzzku5",
+    "id": "crnk_mry03fru_97i7hl",
     "name": "ULTRADE",
     "description": "Rating: 21/1000 | ultrade | $2.4M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1441,10 +1441,10 @@
     ],
     "links": {},
     "discoveredAt": 1776959245876,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_jhl2g8",
+    "id": "crnk_mry03fru_13xxqy",
     "name": "AlphaNet",
     "description": "Rating: 7/1000 | alphanet | $10.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1459,10 +1459,10 @@
     ],
     "links": {},
     "discoveredAt": 1776787066036,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_zpi86k",
+    "id": "crnk_mry03fru_p3ika4",
     "name": "Fact Machine",
     "description": "Rating: 12/1000 | fact-machine | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1477,10 +1477,10 @@
     ],
     "links": {},
     "discoveredAt": 1776783198936,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_pb2cta",
+    "id": "crnk_mry03fru_6m7ko8",
     "name": "Kairo",
     "description": "Rating: 18/1000 | kairo | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1495,10 +1495,10 @@
     ],
     "links": {},
     "discoveredAt": 1776674150551,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_g632fh",
+    "id": "crnk_mry03fru_ot7q3y",
     "name": "Noah AI",
     "description": "Rating: 22/1000 | noah-ai | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1513,10 +1513,10 @@
     ],
     "links": {},
     "discoveredAt": 1776440993896,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_a0vr7s",
+    "id": "crnk_mry03fru_agvmuz",
     "name": "AEON",
     "description": "Rating: 18/1000 | aeon-xyz | $8.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1531,10 +1531,10 @@
     ],
     "links": {},
     "discoveredAt": 1776439793019,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_9tafi1",
+    "id": "crnk_mry03fru_0kpkgy",
     "name": "predit.market",
     "description": "Rating: 0/1000 | predit-market | $2.8M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1549,10 +1549,10 @@
     ],
     "links": {},
     "discoveredAt": 1776355749964,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_t57ga5",
+    "id": "crnk_mry03fru_u42m9r",
     "name": "Jurassic Finance",
     "description": "Rating: 17/1000 | jurassic-finance | $15.3M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1567,10 +1567,10 @@
     ],
     "links": {},
     "discoveredAt": 1776269017508,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_r4ke7z",
+    "id": "crnk_mry03fru_r0rz3y",
     "name": "Nava AI",
     "description": "Rating: 41/1000 | nava-ai | $8.3M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1585,10 +1585,10 @@
     ],
     "links": {},
     "discoveredAt": 1776261418336,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_mb5hbz",
+    "id": "crnk_mry03fru_k93gl2",
     "name": "Unicity",
     "description": "Rating: 47/1000 | unicity | $3.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1603,10 +1603,10 @@
     ],
     "links": {},
     "discoveredAt": 1776180229408,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_79vq2z",
+    "id": "crnk_mry03fru_xpj0cp",
     "name": "Ralio",
     "description": "Rating: 3/1000 | ralio | $2.5M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1621,10 +1621,10 @@
     ],
     "links": {},
     "discoveredAt": 1776176263487,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_gzaqae",
+    "id": "crnk_mry03fru_qas73j",
     "name": "Onsight",
     "description": "Rating: 7/1000 | onsight | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1639,10 +1639,10 @@
     ],
     "links": {},
     "discoveredAt": 1776173476079,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_dyqf0o",
+    "id": "crnk_mry03fru_8hgdaf",
     "name": "Cronos",
     "description": "Rating: 3/1000 | crypto-com-cro | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1657,10 +1657,10 @@
     ],
     "links": {},
     "discoveredAt": 1776090241183,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_9d3ihq",
+    "id": "crnk_mry03fru_gcsmwr",
     "name": "Saturn",
     "description": "Rating: 12/1000 | saturn-protocol | $2.8M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1675,10 +1675,10 @@
     ],
     "links": {},
     "discoveredAt": 1775837287660,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_fhakr1",
+    "id": "crnk_mry03fru_d94r2b",
     "name": "Knidos",
     "description": "Rating: 30/1000 | knidoslabs | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1693,10 +1693,10 @@
     ],
     "links": {},
     "discoveredAt": 1775825532070,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_7tfy3h",
+    "id": "crnk_mry03fru_rf04b1",
     "name": "Splyce Finance",
     "description": "Rating: 16/1000 | splyce-finance | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1711,10 +1711,10 @@
     ],
     "links": {},
     "discoveredAt": 1775742596053,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_xesuai",
+    "id": "crnk_mry03fru_crrrlt",
     "name": "Swapper Finance",
     "description": "Rating: 9/1000 | swapper-finance | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1729,10 +1729,10 @@
     ],
     "links": {},
     "discoveredAt": 1775658517506,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_4oujmz",
+    "id": "crnk_mry03fru_sqkkyq",
     "name": "CARTE",
     "description": "Rating: 19/1000 | carte | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1747,10 +1747,10 @@
     ],
     "links": {},
     "discoveredAt": 1775475220161,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_0bvqzk",
+    "id": "crnk_mry03fru_8mylgk",
     "name": "Pixie Chess",
     "description": "Rating: 29/1000 | pixie-chess | $5.2M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1765,10 +1765,10 @@
     ],
     "links": {},
     "discoveredAt": 1775228084178,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8u_ue4976",
+    "id": "crnk_mry03frt_mvkz7d",
     "name": "AmericanFortress",
     "description": "Rating: 32/1000 | american-fortress | $8.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1783,10 +1783,10 @@
     ],
     "links": {},
     "discoveredAt": 1775226617934,
-    "lastChecked": 1784834358798
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_0auchs",
+    "id": "crnk_mry03fru_k9442m",
     "name": "Derivio",
     "description": "Rating: 17/1000 | derivio | $6.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1801,10 +1801,10 @@
     ],
     "links": {},
     "discoveredAt": 1774971797978,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_v0jumv",
+    "id": "crnk_mry03fru_2bkkpr",
     "name": "dFusion AI",
     "description": "Rating: 102/1000 | dfusion-ai | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1819,10 +1819,10 @@
     ],
     "links": {},
     "discoveredAt": 1774961188906,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_3dlq1j",
+    "id": "crnk_mry03fru_a7qr9g",
     "name": "OmenX",
     "description": "Rating: 27/1000 | omenx | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1837,10 +1837,10 @@
     ],
     "links": {},
     "discoveredAt": 1774951139126,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_qgmx2j",
+    "id": "crnk_mry03fru_zylq0i",
     "name": "BRIX",
     "description": "Rating: 15/1000 | brix-money | $5.5M raised | Tasks: Fill The Form | Effort: 0pts / 5min",
     "source": "web_scrape",
@@ -1855,10 +1855,10 @@
     ],
     "links": {},
     "discoveredAt": 1774885065852,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8u_a7rk06",
+    "id": "crnk_mry03frt_pt8xt9",
     "name": "Startale",
     "description": "Rating: 34/1000 | startale-labs | $70.0M raised | Tasks: Gaming, Liquidity, Staking, Fill The Form, Bounty Platforms, Mainnet | Effort: 10pts / 42min",
     "source": "web_scrape",
@@ -1873,10 +1873,10 @@
     ],
     "links": {},
     "discoveredAt": 1774884402000,
-    "lastChecked": 1784834358798
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_pt9nqt",
+    "id": "crnk_mry03fru_rbzcpa",
     "name": "ip.world",
     "description": "Rating: 23/1000 | ip-world | Tasks: Fill The Form | Effort: 0pts / 2min",
     "source": "web_scrape",
@@ -1891,10 +1891,10 @@
     ],
     "links": {},
     "discoveredAt": 1774879283951,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_1we093",
+    "id": "crnk_mry03fru_4z7pu0",
     "name": "3F",
     "description": "Rating: 17/1000 | 3-f-labs | $4.8M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1909,10 +1909,10 @@
     ],
     "links": {},
     "discoveredAt": 1774449667434,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_qkho8n",
+    "id": "crnk_mry03fru_95tn3o",
     "name": "Watch.fun",
     "description": "Rating: 28/1000 | watch-fun | $8.6M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1927,10 +1927,10 @@
     ],
     "links": {},
     "discoveredAt": 1774449063223,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_qfypiu",
+    "id": "crnk_mry03fru_4ae0de",
     "name": "Golden Tides",
     "description": "Rating: 31/1000 | golden-tides | $3.5M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1945,10 +1945,10 @@
     ],
     "links": {},
     "discoveredAt": 1774447575283,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_xwsntn",
+    "id": "crnk_mry03fru_3wbzuo",
     "name": "Lora Finance",
     "description": "Rating: 38/1000 | lora-finance | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1963,10 +1963,10 @@
     ],
     "links": {},
     "discoveredAt": 1774367743098,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8u_3yooz8",
+    "id": "crnk_mry03frt_1c5rhi",
     "name": "SwarmBase",
     "description": "Rating: 0/1000 | swarm-base | $7.0M raised | Tasks: Mint NFT | Effort: 1pts / 2min",
     "source": "web_scrape",
@@ -1981,10 +1981,10 @@
     ],
     "links": {},
     "discoveredAt": 1774020837962,
-    "lastChecked": 1784834358798
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_gx2xsn",
+    "id": "crnk_mry03fru_i6oimq",
     "name": "Watt2Trade",
     "description": "Rating: 53/1000 | watt-2-trade | $1.6M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -1999,10 +1999,10 @@
     ],
     "links": {},
     "discoveredAt": 1773845613764,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_zsz2as",
+    "id": "crnk_mry03fru_vlqnmd",
     "name": "Beep",
     "description": "Rating: 45/1000 | beep-lab | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2017,10 +2017,10 @@
     ],
     "links": {},
     "discoveredAt": 1773682074459,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_rnu26a",
+    "id": "crnk_mry03fru_g4c0vw",
     "name": "GoDark",
     "description": "Rating: 40/1000 | godark | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2035,10 +2035,10 @@
     ],
     "links": {},
     "discoveredAt": 1773673551590,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_mqcr86",
+    "id": "crnk_mry03fru_kghvkw",
     "name": "Backed (xStocks)",
     "description": "Rating: 119/1000 | backed | $12.7M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2053,10 +2053,10 @@
     ],
     "links": {},
     "discoveredAt": 1773247560746,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_jt33k6",
+    "id": "crnk_mry03fru_m8ygt1",
     "name": "blinq",
     "description": "Rating: 13/1000 | blinq | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2071,10 +2071,10 @@
     ],
     "links": {},
     "discoveredAt": 1773240941047,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_cdg1zr",
+    "id": "crnk_mry03fru_lkvxbq",
     "name": "Utexo",
     "description": "Rating: 56/1000 | utexo | $7.5M raised | Tasks: Getting a role, Social, Ambassador program | Effort: 0pts / 3min",
     "source": "web_scrape",
@@ -2089,10 +2089,10 @@
     ],
     "links": {},
     "discoveredAt": 1773228250176,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_pbmsme",
+    "id": "crnk_mry03fru_v2z66m",
     "name": "Limit Break",
     "description": "Rating: 34/1000 | limit-break | $200.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2107,10 +2107,10 @@
     ],
     "links": {},
     "discoveredAt": 1773148936380,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_taqes7",
+    "id": "crnk_mry03fru_lpwgpk",
     "name": "KAST",
     "description": "Rating: 15/1000 | kast | $90.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2125,10 +2125,10 @@
     ],
     "links": {},
     "discoveredAt": 1773071844437,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_u11iic",
+    "id": "crnk_mry03fru_qni4k2",
     "name": "Shelby",
     "description": "Rating: 22/1000 | shelby | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2143,10 +2143,10 @@
     ],
     "links": {},
     "discoveredAt": 1773063175090,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_sp4228",
+    "id": "crnk_mry03fru_cvijuk",
     "name": "Byzanlink",
     "description": "Rating: 34/1000 | byzanlink | $1.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2161,10 +2161,10 @@
     ],
     "links": {},
     "discoveredAt": 1772807429656,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_r8pxnd",
+    "id": "crnk_mry03fru_qbuj9r",
     "name": "Hit",
     "description": "Rating: 16/1000 | hit-one | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2179,10 +2179,10 @@
     ],
     "links": {},
     "discoveredAt": 1772805137632,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_slzmyh",
+    "id": "crnk_mry03fru_9vi4oj",
     "name": "QFEX",
     "description": "Rating: 21/1000 | qfex | $9.5M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2197,10 +2197,10 @@
     ],
     "links": {},
     "discoveredAt": 1772804445734,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_dg1jc6",
+    "id": "crnk_mry03fru_xsbyr8",
     "name": "Sonic",
     "description": "Rating: 15/1000 | sonic | $101.5M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2215,10 +2215,10 @@
     ],
     "links": {},
     "discoveredAt": 1772722424787,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_yyvji7",
+    "id": "crnk_mry03fru_i613jf",
     "name": "PlutonAI",
     "description": "Rating: 29/1000 | plutonai | $2.7M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2233,10 +2233,10 @@
     ],
     "links": {},
     "discoveredAt": 1772638205681,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_hdk7vz",
+    "id": "crnk_mry03fru_1dpyxg",
     "name": "Stormrae",
     "description": "Rating: 8/1000 | stormrae | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2251,10 +2251,10 @@
     ],
     "links": {},
     "discoveredAt": 1772554382002,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_87st0t",
+    "id": "crnk_mry03fru_vu84fx",
     "name": "t54 Labs",
     "description": "Rating: 18/1000 | t-54-labs | $5.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2269,10 +2269,10 @@
     ],
     "links": {},
     "discoveredAt": 1772471555251,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_szeis8",
+    "id": "crnk_mry03fru_z9bjm5",
     "name": "Miracle",
     "description": "Rating: 6/1000 | miracle-trade | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2287,12 +2287,12 @@
     ],
     "links": {},
     "discoveredAt": 1772469878413,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8u_tkih6r",
+    "id": "crnk_mry03frt_4gxwo9",
     "name": "Apyx",
-    "description": "Rating: 43/1000 | apyx | $3.0M raised | Effort: 0pts / 0min",
+    "description": "Rating: 42/1000 | apyx | $3.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
     "sourceUrl": "https://cryptorank.io/price/apyx",
     "chains": [
@@ -2305,10 +2305,10 @@
     ],
     "links": {},
     "discoveredAt": 1772198834269,
-    "lastChecked": 1784834358798
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_cu7ybp",
+    "id": "crnk_mry03fru_yrvr6s",
     "name": "InventMoney",
     "description": "Rating: 37/1000 | the-invention-network | $4.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2323,10 +2323,10 @@
     ],
     "links": {},
     "discoveredAt": 1772113389684,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_dnaxdi",
+    "id": "crnk_mry03fru_yghxsp",
     "name": "Kash",
     "description": "Rating: 17/1000 | kash | $2.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2341,10 +2341,10 @@
     ],
     "links": {},
     "discoveredAt": 1772034325285,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_v9wrtz",
+    "id": "crnk_mry03fru_5igd2c",
     "name": "MWX",
     "description": "Rating: 11/1000 | mwx | $700.0K raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2359,10 +2359,10 @@
     ],
     "links": {},
     "discoveredAt": 1771428462481,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_bm2z3m",
+    "id": "crnk_mry03fru_4aybca",
     "name": "PRED",
     "description": "Rating: 17/1000 | pred | $2.5M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2377,10 +2377,10 @@
     ],
     "links": {},
     "discoveredAt": 1771420570291,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8u_gh38rz",
+    "id": "crnk_mry03frt_30cuz4",
     "name": "Axis AI",
     "description": "Rating: 22/1000 | axis-ai | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2395,10 +2395,10 @@
     ],
     "links": {},
     "discoveredAt": 1771415986539,
-    "lastChecked": 1784834358798
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_v4nc2l",
+    "id": "crnk_mry03fru_hmq2nu",
     "name": "Horizen",
     "description": "Rating: 24/1000 | zencash | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2413,10 +2413,10 @@
     ],
     "links": {},
     "discoveredAt": 1771346860525,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_1at1gi",
+    "id": "crnk_mry03fru_z4wu79",
     "name": "Clash of Coins",
     "description": "Rating: 21/1000 | clash-of-coins | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2431,10 +2431,10 @@
     ],
     "links": {},
     "discoveredAt": 1771262904936,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_us4p2j",
+    "id": "crnk_mry03fru_q3y8ej",
     "name": "Dreamcash",
     "description": "Rating: 56/1000 | dreamcash | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2449,10 +2449,10 @@
     ],
     "links": {},
     "discoveredAt": 1771262014972,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8u_wrsosi",
+    "id": "crnk_mry03frt_3e6gh5",
     "name": "Canopy Network",
     "description": "Rating: 74/1000 | canopy-network | $8.5M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2467,10 +2467,10 @@
     ],
     "links": {},
     "discoveredAt": 1771258323830,
-    "lastChecked": 1784834358798
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_f6uj38",
+    "id": "crnk_mry03fru_mllm5t",
     "name": "Mahojin",
     "description": "Rating: 20/1000 | mahojin | $5.5M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2485,10 +2485,10 @@
     ],
     "links": {},
     "discoveredAt": 1771249704007,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_lm9kpu",
+    "id": "crnk_mry03fru_nwxuk1",
     "name": "SUMEX",
     "description": "Rating: 50/1000 | sumex | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2503,10 +2503,10 @@
     ],
     "links": {},
     "discoveredAt": 1771001455205,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_kunwu0",
+    "id": "crnk_mry03fru_woiwig",
     "name": "Vibe Trading",
     "description": "Rating: 18/1000 | vibe-trading | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2521,10 +2521,10 @@
     ],
     "links": {},
     "discoveredAt": 1770998088713,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_qdxul0",
+    "id": "crnk_mry03fru_vg8agt",
     "name": "Bullshot",
     "description": "Rating: 7/1000 | bullshot | $7.7M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2539,10 +2539,10 @@
     ],
     "links": {},
     "discoveredAt": 1770907877898,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_esye3m",
+    "id": "crnk_mry03frt_5vlb68",
     "name": "Robinhood Chain",
     "description": "Rating: 160/1000 | robinhood-chain | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2557,10 +2557,10 @@
     ],
     "links": {},
     "discoveredAt": 1770900358677,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_k9r3v1",
+    "id": "crnk_mry03frt_ssl879",
     "name": "Monaco",
     "description": "Rating: 76/1000 | monaco-trading | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2575,10 +2575,10 @@
     ],
     "links": {},
     "discoveredAt": 1770895151980,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743577
   },
   {
-    "id": "crnk_mrxwal8v_yif11u",
+    "id": "crnk_mry03fru_ypd0di",
     "name": "dTelecom",
     "description": "Rating: 128/1000 | dtelecom | $1.2M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2593,10 +2593,10 @@
     ],
     "links": {},
     "discoveredAt": 1770823182101,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_82sdmk",
+    "id": "crnk_mry03fru_61jg9f",
     "name": "Quip Network",
     "description": "Rating: 96/1000 | quip-network | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2611,10 +2611,10 @@
     ],
     "links": {},
     "discoveredAt": 1770817237633,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_hrm0m0",
+    "id": "crnk_mry03fru_tetvil",
     "name": "Action Model",
     "description": "Rating: 65/1000 | action-model | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2629,10 +2629,10 @@
     ],
     "links": {},
     "discoveredAt": 1770742247731,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_ia7h5s",
+    "id": "crnk_mry03fru_6e6e5n",
     "name": "Tenbin Labs",
     "description": "Rating: 28/1000 | tenbin-labs | $7.1M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2647,10 +2647,10 @@
     ],
     "links": {},
     "discoveredAt": 1770738750802,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_0fkpuc",
+    "id": "crnk_mry03fru_sutsbc",
     "name": "Fair Shares",
     "description": "Rating: 22/1000 | fair-shares | Tasks: Social, Ambassador program | Effort: 0pts / 10min",
     "source": "web_scrape",
@@ -2665,10 +2665,10 @@
     ],
     "links": {},
     "discoveredAt": 1770730705640,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_8iz246",
+    "id": "crnk_mry03fru_jdpskg",
     "name": "Oasis",
     "description": "Rating: 27/1000 | oasis-network | $46.0M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2683,10 +2683,10 @@
     ],
     "links": {},
     "discoveredAt": 1770724815497,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_iwaf8n",
+    "id": "crnk_mry03fru_lc9w9k",
     "name": "Blockcast",
     "description": "Rating: 8/1000 | blockcast | $2.9M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2701,10 +2701,10 @@
     ],
     "links": {},
     "discoveredAt": 1770630799135,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_jbl3l4",
+    "id": "crnk_mry03fru_74kl4x",
     "name": "Ratio",
     "description": "Rating: 13/1000 | ratio | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2719,10 +2719,10 @@
     ],
     "links": {},
     "discoveredAt": 1770313415482,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_2sm4jh",
+    "id": "crnk_mry03fru_fih7g8",
     "name": "OptimAI Network",
     "description": "Rating: 50/1000 | optimai-network | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2737,10 +2737,10 @@
     ],
     "links": {},
     "discoveredAt": 1770220462381,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_qmbzxh",
+    "id": "crnk_mry03fru_j9s66d",
     "name": "Outcome",
     "description": "Rating: 29/1000 | outcome | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2755,10 +2755,10 @@
     ],
     "links": {},
     "discoveredAt": 1770130447771,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_2icfkc",
+    "id": "crnk_mry03fru_2imuux",
     "name": "Monday Trade",
     "description": "Rating: 27/1000 | monday-trade | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2773,10 +2773,10 @@
     ],
     "links": {},
     "discoveredAt": 1770115166357,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_uevhhz",
+    "id": "crnk_mry03fru_b9idgf",
     "name": "BOINK",
     "description": "Rating: 33/1000 | boink | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2791,10 +2791,10 @@
     ],
     "links": {},
     "discoveredAt": 1770051726188,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_3lzvy0",
+    "id": "crnk_mry03fru_sk4lru",
     "name": "Ronin",
     "description": "Rating: 28/1000 | ronin | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2809,10 +2809,10 @@
     ],
     "links": {},
     "discoveredAt": 1769745450592,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_m56cv3",
+    "id": "crnk_mry03fru_ov05qu",
     "name": "Upshot",
     "description": "Rating: 27/1000 | upshot | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2827,10 +2827,10 @@
     ],
     "links": {},
     "discoveredAt": 1769740687426,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_pi9yql",
+    "id": "crnk_mry03fru_pifhee",
     "name": "ARO Network",
     "description": "Rating: 87/1000 | aro-network | $7.1M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2845,10 +2845,10 @@
     ],
     "links": {},
     "discoveredAt": 1769471333348,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_0q5815",
+    "id": "crnk_mry03fru_tvo2aw",
     "name": "Mocaverse",
     "description": "Rating: 32/1000 | mocaverse | $46.9M raised | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2863,10 +2863,10 @@
     ],
     "links": {},
     "discoveredAt": 1769457526011,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   },
   {
-    "id": "crnk_mrxwal8v_kx31ek",
+    "id": "crnk_mry03fru_lz68k0",
     "name": "Corners",
     "description": "Rating: 7/1000 | corners-market | Effort: 0pts / 0min",
     "source": "web_scrape",
@@ -2881,6 +2881,6 @@
     ],
     "links": {},
     "discoveredAt": 1769445026800,
-    "lastChecked": 1784834358799
+    "lastChecked": 1784840743578
   }
 ]
