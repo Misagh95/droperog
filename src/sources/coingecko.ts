@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AirdropProject } from '../types';
+import { AirdropProject, NewListing } from '../types';
 import { generateId, extractChains } from '../utils';
 
 const API_BASE = 'https://api.coingecko.com/api/v3';
@@ -37,6 +37,49 @@ interface CoinDetails {
 
 export class CoinGeckoSource {
   private cache: Set<string> = new Set();
+  private newListingCache: NewListing[] = [];
+
+  async fetchNewListings(): Promise<NewListing[]> {
+    if (this.newListingCache.length > 0) return this.newListingCache;
+
+    try {
+      const res = await axios.get(`${API_BASE}/coins/list/new`, {
+        headers: { 'Accept': 'application/json' },
+        timeout: 15000,
+      });
+
+      if (!Array.isArray(res.data)) return [];
+
+      const listings: NewListing[] = res.data.slice(0, 30).map((coin: any) => ({
+        id: coin.id,
+        name: coin.name,
+        symbol: coin.symbol,
+        price: 0,
+        change24h: 0,
+        marketCap: 0,
+        discoveredAt: Date.now(),
+      }));
+
+      this.newListingCache = listings;
+      return listings;
+    } catch {
+      // Fallback: try /search/trending as proxy for new coins
+      try {
+        const trending = await this.getTrending();
+        const listings: NewListing[] = trending.slice(0, 30).map((coin: any) => ({
+          id: coin.id,
+          name: coin.name,
+          symbol: coin.symbol,
+          price: 0,
+          change24h: 0,
+          marketCap: coin.market_cap_rank || 0,
+          discoveredAt: Date.now(),
+        }));
+        this.newListingCache = listings;
+        return listings;
+      } catch { return []; }
+    }
+  }
 
   async fetchAirdropCandidates(): Promise<AirdropProject[]> {
     const projects: AirdropProject[] = [];

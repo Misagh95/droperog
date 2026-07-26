@@ -2,23 +2,30 @@ import { RSSSource } from './sources/rss';
 import { TwitterSource } from './sources/twitter';
 import { AlphaDropsSource } from './sources/alphadrops';
 import { CryptoRankSource } from './sources/cryptorank';
+import { CoinGeckoSource } from './sources/coingecko';
 import { TrustChecker } from './trustChecker';
 import { ChecklistManager } from './checklist';
 import { WalletAnalyzer } from './walletAnalyzer';
+import { MarketData } from './market';
+import { GasTracker } from './gasTracker';
 import { loadConfig } from './config';
-import { AirdropProject, ProjectChecklist, SearchFilter } from './types';
+import { AirdropProject, ProjectChecklist, SearchFilter, NewListing } from './types';
 import { emojiForStatus, chainToEmoji, bar, truncate, getTimeAgo } from './utils';
 
 export class DroperOG {
   private rss: RSSSource;
   private twitter: TwitterSource;
   private cryptorank: CryptoRankSource;
+  private coingecko: CoinGeckoSource;
   private alphadrops: AlphaDropsSource;
   private trustChecker: TrustChecker;
   private checklist: ChecklistManager;
   private walletAnalyzer: WalletAnalyzer;
+  market: MarketData;
+  gas: GasTracker;
   private config = loadConfig();
   projects: AirdropProject[] = [];
+  newListings: NewListing[] = [];
   knownIds = new Set<string>();
 
   constructor(apiKey?: string) {
@@ -31,10 +38,13 @@ export class DroperOG {
       'airdrops_king',
     ]);
     this.cryptorank = new CryptoRankSource();
+    this.coingecko = new CoinGeckoSource();
     this.alphadrops = new AlphaDropsSource();
     this.trustChecker = new TrustChecker();
     this.checklist = new ChecklistManager();
     this.walletAnalyzer = new WalletAnalyzer();
+    this.market = new MarketData();
+    this.gas = new GasTracker();
   }
 
   async runOnce(): Promise<AirdropProject[]> {
@@ -52,6 +62,20 @@ export class DroperOG {
     ]);
 
     let allProjects = [...rss, ...twitter, ...cryptoRank, ...alphaDrops];
+
+    // Market snapshot
+    console.log('');
+    await this.market.printFearGreed();
+    await this.gas.printGas();
+
+    // New listings on CoinGecko
+    try {
+      const listings = await this.coingecko.fetchNewListings();
+      if (listings.length > 0) {
+        this.newListings = listings;
+        console.log(`  🆕 ${listings.length} recent new token listings detected`);
+      }
+    } catch { /* ignore */ }
 
     // Filter projects older than 6 months
     const sixMonthsAgo = Date.now() - 180 * 24 * 60 * 60 * 1000;

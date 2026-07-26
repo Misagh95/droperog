@@ -60,6 +60,13 @@ async function main() {
       totalValue,
     ));
 
+    // Market snapshot
+    const [fng, gasData] = await Promise.all([
+      app.market.getFearGreedIndex(),
+      app.gas.getAllGas(),
+    ]);
+    notifyPromises.push(telegram.notifyMarketSnapshot(fng, gasData, app.newListings));
+
     await Promise.all(notifyPromises);
   } else {
     console.log(`  First run — state initialized with ${app.knownIds.size} IDs. No notifications sent.`);

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AirdropProject } from './types';
+import { AirdropProject, FearGreedData, GasData, NewListing } from './types';
 import { emojiForStatus, chainToEmoji, bar } from './utils';
 
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '';
@@ -186,6 +186,36 @@ export class TelegramNotifier {
       `⏰ Urgent: ${urgent}\n` +
       `🚨 Security Issues: ${risky} risky + ${linkIssues} link warnings\n\n` +
       `💵 Total Est. Value: $${totalValue.toLocaleString()}`;
+
+    await this.sendMessage(msg);
+  }
+
+  async notifyMarketSnapshot(fng: FearGreedData | null, gasData: GasData[], newListings: NewListing[]): Promise<void> {
+    if (!this.enabled) return;
+
+    let msg = `🌍 <b>DroperOG — Market Snapshot</b>\n\n`;
+
+    if (fng) {
+      const emoji = fng.classification.includes('Fear') ? '😱' : fng.classification.includes('Greed') ? '🤑' : '😐';
+      msg += `${emoji} <b>Fear & Greed:</b> ${fng.value}/100 — ${fng.classification}\n`;
+    }
+
+    if (gasData.length > 0) {
+      msg += `\n⛽ <b>Gas Prices:</b>\n`;
+      for (const g of gasData) {
+        const ge = g.standard <= 20 ? '🟢' : g.standard <= 50 ? '🟡' : '🔴';
+        msg += `  ${ge} ${g.chain}: ${g.standard} gwei (fast: ${g.fast})\n`;
+      }
+    }
+
+    if (newListings.length > 0) {
+      const top = newListings.slice(0, 5);
+      msg += `\n🆕 <b>Recent New Listings:</b>\n`;
+      for (const l of top) {
+        msg += `  • ${l.name} (${l.symbol.toUpperCase()})\n`;
+      }
+      if (newListings.length > 5) msg += `  ... and ${newListings.length - 5} more\n`;
+    }
 
     await this.sendMessage(msg);
   }

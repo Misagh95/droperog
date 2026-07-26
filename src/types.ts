@@ -157,6 +157,29 @@ export interface WalletProfile {
   analyzedAt: number;
 }
 
+export interface FearGreedData {
+  value: number;
+  classification: string;
+  timestamp: string;
+}
+
+export interface GasData {
+  safe: number;
+  standard: number;
+  fast: number;
+  chain: string;
+}
+
+export interface NewListing {
+  id: string;
+  name: string;
+  symbol: string;
+  price: number;
+  change24h: number;
+  marketCap: number;
+  discoveredAt: number;
+}
+
 export interface EligibilityResult {
   projectId: string;
   projectName: string;
