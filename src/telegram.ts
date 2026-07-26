@@ -83,7 +83,7 @@ export class TelegramNotifier {
 
     // Register built-in commands
     this.onCommand('start', async (chatId) => {
-      return `🪂 <b>DroperOG Bot</b>
+      return `🪂 DroperOG Bot
 
 /subscribe — Get airdrop alerts
 /unsubscribe — Stop alerts
@@ -93,36 +93,36 @@ export class TelegramNotifier {
     });
 
     this.onCommand('help', async (chatId) => {
-      return `🪂 <b>DroperOG Commands</b>
+      return `🪂 DroperOG Commands
 
 /subscribe — Subscribe to airdrop alerts
 /unsubscribe — Unsubscribe from alerts
-/latest — Show latest ${Math.min(5, latestProjects().length)} airdrops
+/latest — Show top ${Math.min(5, latestProjects().length)} airdrops
 /status — Show bot status & stats`;
     });
 
     this.onCommand('subscribe', async (chatId) => {
       if (!this.isAdmin(chatId)) return '⛔ Access denied.';
       if (this.addSubscriber(chatId)) return '✅ Subscribed to airdrop alerts!';
-      return 'ℹ️ Already subscribed.';
+      return 'Already subscribed.';
     });
 
     this.onCommand('unsubscribe', async (chatId) => {
       if (this.removeSubscriber(chatId)) return '✅ Unsubscribed.';
-      return 'ℹ️ You are not subscribed.';
+      return 'Not subscribed.';
     });
 
     this.onCommand('latest', async (chatId) => {
       const projects = latestProjects();
-      if (!projects.length) return 'No airdrops found yet.';
+      if (!projects.length) return 'No airdrops yet.';
       const top = projects
         .sort((a, b) => (b.opportunityScore ?? 0) - (a.opportunityScore ?? 0))
         .slice(0, 5);
-      let msg = `🪂 <b>Latest Airdrops</b>\n`;
+      let msg = `🪂 Latest airdrops\n`;
       for (const p of top) {
         const ev = p.expectedValue ?? 0;
         const chains = p.chains.map(c => chainToEmoji(c)).join(' ');
-        msg += `\n<b>${p.name}</b>\n`;
+        msg += `\n${p.name}\n`;
         msg += `   🎯 ${p.opportunityScore ?? '?'}% · ✅ ${p.trustScore}% · ${chains}\n`;
         if (ev > 0) msg += `   💰 $${ev}\n`;
         msg += `   ${p.sourceUrl}\n`;
@@ -135,13 +135,12 @@ export class TelegramNotifier {
       const total = projects.length;
       const trusted = projects.filter(p => p.trustScore >= 70).length;
       const highVal = projects.filter(p => (p.expectedValue ?? 0) >= 500).length;
-      return `📊 <b>DroperOG Status</b>
+      return `📊 DroperOG
 
-👥 Subscribers: ${this.subscribers.length}
-🪂 Tracked: ${total}
-✅ Trusted (≥70%): ${trusted}
-💰 High Value: ${highVal}
-🆕 Subscribers: ${this.subscribers.length}`;
+Subscribers: ${this.subscribers.length}
+Tracked: ${total}
+Trusted: ${trusted}
+High value: ${highVal}`;
     });
 
     console.log('  [Telegram] Starting command polling...');
@@ -243,34 +242,24 @@ export class TelegramNotifier {
   // ── Notification Methods ──
 
   private formatProjectCard(p: AirdropProject, showDetail: boolean = false): string {
-    const statusEmoji = emojiForStatus(p.status);
     const chains = p.chains.map(c => chainToEmoji(c)).join(' ');
-    const trustBar = bar(p.trustScore);
-    const opp = p.opportunityScore ?? 50;
-    const oppBar = bar(opp);
     const risk = p.scamRisk ?? 'low';
-    const riskEmoji = risk === 'critical' ? '🔴' : risk === 'high' ? '🟠' : risk === 'medium' ? '🟡' : '🟢';
     const ev = p.expectedValue ?? 0;
     const vph = p.valuePerHour ?? 0;
     const lw = p.linkWarnings || [];
     const hasLinkIssue = lw.some(w => w.severity === 'high' || w.severity === 'critical');
 
-    let card = `\n${statusEmoji} <b>${p.name}</b>\n` +
-      `   🎯 Opp: ${oppBar} ${opp}% | ✅ Trust: ${trustBar} ${p.trustScore}%\n` +
-      `   ${riskEmoji} Risk: ${risk} | ${chains || '?'}`;
+    let card = `\n<b>${p.name}</b>\n` +
+      `   🎯 ${p.opportunityScore ?? '?'}% · ✅ ${p.trustScore}% · ${chains || '?'} · 🛡 ${risk}`;
 
     if (showDetail) {
-      const leg = p.legitimacyScore ?? '?';
-      const rw = p.rewardPotential ?? '?';
-      const ef = p.effortScore ?? '?';
-      const urg = p.urgencyScore ?? '?';
-      card += `\n   🎯 ${leg}% · 💰 ${rw}% · 💪 ${ef}% · ⏰ ${urg}%`;
+      card += `\n   Legitimacy: ${p.legitimacyScore ?? '?'}% · Reward: ${p.rewardPotential ?? '?'}% · Effort: ${p.effortScore ?? '?'}% · Urgency: ${p.urgencyScore ?? '?'}%`;
     }
 
-    if (ev > 0) card += `\n   💰 Est. Value: $${ev}${vph > 0 ? ` · $${vph}/hr` : ''}`;
+    if (ev > 0) card += `\n   💰 $${ev}${vph > 0 ? ` ($${vph}/hr)` : ''}`;
     if (p.tokenInfo?.symbol) card += `\n   Token: ${p.tokenInfo.symbol}`;
     card += `\n   ${p.sourceUrl}`;
-    if (hasLinkIssue) card += `\n   🔗 ⚠️ Suspicious link detected`;
+    if (hasLinkIssue) card += `\n   ⚠️ Suspicious link detected`;
     if (p.scamFlags.length > 0) card += `\n   ⚠️ ${p.scamFlags.join(', ')}`;
 
     return card;
@@ -279,44 +268,13 @@ export class TelegramNotifier {
   async notifyNewProjects(projects: AirdropProject[]): Promise<void> {
     if (!this.enabled || projects.length === 0) return;
 
-    const highOpp = projects.filter(p => (p.opportunityScore ?? 0) >= 75);
-    const criticalRisk = projects.filter(p => p.scamRisk === 'critical');
-    const urgent = projects.filter(p => (p.urgencyScore ?? 0) >= 70);
-
-    const header = `🪂 <b>DroperOG — ${projects.length} New Airdrops</b>`;
-    let detailLines = '';
-
+    const header = `🪂 ${projects.length} new airdrops found`;
     const sorted = [...projects].sort((a, b) => (b.opportunityScore ?? 0) - (a.opportunityScore ?? 0));
-    const top = sorted.slice(0, 8);
+    const top = sorted.slice(0, 5);
+    const body = top.map(p => this.formatProjectCard(p, true)).join('');
+    const more = sorted.length > 5 ? `\n\n+${sorted.length - 5} more` : '';
 
-    for (const p of top) {
-      const isTop = highOpp.includes(p);
-      const isRisk = criticalRisk.includes(p);
-      const isUrgent = urgent.includes(p);
-      const badge = isTop ? '🔥 ' : isRisk ? '🚨 ' : isUrgent ? '⏰ ' : '';
-      detailLines += `\n${badge}${this.formatProjectCard(p, true)}`;
-    }
-
-    if (sorted.length > 8) {
-      detailLines += `\n\n... and ${sorted.length - 8} more`;
-    }
-
-    if (highOpp.length > 0) {
-      detailLines += `\n\n🔥 <b>Top Opportunities:</b> ${highOpp.map(p => p.name).join(', ')}`;
-    }
-
-    if (criticalRisk.length > 0) {
-      detailLines += `\n\n🚨 <b>⚠️ Critical Risk Projects:</b> ${criticalRisk.map(p => p.name).join(', ')}`;
-    }
-
-    if (urgent.length > 0) {
-      detailLines += `\n\n⏰ <b>Urgent — Deadline Approaching:</b> ${urgent.map(p => p.name).join(', ')}`;
-    }
-
-    const chunks = this.chunkText(header + detailLines);
-    for (const chunk of chunks) {
-      await this.broadcast(chunk);
-    }
+    await this.broadcast(header + body + more);
   }
 
   async notifyUrgentProjects(projects: AirdropProject[]): Promise<void> {
@@ -332,10 +290,10 @@ export class TelegramNotifier {
     }
 
     const sorted = [...newUrgent].sort((a, b) => (b.urgencyScore ?? 0) - (a.urgencyScore ?? 0));
-    const header = `⏰ <b>DroperOG — ${newUrgent.length} Urgent Deadline${newUrgent.length > 1 ? 's' : ''}</b>\n`;
+    const header = `⏰ ${newUrgent.length} deadline${newUrgent.length > 1 ? 's' : ''} approaching\n`;
     const body = sorted.slice(0, 6).map(p => this.formatProjectCard(p, true)).join('');
-    const reminder = sorted.length > 6 ? `\n... and ${sorted.length - 6} more` : '';
-    await this.broadcast(header + body + reminder);
+    const more = sorted.length > 6 ? `\n+${sorted.length - 6} more` : '';
+    await this.broadcast(header + body + more);
   }
 
   async notifyRiskAlerts(projects: AirdropProject[]): Promise<void> {
@@ -350,8 +308,7 @@ export class TelegramNotifier {
       this.notifiedRisky.add(p.id);
     }
 
-    const header = `🚨 <b>DroperOG — ${risky.length} Security Alert${risky.length > 1 ? 's' : ''}</b>\n` +
-      `⚠️ The following projects have suspicious indicators:\n`;
+    const header = `🚨 ${risky.length} security alert${risky.length > 1 ? 's' : ''}\nSuspicious indicators found:\n`;
     const body = risky.slice(0, 8).map(p => this.formatProjectCard(p, true)).join('');
     await this.broadcast(header + body);
   }
@@ -365,7 +322,7 @@ export class TelegramNotifier {
     const sorted = [...scored].sort((a, b) => (b.opportunityScore ?? 0) - (a.opportunityScore ?? 0));
     const top = sorted.slice(0, 5);
 
-    const header = `🏆 <b>DroperOG — Top ${top.length} Opportunities</b>\n`;
+    const header = `🏆 Top ${top.length} opportunities\n`;
     const body = top.map(p => this.formatProjectCard(p, true)).join('');
     await this.broadcast(header + body);
   }
@@ -379,25 +336,19 @@ export class TelegramNotifier {
 
     const total = allProjects.length;
     const trusted = allProjects.filter(p => p.trustScore >= 70).length;
-    const scored = allProjects.filter(p => (p.opportunityScore ?? 0) > 0);
-    const avgOpp = scored.length > 0
-      ? Math.round(scored.reduce((s, p) => s + (p.opportunityScore ?? 0), 0) / scored.length)
+    const avgOpp = allProjects.filter(p => (p.opportunityScore ?? 0) > 0).length
+      ? Math.round(allProjects.reduce((s, p) => s + (p.opportunityScore ?? 0), 0) / allProjects.filter(p => (p.opportunityScore ?? 0) > 0).length)
       : 0;
     const highValue = allProjects.filter(p => (p.expectedValue ?? 0) >= 500).length;
     const urgent = allProjects.filter(p => (p.urgencyScore ?? 0) >= 70).length;
     const risky = allProjects.filter(p => p.scamRisk === 'critical' || p.scamRisk === 'high').length;
-    const linkIssues = allProjects.reduce((s, p) => s + ((p.linkWarnings || []).filter(w => w.severity === 'high' || w.severity === 'critical').length), 0);
 
-    let msg = `📊 <b>DroperOG Smart Summary</b>\n\n` +
-      `📈 Tracked: ${total}\n` +
-      `🆕 New: ${newCount}\n` +
-      `✅ Trusted (≥70%): ${trusted}\n\n` +
-      `🎯 Avg Opportunity: ${avgOpp}%\n` +
-      `💰 High Value (≥$500): ${highValue}\n` +
-      `⏰ Urgent: ${urgent}\n` +
-      `🚨 Security Issues: ${risky} risky + ${linkIssues} link warnings\n\n` +
-      `💵 Total Est. Value: $${totalValue.toLocaleString()}\n` +
-      `👥 Subscribers: ${this.subscribers.length}`;
+    let msg = `📊 <b>DroperOG Summary</b>\n\n` +
+      `Tracked: ${total} · New: ${newCount}\n` +
+      `Avg opportunity: ${avgOpp}% · Trusted: ${trusted}\n` +
+      `High value: ${highValue} · Urgent: ${urgent} · Risky: ${risky}\n\n` +
+      `Total Est. Value: $${totalValue.toLocaleString()}\n` +
+      `Subscribers: ${this.subscribers.length}`;
 
     await this.broadcast(msg);
   }
@@ -405,31 +356,24 @@ export class TelegramNotifier {
   async notifyMarketSnapshot(fng: FearGreedData | null, gasData: GasData[], newListings: NewListing[]): Promise<void> {
     if (!this.enabled) return;
 
-    let msg = `🌍 <b>DroperOG — Market Snapshot</b>\n\n`;
+    const lines: string[] = ['🌍 Market snapshot'];
 
     if (fng) {
       const emoji = fng.classification.includes('Fear') ? '😱' : fng.classification.includes('Greed') ? '🤑' : '😐';
-      msg += `${emoji} <b>Fear & Greed:</b> ${fng.value}/100 — ${fng.classification}\n`;
+      lines.push(`${emoji} Fear & Greed: ${fng.value}/100 — ${fng.classification}`);
     }
 
     if (gasData.length > 0) {
-      msg += `\n⛽ <b>Gas Prices:</b>\n`;
       for (const g of gasData) {
-        const ge = g.standard <= 20 ? '🟢' : g.standard <= 50 ? '🟡' : '🔴';
-        msg += `  ${ge} ${g.chain}: ${g.standard} gwei (fast: ${g.fast})\n`;
+        lines.push(`⛽ ${g.chain}: ${g.standard} gwei`);
       }
     }
 
     if (newListings.length > 0) {
-      const top = newListings.slice(0, 5);
-      msg += `\n🆕 <b>Recent New Listings:</b>\n`;
-      for (const l of top) {
-        msg += `  • ${l.name} (${l.symbol.toUpperCase()})\n`;
-      }
-      if (newListings.length > 5) msg += `  ... and ${newListings.length - 5} more\n`;
+      lines.push(`🆕 ${newListings.length} new listings today`);
     }
 
-    await this.broadcast(msg);
+    await this.broadcast(lines.join('\n'));
   }
 
   private chunkText(text: string): string[] {
