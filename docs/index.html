@@ -14,72 +14,103 @@
 <body>
   <div class="container">
     <header>
-      <div>
-        <h1><span>🪂</span> DroperOG</h1>
+      <div class="header-left">
+        <h1><span class="logo">🪂</span>DroperOG</h1>
         <div class="sub">Multi-Source Airdrop Hunter</div>
       </div>
-      <div style="text-align:right">
-        <div id="count" style="font-size:13px;color:#94a3b8">Loading...</div>
-        <div id="avg-opp" style="font-size:11px;color:#64748b"></div>
+      <div class="header-right">
+        <div id="count" class="stat-num">—</div>
+        <div class="stat-label">airdrops</div>
       </div>
     </header>
 
-    <div class="toolbar">
-      <input id="search" type="search" placeholder="Search projects...">
+    <div id="market-bar" class="market-bar">
+      <div class="market-item" id="fng-display">
+        <span class="market-icon">😱</span>
+        <span class="market-label">Fear & Greed</span>
+        <span class="market-value" id="fng-value">—</span>
+      </div>
+      <div class="market-item" id="gas-display">
+        <span class="market-icon">⛽</span>
+        <span class="market-label">ETH Gas</span>
+        <span class="market-value" id="gas-value">—</span>
+      </div>
+      <div class="market-item" id="listings-display">
+        <span class="market-icon">🆕</span>
+        <span class="market-label">New Listings</span>
+        <span class="market-value" id="listings-value">—</span>
+      </div>
     </div>
 
-    <div class="section-label">Status</div>
-    <div class="toolbar">
-      <button class="chip view-btn active" data-view="all" onclick="setView('all')">📋 All</button>
-      <button class="chip view-btn" data-view="new" onclick="setView('new')">🆕 New (3d)</button>
-      <button class="chip status-btn" data-status="potential" onclick="filterByStatus('potential')">💎 Potential</button>
-      <button class="chip status-btn" data-status="confirmed" onclick="filterByStatus('confirmed')">✅ Confirmed</button>
-      <button class="chip status-btn" data-status="active" onclick="filterByStatus('active')">🟢 Active</button>
-      <button class="chip status-btn" data-status="upcoming" onclick="filterByStatus('upcoming')">🆕 Upcoming</button>
-      <button class="chip status-btn" data-status="ended" onclick="filterByStatus('ended')">🔴 Ended</button>
+    <div class="search-row">
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input id="search" type="search" placeholder="Search projects..." autocomplete="off">
+      </div>
+      <div id="avg-opp" class="avg-opp"></div>
     </div>
 
-    <div class="section-label">Chain</div>
-    <div class="toolbar">
-      <button class="chip chain-btn active" data-chain="all" onclick="filterByChain('all')">🌐 All</button>
-      <button class="chip chain-btn" data-chain="ethereum" onclick="filterByChain('ethereum')">⟠ ETH</button>
-      <button class="chip chain-btn" data-chain="solana" onclick="filterByChain('solana')">◎ SOL</button>
-      <button class="chip chain-btn" data-chain="base" onclick="filterByChain('base')">🔵 Base</button>
-      <button class="chip chain-btn" data-chain="arbitrum" onclick="filterByChain('arbitrum')">🔴 Arb</button>
-      <button class="chip chain-btn" data-chain="optimism" onclick="filterByChain('optimism')">🟠 OP</button>
-      <button class="chip chain-btn" data-chain="polygon" onclick="filterByChain('polygon')">🟣 MATIC</button>
-      <button class="chip chain-btn" data-chain="zksync" onclick="filterByChain('zksync')">⚡ zkSync</button>
-      <button class="chip chain-btn" data-chain="bsc" onclick="filterByChain('bsc')">🟡 BSC</button>
+    <div class="filter-section">
+      <div class="filter-label">Status</div>
+      <div class="chip-row">
+        <button class="chip view-btn active" data-view="all">📋 All</button>
+        <button class="chip view-btn" data-view="new">🆕 New</button>
+        <button class="chip status-btn" data-status="potential">💎 Potential</button>
+        <button class="chip status-btn" data-status="confirmed">✅ Confirmed</button>
+        <button class="chip status-btn" data-status="active">🟢 Active</button>
+        <button class="chip status-btn" data-status="upcoming">🆕 Upcoming</button>
+        <button class="chip status-btn" data-status="ended">🔴 Ended</button>
+      </div>
     </div>
 
-    <div class="section-label">Risk Level</div>
-    <div class="toolbar">
-      <button class="chip risk-btn active" data-risk="all" onclick="filterByRisk('all')">All</button>
-      <button class="chip risk-btn" data-risk="low" onclick="filterByRisk('low')">🟢 Low</button>
-      <button class="chip risk-btn" data-risk="medium" onclick="filterByRisk('medium')">🟡 Medium</button>
-      <button class="chip risk-btn" data-risk="high" onclick="filterByRisk('high')">🟠 High</button>
-      <button class="chip risk-btn" data-risk="critical" onclick="filterByRisk('critical')">🔴 Critical</button>
+    <div class="filter-section">
+      <div class="filter-label">Chain</div>
+      <div class="chip-row">
+        <button class="chip chain-btn active" data-chain="all">🌐 All</button>
+        <button class="chip chain-btn" data-chain="ethereum">⟠ ETH</button>
+        <button class="chip chain-btn" data-chain="solana">◎ SOL</button>
+        <button class="chip chain-btn" data-chain="base">🔵 Base</button>
+        <button class="chip chain-btn" data-chain="arbitrum">🔴 Arb</button>
+        <button class="chip chain-btn" data-chain="optimism">🟠 OP</button>
+        <button class="chip chain-btn" data-chain="polygon">🟣 MATIC</button>
+        <button class="chip chain-btn" data-chain="zksync">⚡ zkSync</button>
+        <button class="chip chain-btn" data-chain="bsc">🟡 BSC</button>
+      </div>
     </div>
 
-    <div class="section-label">Sort By</div>
-    <div class="toolbar">
-      <button class="chip sort-btn active" data-sort="opportunity" onclick="setSort('opportunity')">🎯 Opportunity</button>
-      <button class="chip sort-btn" data-sort="newest" onclick="setSort('newest')">🕐 Newest</button>
-      <button class="chip sort-btn" data-sort="trust" onclick="setSort('trust')">✅ Trust</button>
-      <button class="chip sort-btn" data-sort="value" onclick="setSort('value')">💰 Est. Value</button>
-      <button class="chip sort-btn" data-sort="vph" onclick="setSort('vph')">⚡ $/hr</button>
-      <button class="chip sort-btn" data-sort="urgency" onclick="setSort('urgency')">⏰ Urgency</button>
+    <div class="filter-section">
+      <div class="filter-label">Risk Level</div>
+      <div class="chip-row">
+        <button class="chip risk-btn active" data-risk="all">All</button>
+        <button class="chip risk-btn" data-risk="low">🟢 Low</button>
+        <button class="chip risk-btn" data-risk="medium">🟡 Medium</button>
+        <button class="chip risk-btn" data-risk="high">🟠 High</button>
+        <button class="chip risk-btn" data-risk="critical">🔴 Critical</button>
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-label">Sort By</div>
+      <div class="chip-row">
+        <button class="chip sort-btn active" data-sort="opportunity">🎯 Opportunity</button>
+        <button class="chip sort-btn" data-sort="newest">🕐 Newest</button>
+        <button class="chip sort-btn" data-sort="trust">✅ Trust</button>
+        <button class="chip sort-btn" data-sort="value">💰 Value</button>
+        <button class="chip sort-btn" data-sort="vph">⚡ $/hr</button>
+        <button class="chip sort-btn" data-sort="urgency">⏰ Urgency</button>
+      </div>
     </div>
 
     <div id="loading">
       <div class="spinner"></div>
-      Scanning sources...
+      Loading airdrops...
     </div>
 
     <div id="project-list"></div>
 
     <footer>
-      🪂 <a href="https://github.com/Misagh95/droperog" target="_blank">DroperOG</a> &mdash; Updated <span id="last-update">just now</span>
+      🪂 <a href="https://github.com/Misagh95/droperog" target="_blank">DroperOG</a>
+      &mdash; Updated <span id="last-update">—</span>
     </footer>
   </div>
 <script src="app.js"></script>
