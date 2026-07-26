@@ -36,6 +36,7 @@ export const DEFAULT_CONFIG: Config = {
     console: true,
     desktop: false,
   },
+  alertKeywords: ['airdrop', 'claim', 'eligibility', 'snapshot', 'retrodrop', 'distribution', 'token', 'governance'],
 };
 
 export function loadConfig(): Config {

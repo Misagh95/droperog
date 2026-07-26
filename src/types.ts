@@ -116,6 +116,7 @@ export interface Config {
   twitter: TwitterConfig;
   blockchain: BlockchainConfig;
   notifications: NotificationConfig;
+  alertKeywords?: string[];
 }
 
 export interface TwitterConfig {
@@ -203,6 +204,16 @@ export interface ProjectChecklist {
   items: ChecklistItem[];
   createdAt: number;
   updatedAt: number;
+}
+
+export interface TelegramSubscriber {
+  chatId: string;
+  subscribedAt: number;
+  lastNotified?: number;
+}
+
+export interface SubscriberStore {
+  subscribers: TelegramSubscriber[];
 }
 
 export interface SearchFilter {
