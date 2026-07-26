@@ -1,12 +1,14 @@
 import axios from 'axios';
 import { AirdropProject } from './types';
-import { emojiForStatus, chainToEmoji, bar, truncate } from './utils';
+import { emojiForStatus, chainToEmoji, bar } from './utils';
 
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '';
 const CHAT_ID = process.env.TELEGRAM_CHAT_ID || '';
 
 export class TelegramNotifier {
   private enabled: boolean;
+  private notifiedUrgent = new Set<string>();
+  private notifiedRisky = new Set<string>();
 
   constructor() {
     this.enabled = !!(BOT_TOKEN && CHAT_ID);
@@ -29,51 +31,182 @@ export class TelegramNotifier {
     }
   }
 
+  private formatProjectCard(p: AirdropProject, showDetail: boolean = false): string {
+    const statusEmoji = emojiForStatus(p.status);
+    const chains = p.chains.map(c => chainToEmoji(c)).join(' ');
+    const trustBar = bar(p.trustScore);
+    const opp = p.opportunityScore ?? 50;
+    const oppBar = bar(opp);
+    const risk = p.scamRisk ?? 'low';
+    const riskEmoji = risk === 'critical' ? '🔴' : risk === 'high' ? '🟠' : risk === 'medium' ? '🟡' : '🟢';
+    const ev = p.expectedValue ?? 0;
+    const vph = p.valuePerHour ?? 0;
+    const lw = p.linkWarnings || [];
+    const hasLinkIssue = lw.some(w => w.severity === 'high' || w.severity === 'critical');
+
+    let card = `\n${statusEmoji} <b>${p.name}</b>\n` +
+      `   🎯 Opp: ${oppBar} ${opp}% | ✅ Trust: ${trustBar} ${p.trustScore}%\n` +
+      `   ${riskEmoji} Risk: ${risk} | ${chains || '?'}`;
+
+    if (showDetail) {
+      const leg = p.legitimacyScore ?? '?';
+      const rw = p.rewardPotential ?? '?';
+      const ef = p.effortScore ?? '?';
+      const urg = p.urgencyScore ?? '?';
+      card += `\n   🎯 ${leg}% · 💰 ${rw}% · 💪 ${ef}% · ⏰ ${urg}%`;
+    }
+
+    if (ev > 0) card += `\n   💰 Est. Value: $${ev}${vph > 0 ? ` · $${vph}/hr` : ''}`;
+    if (p.tokenInfo?.symbol) card += `\n   Token: ${p.tokenInfo.symbol}`;
+    card += `\n   ${p.sourceUrl}`;
+    if (hasLinkIssue) card += `\n   🔗 ⚠️ Suspicious link detected`;
+    if (p.scamFlags.length > 0) card += `\n   ⚠️ ${p.scamFlags.join(', ')}`;
+
+    return card;
+  }
+
   async notifyNewProjects(projects: AirdropProject[]): Promise<void> {
     if (!this.enabled || projects.length === 0) return;
 
-    const header = `🪂 <b>DroperOG — ${projects.length} New Airdrops!</b>\n`;
+    const highOpp = projects.filter(p => (p.opportunityScore ?? 0) >= 75);
+    const criticalRisk = projects.filter(p => p.scamRisk === 'critical');
+    const urgent = projects.filter(p => (p.urgencyScore ?? 0) >= 70);
 
-    const chunks = this.chunkProjects(projects.slice(0, 10));
-    await this.sendMessage(header + chunks[0]);
+    const header = `🪂 <b>DroperOG — ${projects.length} New Airdrops</b>`;
+    let detailLines = '';
 
-    for (let i = 1; i < chunks.length; i++) {
-      await this.sendMessage(chunks[i]);
+    const sorted = [...projects].sort((a, b) => (b.opportunityScore ?? 0) - (a.opportunityScore ?? 0));
+    const top = sorted.slice(0, 8);
+
+    for (const p of top) {
+      const isTop = highOpp.includes(p);
+      const isRisk = criticalRisk.includes(p);
+      const isUrgent = urgent.includes(p);
+      const badge = isTop ? '🔥 ' : isRisk ? '🚨 ' : isUrgent ? '⏰ ' : '';
+      detailLines += `\n${badge}${this.formatProjectCard(p, true)}`;
+    }
+
+    if (sorted.length > 8) {
+      detailLines += `\n\n... and ${sorted.length - 8} more`;
+    }
+
+    if (highOpp.length > 0) {
+      detailLines += `\n\n🔥 <b>Top Opportunities:</b> ${highOpp.map(p => p.name).join(', ')}`;
+    }
+
+    if (criticalRisk.length > 0) {
+      detailLines += `\n\n🚨 <b>⚠️ Critical Risk Projects:</b> ${criticalRisk.map(p => p.name).join(', ')}`;
+    }
+
+    if (urgent.length > 0) {
+      detailLines += `\n\n⏰ <b>Urgent — Deadline Approaching:</b> ${urgent.map(p => p.name).join(', ')}`;
+    }
+
+    const chunks = this.chunkText(header + detailLines);
+    for (const chunk of chunks) {
+      await this.sendMessage(chunk);
     }
   }
 
-  async notifySummary(total: number, trusted: number, newCount: number): Promise<void> {
+  async notifyUrgentProjects(projects: AirdropProject[]): Promise<void> {
+    if (!this.enabled || projects.length === 0) return;
+
+    const newUrgent = projects.filter(p =>
+      (p.urgencyScore ?? 0) >= 70 && !this.notifiedUrgent.has(p.id)
+    );
+    if (newUrgent.length === 0) return;
+
+    for (const p of newUrgent) {
+      this.notifiedUrgent.add(p.id);
+    }
+
+    const sorted = [...newUrgent].sort((a, b) => (b.urgencyScore ?? 0) - (a.urgencyScore ?? 0));
+    const header = `⏰ <b>DroperOG — ${newUrgent.length} Urgent Deadline${newUrgent.length > 1 ? 's' : ''}</b>\n`;
+    const body = sorted.slice(0, 6).map(p => this.formatProjectCard(p, true)).join('');
+    const reminder = sorted.length > 6 ? `\n... and ${sorted.length - 6} more` : '';
+    await this.sendMessage(header + body + reminder);
+  }
+
+  async notifyRiskAlerts(projects: AirdropProject[]): Promise<void> {
     if (!this.enabled) return;
-    const msg = `📊 <b>DroperOG Summary</b>\n` +
-      `Total tracked: ${total}\n` +
-      `Trusted (≥70%): ${trusted} ✅\n` +
-      `New this run: ${newCount} 🆕`;
+
+    const risky = projects.filter(p =>
+      (p.scamRisk === 'critical' || p.scamRisk === 'high') && !this.notifiedRisky.has(p.id)
+    );
+    if (risky.length === 0) return;
+
+    for (const p of risky) {
+      this.notifiedRisky.add(p.id);
+    }
+
+    const header = `🚨 <b>DroperOG — ${risky.length} Security Alert${risky.length > 1 ? 's' : ''}</b>\n` +
+      `⚠️ The following projects have suspicious indicators:\n`;
+    const body = risky.slice(0, 8).map(p => this.formatProjectCard(p, true)).join('');
+    await this.sendMessage(header + body);
+  }
+
+  async notifyTopOpportunities(projects: AirdropProject[]): Promise<void> {
+    if (!this.enabled || projects.length === 0) return;
+
+    const scored = projects.filter(p => (p.opportunityScore ?? 0) >= 60);
+    if (scored.length === 0) return;
+
+    const sorted = [...scored].sort((a, b) => (b.opportunityScore ?? 0) - (a.opportunityScore ?? 0));
+    const top = sorted.slice(0, 5);
+
+    const header = `🏆 <b>DroperOG — Top ${top.length} Opportunities</b>\n`;
+    const body = top.map(p => this.formatProjectCard(p, true)).join('');
+    await this.sendMessage(header + body);
+  }
+
+  async notifySmartSummary(
+    allProjects: AirdropProject[],
+    newCount: number,
+    totalValue: number,
+  ): Promise<void> {
+    if (!this.enabled) return;
+
+    const total = allProjects.length;
+    const trusted = allProjects.filter(p => p.trustScore >= 70).length;
+    const scored = allProjects.filter(p => (p.opportunityScore ?? 0) > 0);
+    const avgOpp = scored.length > 0
+      ? Math.round(scored.reduce((s, p) => s + (p.opportunityScore ?? 0), 0) / scored.length)
+      : 0;
+    const highValue = allProjects.filter(p => (p.expectedValue ?? 0) >= 500).length;
+    const urgent = allProjects.filter(p => (p.urgencyScore ?? 0) >= 70).length;
+    const risky = allProjects.filter(p => p.scamRisk === 'critical' || p.scamRisk === 'high').length;
+    const linkIssues = allProjects.reduce((s, p) => s + ((p.linkWarnings || []).filter(w => w.severity === 'high' || w.severity === 'critical').length), 0);
+
+    let msg = `📊 <b>DroperOG Smart Summary</b>\n\n` +
+      `📈 Tracked: ${total}\n` +
+      `🆕 New: ${newCount}\n` +
+      `✅ Trusted (≥70%): ${trusted}\n\n` +
+      `🎯 Avg Opportunity: ${avgOpp}%\n` +
+      `💰 High Value (≥$500): ${highValue}\n` +
+      `⏰ Urgent: ${urgent}\n` +
+      `🚨 Security Issues: ${risky} risky + ${linkIssues} link warnings\n\n` +
+      `💵 Total Est. Value: $${totalValue.toLocaleString()}`;
+
     await this.sendMessage(msg);
   }
 
-  private chunkProjects(projects: AirdropProject[]): string[] {
+  private chunkText(text: string): string[] {
+    const MAX = 4000;
+    if (text.length <= MAX) return [text];
+
     const chunks: string[] = [];
     let current = '';
 
-    for (const p of projects) {
-      const statusEmoji = emojiForStatus(p.status);
-      const chains = p.chains.map(c => chainToEmoji(c)).join(' ');
-      const trustBar = bar(p.trustScore);
-      const tokenLine = p.tokenInfo?.symbol ? ` | Token: ${p.tokenInfo.symbol}` : '';
-
-      const line = `\n${statusEmoji} <b>${p.name}</b>\n` +
-        `   Trust: ${trustBar} ${p.trustScore}% | ${chains || '?'}${tokenLine}\n` +
-        `   Status: ${p.status} | ${p.sourceUrl}`;
-
-      if ((current + line).length > 3800) {
+    const lines = text.split('\n');
+    for (const line of lines) {
+      if ((current + line).length > MAX) {
         chunks.push(current);
-        current = line;
+        current = line + '\n';
       } else {
-        current += line;
+        current += line + '\n';
       }
     }
-
-    if (current) chunks.push(current);
+    if (current.trim()) chunks.push(current);
     return chunks;
   }
 }

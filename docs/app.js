@@ -1,29 +1,30 @@
 const DATA_URL = 'https://raw.githubusercontent.com/Misagh95/droperog/main/docs/data/projects.json';
 
-const state = { projects: [], filtered: [], chainFilter: 'all', statusFilter: 'all', viewFilter: 'all', sortOrder: 'newest' };
+const state = {
+  projects: [], filtered: [],
+  chainFilter: 'all', statusFilter: 'all', viewFilter: 'all', riskFilter: 'all',
+  sortOrder: 'opportunity', searchQuery: '',
+};
 
-const NEW_MS = 3 * 24 * 60 * 60 * 1000; // "New" = within 3 days
+const NEW_MS = 3 * 24 * 60 * 60 * 1000;
 
-const chainEmoji = c => ({ ethereum: '⟠', solana: '◎', base: '🔵', arbitrum: '🔴', optimism: '🟠', polygon: '🟣', bsc: '🟡', avalanche: '🔺', ton: '💎' } [c] || '❓');
+const chainEmoji = c => ({ ethereum: '⟠', solana: '◎', base: '🔵', arbitrum: '🔴', optimism: '🟠', polygon: '🟣', zksync: '⚡', bsc: '🟡', avalanche: '🔺', ton: '💎', scroll: '📜', linea: '〰️', starknet: '⚔️', sui: '🌊' } [c] || '⛓');
 
 const statusBadge = s => {
   const m = {
-    potential: ['💎', 'Potential'],
-    confirmed: ['✅', 'Confirmed'],
-    active: ['🟢', 'Active'],
-    upcoming: ['🆕', 'Upcoming'],
-    ended: ['🔴', 'Ended'],
-    unknown: ['❓', 'Unknown'],
+    potential: ['💎', 'Potential'], confirmed: ['✅', 'Confirmed'], active: ['🟢', 'Active'],
+    upcoming: ['🆕', 'Upcoming'], ended: ['🔴', 'Ended'], unknown: ['❓', 'Unknown'],
   };
   const [e, t] = m[s] || ['❓', s];
   return `<span class="badge badge-${s}">${e} ${t}</span>`;
 };
 
-const trustColor = s => s >= 80 ? '#22c55e' : s >= 60 ? '#eab308' : s >= 40 ? '#f97316' : '#ef4444';
+const scoreColor = s => s >= 80 ? '#22c55e' : s >= 60 ? '#eab308' : s >= 40 ? '#f97316' : '#ef4444';
+const riskColor = r => ({ low: '#22c55e', medium: '#eab308', high: '#f97316', critical: '#ef4444' } [r] || '#64748b');
 
-function trustBar(score) {
-  const color = trustColor(score);
-  return `<div class="trust-bar"><div class="trust-fill" style="width:${score}%;background:${color}"></div></div><span class="trust-text" style="color:${color}">${score}%</span>`;
+function scoreBar(score) {
+  const c = scoreColor(score);
+  return `<div class="score-bar"><div class="score-fill" style="width:${score}%;background:${c}"></div></div><span class="score-text" style="color:${c}">${score}%</span>`;
 }
 
 function timeAgo(ts) {
@@ -37,53 +38,104 @@ function timeAgo(ts) {
   return `${d}d ago`;
 }
 
-function isNew(p) {
-  return (Date.now() - p.discoveredAt) < NEW_MS;
-}
+function isNew(p) { return (Date.now() - p.discoveredAt) < NEW_MS; }
+function safe(p, field, def) { const v = p[field]; return v !== undefined && v !== null ? v : def; }
 
 function render() {
   const list = document.getElementById('project-list');
   const count = document.getElementById('count');
-  let items = state.filtered;
+  const avgOpp = document.getElementById('avg-opp');
+  let items = [...state.filtered];
 
-  if (state.chainFilter !== 'all') items = items.filter(p => p.chains.includes(state.chainFilter) || p.chains.includes('unknown'));
+  // Chain filter
+  if (state.chainFilter !== 'all') items = items.filter(p => (p.chains || []).some(c => c === state.chainFilter));
+
+  // View filter (overrides status)
   if (state.viewFilter === 'new') items = items.filter(isNew);
   else if (state.statusFilter !== 'all') items = items.filter(p => p.status === state.statusFilter);
 
-  if (state.sortOrder === 'newest') items.sort((a, b) => b.discoveredAt - a.discoveredAt);
-  else items.sort((a, b) => a.discoveredAt - b.discoveredAt);
+  // Risk filter
+  if (state.riskFilter !== 'all') items = items.filter(p => (p.scamRisk || 'low') === state.riskFilter);
+
+  // Search
+  if (state.searchQuery) {
+    const q = state.searchQuery.toLowerCase();
+    items = items.filter(p => p.name.toLowerCase().includes(q) || (p.description || '').toLowerCase().includes(q) || (p.chains || []).some(c => c.includes(q)));
+  }
+
+  // Sort
+  const sortFns = {
+    opportunity: (a, b) => (safe(b, 'opportunityScore', 0) - safe(a, 'opportunityScore', 0)),
+    newest: (a, b) => b.discoveredAt - a.discoveredAt,
+    oldest: (a, b) => a.discoveredAt - b.discoveredAt,
+    trust: (a, b) => b.trustScore - a.trustScore,
+    value: (a, b) => (safe(b, 'expectedValue', 0) - safe(a, 'expectedValue', 0)),
+    vph: (a, b) => (safe(b, 'valuePerHour', 0) - safe(a, 'valuePerHour', 0)),
+    urgency: (a, b) => (safe(b, 'urgencyScore', 0) - safe(a, 'urgencyScore', 0)),
+  };
+  items.sort(sortFns[state.sortOrder] || sortFns.opportunity);
+
   count.textContent = `${items.length} airdrops`;
+  const avg = items.length ? Math.round(items.reduce((s, p) => s + safe(p, 'opportunityScore', 0), 0) / items.length) : 0;
+  avgOpp.textContent = `Avg Opp: ${avg}%`;
 
   if (!items.length) {
     list.innerHTML = '<div class="empty">✨ No airdrops found</div>';
     return;
   }
 
-  list.innerHTML = items.map(p => `
-    <div class="card" onclick="window.open('${p.sourceUrl}','_blank')">
+  list.innerHTML = items.map(p => {
+    const opp = safe(p, 'opportunityScore', '?');
+    const leg = safe(p, 'legitimacyScore', '?');
+    const rw = safe(p, 'rewardPotential', '?');
+    const ef = safe(p, 'effortScore', '?');
+    const urg = safe(p, 'urgencyScore', '?');
+    const ev = safe(p, 'expectedValue', 0);
+    const vph = safe(p, 'valuePerHour', 0);
+    const risk = p.scamRisk || 'low';
+    const lw = p.linkWarnings || [];
+    const hasLinkWarn = lw.some(w => w.severity === 'high' || w.severity === 'critical');
+
+    return `<div class="card" onclick="window.open('${p.sourceUrl}','_blank')">
       <div class="card-header">
         <span class="card-name">${statusBadge(p.status)} ${p.name}</span>
         <span class="card-source">${p.source === 'twitter' ? '🐦' : '🌐'}</span>
       </div>
       <div class="card-body">
         <div class="card-row">
-          <span class="label">Trust</span>
-          ${trustBar(p.trustScore)}
+          <span class="card-label">Opportunity</span>
+          ${scoreBar(opp)}
         </div>
         <div class="card-row">
-          <span class="label">Chain</span>
-          <span>${p.chains.map(c => chainEmoji(c)).join(' ') || '?'}</span>
+          <span class="card-label">Trust</span>
+          ${scoreBar(p.trustScore)}
         </div>
-        ${p.tokenInfo?.symbol ? `<div class="card-row"><span class="label">Token</span><span>${p.tokenInfo.symbol}</span></div>` : ''}
         <div class="card-row">
-          <span class="label">Found</span>
+          <span class="card-label">Chain</span>
+          <span>${(p.chains || ['?']).map(c => chainEmoji(c)).join(' ')}</span>
+        </div>
+        <div class="card-row">
+          <span class="card-label">Risk</span>
+          <span style="color:${riskColor(risk)};font-weight:600">${risk}</span>
+        </div>
+        <div class="card-row">
+          <span class="card-label">Found</span>
           <span>${timeAgo(p.discoveredAt)}</span>
+        </div>
+        ${p.tokenInfo?.symbol ? `<div class="card-row"><span class="card-label">Token</span><span>${p.tokenInfo.symbol}</span></div>` : ''}
+        ${ev > 0 ? `<div class="card-row"><span class="card-label">Est. Value</span><span>$${ev} ${vph > 0 ? `· $${vph}/hr` : ''}</span></div>` : ''}
+        <div class="score-row">
+          <span class="score-item">🎯 <span style="color:${scoreColor(leg)}">${leg}</span></span>
+          <span class="score-item">💰 <span style="color:${scoreColor(rw)}">${rw}</span></span>
+          <span class="score-item">💪 <span style="color:${scoreColor(ef)}">${ef}</span></span>
+          <span class="score-item">⏰ <span style="color:${scoreColor(urg)}">${urg}</span></span>
         </div>
       </div>
       ${p.description && p.description.length > 10 ? `<div class="card-desc">${p.description.substring(0, 100)}${p.description.length > 100 ? '...' : ''}</div>` : ''}
-      ${p.scamFlags.length ? `<div class="card-flags">⚠️ ${p.scamFlags.join(', ')}</div>` : '<div class="card-flags safe">✅ No red flags</div>'}
-    </div>
-  `).join('');
+      ${hasLinkWarn ? `<div class="card-link-warn">🔗 ⚠️ ${lw.length} link warning(s)</div>` : ''}
+      ${p.scamFlags && p.scamFlags.length ? `<div class="card-flags">⚠️ ${p.scamFlags.join(', ')}</div>` : `<div class="card-flags safe">✅ No red flags</div>`}
+    </div>`;
+  }).join('');
 }
 
 async function load() {
@@ -106,7 +158,9 @@ function filterByChain(chain) {
 
 function setView(view) {
   state.viewFilter = state.viewFilter === view ? 'all' : view;
+  state.statusFilter = 'all';
   document.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.dataset.view === state.viewFilter));
+  document.querySelectorAll('.status-btn').forEach(b => b.classList.remove('active'));
   render();
 }
 
@@ -118,6 +172,12 @@ function filterByStatus(status) {
   render();
 }
 
+function filterByRisk(risk) {
+  state.riskFilter = state.riskFilter === risk ? 'all' : risk;
+  document.querySelectorAll('.risk-btn').forEach(b => b.classList.toggle('active', b.dataset.risk === state.riskFilter));
+  render();
+}
+
 function setSort(order) {
   state.sortOrder = order;
   document.querySelectorAll('.sort-btn').forEach(b => b.classList.toggle('active', b.dataset.sort === state.sortOrder));
@@ -125,9 +185,7 @@ function setSort(order) {
 }
 
 function search(q) {
-  if (!q) { state.filtered = [...state.projects]; render(); return; }
-  const lq = q.toLowerCase();
-  state.filtered = state.projects.filter(p => p.name.toLowerCase().includes(lq) || (p.description || '').toLowerCase().includes(lq) || (p.chains || []).some(c => c.includes(lq)));
+  state.searchQuery = q || '';
   render();
 }
 
@@ -138,5 +196,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/droperog/sw.js');
+  navigator.serviceWorker.register('sw.js');
 }

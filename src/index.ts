@@ -3,8 +3,10 @@ import { TwitterSource } from './sources/twitter';
 import { AlphaDropsSource } from './sources/alphadrops';
 import { CryptoRankSource } from './sources/cryptorank';
 import { TrustChecker } from './trustChecker';
+import { ChecklistManager } from './checklist';
+import { WalletAnalyzer } from './walletAnalyzer';
 import { loadConfig } from './config';
-import { AirdropProject, SearchFilter } from './types';
+import { AirdropProject, ProjectChecklist, SearchFilter } from './types';
 import { emojiForStatus, chainToEmoji, bar, truncate, getTimeAgo } from './utils';
 
 export class DroperOG {
@@ -13,6 +15,8 @@ export class DroperOG {
   private cryptorank: CryptoRankSource;
   private alphadrops: AlphaDropsSource;
   private trustChecker: TrustChecker;
+  private checklist: ChecklistManager;
+  private walletAnalyzer: WalletAnalyzer;
   private config = loadConfig();
   projects: AirdropProject[] = [];
   knownIds = new Set<string>();
@@ -29,6 +33,8 @@ export class DroperOG {
     this.cryptorank = new CryptoRankSource();
     this.alphadrops = new AlphaDropsSource();
     this.trustChecker = new TrustChecker();
+    this.checklist = new ChecklistManager();
+    this.walletAnalyzer = new WalletAnalyzer();
   }
 
   async runOnce(): Promise<AirdropProject[]> {
@@ -98,6 +104,14 @@ export class DroperOG {
       this.printProjects(newProjects);
     }
 
+    // Generate checklists for all projects
+    for (const p of this.projects) {
+      this.checklist.getOrCreate(p);
+    }
+
+    // Show deadline alerts
+    this.checklist.printDeadlineAlerts();
+
     console.log(`  📊 Total tracked: ${this.projects.length} projects`);
     console.log(`  ⏰ Last check: ${new Date().toLocaleTimeString()}\n`);
 
@@ -124,6 +138,17 @@ export class DroperOG {
     }, interval);
   }
 
+  async analyzeWallet(address: string): Promise<void> {
+    console.log(`\n  🔍 Analyzing wallet: ${address}\n`);
+    try {
+      const profile = await this.walletAnalyzer.analyzeWallet(address);
+      const eligible = this.walletAnalyzer.estimateEligibility(profile, this.projects);
+      this.walletAnalyzer.printAnalysis(profile, eligible);
+    } catch (err: any) {
+      console.error(`  ✗ Wallet analysis failed: ${err.message}`);
+    }
+  }
+
   find(filter: SearchFilter = {}): AirdropProject[] {
     let result = [...this.projects];
 
@@ -141,6 +166,10 @@ export class DroperOG {
         const dir = filter.sortDir === 'asc' ? 1 : -1;
         if (filter.sortBy === 'trustScore') return (a.trustScore - b.trustScore) * dir;
         if (filter.sortBy === 'discoveredAt') return (a.discoveredAt - b.discoveredAt) * dir;
+        if (filter.sortBy === 'opportunityScore') return ((a.opportunityScore ?? 0) - (b.opportunityScore ?? 0)) * dir;
+        if (filter.sortBy === 'expectedValue') return ((a.expectedValue ?? 0) - (b.expectedValue ?? 0)) * dir;
+        if (filter.sortBy === 'valuePerHour') return ((a.valuePerHour ?? 0) - (b.valuePerHour ?? 0)) * dir;
+        if (filter.sortBy === 'urgencyScore') return ((a.urgencyScore ?? 0) - (b.urgencyScore ?? 0)) * dir;
         return a.name.localeCompare(b.name) * dir;
       });
     }
@@ -155,16 +184,45 @@ export class DroperOG {
       const statusEmoji = emojiForStatus(p.status);
       const chains = p.chains.map(c => chainToEmoji(c)).join(' ');
       const trust = bar(p.trustScore);
+      const opp = p.opportunityScore ?? 50;
+      const oppBar = bar(opp);
       const source = p.source === 'twitter' ? '🐦' : '🌐';
+      const risk = p.scamRisk ?? 'unknown';
+      const scamEmoji = risk === 'critical' ? '🔴' : risk === 'high' ? '🟠' : risk === 'medium' ? '🟡' : '🟢';
 
       console.log(`  ${statusEmoji} ${p.name} ${source}`);
       console.log(`     ├─ Trust: ${trust} ${p.trustScore}%`);
+      console.log(`     ├─ Opportunity: ${oppBar} ${opp}%`);
       console.log(`     ├─ Chain: ${chains || '?'}`);
-      console.log(`     ├─ Status: ${p.status}`);
+      console.log(`     ├─ Status: ${p.status}  |  Risk: ${scamEmoji} ${risk}`);
+      console.log(`     ├─ Legitimacy: ${p.legitimacyScore ?? '?'}%  |  Reward: ${p.rewardPotential ?? '?'}%`);
+      console.log(`     ├─ Effort: ${p.effortScore ?? '?'}%  |  Urgency: ${p.urgencyScore ?? '?'}%`);
+      const ev = p.expectedValue ?? 0;
+      if (ev > 0) console.log(`     ├─ Est. Value: $${ev}  |  $${p.valuePerHour ?? 0}/hr`);
       if (p.tokenInfo?.symbol) console.log(`     ├─ Token: ${p.tokenInfo.symbol}`);
       console.log(`     ├─ Link: ${p.sourceUrl}`);
       if (p.links?.twitter) console.log(`     ├─ 🐦: ${p.links.twitter}`);
       console.log(`     ├─ Found: ${getTimeAgo(p.discoveredAt)}`);
+      // Checklist progress
+      const cl = this.checklist.getProjectChecklist(p.id);
+      if (cl && cl.items.length > 0) {
+        const done = cl.items.filter(i => i.completed).length;
+        const total = cl.items.length;
+        const checkEmoji = done === total ? '✅' : '📋';
+        console.log(`     ├─ ${checkEmoji} ${done}/${total} tasks`);
+      }
+
+      if (p.linkWarnings && p.linkWarnings.length > 0) {
+        const high = p.linkWarnings.filter(w => w.severity === 'high' || w.severity === 'critical');
+        const countText = high.length > 0 ? `${p.linkWarnings.length} warning(s) — ${high.length} critical` : `${p.linkWarnings.length} warning(s)`;
+        console.log(`     ├─ 🔗 ${countText}`);
+        if (p.linkWarnings.length <= 3) {
+          for (const w of p.linkWarnings) {
+            const emoji = w.severity === 'critical' ? '🔴' : w.severity === 'high' ? '🟠' : '🟡';
+            console.log(`     │  ${emoji} [${w.field}] ${w.reason}`);
+          }
+        }
+      }
       if (p.scamFlags.length > 0) {
         console.log(`     ╰─ ⚠️  ${p.scamFlags.join(', ')}`);
       } else {
@@ -184,21 +242,44 @@ export class DroperOG {
     const confirmed = this.projects.filter(p => p.status === 'confirmed').length;
     const active = this.projects.filter(p => p.status === 'active').length;
 
-    console.log(`\n${'='.repeat(36)}`);
-    console.log('  DroperOG Summary');
-    console.log(`${'='.repeat(36)}`);
-    console.log(`  Total:     ${total}`);
-    console.log(`  Trusted:   ${trusted} ✅`);
-    console.log(`  Potential: ${potential} 💎`);
-    console.log(`  Confirmed: ${confirmed} ✅`);
-    console.log(`  Active:    ${active} 🟢`);
-    console.log(`${'='.repeat(36)}\n`);
+    const avgOpportunity = total > 0 ? Math.round(this.projects.reduce((s, p) => s + (p.opportunityScore ?? 0), 0) / total) : 0;
+    const highValue = this.projects.filter(p => (p.expectedValue ?? 0) >= 500).length;
+    const lowRisk = this.projects.filter(p => p.scamRisk === 'low' || p.scamRisk === 'medium').length;
+    const urgent = this.projects.filter(p => (p.urgencyScore ?? 0) >= 70).length;
+    const linkWarnings = this.projects.reduce((s, p) => s + (p.linkWarnings?.length ?? 0), 0);
+
+    console.log(`\n${'='.repeat(42)}`);
+    console.log('  DroperOG Scoring Summary');
+    console.log(`${'='.repeat(42)}`);
+    console.log(`  Total:         ${total}`);
+    console.log(`  Trusted:       ${trusted} ✅`);
+    console.log(`  Potential:     ${potential} 💎`);
+    console.log(`  Confirmed:     ${confirmed} ✅`);
+    console.log(`  Active:        ${active} 🟢`);
+    console.log(`  Avg Opp.:      ${avgOpportunity}%`);
+    console.log(`  High Value:    ${highValue} 💰`);
+    console.log(`  Low Risk:      ${lowRisk} 🟢`);
+    console.log(`  Urgent:        ${urgent} ⏰`);
+    console.log(`  Link Warnings: ${linkWarnings} 🔗`);
+    const clStats = this.checklist.getStats();
+    if (clStats.total > 0) {
+      console.log(`  Tasks:         ${clStats.completed}/${clStats.total} ✅`);
+      if (clStats.deadlinesNear > 0) console.log(`  Deadlines:     ${clStats.deadlinesNear} approaching ⏰`);
+    }
+    console.log(`${'='.repeat(42)}\n`);
   }
 }
 
 async function main() {
   const app = new DroperOG();
   const args = process.argv.slice(2);
+
+  const walletIdx = args.indexOf('--wallet');
+  if (walletIdx !== -1 && walletIdx + 1 < args.length) {
+    await app.runOnce();
+    await app.analyzeWallet(args[walletIdx + 1]);
+    return;
+  }
 
   if (args.includes('--once')) {
     await app.runOnce();

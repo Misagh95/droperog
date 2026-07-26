@@ -33,44 +33,46 @@ async function main() {
   const telegram = new TelegramNotifier();
   const state = loadState();
 
-  // Restore known IDs
   for (const id of state.knownIds) {
     app.knownIds.add(id);
   }
 
   const allProjects = await app.runOnce();
-
-  // Collect new projects
   const newProjects = allProjects.filter(p => !state.knownIds.includes(p.id));
 
-  const summary = {
-    total: app.projects.length,
-    trusted: app.projects.filter(p => p.trustScore >= 70).length,
-    newCount: newProjects.length,
-  };
+  const totalValue = app.projects.reduce((s, p) => s + (p.expectedValue ?? 0), 0);
 
   const isFirstRun = state.knownIds.length === 0;
 
-  // Notify — skip first run (just builds state)
   if (!isFirstRun) {
+    const notifyPromises: Promise<void>[] = [];
+
     if (newProjects.length > 0) {
-      await telegram.notifyNewProjects(newProjects);
+      notifyPromises.push(telegram.notifyNewProjects(newProjects));
     }
-    await telegram.notifySummary(summary.total, summary.trusted, summary.newCount);
+
+    notifyPromises.push(telegram.notifyUrgentProjects(app.projects));
+    notifyPromises.push(telegram.notifyRiskAlerts(app.projects));
+    notifyPromises.push(telegram.notifyTopOpportunities(app.projects));
+    notifyPromises.push(telegram.notifySmartSummary(
+      app.projects,
+      newProjects.length,
+      totalValue,
+    ));
+
+    await Promise.all(notifyPromises);
   } else {
     console.log(`  First run — state initialized with ${app.knownIds.size} IDs. No notifications sent.`);
   }
 
-  // Update state — save ALL known IDs
   const updatedState: State = {
     knownIds: [...app.knownIds],
-    totalProjects: summary.total,
+    totalProjects: app.projects.length,
     lastRun: new Date().toISOString(),
   };
   saveState(updatedState);
   console.log(`\nState saved: ${updatedState.knownIds.length} known IDs`);
 
-  // Save project list for PWA
   const docsDir = path.join(__dirname, '..', 'docs', 'data');
   if (!fs.existsSync(docsDir)) fs.mkdirSync(docsDir, { recursive: true });
   fs.writeFileSync(
