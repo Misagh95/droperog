@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0a0a1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>DroperOG — Airdrop Hunter</title>
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="https://img.icons8.com/fluency/48/parachute.png">
@@ -14,103 +13,55 @@
 <body>
   <div class="container">
     <header>
-      <div class="header-left">
-        <h1><span class="logo">🪂</span>DroperOG</h1>
-        <div class="sub">Multi-Source Airdrop Hunter</div>
+      <div>
+        <h1>🪂 DroperOG</h1>
+        <div class="sub">Airdrop Hunter</div>
       </div>
-      <div class="header-right">
-        <div id="count" class="stat-num">—</div>
-        <div class="stat-label">airdrops</div>
+      <div class="header-stats">
+        <div><span id="count">—</span> tracked</div>
+        <div id="avg-opp"></div>
       </div>
     </header>
 
-    <div id="market-bar" class="market-bar">
-      <div class="market-item" id="fng-display">
-        <span class="market-icon">😱</span>
-        <span class="market-label">Fear & Greed</span>
-        <span class="market-value" id="fng-value">—</span>
-      </div>
-      <div class="market-item" id="gas-display">
-        <span class="market-icon">⛽</span>
-        <span class="market-label">ETH Gas</span>
-        <span class="market-value" id="gas-value">—</span>
-      </div>
-      <div class="market-item" id="listings-display">
-        <span class="market-icon">🆕</span>
-        <span class="market-label">New Listings</span>
-        <span class="market-value" id="listings-value">—</span>
-      </div>
-    </div>
-
-    <div class="search-row">
+    <div class="controls">
       <div class="search-wrap">
-        <span class="search-icon">🔍</span>
-        <input id="search" type="search" placeholder="Search projects..." autocomplete="off">
+        <input id="search" type="search" placeholder="Search name or symbol..." autocomplete="off">
       </div>
-      <div id="avg-opp" class="avg-opp"></div>
-    </div>
-
-    <div class="filter-section">
-      <div class="filter-label">Status</div>
-      <div class="chip-row">
-        <button class="chip view-btn active" data-view="all">📋 All</button>
-        <button class="chip view-btn" data-view="new">🆕 New</button>
-        <button class="chip status-btn" data-status="potential">💎 Potential</button>
-        <button class="chip status-btn" data-status="confirmed">✅ Confirmed</button>
-        <button class="chip status-btn" data-status="active">🟢 Active</button>
-        <button class="chip status-btn" data-status="upcoming">🆕 Upcoming</button>
-        <button class="chip status-btn" data-status="ended">🔴 Ended</button>
-      </div>
-    </div>
-
-    <div class="filter-section">
-      <div class="filter-label">Chain</div>
-      <div class="chip-row">
-        <button class="chip chain-btn active" data-chain="all">🌐 All</button>
-        <button class="chip chain-btn" data-chain="ethereum">⟠ ETH</button>
-        <button class="chip chain-btn" data-chain="solana">◎ SOL</button>
-        <button class="chip chain-btn" data-chain="base">🔵 Base</button>
-        <button class="chip chain-btn" data-chain="arbitrum">🔴 Arb</button>
-        <button class="chip chain-btn" data-chain="optimism">🟠 OP</button>
-        <button class="chip chain-btn" data-chain="polygon">🟣 MATIC</button>
-        <button class="chip chain-btn" data-chain="zksync">⚡ zkSync</button>
-        <button class="chip chain-btn" data-chain="bsc">🟡 BSC</button>
-      </div>
-    </div>
-
-    <div class="filter-section">
-      <div class="filter-label">Risk Level</div>
-      <div class="chip-row">
-        <button class="chip risk-btn active" data-risk="all">All</button>
-        <button class="chip risk-btn" data-risk="low">🟢 Low</button>
-        <button class="chip risk-btn" data-risk="medium">🟡 Medium</button>
-        <button class="chip risk-btn" data-risk="high">🟠 High</button>
-        <button class="chip risk-btn" data-risk="critical">🔴 Critical</button>
-      </div>
-    </div>
-
-    <div class="filter-section">
-      <div class="filter-label">Sort By</div>
-      <div class="chip-row">
-        <button class="chip sort-btn active" data-sort="opportunity">🎯 Opportunity</button>
-        <button class="chip sort-btn" data-sort="newest">🕐 Newest</button>
-        <button class="chip sort-btn" data-sort="trust">✅ Trust</button>
-        <button class="chip sort-btn" data-sort="value">💰 Value</button>
-        <button class="chip sort-btn" data-sort="vph">⚡ $/hr</button>
-        <button class="chip sort-btn" data-sort="urgency">⏰ Urgency</button>
-      </div>
+      <select id="sort-select">
+        <option value="opportunity">🎯 Opportunity</option>
+        <option value="newest">🕐 Newest</option>
+        <option value="trust">✅ Trust</option>
+        <option value="value">💰 Value</option>
+        <option value="urgency">⏰ Urgency</option>
+      </select>
+      <select id="status-select">
+        <option value="all">📋 All</option>
+        <option value="new">🆕 New</option>
+        <option value="potential">💎 Potential</option>
+        <option value="confirmed">✅ Confirmed</option>
+        <option value="active">🟢 Active</option>
+        <option value="upcoming">Upcoming</option>
+        <option value="ended">🔴 Ended</option>
+      </select>
+      <select id="risk-select">
+        <option value="all">All Risk</option>
+        <option value="low">🟢 Low</option>
+        <option value="medium">🟡 Medium</option>
+        <option value="high">🟠 High</option>
+        <option value="critical">🔴 Critical</option>
+      </select>
     </div>
 
     <div id="loading">
       <div class="spinner"></div>
-      Loading airdrops...
+      Loading...
     </div>
 
     <div id="project-list"></div>
 
     <footer>
       🪂 <a href="https://github.com/Misagh95/droperog" target="_blank">DroperOG</a>
-      &mdash; Updated <span id="last-update">—</span>
+      &mdash; <span id="last-update">—</span>
     </footer>
   </div>
 <script src="app.js"></script>
