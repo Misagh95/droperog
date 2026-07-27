@@ -22,6 +22,9 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Run scanner
         run: python droperog.py
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
       - name: Commit Pages JSON
         run: |
           git config user.name "droperog-bot"

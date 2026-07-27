@@ -6,6 +6,7 @@ Multi-source airdrop monitor with auto-categorization (Testnet / Task Farmer / M
 
 ```bash
 pip install -r requirements.txt
+cp .env.example .env   # set BOT_TOKEN and CHAT_ID
 python droperog.py
 ```
 
@@ -57,4 +58,24 @@ powershell -File setup_schedule.ps1 -Hours 6   # every 6 hours
 --------------------------------------------------
   Total: 357 | Testnet: 3 | Social Tasks: 279 | Mainnet: 75
 ==========================================================
+```
+
+## Telegram (optional)
+
+Set `BOT_TOKEN` and `CHAT_ID` in `.env`:
+
+```
+🪂 Airdrop Scan — 17:42
+
+🆕 New (3)
+  PIN AI  ·  Social Tasks  ·  https://...  ·  Social, Fill The Form
+  Fomo  ·  Mainnet  ·  https://...  ·  Trade Perps
+  Soul Labs  ·  Testnet  ·  https://...  ·  Testnet, Faucet
+
+📊 Summary
+  🟣 Testnet: 8
+  🟢 Mainnet: 89
+  🟡 Social Tasks: 667
+  ────────────
+  Total: 764
 ```

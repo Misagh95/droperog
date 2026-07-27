@@ -287,6 +287,56 @@ def build_report(new_projects, updated, removed, categorized, state):
     return "\n".join(lines)
 
 
+# ─── TELEGRAM ─────────────────────────────────────────────
+
+BOT_TOKEN = os.environ.get("BOT_TOKEN") or ""
+CHAT_ID = os.environ.get("CHAT_ID") or ""
+# Also try loading from .env file
+try:
+    env_file = BASE / ".env"
+    if env_file.exists():
+        for line in env_file.read_text("utf-8").splitlines():
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, v = line.split("=", 1)
+                k, v = k.strip(), v.strip().strip("\"'")
+                if k == "BOT_TOKEN" and not BOT_TOKEN: BOT_TOKEN = v
+                if k == "CHAT_ID" and not CHAT_ID: CHAT_ID = v
+except Exception:
+    pass
+
+def send_telegram(new_projects: list, categorized: dict):
+    if not BOT_TOKEN or not CHAT_ID:
+        return
+    if not new_projects:
+        return
+
+    lines = [f"\U0001fa82 Airdrop Scan \u2014 {datetime.now().strftime('%H:%M')}"]
+    lines.append("")
+    lines.append(f"\U0001f195 New ({len(new_projects)})")
+    for p in sorted(new_projects, key=lambda x: x["trust"], reverse=True)[:10]:
+        cat = CAT_LABEL.get(categorize(p), "?")
+        tasks = ", ".join(p.get("tasks", [])[:3]) if p.get("tasks") else "-"
+        lines.append(f"  {p['name']}  \u00b7  {cat}  \u00b7  {p['url']}  \u00b7  {tasks}")
+    lines.append("")
+    lines.append(f"\U0001f4ca Summary")
+    for k, label in [("testnet", "Testnet"), ("mainnet", "Mainnet"), ("task_farmer", "Social Tasks")]:
+        lines.append(f"  {CAT_EMOJI[k]} {label}: {len(categorized.get(k, []))}")
+    lines.append(f"  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500")
+    lines.append(f"  Total: {sum(len(v) for v in categorized.values())}")
+
+    text = "\n".join(lines)
+    try:
+        requests.post(
+            f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
+            json={"chat_id": CHAT_ID, "text": text, "disable_web_page_preview": True},
+            timeout=10,
+        )
+        log("Telegram sent")
+    except Exception as e:
+        log(f"Telegram error: {e}")
+
+
 # ─── MAIN ──────────────────────────────────────────────────
 
 def main():
@@ -356,6 +406,8 @@ def main():
     print("\n" + report)
     REPORT_FILE.write_text(report, "utf-8")
     log(f"Report -> {REPORT_FILE}")
+
+    send_telegram(new_p, categorized)
 
     # Write summary JSON for GitHub Pages
     try:
