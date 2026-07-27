@@ -1,6 +1,6 @@
 # DroperOG v2
 
-هانتینگ خودکار ایردراپ با دسته‌بندی سه‌گانه (تست‌نت / تسک فارمر / مین‌نت) و تشخیص تغییرات
+Multi-source airdrop monitor with auto-categorization (Testnet / Task Farmer / Mainnet) and change detection.
 
 ## Quick Start
 
@@ -9,26 +9,21 @@ pip install -r requirements.txt
 python droperog.py
 ```
 
-```powershell
-# یا اجرای مستقیم:
-python droperog.py
-```
-
 ## Features
 
-- **۲ منبع داده:** AlphaDrops + CryptoRank (~700+ پروژه)
-- **دسته‌بندی خودکار:** 🟣 Testnet / 🟡 Task Farmer / 🟢 Mainnet
-- **تشخیص تغییرات:** پروژه‌های جدید 🆕 / آپدیت شده 🔄 / حذف شده 🗑️
-- **Trust Score:** براساس فاندینگ، ریتینگ، وضعیت و ویژگی‌ها
-- **ذخیره وضعیت:** فقط تغییرات بین ران‌ها نشون داده می‌شه
-- **قابلیت زمان‌بندی:** اجرا خودکار هر ۴ ساعت
+- **2 data sources:** AlphaDrops + CryptoRank (~400+ unique projects)
+- **Auto-categorization:** 🟣 Testnet / 🟡 Task Farmer / 🟢 Mainnet
+- **Change detection:** NEW 🆕 / UPDATED 🔄 / REMOVED 🗑️ shown on each run
+- **Trust Score:** 0-95% based on funding, rating, status, and metadata
+- **State persistence:** only deltas shown after the first run
+- **Scheduling:** Windows Task Scheduler every 4h
 
 ## Schedule (Windows Task Scheduler)
 
 ```powershell
-# Administrator:
-powershell -File setup_schedule.ps1    # هر ۴ ساعت
-powershell -File setup_schedule.ps1 -Hours 6   # هر ۶ ساعت
+# Run as Administrator:
+powershell -File setup_schedule.ps1       # every 4 hours
+powershell -File setup_schedule.ps1 -Hours 6   # every 6 hours
 ```
 
 ## Output
@@ -41,23 +36,25 @@ powershell -File setup_schedule.ps1 -Hours 6   # هر ۶ ساعت
   No new projects
 
 --------------------------------------------------
-  CATEGORIZED SUMMARY (Trust >= 65)
+  CATEGORIZED SUMMARY
 --------------------------------------------------
 
-🟣 Testnet (7):
-  Soul Labs — 80% | ethereum
-  Ithaca — 70% | ethereum | Faucet
+🟣 Testnet (3):
+  Fermah — 80% | $5.2M | Predictions, Testnet
+  Tempo — 70% | $500M | Use Testnet, Complete Quests
   ...
 
-🟢 Mainnet (80):
-  Fomo — 85% | solana, base, ethereum | $15M
+🟢 Mainnet (75):
+  Fomo — 85% | solana, base, ethereum | $94M
+  Polymarket — 85% | polygon | $2.88B
   ...
 
-🟡 Task Farmer (676):
-  PIN AI — 75% | ethereum | Social
+🟡 Task Farmer (279):
+  PIN AI — 95% | $10M | Social
+  DogeOS — 85% | $6.9M
   ...
 
 --------------------------------------------------
-  Total: 763 | Testnet: 7 | Task Farmer: 676 | Mainnet: 80
+  Total: 357 | Testnet: 3 | Task Farmer: 279 | Mainnet: 75
 ==========================================================
 ```
