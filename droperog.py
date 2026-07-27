@@ -289,8 +289,8 @@ def build_report(new_projects, updated, removed, categorized, state):
 
 # ─── TELEGRAM ─────────────────────────────────────────────
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN") or ""
-CHAT_ID = os.environ.get("CHAT_ID") or ""
+BOT_TOKEN = (os.environ.get("BOT_TOKEN") or os.environ.get("TELEGRAM_BOT_TOKEN") or "")
+CHAT_ID = (os.environ.get("CHAT_ID") or os.environ.get("TELEGRAM_CHAT_ID") or "")
 # Also try loading from .env file
 try:
     env_file = BASE / ".env"
@@ -300,8 +300,8 @@ try:
             if line and not line.startswith("#") and "=" in line:
                 k, v = line.split("=", 1)
                 k, v = k.strip(), v.strip().strip("\"'")
-                if k == "BOT_TOKEN" and not BOT_TOKEN: BOT_TOKEN = v
-                if k == "CHAT_ID" and not CHAT_ID: CHAT_ID = v
+                if k in ("BOT_TOKEN", "TELEGRAM_BOT_TOKEN") and not BOT_TOKEN: BOT_TOKEN = v
+                if k in ("CHAT_ID", "TELEGRAM_CHAT_ID") and not CHAT_ID: CHAT_ID = v
 except Exception:
     pass
 
