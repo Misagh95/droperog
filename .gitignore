@@ -1,6 +1,5 @@
-node_modules/
-dist/
+__pycache__/
+*.pyc
+data/state.json
+data/run_log.txt
 .env
-*.log
-.DS_Store
-Thumbs.db
