@@ -1,79 +1,38 @@
 ==========================================================
-  DroperOG v2 — 2026-07-27 17:26:55
+  DroperOG v2 — 2026-07-27 17:32:59
 ==========================================================
 
-  [32mNEW (406):[0m
-  🟢 Bullpen [Mainnet]  Trust: 75%
+  [32mNEW (1):[0m
+  🟢 RISEx [Mainnet]  Trust: 65%
      Chains: ?
-     Cost: $10
-     https://cryptorank.io/price/bullpen
-  🟡 Architect [Task Farmer]  Trust: 95%
-     Chains: ?
-     Funding: $52,000,000
-     https://cryptorank.io/price/architect
-  🟡 DeepNodeAI [Task Farmer]  Trust: 75%
-     Chains: ?
-     Funding: $5,000,000
-     https://cryptorank.io/price/deepnodeai
-  🟡 Geo [Task Farmer]  Trust: 65%
-     Chains: ?
-     https://cryptorank.io/price/geo
-  🟡 Codex [Task Farmer]  Trust: 80%
-     Chains: ?
-     Funding: $15,800,000
-     https://cryptorank.io/price/codex-pbc
-  🟡 Fast Protocol [Task Farmer]  Trust: 55%
-     Chains: ?
-     https://cryptorank.io/price/fast-protocol
-  🟡 PiP World [Task Farmer]  Trust: 80%
-     Chains: ?
-     Funding: $10,000,000
-     https://cryptorank.io/price/pip-world
-  🟡 Duffle [Task Farmer]  Trust: 55%
-     Chains: ?
-     https://cryptorank.io/price/duffle
-  🟡 Rhuna [Task Farmer]  Trust: 80%
-     Chains: ?
-     Funding: $2,000,000
-     https://cryptorank.io/price/rhuna
-  🟡 Cerebro [Task Farmer]  Trust: 60%
-     Chains: ?
-     https://cryptorank.io/price/cerebro
-  🟡 Ellipsis Labs (Phoenix Trade) [Task Farmer]  Trust: 80%
-     Chains: ?
-     Funding: $44,300,000
-     https://cryptorank.io/price/ellipsis-labs
-  🟡 Axis [Task Farmer]  Trust: 75%
-     Chains: ?
-     Funding: $5,000,000
-     https://cryptorank.io/price/axis
-  🟡 Zaiffer [Task Farmer]  Trust: 75%
-     Chains: ?
-     Funding: $2,310,000
-     https://cryptorank.io/price/zaiffer
-  🟡 SOAR [Task Farmer]  Trust: 55%
-     Chains: ?
-     https://cryptorank.io/price/launchonsoar
-  🟡 Fin (Prev. TipLink) [Task Farmer]  Trust: 80%
-     Chains: ink
-     Funding: $23,000,000
-     https://cryptorank.io/price/fin
-     ... and 391 more
+     Cost: $30
+     https://cryptorank.io/price/risex
+
+  [36mUPDATED (8):[0m
+  Clasho: Trust: 65% -> 55%
+  Injective: Trust: 85% -> 75%
+  Quip Network: Trust: 60% -> 70%
+  BRIX: Trust: 85% -> 75%
+  HelloTrade: Trust: 75% -> 85%
+  Polymer Labs: Trust: 90% -> 80%
+  Atleta Network: Trust: 55% -> 65%
+  JPool Staked SOL: Trust: 65% -> 55%
 
 --------------------------------------------------
   CATEGORIZED SUMMARY (Trust >= 65)
 --------------------------------------------------
 
-🟣 Testnet (7 — showing 7 high-trust):
+🟣 Testnet (8 — showing 8 high-trust):
   Ithaca — 85% | ? | $20,000,000 | Testnet
   Fermah — 80% | ? | $5,200,000 | Predictions, Testnet
   Only Layer — 80% | ? | Testnet
+  Celo — 80% | ? | $104,500,000 | Testnet
   Soul Labs — 75% | ? | Testnet
   Tempo — 70% | ? | $500.00M | Use Testnet, Complete Quests
-  Cashmere Labs — 70% | ? | Mainnet, Bounty Platforms
+  Quip Network — 70% | ? | Node, Social
   DeFi Saver — 65% | arbitrum, ethereum, optimism | NA | Use both the mainnet and testnet
 
-🟢 Mainnet (87 — showing 73 high-trust):
+🟢 Mainnet (89 — showing 74 high-trust):
   Project 0 (prev. marginfi) — 90% | ? | $3,000,000 | Mainnet
   Pharos Network — 88% | pharos | $8M | Explore Pharos Network app, Bridge to the network
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
@@ -95,12 +54,11 @@
   Rysk Finance — 75% | arbitrum | $1.4M | Explore Rysk Finance app, Do one onchain action
   Optimism — 75% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
 
-🟡 Task Farmer (669 — showing 514 high-trust):
+🟡 Social Tasks (667 — showing 513 high-trust):
   PIN AI — 95% | ? | $10,000,000 | Social, Fill The Form
   Architect — 95% | ? | $52,000,000 | Fill The Form
   Poseidon — 95% | ? | $15,000,000 | Social
   Bluefin — 90% | ? | $33,550,000 | Fill The Form
-  Polymer Labs — 90% | ? | $26,600,000 | Getting a role, Social
   RateX — 85% | multi-chain | TBA
   ETHGAS — 85% | ethereum | $12.00M | Join the Points Program, Complete quests
   Superform — 85% | arbitrum, base, ethereum, optimism, polygon | $6.5M | Join the Safari campaign to earn XP and collect NFTs
@@ -116,8 +74,9 @@
   GRVT — 85% | ? | $33,300,000
   D3 — 85% | ? | $30,000,000
   Ritual — 85% | ? | $25,000,000
+  Cambrian Network — 85% | ? | $11,900,000
 
 --------------------------------------------------
-  Total: 763 | Testnet: 7 | Task Farmer: 669 | Mainnet: 87
+  Total: 764 | Testnet: 8 | Social Tasks: 667 | Mainnet: 89
   Last run: 0 min ago
 ==========================================================

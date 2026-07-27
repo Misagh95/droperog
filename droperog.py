@@ -193,7 +193,7 @@ def categorize(project: dict) -> str:
     return "task_farmer"
 
 
-CAT_LABEL = {"testnet": "Testnet", "task_farmer": "Task Farmer", "mainnet": "Mainnet"}
+CAT_LABEL = {"testnet": "Testnet", "task_farmer": "Social Tasks", "mainnet": "Mainnet"}
 CAT_EMOJI = {"testnet": "🟣", "task_farmer": "🟡", "mainnet": "🟢"}
 CAT_COLOR = {"testnet": "\033[35m", "task_farmer": "\033[33m", "mainnet": "\033[32m"}
 
@@ -275,7 +275,7 @@ def build_report(new_projects, updated, removed, categorized, state):
     tf = len(categorized.get("task_farmer", []))
     mn = len(categorized.get("mainnet", []))
     lines.append(f"\n{'-' * 50}")
-    lines.append(f"  Total: {total} | Testnet: {tn} | Task Farmer: {tf} | Mainnet: {mn}")
+    lines.append(f"  Total: {total} | Testnet: {tn} | Social Tasks: {tf} | Mainnet: {mn}")
     if state.get("last_run"):
         try:
             last = datetime.fromisoformat(state["last_run"])

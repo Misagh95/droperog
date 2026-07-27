@@ -12,7 +12,7 @@ python droperog.py
 ## Features
 
 - **2 data sources:** AlphaDrops + CryptoRank (~400+ unique projects)
-- **Auto-categorization:** 🟣 Testnet / 🟡 Task Farmer / 🟢 Mainnet
+- **Auto-categorization:** 🟣 Testnet / 🟡 Social Tasks / 🟢 Mainnet
 - **Change detection:** NEW 🆕 / UPDATED 🔄 / REMOVED 🗑️ shown on each run
 - **Trust Score:** 0-95% based on funding, rating, status, and metadata
 - **State persistence:** only deltas shown after the first run
@@ -49,12 +49,12 @@ powershell -File setup_schedule.ps1 -Hours 6   # every 6 hours
   Polymarket — 85% | polygon | $2.88B
   ...
 
-🟡 Task Farmer (279):
+🟡 Social Tasks (279):
   PIN AI — 95% | $10M | Social
   DogeOS — 85% | $6.9M
   ...
 
 --------------------------------------------------
-  Total: 357 | Testnet: 3 | Task Farmer: 279 | Mainnet: 75
+  Total: 357 | Testnet: 3 | Social Tasks: 279 | Mainnet: 75
 ==========================================================
 ```
