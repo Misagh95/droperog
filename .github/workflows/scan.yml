@@ -1,0 +1,35 @@
+name: Scan Airdrops
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Run scanner
+        run: python droperog.py
+      - name: Commit Pages JSON
+        run: |
+          git config user.name "droperog-bot"
+          git config user.email "bot@droperog.app"
+          if git diff --quiet docs/projects.json; then
+            echo "No changes"
+          else
+            git add docs/projects.json
+            git commit -m "Auto-update scan results [skip ci]"
+            git push
+          fi

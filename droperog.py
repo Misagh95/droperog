@@ -357,6 +357,19 @@ def main():
     REPORT_FILE.write_text(report, "utf-8")
     log(f"Report -> {REPORT_FILE}")
 
+    # Write summary JSON for GitHub Pages
+    try:
+        summary = {
+            "summary": {k: len(v) for k, v in categorized.items()},
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M UTC"),
+        }
+        pages_file = BASE / "docs" / "projects.json"
+        pages_file.parent.mkdir(exist_ok=True)
+        pages_file.write_text(json.dumps(summary, indent=2), "utf-8")
+        log(f"Pages JSON -> {pages_file}")
+    except Exception as e:
+        log(f"Pages JSON error: {e}")
+
 
 if __name__ == "__main__":
     main()
