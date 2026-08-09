@@ -1,0 +1,43 @@
+name: Hunter Scan (Early Detection)
+
+on:
+  schedule:
+    # هر ۶ ساعت — UTC است؛ یعنی ۰۰:۳۰، ۰۶:۳۰، ۱۲:۳۰، ۱۸:۳۰ به وقت تهران
+    - cron: '30 */6 * * *'
+  workflow_dispatch:   # دکمه «Run workflow» برای اجرای دستی
+
+permissions:
+  contents: write
+
+jobs:
+  hunter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run hunter (early detection)
+        run: python hunter.py --telegram
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Commit hunter state + report
+        run: |
+          git config user.name "droperog-bot"
+          git config user.email "bot@droperog.app"
+          git add data/hunter_state.json data/hunter_report.txt data/triage.csv docs/hunter_report.md
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Auto-update hunter state [skip ci]"
+            git push
+          fi
