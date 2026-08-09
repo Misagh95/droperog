@@ -1,0 +1,46 @@
+{
+  "seen": {
+    "h_testnet_haust-network": {
+      "first_seen": "2026-08-09T17:32:35.417369+00:00"
+    },
+    "h_testnet_pharos-airdrop": {
+      "first_seen": "2026-08-09T17:32:35.417391+00:00"
+    },
+    "h_testnet_fraction-ai": {
+      "first_seen": "2026-08-09T17:32:35.417395+00:00"
+    },
+    "h_testnet_inertia-airdrop": {
+      "first_seen": "2026-08-09T17:32:35.417399+00:00"
+    },
+    "h_testnet_theoriqai-airdrop": {
+      "first_seen": "2026-08-09T17:32:35.417402+00:00"
+    },
+    "h_testnet_initia-airdrop": {
+      "first_seen": "2026-08-09T17:32:35.417406+00:00"
+    },
+    "h_fund_gnews_bb39b10d35e6e995": {
+      "first_seen": "2026-08-09T17:32:35.417737+00:00"
+    },
+    "h_fund_gnews_f19da9358047525e": {
+      "first_seen": "2026-08-09T17:32:35.417818+00:00"
+    },
+    "h_fund_gnews_2006f3a09838ce4e": {
+      "first_seen": "2026-08-09T17:32:35.417840+00:00"
+    },
+    "h_gh_Rinse12/testnet-5chan-pass-faucet": {
+      "first_seen": "2026-08-09T17:32:35.417844+00:00"
+    },
+    "h_gh_SoroushDevv/CFT-Dashboard": {
+      "first_seen": "2026-08-09T17:32:35.417847+00:00"
+    },
+    "h_gh_promanas0/archpulse": {
+      "first_seen": "2026-08-09T17:32:35.417850+00:00"
+    }
+  },
+  "last_run": "2026-08-09T17:32:35.417859+00:00",
+  "seen_fund_keys": [
+    "firmus|2b",
+    "jpyc|38m",
+    "nvidia-backed company nearly doubles valuatio"
+  ]
+}
