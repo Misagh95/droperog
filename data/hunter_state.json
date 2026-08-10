@@ -30,12 +30,19 @@
     },
     "h_fund_a29460eb7ebeefd7": {
       "first_seen": "2026-08-10T02:41:30.203285+00:00"
+    },
+    "h_news_bd163e295b715c2e": {
+      "first_seen": "2026-08-10T13:56:07.929690+00:00"
+    },
+    "h_fund_f6602bda2c8241ad": {
+      "first_seen": "2026-08-10T13:56:07.930003+00:00"
     }
   },
   "seen_fund_keys": [
+    "crypto news: ethereum based pepeto sells out ",
     "crypto startups raise $76.4 million this week",
     "firmus|2b",
     "nvidia-backed company nearly doubles valuatio"
   ],
-  "last_run": "2026-08-10T08:14:49.777749+00:00"
+  "last_run": "2026-08-10T13:56:07.930014+00:00"
 }
