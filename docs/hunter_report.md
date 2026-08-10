@@ -1,13 +1,6 @@
-# 🎯 DroperOG Hunter — 2026-08-10 06:11 (تهران)
+# 🎯 DroperOG Hunter — 2026-08-10 11:44 (تهران)
 
-🆕 **1 مورد تازه:**
-
-## 💰 خبر فاندینگ (1)
-
-- **Crypto Startups Raise $76.4 Million This Week, Yellow Card Leads** (1h پیش)
-  - https://news.google.com/rss/articles/CBMiWEFVX3lxTE9VXzdrWUZVM1A0NkV0ZmVrY0dzc0pIczVVV1oyQnM2dHdxRkE2WnF5allXcW53MFpkYjQzUlVqSWVTOXN3alhsSk9xY0lVUWpHWDFDbFlMR18?oc=5
-  - $76.4M
-
+🔍 این اسکن: هیچ کمپین تازه‌ای (چند روز اخیر) پیدا نشد.
 ---
 
-**چشم‌انداز:** 💰 خبر فاندینگ: 2 | 🆕 تازه در ترکر: 6
+**چشم‌انداز:** 🆕 تازه در ترکر: 6
