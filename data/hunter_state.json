@@ -45,14 +45,25 @@
     },
     "h_fund_d3062bca558988e6": {
       "first_seen": "2026-08-11T02:35:29.087878+00:00"
+    },
+    "h_news_46770539cc530e1b": {
+      "first_seen": "2026-08-11T07:46:08.994244+00:00"
+    },
+    "h_fund_ef7df3d8592875a2": {
+      "first_seen": "2026-08-11T07:46:08.994548+00:00"
+    },
+    "h_fund_60b11e7dbc53dc9b": {
+      "first_seen": "2026-08-11T07:46:08.994558+00:00"
     }
   },
   "seen_fund_keys": [
     "crypto news: ethereum based pepeto sells out ",
     "crypto startups raise $76.4 million this week",
     "firmus|2b",
+    "lightspeed india partners: funding rounds and",
     "nvidia-backed company nearly doubles valuatio",
-    "studios|35m"
+    "studios|35m",
+    "sv investment: funding rounds and investments"
   ],
-  "last_run": "2026-08-11T02:35:29.087893+00:00"
+  "last_run": "2026-08-11T07:46:08.994568+00:00"
 }

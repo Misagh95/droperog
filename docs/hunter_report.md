@@ -1,19 +1,19 @@
-# 🎯 DroperOG Hunter — 2026-08-11 06:05 (تهران)
+# 🎯 DroperOG Hunter — 2026-08-11 11:16 (تهران)
 
-🆕 **2 مورد تازه:**
+🆕 **3 مورد تازه:**
 
-## 💰 خبر فاندینگ (1)
+## 💰 خبر فاندینگ (2)
 
-- **Parallel Studios Secures $35M in Funding for Ethereum NFT Game Parallel and AI-Powered Colony** (27h پیش)
-  - https://news.google.com/rss/articles/CBMi1wFBVV95cUxOeTFRVXk0Qks1SVl5aVY4ODhHV1FMY1oteFpERS1hQkhKckN3MmNkN0FSVDFvWjhvQmNORmpVNEM5Ni15RHNjNjFmam9NVkdqWVFHZjZwLUlkcGpuMWRKWC0wdUlpMWNCcGFhekdKSjRCMnJLWjhDaHhuWnlqOVBaSDIwN0pMLXdfc3ZtNXZkM1pwVnpLa0NheVBSeks1dVU0Z0x3b2dtTzlRaWptbm04ZzhvMlMzby1lWFdyc2FlZEp1WTNjMkxLRDNXRmVqMU50YjV4WXBNSQ?oc=5
-  - $35M
+- **SV Investment: Funding Rounds and Investments** (همین الان)
+  - https://news.google.com/rss/articles/CBMiXEFVX3lxTE84TnZsWXVPRFJtbF9Pc0ZVRUQwWFhQN25qcE1xeFRIdkNNNExJRlBrWnNIR0FTYnFsX2pCVVgxSjVON25xUllOUllhLWZSWFAxQWY5T2JGOUxCb2xf?oc=5
+- **Lightspeed India Partners: Funding Rounds and Investments** (همین الان)
+  - https://news.google.com/rss/articles/CBMibEFVX3lxTE1xdkNDQmhtX2x3b1FnVUl4bmRRSzJZMWtiT0FVbXg5LS1qVHo3LThpdGl3aHdYOUQxR3Y2S3BYamx2ekJzUWxPWGE3MmhjRFV0WDlsbWFLUDNCSDJZSGpTRm01MGpyLWpwMFBYdQ?oc=5
 
-## 🟡 تسک/کمپین (1)
+## 🔵 پوینت (1)
 
-- **Vangrid** (6h پیش)
-  - https://cryptorank.io/price/vangrid-activity1266
-  - 🎁 Points | 💰 $9,000,000 | رایگان | ⏱ 20min
+- **Midas Markets Airdrop Guide: How Trading Earns You Points** (همین الان)
+  - https://news.google.com/rss/articles/CBMiZ0FVX3lxTE85VHhadTBuSWN0MTJKU0Y3dmNhal9CaXJaVXBHNDRJSFh0aXREMlhSbGZRNmhQWTJ6OFctNE0zek5OYXNOYVM1ZUVZdkRkVkpLOGpRelJWWENQclRBTW44bGRsbjNpSEk?oc=5
 
 ---
 
-**چشم‌انداز:** 🟣 تست‌نت: 1 | 💰 خبر فاندینگ: 1 | 🟡 تسک/کمپین: 3 | 🆕 تازه در ترکر: 6
+**چشم‌انداز:** 🟣 تست‌نت: 1 | 💰 خبر فاندینگ: 3 | 🔵 پوینت: 1 | 🟡 تسک/کمپین: 1 | 🆕 تازه در ترکر: 6
