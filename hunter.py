@@ -29,9 +29,11 @@ import csv
 import hashlib
 import json
 import os
+import random
 import re
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -53,8 +55,13 @@ HUNTER_STATE = DATA_DIR / "hunter_state.json"
 HUNTER_REPORT = DATA_DIR / "hunter_report.txt"
 HUNTER_REPORT_MD = DOCS_DIR / "hunter_report.md"
 TRIAGE_CSV = DATA_DIR / "triage.csv"
+HUNTER_LOG = DATA_DIR / "hunter_log.txt"
 
 STATE_VERSION = 3
+
+# URLs that failed completely after retries — a failed fetch must not be
+# treated as "everything disappeared" (no false REMOVED / state reset).
+FETCH_ERRORS: list[str] = []
 
 HEADERS = {"User-Agent": "DroperOG-Hunter/3.0", "Accept": "application/json"}
 BROWSER_HEADERS = {
@@ -68,25 +75,51 @@ NEWS_DAYS = int(os.environ.get("HUNTER_NEWS_DAYS", "3"))
 
 def log(msg: str):
     ts = datetime.now().strftime("%H:%M:%S")
-    print(f"[{ts}] {msg}")
+    line = f"[{ts}] {msg}"
+    print(line)
+    try:
+        with open(HUNTER_LOG, "a", encoding="utf-8") as f:
+            f.write(line + "\n")
+    except Exception:
+        pass
+
+
+def _request(url: str, timeout: int, params: dict | None, headers: dict, retries: int = 3):
+    """GET with retry + exponential backoff. Returns response or None."""
+    last_err = ""
+    for attempt in range(retries):
+        try:
+            r = requests.get(url, params=params, timeout=timeout, headers=headers)
+            if r.status_code == 200:
+                return r
+            last_err = f"HTTP {r.status_code}"
+            if r.status_code < 500:
+                break  # client error — retrying won't help
+        except Exception as e:
+            last_err = str(e)
+        if attempt < retries - 1:
+            time.sleep(0.5 * (2 ** attempt) + random.uniform(0, 0.3))
+    FETCH_ERRORS.append(url)
+    log(f"  Error {url}: {last_err}")
+    return None
 
 
 def fetch_json(url: str, timeout: int = 20, params: dict | None = None) -> object:
+    r = _request(url, timeout, params, HEADERS)
+    if r is None:
+        return None
     try:
-        r = requests.get(url, params=params, timeout=timeout, headers=HEADERS)
-        return r.json() if r.status_code == 200 else None
+        return r.json()
     except Exception as e:
         log(f"  Error {url}: {e}")
         return None
 
 
 def fetch_text(url: str, timeout: int = 20, params: dict | None = None) -> str | None:
-    try:
-        r = requests.get(url, timeout=timeout, headers=BROWSER_HEADERS, params=params)
-        return r.text if r.status_code == 200 else None
-    except Exception as e:
-        log(f"  Error {url}: {e}")
+    r = _request(url, timeout, params, BROWSER_HEADERS)
+    if r is None:
         return None
+    return r.text
 
 
 def stable_id(*parts: str) -> str:
@@ -274,6 +307,86 @@ def fetch_crypto_rank_fresh(days: int = FRESH_DAYS) -> list[dict]:
     return out
 
 
+# ─── 2b) DropJet — لیست رایگان/کیوریت‌شده ایردراپ‌ها (WP REST API) ─────
+
+DROPJET_API = "https://dropjet.co/wp-json/wp/v2"
+
+
+def _wp_get(path: str, params: dict | None = None) -> object:
+    return fetch_json(f"{DROPJET_API}/{path}", params=params)
+
+
+def _wp_terms(taxonomy: str) -> dict[int, str]:
+    """Fetch all terms of a DropJet taxonomy: {term_id: name}."""
+    out: dict[int, str] = {}
+    page = 1
+    while True:
+        data = _wp_get(taxonomy, {"per_page": 100, "page": page})
+        if not isinstance(data, list) or not data:
+            break
+        for t in data:
+            out[t.get("id")] = t.get("name") or t.get("slug") or ""
+        if len(data) < 100:
+            break
+        page += 1
+    return out
+
+
+def _strip_html(html: str) -> str:
+    text = re.sub(r"<[^>]+>", " ", html or "")
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def categorize_dropjet(cats: list[str], desc: str = "") -> str:
+    text = " ".join(cats).lower() + " " + desc.lower()
+    if any(k in text for k in ("testnet", "faucet", "devnet", "sepolia")):
+        return "testnet"
+    if any(k in text for k in ("social", "telegram mini apps", "raffle", "gamefi", "quest")):
+        return "task"
+    if any(k in text for k in ("points", "season", "campaign", "xp")):
+        return "points"
+    if any(k in text for k in ("layer 1", "layer 2", "dex", "defi", "lending",
+                               "rollup", "tge", "mainnet", "trading")):
+        return "mainnet"
+    return "newtracked"
+
+
+def fetch_dropjet_fresh(days: int = FRESH_DAYS) -> list[dict]:
+    """DropJet airdrops added within the last N days (real publish date)."""
+    cats = _wp_terms("airdrop_categories")
+    chains = _wp_terms("blockchains")
+    cutoff = fresh_cutoff(days)
+    out = []
+    page = 1
+    while True:
+        data = _wp_get("airdrops", {"per_page": 100, "page": page})
+        if not isinstance(data, list) or not data:
+            break
+        for a in data:
+            added = parse_dt(a.get("date") or a.get("date_gmt"))
+            if not added or added < cutoff:
+                continue
+            name = (a.get("title") or {}).get("rendered") or "Unknown"
+            cat_names = [cats.get(t) for t in (a.get("airdrop_categories") or []) if cats.get(t)]
+            chain_names = [chains.get(t) for t in (a.get("blockchains") or []) if chains.get(t)]
+            desc = _strip_html((a.get("content") or {}).get("rendered", ""))[:160]
+            out.append({
+                "id": f"dj_{a.get('id', '')}",
+                "name": name,
+                "category": categorize_dropjet(cat_names, desc),
+                "source": "dropjet",
+                "url": a.get("link") or "",
+                "desc": ", ".join(cat_names[:4]) + (f" | 🔗 {', '.join(chain_names[:4])}" if chain_names else ""),
+                "date": added,
+                "cost": None,
+            })
+        if len(data) < 100:
+            break
+        page += 1
+    log(f"  dropjet: {len(out)} fresh airdrops (last {days}d)")
+    return out
+
+
 # ─── 3) خبرهای ایردراپ/تستنت تازه (Google News) ────────────────────────
 
 GSEARCH = "https://news.google.com/rss/search"
@@ -333,12 +446,21 @@ def fetch_airdrop_news(days: int = NEWS_DAYS) -> list[dict]:
     """اعلامیه‌های تازه ایردراپ/تستنت از اخبار — با فیلتر لیستیکل و پرومو."""
     out = []
     cutoff = datetime.now(timezone.utc) - timedelta(days=days)
-    for q in AIRDROP_QUERIES:
-        data = fetch_text(GSEARCH, params={"q": q, "hl": "en-US", "gl": "US", "ceid": "US:en"})
-        if not data:
-            time.sleep(2)
-            continue
-        n = 0
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        futures = [ex.submit(_airdrop_query, q, cutoff) for q in AIRDROP_QUERIES]
+        for f in as_completed(futures):
+            try:
+                out.extend(f.result())
+            except Exception as e:
+                log(f"  gnews query error: {e}")
+    return out
+
+
+def _airdrop_query(q: str, cutoff: datetime) -> list[dict]:
+    """Run one Google News query for airdrop/testnet announcements."""
+    data = fetch_text(GSEARCH, params={"q": q, "hl": "en-US", "gl": "US", "ceid": "US:en"})
+    out = []
+    if data:
         for it in parse_rss_items(data):
             title = strip_source(it["title"])
             low = title.lower()
@@ -358,9 +480,7 @@ def fetch_airdrop_news(days: int = NEWS_DAYS) -> list[dict]:
                 "desc": "",
                 "date": pub,
             })
-            n += 1
-        log(f"  gnews '{q}': {n} airdrop news")
-        time.sleep(2)
+    log(f"  gnews '{q}': {len(out)} airdrop news")
     return out
 
 
@@ -418,12 +538,22 @@ def funding_dedup_key(name: str) -> str:
 def fetch_funding_news(days: int = FUNDING_DAYS) -> list[dict]:
     out = []
     cutoff = datetime.now(timezone.utc) - timedelta(days=days)
-    for q in FUNDING_QUERIES:
-        data = fetch_text(GSEARCH, params={"q": q, "hl": "en-US", "gl": "US", "ceid": "US:en"})
-        if not data:
-            time.sleep(2)
-            continue
-        n = 0
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        futures = [ex.submit(_funding_query, q, cutoff) for q in FUNDING_QUERIES]
+        futures += [ex.submit(_funding_feed, src, url, cutoff) for src, url in SECONDARY_FEEDS]
+        for f in as_completed(futures):
+            try:
+                out.extend(f.result())
+            except Exception as e:
+                log(f"  funding fetch error: {e}")
+    return out
+
+
+def _funding_query(q: str, cutoff: datetime) -> list[dict]:
+    """Run one Google News funding query."""
+    data = fetch_text(GSEARCH, params={"q": q, "hl": "en-US", "gl": "US", "ceid": "US:en"})
+    out = []
+    if data:
         for it in parse_rss_items(data):
             title = strip_source(it["title"])
             if not is_funding_news(title):
@@ -440,15 +570,15 @@ def fetch_funding_news(days: int = FUNDING_DAYS) -> list[dict]:
                 "desc": extract_funding_amount(title),
                 "date": pub,
             })
-            n += 1
-        log(f"  gnews '{q}': {n} funding items")
-        time.sleep(2)
+    log(f"  gnews '{q}': {len(out)} funding items")
+    return out
 
-    for src, url in SECONDARY_FEEDS:
-        xml = fetch_text(url)
-        if not xml:
-            continue
-        n = 0
+
+def _funding_feed(src: str, url: str, cutoff: datetime) -> list[dict]:
+    """Parse one secondary funding RSS feed."""
+    xml = fetch_text(url)
+    out = []
+    if xml:
         for it in parse_rss_items(xml):
             if not is_funding_news(it["title"]):
                 continue
@@ -464,9 +594,7 @@ def fetch_funding_news(days: int = FUNDING_DAYS) -> list[dict]:
                 "desc": extract_funding_amount(it["title"]),
                 "date": pub,
             })
-            n += 1
-        log(f"  {src}: {n} funding items")
-        time.sleep(1)
+    log(f"  {src}: {len(out)} funding items")
     return out
 
 
@@ -528,9 +656,24 @@ def append_triage(items: list[dict]):
                         it["source"], it["url"], dstr, it["id"]])
 
 
+def esc(s: object) -> str:
+    """Escape text for Telegram HTML parse mode."""
+    return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def _truncate_html(text: str, limit: int = 3800) -> str:
+    """Cut at a newline boundary so Telegram HTML tags stay well-formed."""
+    if len(text) <= limit:
+        return text
+    cut = text.rfind("\n", 0, limit)
+    if cut < 0:
+        cut = limit
+    return text[:cut] + "\n…"
+
+
 def build_telegram_message(new_items: list[dict], fresh: dict) -> str:
     now = now_tehran()
-    header = (f"🎯 DroperOG Hunter — {now.strftime('%Y-%m-%d %H:%M')} (تهران)\n"
+    header = (f"🎯 <b>DroperOG Hunter</b> — {now.strftime('%Y-%m-%d %H:%M')} (تهران)\n"
               f"────────────────────")
 
     if not new_items:
@@ -540,7 +683,7 @@ def build_telegram_message(new_items: list[dict], fresh: dict) -> str:
                 "\n📋 جزئیات: docs/hunter_report.md")
         return f"{header}\n{body}"
 
-    lines = [header, f"\n🆕 {len(new_items)} مورد تازه:"]
+    lines = [header, f"\n🆕 <b>{len(new_items)} مورد تازه:</b>"]
     caps = {"testnet": 8, "funding": 5, "points": 4, "task": 5,
             "mainnet": 5, "network": 6, "newtracked": 6, "unknown": 3}
 
@@ -555,21 +698,18 @@ def build_telegram_message(new_items: list[dict], fresh: dict) -> str:
             nm = p["name"]
             if len(nm) > 70:
                 nm = nm[:67] + "..."
-            lines.append(f"• {nm} {age}")
-            lines.append(f"  {p['url']}")
+            lines.append(f"<b>{esc(nm)}</b> {CAT_LABEL.get(p['category'], '')} {age}")
+            lines.append(f"🔗 {p['url']}")
             if p.get("desc"):
-                lines.append(f"  {p['desc']}")
+                lines.append(f"<blockquote>{esc(p['desc'])}</blockquote>")
         if len(items) > caps.get(cat, 5):
             lines.append(f"  … و {len(items) - caps[cat]} مورد دیگر")
 
     summary = "  |  ".join(f"{CAT_LABEL[c]}: {fresh.get(c, 0)}" for c in CAT_ORDER if fresh.get(c, 0))
-    lines.append(f"\n📊 چشم‌انداز: {summary}")
+    lines.append(f"\n📊 <b>چشم‌انداز:</b> {summary}")
     lines.append("📋 جزئیات کامل: docs/hunter_report.md")
 
-    text = "\n".join(lines)
-    if len(text) > 3900:
-        text = text[:3900] + "\n…"
-    return text
+    return _truncate_html("\n".join(lines))
 
 
 def send_telegram(text: str, dry_run: bool = False):
@@ -582,12 +722,22 @@ def send_telegram(text: str, dry_run: bool = False):
         log("  Telegram: BOT_TOKEN یا CHAT_ID تنظیم نشده — رد شد")
         return
     try:
-        requests.post(
+        r = requests.post(
             f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
-            json={"chat_id": CHAT_ID, "text": text, "disable_web_page_preview": True},
+            json={"chat_id": CHAT_ID, "text": text, "parse_mode": "HTML",
+                  "disable_web_page_preview": True},
             timeout=15,
         )
-        log("  Telegram sent")
+        ok = False
+        if r.status_code == 200:
+            try:
+                ok = bool(r.json().get("ok"))
+            except Exception:
+                ok = False
+        if ok:
+            log("  Telegram sent")
+        else:
+            log(f"  Telegram error: HTTP {r.status_code}: {r.text[:200]}")
     except Exception as e:
         log(f"  Telegram error: {e}")
 
@@ -681,19 +831,35 @@ def main():
     seen = state.get("seen", {})
     seen_fund_keys = set(state.get("seen_fund_keys", []))
 
-    log(f"1) AlphaDrops (addedDate fresh {FRESH_DAYS}d)...")
-    alpha = fetch_alpha_drops_fresh(days=FRESH_DAYS)
+    log(f"Fetching 5 sources in parallel (AlphaDrops fresh {FRESH_DAYS}d, "
+        f"CryptoRank fresh {FRESH_DAYS}d, DropJet fresh {FRESH_DAYS}d, "
+        f"news fresh {NEWS_DAYS}d, funding fresh {FUNDING_DAYS}d)...")
+    with ThreadPoolExecutor(max_workers=5) as ex:
+        f_alpha = ex.submit(fetch_alpha_drops_fresh, days=FRESH_DAYS)
+        f_cr = ex.submit(fetch_crypto_rank_fresh, days=FRESH_DAYS)
+        f_dj = ex.submit(fetch_dropjet_fresh, days=FRESH_DAYS)
+        f_news = ex.submit(fetch_airdrop_news, days=NEWS_DAYS)
+        f_fund = ex.submit(fetch_funding_news, days=FUNDING_DAYS)
+        alpha = f_alpha.result()
+        campaigns = f_cr.result()
+        dropjet = f_dj.result()
+        airdrop_news = f_news.result()
+        funding = f_fund.result()
+    log(f"  AlphaDrops: {len(alpha)} | CryptoRank: {len(campaigns)} | "
+        f"DropJet: {len(dropjet)} | News: {len(airdrop_news)} | Funding: {len(funding)}")
 
-    log(f"2) CryptoRank (createdAt fresh {FRESH_DAYS}d)...")
-    campaigns = fetch_crypto_rank_fresh(days=FRESH_DAYS)
+    critical_failures = [u for u in FETCH_ERRORS
+                         if "alphadrops" in u or "cryptorank" in u]
+    if critical_failures:
+        log(f"  Critical source(s) failed: {critical_failures} — aborting scan.")
+        log("  Keeping previous state to avoid false REMOVED reports.")
+        return
+    if FETCH_ERRORS:
+        log(f"  {len(FETCH_ERRORS)} non-critical fetch(es) failed (news/funding) — continuing.")
 
-    log(f"3) خبرهای ایردراپ/تستنت تازه (fresh {NEWS_DAYS}d)...")
-    airdrop_news = fetch_airdrop_news(days=NEWS_DAYS)
 
-    log(f"4) خبرهای فاندینگ (fresh {FUNDING_DAYS}d)...")
-    funding = fetch_funding_news(days=FUNDING_DAYS)
 
-    all_items = alpha + campaigns + airdrop_news + funding
+    all_items = alpha + campaigns + dropjet + airdrop_news + funding
 
     # فقط موارد واقعاً جدید برای ما
     new_items = []

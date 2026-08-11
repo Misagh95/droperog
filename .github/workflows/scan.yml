@@ -5,6 +5,11 @@ on:
     - cron: '0 */4 * * *'
   workflow_dispatch:
 
+concurrency:
+  # از اجرای هم‌زمان scan و hunter جلوگیری می‌کند تا git push هر دو با هم race نشود
+  group: droperog-scan
+  cancel-in-progress: false
+
 permissions:
   contents: write
 

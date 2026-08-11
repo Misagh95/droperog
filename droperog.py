@@ -3,8 +3,9 @@
 DroperOG v2 — Multi-source airdrop hunter with auto-categorization & monitoring
 """
 
-import json, os, sys, time
-from datetime import datetime, timezone
+import json, os, random, re, sys, time
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -23,20 +24,42 @@ REPORT_FILE = DATA_DIR / "last_report.txt"
 LOG_FILE = DATA_DIR / "run_log.txt"
 DATA_DIR.mkdir(exist_ok=True)
 
+# URLs whose fetch failed completely after retries — used to avoid
+# treating a network outage as "projects removed".
+FETCH_ERRORS: list[str] = []
+
 
 def log(msg: str):
     ts = datetime.now().strftime("%H:%M:%S")
-    print(f"[{ts}] {msg}")
-
-
-def fetch_json(url: str, timeout: int = 20, params: dict | None = None) -> Any:
+    line = f"[{ts}] {msg}"
+    print(line)
     try:
-        r = requests.get(url, params=params, timeout=timeout,
-            headers={"User-Agent": "DroperOG/2.0", "Accept": "application/json"})
-        return r.json() if r.status_code == 200 else None
-    except Exception as e:
-        log(f"  Error: {e}")
-        return None
+        with open(LOG_FILE, "a", encoding="utf-8") as f:
+            f.write(line + "\n")
+    except Exception:
+        pass
+
+
+def fetch_json(url: str, timeout: int = 20, params: dict | None = None, retries: int = 3) -> Any:
+    """GET with retry + exponential backoff. Returns parsed JSON or None.
+    On total failure the URL is recorded in FETCH_ERRORS."""
+    last_err = ""
+    for attempt in range(retries):
+        try:
+            r = requests.get(url, params=params, timeout=timeout,
+                headers={"User-Agent": "DroperOG/2.0", "Accept": "application/json"})
+            if r.status_code == 200:
+                return r.json()
+            last_err = f"HTTP {r.status_code}"
+            if r.status_code < 500:
+                break  # client error — retrying won't help
+        except Exception as e:
+            last_err = str(e)
+        if attempt < retries - 1:
+            time.sleep(0.5 * (2 ** attempt) + random.uniform(0, 0.3))
+    FETCH_ERRORS.append(url)
+    log(f"  Error: {url} ({last_err})")
+    return None
 
 
 # ─── SOURCES ───────────────────────────────────────────────
@@ -68,7 +91,12 @@ def fetch_alphadrops() -> list[dict]:
         tasks = [t.get("title") or t.get("description", "") for t in tasks_raw if t.get("title") or t.get("description")]
         trust = 50
         if a.get("featured"): trust += 15
-        if a.get("fundingAmount") and a["fundingAmount"] not in ("Undisclosed", "Hidden", ""): trust += 15
+        f_usd = funding_usd(a.get("fundingAmount"))
+        if f_usd is not None:
+            if f_usd >= 50_000_000: trust += 15
+            elif f_usd >= 10_000_000: trust += 12
+            elif f_usd >= 1_000_000: trust += 10
+            else: trust += 5
         if a.get("isClaimable"): trust += 10
         if a.get("claimLink"): trust += 5
         if a.get("website"): trust += 5
@@ -134,8 +162,13 @@ def fetch_cryptorank() -> list[dict]:
         if rating > 100: trust += 15
         elif rating > 50: trust += 10
         elif rating > 10: trust += 5
-        if coin.get("totalRaise"): trust += 10
-        if coin.get("funds"): trust += 10
+        f_usd = funding_usd(coin.get("totalRaise"))
+        if f_usd is not None:
+            if f_usd >= 50_000_000: trust += 12
+            elif f_usd >= 10_000_000: trust += 10
+            elif f_usd >= 1_000_000: trust += 8
+            else: trust += 4
+        elif coin.get("funds"): trust += 5
         if item.get("status") == "CONFIRMED": trust += 10
         if item.get("linkToClaim"): trust += 5
         trust = min(trust, 95)
@@ -157,6 +190,177 @@ def fetch_cryptorank() -> list[dict]:
             "reward_type": reward_type,
         })
     return result
+
+
+# ─── SOURCE: DROPJET ──────────────────────────────────────
+# Public WordPress REST API of dropjet.co — human-curated airdrops with
+# category, blockchain and investor taxonomy terms.
+
+DROPJET_API = "https://dropjet.co/wp-json/wp/v2"
+
+
+def _wp_get(path: str, params: dict | None = None) -> Any:
+    return fetch_json(f"{DROPJET_API}/{path}", params=params)
+
+
+def _wp_terms(taxonomy: str) -> dict[int, str]:
+    """Fetch all terms of a DropJet taxonomy: {term_id: name}."""
+    out: dict[int, str] = {}
+    page = 1
+    while True:
+        data = _wp_get(taxonomy, params={"per_page": 100, "page": page})
+        if not isinstance(data, list) or not data:
+            break
+        for t in data:
+            out[t.get("id")] = t.get("name") or t.get("slug") or ""
+        if len(data) < 100:
+            break
+        page += 1
+    return out
+
+
+def _strip_html(html: str) -> str:
+    text = re.sub(r"<[^>]+>", " ", html or "")
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def fetch_dropjet() -> list[dict]:
+    """DropJet — curated airdrop list via its public WP REST API."""
+    cats = _wp_terms("airdrop_categories")
+    chains = _wp_terms("blockchains")
+    investors = _wp_terms("investors")
+
+    all_items = []
+    page = 1
+    while True:
+        data = _wp_get("airdrops", params={"per_page": 100, "page": page})
+        if not isinstance(data, list) or not data:
+            break
+        all_items.extend(data)
+        if len(data) < 100:
+            break
+        page += 1
+
+    result = []
+    for a in all_items:
+        name = (a.get("title") or {}).get("rendered") or "Unknown"
+        cat_names = [cats.get(t) for t in (a.get("airdrop_categories") or [])]
+        cat_names = [c for c in cat_names if c]
+        chain_names = [chains.get(t) for t in (a.get("blockchains") or [])]
+        chain_names = [c for c in chain_names if c]
+        inv_names = [investors.get(t) for t in (a.get("investors") or [])]
+        inv_names = [i for i in inv_names if i]
+
+        desc = _strip_html((a.get("content") or {}).get("rendered", ""))
+        cats_low = " ".join(cat_names).lower()
+
+        trust = 50
+        n_inv = len(inv_names)
+        if n_inv >= 5: trust += 12
+        elif n_inv >= 2: trust += 8
+        elif n_inv == 1: trust += 5
+        if any(k in cats_low for k in ("layer 1", "layer 2", "rollup", "infrastructure")):
+            trust += 5
+        if "social" in cats_low or "gamefi" in cats_low:
+            trust += 3
+        trust = min(trust, 95)
+
+        result.append({
+            "id": f"dj_{a.get('id', '')}",
+            "name": name,
+            "desc": desc[:300],
+            "chains": [c.lower() for c in chain_names],
+            "categories": [c.lower() for c in cat_names],
+            "tasks": cat_names,
+            "status_raw": "active",
+            "funding": "",
+            "url": a.get("link") or "",
+            "source": "DropJet",
+            "trust": trust,
+            "investors": inv_names,
+        })
+    return result
+
+
+# ─── DATA QUALITY ─────────────────────────────────────────
+
+def funding_usd(funding: Any) -> float | None:
+    """Parse a funding string ('$5.2M', '$10 million', '$94,000,000') to USD."""
+    if not funding:
+        return None
+    m = re.search(r"([\d,]+(?:\.\d+)?)\s*(b|m|k|billion|million|thousand)?", str(funding).lower())
+    if not m:
+        return None
+    amt = float(m.group(1).replace(",", ""))
+    unit = m.group(2) or ""
+    if unit.startswith("b"):
+        return amt * 1e9
+    if unit.startswith("m"):
+        return amt * 1e6
+    if unit.startswith("k"):
+        return amt * 1e3
+    return amt
+
+
+def funding_rank(funding: Any) -> int:
+    """Order funding display values: concrete > undisclosed > empty."""
+    if not funding:
+        return 0
+    if str(funding).strip().lower() in ("undisclosed", "hidden"):
+        return 1
+    return 2
+
+
+def normalize_name(name: str) -> str:
+    """Normalize a project name for dedup: strip token symbols in parens,
+    common suffixes and punctuation."""
+    n = name.lower().strip()
+    n = re.sub(r"\s*\([^)]*\)", "", n)  # "Polymarket (POLY)" -> "polymarket"
+    for suf in (" protocol", " network", " finance", " foundation", " labs",
+                " lab", " token", " coin", " project", " official"):
+        if n.endswith(suf):
+            n = n[: -len(suf)]
+            break
+    n = re.sub(r"[^a-z0-9\s]", " ", n)
+    return re.sub(r"\s+", " ", n).strip()
+
+
+def project_key(p: dict) -> str:
+    """Stable dedup key for a project record."""
+    k = normalize_name(p.get("name") or "")
+    if len(k) < 2 or len(k) > 60:
+        return ""
+    if k == "unknown":
+        # keep anonymous projects separate instead of merging them
+        return f"unknown_{p.get('id', '')}"
+    return k
+
+
+def merge_projects(projects: list[dict]) -> list[dict]:
+    """Dedup by normalized name; merge records from multiple sources:
+    union of chains/categories/tasks, max trust, best funding.
+    Each merged record keeps `ids` = list of all source ids."""
+    merged: dict[str, dict] = {}
+    for p in projects:
+        k = project_key(p)
+        if not k:
+            continue
+        if k not in merged:
+            m = dict(p)
+            m["ids"] = [p["id"]]
+            merged[k] = m
+            continue
+        m = merged[k]
+        for field in ("chains", "categories", "tasks"):
+            m[field] = list(dict.fromkeys((m.get(field) or []) + (p.get(field) or [])))
+        m["trust"] = max(m["trust"], p["trust"])
+        if funding_rank(p.get("funding")) > funding_rank(m.get("funding")):
+            m["funding"] = p.get("funding", "")
+        if len(p["name"]) < len(m["name"]):
+            m["name"] = p["name"]
+        if p["id"] not in m["ids"]:
+            m["ids"].append(p["id"])
+    return list(merged.values())
 
 
 # ─── CATEGORIZATION ────────────────────────────────────────
@@ -200,17 +404,49 @@ CAT_COLOR = {"testnet": "\033[35m", "task_farmer": "\033[33m", "mainnet": "\033[
 
 # ─── STATE ─────────────────────────────────────────────────
 
+STATE_SCHEMA = 2
+
+
 def load_state() -> dict:
     if STATE_FILE.exists():
         try:
             return json.loads(STATE_FILE.read_text("utf-8"))
         except Exception:
             pass
-    return {"projects": {}, "last_run": None, "seen_ids": []}
+    return {"projects": {}, "last_run": None}
 
 
 def save_state(state: dict):
     STATE_FILE.write_text(json.dumps(state, indent=2, ensure_ascii=False), "utf-8")
+
+
+def migrate_state(state: dict):
+    """Migrate v1 state (keyed by source id) to v2 (keyed by project key)."""
+    if state.get("schema") == STATE_SCHEMA:
+        return
+    migrated = {}
+    for pid, rec in state.get("projects", {}).items():
+        if isinstance(rec, dict) and rec.get("name"):
+            k = project_key(rec)
+            if k and k not in migrated:
+                r = dict(rec)
+                r["ids"] = [pid]
+                migrated[k] = r
+    state["projects"] = migrated
+    state["schema"] = STATE_SCHEMA
+    if migrated:
+        log(f"  Migrated state to schema {STATE_SCHEMA}: {len(migrated)} project(s)")
+
+
+def prune_state(state: dict, days: int = 60):
+    """Drop projects not seen for `days` so state.json doesn't grow forever."""
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=days)).isoformat()
+    stale = [k for k, p in state["projects"].items()
+             if p.get("last_seen") and p["last_seen"] < cutoff]
+    if stale:
+        for k in stale:
+            state["projects"].pop(k, None)
+        log(f"  Pruned {len(stale)} project(s) not seen in {days}d")
 
 
 # ─── REPORT ────────────────────────────────────────────────
@@ -305,34 +541,63 @@ try:
 except Exception:
     pass
 
+def esc(s: object) -> str:
+    """Escape text for Telegram HTML parse mode."""
+    return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def _truncate_html(text: str, limit: int = 3800) -> str:
+    """Cut at a newline boundary so Telegram HTML tags stay well-formed."""
+    if len(text) <= limit:
+        return text
+    cut = text.rfind("\n", 0, limit)
+    if cut < 0:
+        cut = limit
+    return text[:cut] + "\n…"
+
+
 def send_telegram(new_projects: list, categorized: dict):
     if not BOT_TOKEN or not CHAT_ID:
         return
     if not new_projects:
         return
 
-    lines = [f"\U0001fa82 Airdrop Scan \u2014 {datetime.now().strftime('%H:%M')}"]
-    lines.append("")
-    lines.append(f"\U0001f195 New ({len(new_projects)})")
+    lines = [f"🪂 <b>Airdrop Scan</b> — {datetime.now().strftime('%H:%M')}", ""]
+    lines.append(f"🆕 <b>New ({len(new_projects)})</b>")
     for p in sorted(new_projects, key=lambda x: x["trust"], reverse=True)[:10]:
-        cat = CAT_LABEL.get(categorize(p), "?")
-        tasks = ", ".join(p.get("tasks", [])[:3]) if p.get("tasks") else "-"
-        lines.append(f"  {p['name']}  \u00b7  {cat}  \u00b7  {p['url']}  \u00b7  {tasks}")
-    lines.append("")
-    lines.append(f"\U0001f4ca Summary")
+        cat = categorize(p)
+        label = CAT_LABEL.get(cat, "?")
+        emoji = CAT_EMOJI.get(cat, "❓")
+        tasks = ", ".join(p.get("tasks", [])[:3]) if p.get("tasks") else ""
+        lines.append(f"<b>{esc(p['name'])}</b> {emoji} {label}")
+        lines.append(f"🔗 {p['url']}")
+        if tasks:
+            lines.append(f"<blockquote>{esc(tasks)}</blockquote>")
+        lines.append("")
+    lines.append("📊 <b>Summary</b>")
     for k, label in [("testnet", "Testnet"), ("mainnet", "Mainnet"), ("task_farmer", "Social Tasks")]:
         lines.append(f"  {CAT_EMOJI[k]} {label}: {len(categorized.get(k, []))}")
-    lines.append(f"  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500")
-    lines.append(f"  Total: {sum(len(v) for v in categorized.values())}")
+    lines.append(f"  ────────────────────")
+    lines.append(f"  <b>Total: {sum(len(v) for v in categorized.values())}</b>")
 
-    text = "\n".join(lines)
+    text = _truncate_html("\n".join(lines))
     try:
-        requests.post(
+        r = requests.post(
             f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
-            json={"chat_id": CHAT_ID, "text": text, "disable_web_page_preview": True},
+            json={"chat_id": CHAT_ID, "text": text, "parse_mode": "HTML",
+                  "disable_web_page_preview": True},
             timeout=10,
         )
-        log("Telegram sent")
+        ok = False
+        if r.status_code == 200:
+            try:
+                ok = bool(r.json().get("ok"))
+            except Exception:
+                ok = False
+        if ok:
+            log("Telegram sent")
+        else:
+            log(f"Telegram error: HTTP {r.status_code}: {r.text[:200]}")
     except Exception as e:
         log(f"Telegram error: {e}")
 
@@ -343,57 +608,63 @@ def main():
     log("DroperOG v2 starting...\n")
 
     state = load_state()
-    seen_ids = set(state.get("seen_ids", []))
+    migrate_state(state)
+    prune_state(state)
 
-    log("AlphaDrops...")
-    ad = fetch_alphadrops()
-    log(f"  {len(ad)} projects")
+    # Fetch all sources in parallel
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        f_ad = ex.submit(fetch_alphadrops)
+        f_cr = ex.submit(fetch_cryptorank)
+        f_dj = ex.submit(fetch_dropjet)
+        log("Fetching AlphaDrops + CryptoRank + DropJet in parallel...")
+        ad = f_ad.result()
+        cr = f_cr.result()
+        dj = f_dj.result()
+    log(f"  AlphaDrops: {len(ad)} | CryptoRank: {len(cr)} | DropJet: {len(dj)}")
 
-    log("CryptoRank...")
-    cr = fetch_cryptorank()
-    log(f"  {len(cr)} projects")
+    if FETCH_ERRORS:
+        log(f"  {len(FETCH_ERRORS)} fetch(es) failed — aborting scan.")
+        log("  Keeping previous state to avoid false REMOVED reports.")
+        return
 
-    all_p = ad + cr
+    all_p = ad + cr + dj
 
-    # Dedup by name
-    seen_names = set()
-    deduped = []
-    for p in all_p:
-        k = p["name"].lower().strip()
-        if k in seen_names or len(k) < 2 or len(k) > 60:
-            continue
-        seen_names.add(k)
-        deduped.append(p)
+    # Dedup by normalized name + merge records from all sources
+    deduped = merge_projects(all_p)
+    log(f"  After dedup/merge: {len(deduped)} unique projects")
 
-    # Detect new / updated / removed
+    cur_names = {project_key(p) for p in deduped}
+
+    # Detect new / updated / removed (state is keyed by project_key)
     new_p = []
     updated = []
-    cur_ids = set()
     for p in deduped:
-        pid = p["id"]
-        cur_ids.add(pid)
-        if pid not in seen_ids:
+        k = project_key(p)
+        if k not in state["projects"]:
             new_p.append(p)
         else:
-            old = state["projects"].get(pid, {})
+            old = state["projects"].get(k, {})
             ot = old.get("trust", 0)
             if abs(p["trust"] - ot) >= 10:
                 updated.append({"name": p["name"], "change": f"Trust: {ot}% -> {p['trust']}%"})
 
     removed_p = []
-    for pid in seen_ids:
-        if pid not in cur_ids:
-            removed_p.append(state["projects"].get(pid, {}).get("name", pid))
+    for k in list(state["projects"].keys()):
+        if k not in cur_names:
+            nm = state["projects"][k].get("name", "")
+            if nm and nm not in removed_p:
+                removed_p.append(nm)
 
     # Update state
     for p in deduped:
-        state["projects"][p["id"]] = {
+        k = project_key(p)
+        state["projects"][k] = {
             "name": p["name"], "trust": p["trust"], "category": categorize(p),
             "categories": p.get("categories", []), "chains": p.get("chains", []),
+            "ids": p.get("ids") or [p["id"]],
             "last_seen": datetime.now().isoformat(),
         }
     state["last_run"] = datetime.now(timezone.utc).isoformat()
-    state["seen_ids"] = list(cur_ids)
     save_state(state)
 
     # Categorize
