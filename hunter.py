@@ -567,12 +567,23 @@ def build_telegram_message(new_items: list[dict], fresh: dict) -> str:
                 "\n📋 جزئیات: docs/hunter_report.md")
         return f"{header}\n{body}"
 
-    lines = [header, f"\n🆕 <b>{len(new_items)} مورد تازه:</b>"]
+    # defensive dedup by name — main() already dedups, but never show a
+    # project twice in one message
+    seen_names = set()
+    uniq_items = []
+    for it in new_items:
+        k = (it.get("name") or "").strip().lower()
+        if not k or k in seen_names:
+            continue
+        seen_names.add(k)
+        uniq_items.append(it)
+
+    lines = [header, f"\n🆕 <b>{len(uniq_items)} مورد تازه:</b>"]
     caps = {"testnet": 8, "points": 4, "task": 5,
             "mainnet": 5, "network": 6, "newtracked": 6, "unknown": 3}
 
     for cat in CAT_ORDER:
-        items = sorted([x for x in new_items if x["category"] == cat],
+        items = sorted([x for x in uniq_items if x["category"] == cat],
                        key=lambda x: x.get("date") or x.get("first_seen"), reverse=True)
         if not items:
             continue

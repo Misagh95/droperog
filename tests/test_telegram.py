@@ -161,3 +161,55 @@ def test_hunter_build_telegram_message_no_items():
     msg = hunter.build_telegram_message([], {"testnet": 0})
     assert "هیچ کمپین تازه‌ای" in msg
     assert "<b>DroperOG Hunter</b>" in msg
+
+
+# ─── no duplicates in one message ─────────────────────────
+
+def test_droperog_send_telegram_never_duplicates_projects(monkeypatch):
+    captured = {}
+
+    class FakeResponse:
+        status_code = 200
+        text = ""
+
+        def json(self):
+            return {"ok": True}
+
+    def fake_post(url, json=None, timeout=None):
+        captured["json"] = json
+        return FakeResponse()
+
+    monkeypatch.setattr(droperog.requests, "post", fake_post)
+    monkeypatch.setattr(droperog, "BOT_TOKEN", "test")
+    monkeypatch.setattr(droperog, "CHAT_ID", "test")
+
+    # same project reported by two sources, with different casing — must appear once
+    projects = [
+        {"id": "ad_1", "name": "MoonPay", "trust": 80, "tasks": ["Task A"],
+         "url": "https://x.io/a", "desc": "", "chains": [], "categories": ["social"],
+         "cost": 0, "time": 5, "reward_type": "", "funding": ""},
+        {"id": "cr_1", "name": "MOONPAY", "trust": 70, "tasks": ["Task B"],
+         "url": "https://x.io/b", "desc": "", "chains": [], "categories": ["social"],
+         "cost": 0, "time": 5, "reward_type": "", "funding": ""},
+    ]
+    droperog.send_telegram(projects, {"testnet": [], "task_farmer": [None], "mainnet": []})
+
+    text = captured["json"]["text"]
+    assert "<b>MoonPay</b>" in text
+    assert text.count("<b>MoonPay</b>") == 1
+    assert text.count("🔗 https://x.io/") == 1
+    assert "New (1)" in text
+
+
+def test_hunter_build_telegram_message_never_duplicates_projects():
+    now = datetime.now(timezone.utc)
+    items = [
+        {"id": "t1", "name": "Fermah", "category": "testnet", "source": "alphadrops",
+         "url": "https://a.io/fermah", "desc": "first", "date": now},
+        {"id": "t2", "name": "FERMAH", "category": "testnet", "source": "cryptorank",
+         "url": "https://b.io/fermah", "desc": "second", "date": now},
+    ]
+    msg = hunter.build_telegram_message(items, {"testnet": 2})
+    assert msg.count("<b>Fermah</b>") == 1
+    assert msg.count("🔗") == 1
+    assert "<b>1 مورد تازه:</b>" in msg
