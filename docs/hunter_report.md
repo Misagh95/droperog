@@ -1,28 +1,6 @@
-# 🎯 DroperOG Hunter — 2026-08-11 23:05 (تهران)
+# 🎯 DroperOG Hunter — 2026-08-11 23:52 (تهران)
 
-🆕 **5 مورد تازه:**
-
-## 🟣 تست‌نت (2)
-
-- **FX100** (3h پیش)
-  - https://cryptorank.io/price/fx-100-activity1269
-  - 🎁 Airdrop | رایگان | ⏱ 15min
-- **IRIS** (4h پیش)
-  - https://cryptorank.io/price/iris-credit-activity1268
-  - 🎁 Airdrop | رایگان | ⏱ 7min
-
-## 💰 خبر فاندینگ (3)
-
-- **Crypto-friendly Erebor Bank In Talks To Raise $1.5B At $9.5B Valuation** (4h پیش)
-  - https://news.google.com/rss/articles/CBMiakFVX3lxTE1jVVRNUXNjWWZORmJ1SW1GMm40cjhCVjZOSTdvaThSMkZsZzJYQjViZ2k5aURzeFJPd2lnWVFQN0gyWks3cUdCQVBUc2lSY2Ixd3R4MmFYeTRzSkFxQjU4QTg2YTVxYXVxeXc?oc=5
-  - $1.5B
-- **Crypto-friendly bank Erebor in talks to raise $1.5 billion at $9.5 billion valuation: FT** (4h پیش)
-  - https://news.google.com/rss/articles/CBMi0gFBVV95cUxNNngwUnQ0NlNvd2JxZk9ZUmxjSjRxWnoxemI5UU54RzBwWUM2Q3FRemV6WVlxSFBua2JLelZEWDZSalFwVFo4Qk1mMFpXbWcwVV85alVzMVA3OE1DYTE3M1BOZHlEUDlzQ1pHNHE3d1BSb0NHYWtxT2V3YktTdHVVcmctQUdXNndnZW0zTzVXenQ5S0pqWktScE5uX2l1SkYtUDZWbzROS1BvU3daaHpIT25wMHJTRlA1QW5EZkZ6VC00NUtOd0dpSldmU1dpSHlLNVE?oc=5
-  - $1.5B
-- **Crypto Projects Raise Over $1.4B Via Public Token Sales In 2026: Ethereum Leads** (5h پیش)
-  - https://news.google.com/rss/articles/CBMihAFBVV95cUxQT1BGN1RvVUJhTWZXdDJEcnkwb3djckZFRmRiVV8yN1BDMnBxNVktZHQwVFkwa3ZMV0Y1b2owLUJtYjlsV3M0Zi15bHhqUTZOTko0enFIbkRlcjVPYVlsU01QUXVBQkRFZGlMWnNZU0dmdEc3NjB6UlltenByS3cwQm9MT3A?oc=5
-  - $1.4B
-
+🔍 این اسکن: هیچ کمپین تازه‌ای (چند روز اخیر) پیدا نشد.
 ---
 
-**چشم‌انداز:** 🟣 تست‌نت: 3 | 💰 خبر فاندینگ: 5 | 🔵 پوینت: 1 | 🆕 تازه در ترکر: 7
+**چشم‌انداز:** 🟣 تست‌نت: 3 | 🔵 پوینت: 1 | 🆕 تازه در ترکر: 7
