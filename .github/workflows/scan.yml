@@ -41,5 +41,11 @@ jobs:
           else
             git add docs/projects.json
             git commit -m "Auto-update scan results [skip ci]"
-            git push
+            # اگر اسکن دیگری هم‌زمان push کرده باشد، rebase می‌کنیم و دوباره تلاش می‌کنیم
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push && exit 0
+              echo "Push failed (attempt $i), retrying..."
+              sleep 5
+            done
+            exit 1
           fi
