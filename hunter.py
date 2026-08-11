@@ -8,7 +8,7 @@ v3 چی عوض شد؟
   - منبع جدید: AlphaDrops (فیلد addedDate = تاریخ واقعی ثبت هر ایردراپ + داده غنی:
     فاندینگ، چین، سیستم پوینت، وضعیت). این بهترین منبع «تازه» است.
   - CryptoRank هم با همان فیلتر createdAt (فقط موارد ۷ روز اخیر) + نماد توکن.
-  - خبرهای ایردراپ/تستنت تازه از Google News + خبرهای فاندینگ.
+  - خبرهای ایردراپ/تستنت تازه از Google News.
 
 فقط مواردی گزارش می‌شوند که تاریخ واقعی‌شان در بازه تازگی باشد — «اولین باری که
 دیدم» دیگر به‌معنای «جدید» نیست.
@@ -21,7 +21,6 @@ v3 چی عوض شد؟
 
 تنظیم از طریق environment (اختیاری):
   HUNTER_FRESH_DAYS=7    # بازه تازگی کمپین/ایردراپ (روز)
-  HUNTER_FUNDING_DAYS=2  # بازه تازگی خبر فاندینگ (روز)
   HUNTER_NEWS_DAYS=3     # بازه تازگی خبرهای ایردراپ (روز)
 """
 
@@ -69,7 +68,6 @@ BROWSER_HEADERS = {
 }
 
 FRESH_DAYS = int(os.environ.get("HUNTER_FRESH_DAYS", "7"))
-FUNDING_DAYS = int(os.environ.get("HUNTER_FUNDING_DAYS", "2"))
 NEWS_DAYS = int(os.environ.get("HUNTER_NEWS_DAYS", "3"))
 
 
@@ -484,128 +482,14 @@ def _airdrop_query(q: str, cutoff: datetime) -> list[dict]:
     return out
 
 
-# ─── 4) خبرهای فاندینگ ─────────────────────────────────────────────────
-
-FUNDING_QUERIES = [
-    "crypto raises funding",
-    "crypto startup secures funding",
-    "crypto project raises seed",
-]
-SECONDARY_FEEDS = [
-    ("coindesk", "https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml"),
-    ("theblock", "https://www.theblock.co/rss.xml"),
-]
-FUNDING_BLOCKLIST = [
-    "sues", "lawsuit", "tax", "saylor", "raises stakes", "freeze", "hack",
-    "price", "etf", "inflow", "outflow", "chart", "market", "cease",
-    "buys", "bought", "stock", "shares", "director", "executive", "purchase", "acquires",
-]
-
-
-def extract_funding_amount(text: str) -> str:
-    m = re.search(r"\$\s?(\d+(?:\.\d+)?)\s?(M|Million|million|B|Billion|billion|K|k)?", text)
-    if not m:
-        return ""
-    amt, unit = m.group(1), (m.group(2) or "").lower()
-    if unit.startswith("b"):
-        return f"${amt}B"
-    if unit.startswith("m"):
-        return f"${amt}M"
-    return f"${amt}"
-
-
-def is_funding_news(title: str) -> bool:
-    low = title.lower()
-    if any(b in low for b in FUNDING_BLOCKLIST):
-        return False
-    if not re.search(r"(raise[sd]?|funding|seed round|series [abc]|valuation|secures|backed|round led)", low):
-        return False
-    if extract_funding_amount(title):
-        return True
-    return any(k in low for k in ("funding round", "valuation", "seed round", "series a", "series b", "series c"))
-
-
-def funding_dedup_key(name: str) -> str:
-    low = name.lower()
-    mm = re.search(r"(raises|raised|secures|securing|closes)\s+\$?\s*(\d+(?:\.\d+)?)\s*(m|b|k)?", low)
-    if mm:
-        before = low[: mm.start()].rstrip()
-        tokens = [t for t in re.split(r"[^a-z0-9.]+", before) if t]
-        return f"{tokens[-1] if tokens else ''}|{mm.group(2)}{mm.group(3) or ''}"
-    return low[:45]
-
-
-def fetch_funding_news(days: int = FUNDING_DAYS) -> list[dict]:
-    out = []
-    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
-    with ThreadPoolExecutor(max_workers=3) as ex:
-        futures = [ex.submit(_funding_query, q, cutoff) for q in FUNDING_QUERIES]
-        futures += [ex.submit(_funding_feed, src, url, cutoff) for src, url in SECONDARY_FEEDS]
-        for f in as_completed(futures):
-            try:
-                out.extend(f.result())
-            except Exception as e:
-                log(f"  funding fetch error: {e}")
-    return out
-
-
-def _funding_query(q: str, cutoff: datetime) -> list[dict]:
-    """Run one Google News funding query."""
-    data = fetch_text(GSEARCH, params={"q": q, "hl": "en-US", "gl": "US", "ceid": "US:en"})
-    out = []
-    if data:
-        for it in parse_rss_items(data):
-            title = strip_source(it["title"])
-            if not is_funding_news(title):
-                continue
-            pub = parse_pubdate(it["pub"])
-            if pub and pub < cutoff:
-                continue
-            out.append({
-                "id": f"h_fund_{stable_id(title)}",
-                "name": title,
-                "category": "funding",
-                "source": "gnews",
-                "url": it["url"],
-                "desc": extract_funding_amount(title),
-                "date": pub,
-            })
-    log(f"  gnews '{q}': {len(out)} funding items")
-    return out
-
-
-def _funding_feed(src: str, url: str, cutoff: datetime) -> list[dict]:
-    """Parse one secondary funding RSS feed."""
-    xml = fetch_text(url)
-    out = []
-    if xml:
-        for it in parse_rss_items(xml):
-            if not is_funding_news(it["title"]):
-                continue
-            pub = parse_pubdate(it["pub"])
-            if pub and pub < cutoff:
-                continue
-            out.append({
-                "id": f"h_fund_{src}_{stable_id(it['url'])}",
-                "name": it["title"],
-                "category": "funding",
-                "source": f"funding/{src}",
-                "url": it["url"],
-                "desc": extract_funding_amount(it["title"]),
-                "date": pub,
-            })
-    log(f"  {src}: {len(out)} funding items")
-    return out
-
-
 # ─── دسته‌بندی / برچسب ────────────────────────────────────────────────
 
 CAT_LABEL = {
     "testnet": "🟣 تست‌نت", "task": "🟡 تسک/کمپین", "points": "🔵 پوینت",
-    "funding": "💰 خبر فاندینگ", "mainnet": "🟢 مین‌نت",
+    "mainnet": "🟢 مین‌نت",
     "network": "🌐 شبکه/زیرساخت", "newtracked": "🆕 تازه در ترکر", "unknown": "❓ نامشخص",
 }
-CAT_ORDER = ["testnet", "funding", "points", "task", "mainnet", "network", "newtracked", "unknown"]
+CAT_ORDER = ["testnet", "points", "task", "mainnet", "network", "newtracked", "unknown"]
 
 TEHRAN_TZ = timezone(timedelta(hours=3, minutes=30))
 
@@ -636,7 +520,7 @@ def load_state() -> dict:
                 return st
         except Exception:
             pass
-    return {"v": STATE_VERSION, "seen": {}, "seen_fund_keys": []}
+    return {"v": STATE_VERSION, "seen": {}}
 
 
 def save_state(state: dict):
@@ -684,7 +568,7 @@ def build_telegram_message(new_items: list[dict], fresh: dict) -> str:
         return f"{header}\n{body}"
 
     lines = [header, f"\n🆕 <b>{len(new_items)} مورد تازه:</b>"]
-    caps = {"testnet": 8, "funding": 5, "points": 4, "task": 5,
+    caps = {"testnet": 8, "points": 4, "task": 5,
             "mainnet": 5, "network": 6, "newtracked": 6, "unknown": 3}
 
     for cat in CAT_ORDER:
@@ -829,24 +713,21 @@ def main():
 
     state = load_state()
     seen = state.get("seen", {})
-    seen_fund_keys = set(state.get("seen_fund_keys", []))
 
-    log(f"Fetching 5 sources in parallel (AlphaDrops fresh {FRESH_DAYS}d, "
+    log(f"Fetching 4 sources in parallel (AlphaDrops fresh {FRESH_DAYS}d, "
         f"CryptoRank fresh {FRESH_DAYS}d, DropJet fresh {FRESH_DAYS}d, "
-        f"news fresh {NEWS_DAYS}d, funding fresh {FUNDING_DAYS}d)...")
-    with ThreadPoolExecutor(max_workers=5) as ex:
+        f"news fresh {NEWS_DAYS}d)...")
+    with ThreadPoolExecutor(max_workers=4) as ex:
         f_alpha = ex.submit(fetch_alpha_drops_fresh, days=FRESH_DAYS)
         f_cr = ex.submit(fetch_crypto_rank_fresh, days=FRESH_DAYS)
         f_dj = ex.submit(fetch_dropjet_fresh, days=FRESH_DAYS)
         f_news = ex.submit(fetch_airdrop_news, days=NEWS_DAYS)
-        f_fund = ex.submit(fetch_funding_news, days=FUNDING_DAYS)
         alpha = f_alpha.result()
         campaigns = f_cr.result()
         dropjet = f_dj.result()
         airdrop_news = f_news.result()
-        funding = f_fund.result()
     log(f"  AlphaDrops: {len(alpha)} | CryptoRank: {len(campaigns)} | "
-        f"DropJet: {len(dropjet)} | News: {len(airdrop_news)} | Funding: {len(funding)}")
+        f"DropJet: {len(dropjet)} | News: {len(airdrop_news)}")
 
     critical_failures = [u for u in FETCH_ERRORS
                          if "alphadrops" in u or "cryptorank" in u]
@@ -855,11 +736,11 @@ def main():
         log("  Keeping previous state to avoid false REMOVED reports.")
         return
     if FETCH_ERRORS:
-        log(f"  {len(FETCH_ERRORS)} non-critical fetch(es) failed (news/funding) — continuing.")
+        log(f"  {len(FETCH_ERRORS)} non-critical fetch(es) failed (news) — continuing.")
 
 
 
-    all_items = alpha + campaigns + dropjet + airdrop_news + funding
+    all_items = alpha + campaigns + dropjet + airdrop_news
 
     # فقط موارد واقعاً جدید برای ما
     new_items = []
@@ -868,15 +749,10 @@ def main():
         if it["id"] in seen:
             continue
         nm = it["name"].strip().lower()
-        nm_key = nm[:45] if it["source"] in ("gnews", "news", "funding/coindesk", "funding/theblock") else nm
+        nm_key = nm[:45] if it["source"] in ("gnews", "news") else nm
         if nm_key in seen_names or not nm:
             continue
         seen_names.add(nm_key)
-        if it["category"] == "funding":
-            fk = funding_dedup_key(it["name"])
-            if fk in seen_fund_keys:
-                continue
-            seen_fund_keys.add(fk)
         first_seen = datetime.now(timezone.utc)
         it["first_seen"] = first_seen
         seen[it["id"]] = {"first_seen": first_seen.isoformat()}
@@ -887,7 +763,6 @@ def main():
         fresh[it["category"]] = fresh.get(it["category"], 0) + 1
 
     state["seen"] = seen
-    state["seen_fund_keys"] = sorted(seen_fund_keys)
     state["last_run"] = datetime.now(timezone.utc).isoformat()
     save_state(state)
 

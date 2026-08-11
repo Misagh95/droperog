@@ -60,10 +60,10 @@ def _droperog_sample_projects():
     return [
         {"id": "ad_1", "name": "PIN AI", "trust": 95, "tasks": ["Social", "Fill The Form"],
          "url": "https://x.io/pin", "desc": "", "chains": [], "categories": ["social"],
-         "cost": 0, "time": 5, "reward_type": ""},
+         "cost": 0, "time": 5, "reward_type": "", "funding": "$10M"},
         {"id": "cr_1", "name": "Fomo & Friends", "trust": 85, "tasks": ["Trade <Perps>"],
          "url": "https://x.io/fomo", "desc": "", "chains": ["solana"], "categories": ["trading"],
-         "cost": 0, "time": 5, "reward_type": ""},
+         "cost": 0, "time": 5, "reward_type": "", "funding": "$94M"},
     ]
 
 
@@ -100,9 +100,9 @@ def test_droperog_send_telegram_message_format(monkeypatch):
     # link below the name
     assert "🔗 https://x.io/pin" in text
     assert "🔗 https://x.io/fomo" in text
-    # quoted description (escaped)
-    assert "<blockquote>Social, Fill The Form</blockquote>" in text
-    assert "<blockquote>Trade &lt;Perps&gt;</blockquote>" in text
+    # quoted description (escaped) + concrete funding
+    assert "<blockquote>Social, Fill The Form, 💰 $10M</blockquote>" in text
+    assert "<blockquote>Trade &lt;Perps&gt;, 💰 $94M</blockquote>" in text
     # summary
     assert "🟣 Testnet: 3" in text
     assert "<b>Total: 357</b>" in text

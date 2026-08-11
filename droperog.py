@@ -562,17 +562,32 @@ def send_telegram(new_projects: list, categorized: dict):
     if not new_projects:
         return
 
+    # belt-and-suspenders dedup — merge_projects already guarantees unique names
+    seen = set()
+    uniq = []
+    for p in sorted(new_projects, key=lambda x: x["trust"], reverse=True):
+        k = (p.get("name") or "").strip().lower()
+        if not k or k in seen:
+            continue
+        seen.add(k)
+        uniq.append(p)
+
     lines = [f"🪂 <b>Airdrop Scan</b> — {datetime.now().strftime('%H:%M')}", ""]
-    lines.append(f"🆕 <b>New ({len(new_projects)})</b>")
-    for p in sorted(new_projects, key=lambda x: x["trust"], reverse=True)[:10]:
+    lines.append(f"🆕 <b>New ({len(uniq)})</b>")
+    for p in uniq[:10]:
         cat = categorize(p)
         label = CAT_LABEL.get(cat, "?")
         emoji = CAT_EMOJI.get(cat, "❓")
-        tasks = ", ".join(p.get("tasks", [])[:3]) if p.get("tasks") else ""
+        parts = []
+        if p.get("tasks"):
+            parts.append(", ".join(p["tasks"][:3]))
+        fund = p.get("funding") or ""
+        if fund and fund.strip().lower() not in ("undisclosed", "hidden"):
+            parts.append(f"💰 {fund}")
         lines.append(f"<b>{esc(p['name'])}</b> {emoji} {label}")
         lines.append(f"🔗 {p['url']}")
-        if tasks:
-            lines.append(f"<blockquote>{esc(tasks)}</blockquote>")
+        if parts:
+            lines.append(f"<blockquote>{esc(', '.join(parts))}</blockquote>")
         lines.append("")
     lines.append("📊 <b>Summary</b>")
     for k, label in [("testnet", "Testnet"), ("mainnet", "Mainnet"), ("task_farmer", "Social Tasks")]:
