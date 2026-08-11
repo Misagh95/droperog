@@ -8,8 +8,10 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;display:flex;flex-direction:column;align-items:center;padding:40px 20px;min-height:100vh}
 .container{max-width:720px;width:100%}
-h1{font-size:2.2rem;margin-bottom:4px;background:linear-gradient(135deg,#58a6ff,#bc8cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.tag{color:#8b949e;font-size:.9rem;margin-bottom:24px}
+.logo{text-align:center;margin-bottom:24px}
+.logo img{width:120px;height:120px;border-radius:50%;border:3px solid #30363d;box-shadow:0 4px 24px rgba(88,166,255,.15)}
+h1{font-size:2.2rem;margin-bottom:4px;background:linear-gradient(135deg,#58a6ff,#bc8cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center}
+.tag{color:#8b949e;font-size:.9rem;margin-bottom:24px;text-align:center}
 .card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:20px;margin-bottom:16px}
 .card h2{font-size:1.1rem;margin-bottom:8px;color:#f0f6fc}
 .card p{color:#8b949e;font-size:.9rem;line-height:1.5}
@@ -33,6 +35,7 @@ a:hover{text-decoration:underline}
 </head>
 <body>
 <div class="container">
+  <div class="logo"><img src="logo.png" alt="DroperOG v2 Logo"></div>
   <h1>DroperOG v2</h1>
   <div class="tag">Multi-source airdrop monitor &middot; Python</div>
 
@@ -67,7 +70,7 @@ a:hover{text-decoration:underline}
     <h2>Data Sources</h2>
     <p><a href="https://alphadrops.net" target="_blank">AlphaDrops</a> — project metadata, chains, funding, tasks</p>
     <p style="margin-top:4px"><a href="https://cryptorank.io" target="_blank">CryptoRank</a> — activity types, costs, ratings, time estimates</p>
-    <p style="margin-top:4px;color:#8b949e;font-size:.85rem">~400+ unique projects aggregated and deduplicated</p>
+    <p style="margin-top:4px;color:#8b949e;font-size:.85rem">~800+ unique projects aggregated and deduplicated</p>
   </div>
 
   <div class="footer">

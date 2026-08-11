@@ -1,5 +1,9 @@
 # DroperOG v2
 
+<p align="center">
+  <img src="docs/logo.png" width="150" height="150" alt="DroperOG v2 Logo" style="border-radius:50%; box-shadow: 0 4px 20px rgba(88,166,255,.2);">
+</p>
+
 Multi-source airdrop monitor with auto-categorization (Testnet / Task Farmer / Mainnet) and change detection.
 
 ## Quick Start
