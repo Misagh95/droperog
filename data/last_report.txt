@@ -1,68 +1,127 @@
 ==========================================================
-  DroperOG v2 — 2026-07-27 17:42:26
+  DroperOG v2 — 2026-08-11 20:32:30
 ==========================================================
 
-  [32mNo new projects[0m
+  [32mNEW (14):[0m
+  🟢 Quote [Mainnet]  Trust: 70%
+     Chains: hyperliquid
+     Funding: Undisclosed
+     https://alphadrops.net/airdrops/quote
+  🟣 FX100 [Testnet]  Trust: 50%
+     Chains: ?
+     https://cryptorank.io/price/fx-100
+  🟣 IRIS [Testnet]  Trust: 50%
+     Chains: ?
+     https://cryptorank.io/price/iris-credit
+  🟡 Vangrid [Social Tasks]  Trust: 58%
+     Chains: ?
+     Funding: $9,000,000
+     https://cryptorank.io/price/vangrid
+  🟡 c8ntinuum [Social Tasks]  Trust: 50%
+     Chains: ?
+     https://cryptorank.io/price/c8ntinuum
+  🟡 Stellar [Social Tasks]  Trust: 58%
+     Chains: ?
+     Funding: $5,015,000
+     https://cryptorank.io/price/stellar
+  🟡 Nodiens [Social Tasks]  Trust: 55%
+     Chains: ?
+     https://cryptorank.io/price/nodiens
+  🟡 Umia [Social Tasks]  Trust: 58%
+     Chains: ?
+     Funding: $2,076,000
+     https://cryptorank.io/price/umia
+  🟡 Rialto [Social Tasks]  Trust: 50%
+     Chains: ?
+     https://cryptorank.io/price/rialto-exchange
+  🟡 Beezie [Social Tasks]  Trust: 58%
+     Chains: ?
+     Funding: $4,000,000
+     https://cryptorank.io/price/beezie
+  🟡 MoonPay [Social Tasks]  Trust: 67%
+     Chains: ?
+     Funding: $1,242,000,000
+     https://cryptorank.io/price/moonpay
+  🟡 Loaf [Social Tasks]  Trust: 50%
+     Chains: ?
+     https://cryptorank.io/price/loaf
+  🟡 Wager Predict [Social Tasks]  Trust: 50%
+     Chains: ?
+     https://cryptorank.io/price/wager-predict
+  🟡 Click [Social Tasks]  Trust: 50%
+     Chains: ?
+     https://cryptorank.io/price/click-trade
+
+  [36mUPDATED (400):[0m
+  Upshift: Trust: 50% -> 67%
+  Meridian: Trust: 55% -> 65%
+  Nansen: Trust: 70% -> 60%
+  Dreamcash: Trust: 55% -> 65%
+  Pacifica: Trust: 85% -> 70%
+  StandX: Trust: 70% -> 55%
+  Relay: Trust: 55% -> 70%
+  Bebop: Trust: 75% -> 60%
+  Project X: Trust: 70% -> 55%
+  Hyperlend: Trust: 70% -> 55%
+
+  [31mREMOVED (8):[0m Superform, AFK Fishing, Trepa, Netrun, Bonk, Axis, Syntetika, Aligned Layer
 
 --------------------------------------------------
   CATEGORIZED SUMMARY (Trust >= 65)
 --------------------------------------------------
 
-🟣 Testnet (8 — showing 8 high-trust):
-  Ithaca — 85% | ? | $20,000,000 | Testnet
-  Fermah — 80% | ? | $5,200,000 | Predictions, Testnet
-  Only Layer — 80% | ? | Testnet
-  Celo — 80% | ? | $104,500,000 | Testnet
-  Soul Labs — 75% | ? | Testnet
-  Tempo — 70% | ? | $500.00M | Use Testnet, Complete Quests
-  Quip Network — 70% | ? | Node, Social
-  DeFi Saver — 65% | arbitrum, ethereum, optimism | NA | Use both the mainnet and testnet
+🟣 Testnet (10 — showing 5 high-trust):
+  dFusion AI — 83% | ? | $1,500,000 | Testnet, Ambassador program
+  Euclid Protocol — 78% | ? | $4,100,000 | Testnet, Social
+  Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
+  Xenea — 75% | ? | Social, Testnet
+  Malda — 70% | ? | Liquidity, Testnet
 
-🟢 Mainnet (89 — showing 74 high-trust):
-  Project 0 (prev. marginfi) — 90% | ? | $3,000,000 | Mainnet
-  Pharos Network — 88% | pharos | $8M | Explore Pharos Network app, Bridge to the network
+🟢 Mainnet (115 — showing 65 high-trust):
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
-  Perpl — 85% | monad | $9.5M | Trade Perps, $1M Volume
-  xStocks — 85% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
-  Bulk — 85% | solana | $8M | Stake SOL, Trade Perps (NOT LIVE YET)
   Polymarket — 85% | polygon | $2.88B | Explore Polymarket, Trade Markets
-  Pacifica — 85% | solana | Self-funded | Trade Perps
-  Infinex — 85% | evm&svmchains | $65.29M | Explore Infinex app, Place a perps trade
-  Based — 85% | arbitrum, hyperliquid | NA | Explore Based app, Place a perps trade
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
-  T-Rex — 85% | ? | $17,000,000 | Social, Predictions
-  Pixie Chess — 85% | ? | $5,200,000 | Gaming
-  TanX — 85% | ? | $16,500,000 | Trading
-  Raiku — 80% | ? | $13,500,000 | Hold, Staking
-  Pact Swap — 80% | ? | $5,000,000
-  AlienSwap — 80% | ? | $12,000,000
-  Bebop — 75% | ethereum, polygon | NA | Explore Bebop app, Swap a token pair
-  Rysk Finance — 75% | arbitrum | $1.4M | Explore Rysk Finance app, Do one onchain action
-  Optimism — 75% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
+  Infinex — 85% | evm&svmchains | $65.29M | Explore Infinex app, Place a perps trade
+  Pharos — 83% | pharos | $8M | Explore Pharos Network app, Bridge to the network
+  xStocks — 82% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
+  Perpl — 80% | monad | $9.5M | Trade Perps, $1M Volume
+  Bulk — 80% | solana | $8M | Stake SOL, Trade Perps (NOT LIVE YET)
+  Level (Peregrine Exploration) — 78% | ? | $6,200,000 | Mainnet, Getting a role
+  Phantom — 77% | solana | NA | Use in-app swap feature
+  Symbiotic — 75% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points
+  Magicblock — 75% | ? | $10,500,000 | Gaming, Social
+  Sophon — 75% | optimism | $10,000,000 | Social
+  Kintsu — 73% | monad | $4M | Stake $MON, Use sMON in DeFi
+  Ambient — 73% | ethereum, scroll | $6.5M | Trade, Provide Liquidity
+  Tashi Network — 73% | ? | $3,000,000 | DePIN, Node
+  Senpi — 73% | ? | $4,000,000 | Fill The Form, Trading
+  Napier — 73% | ? | $1,000,000 | Liquidity
+  Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
+  Optimism — 72% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
 
-🟡 Social Tasks (667 — showing 513 high-trust):
-  PIN AI — 95% | ? | $10,000,000 | Social, Fill The Form
-  Architect — 95% | ? | $52,000,000 | Fill The Form
-  Poseidon — 95% | ? | $15,000,000 | Social
-  Bluefin — 90% | ? | $33,550,000 | Fill The Form
-  RateX — 85% | multi-chain | TBA
-  ETHGAS — 85% | ethereum | $12.00M | Join the Points Program, Complete quests
-  Superform — 85% | arbitrum, base, ethereum, optimism, polygon | $6.5M | Join the Safari campaign to earn XP and collect NFTs
-  K25.ai — 85% | ? | $10,000,000 | Social, Fill The Form
-  DogeOS — 85% | ? | $6,900,000
-  Variational — 85% | ? | $61,800,000
-  Ducat — 85% | ? | $4,000,000
-  Forte — 85% | ? | $910,000,000
-  N1 (Prev. Layer N) — 85% | ? | $7,000,000
-  DataHive — 85% | ? | $3,500,000
-  Jupiter — 85% | ? | $172,500,000
-  PrismaX — 85% | ? | $11,000,000
-  GRVT — 85% | ? | $33,300,000
-  D3 — 85% | ? | $30,000,000
-  Ritual — 85% | ? | $25,000,000
-  Cambrian Network — 85% | ? | $11,900,000
+🟡 Social Tasks (689 — showing 353 high-trust):
+  ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
+  Zentry — 82% | ? | $145,840,000 | Social
+  Veera — 80% | zksync | $10,016,020 | Social
+  KRNL — 78% | ? | $1,700,000 | Bounty Platforms
+  OpenSea — 77% | ethereum, polygon, base, arbitrum, optimism, solana, bnbchain, linea, avalanche, abstract | $425.15M | Join the Voyage
+  Rainbow — 77% | ? | $19.5M | Explore Rainbow app, Do one onchain action
+  Forte — 77% | ? | $910,000,000
+  Variational — 77% | ? | $61,800,000
+  Jupiter — 77% | ? | $172,500,000
+  Sui — 77% | sui | $405,370,000
+  Arc — 77% | ? | $222,000,000
+  Praxis Society — 77% | ? | $544,200,000
+  Immutable — 77% | ? | $322,380,000
+  Aztec — 77% | ? | $183,765,601.9424
+  Aleo — 77% | ? | $298,000,000 | Ambassador program
+  Architect — 77% | ? | $52,000,000
+  Farcaster — 77% | base, ethereum, zora | $180,000,000 | Social
+  Blockchain.com — 77% | ? | $600,000,000
+  Canton Network — 77% | ton | $812,200,000
+  Doodles — 77% | ? | $54,500,000
 
 --------------------------------------------------
-  Total: 764 | Testnet: 8 | Social Tasks: 667 | Mainnet: 89
+  Total: 814 | Testnet: 10 | Social Tasks: 689 | Mainnet: 115
   Last run: 0 min ago
 ==========================================================
