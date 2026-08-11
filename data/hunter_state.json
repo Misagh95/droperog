@@ -57,11 +57,29 @@
     },
     "h_fund_2bd10b7d87850f68": {
       "first_seen": "2026-08-11T13:54:36.726610+00:00"
+    },
+    "cr_4e861ac7ceb27393": {
+      "first_seen": "2026-08-11T19:35:21.743307+00:00"
+    },
+    "cr_abe1959c742afc3a": {
+      "first_seen": "2026-08-11T19:35:21.743320+00:00"
+    },
+    "h_fund_c4e940885aed23f1": {
+      "first_seen": "2026-08-11T19:35:21.743578+00:00"
+    },
+    "h_fund_c4990852cc5ac15f": {
+      "first_seen": "2026-08-11T19:35:21.743587+00:00"
+    },
+    "h_fund_921925f271ae7899": {
+      "first_seen": "2026-08-11T19:35:21.743593+00:00"
     }
   },
   "seen_fund_keys": [
     "crypto news: ethereum based pepeto sells out ",
+    "crypto projects raise over $1.4b via public t",
     "crypto startups raise $76.4 million this week",
+    "crypto-friendly bank erebor in talks to raise",
+    "crypto-friendly erebor bank in talks to raise",
     "firmus|2b",
     "lightspeed india partners: funding rounds and",
     "nvidia-backed company nearly doubles valuatio",
@@ -69,5 +87,5 @@
     "sv investment: funding rounds and investments",
     "tradezero funding rounds, token sale review &"
   ],
-  "last_run": "2026-08-11T13:54:36.726639+00:00"
+  "last_run": "2026-08-11T19:35:21.743604+00:00"
 }
