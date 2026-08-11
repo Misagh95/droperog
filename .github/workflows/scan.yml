@@ -32,14 +32,14 @@ jobs:
           CHAT_ID: ${{ secrets.CHAT_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      - name: Commit Pages JSON
+      - name: Commit scan state + Pages JSON
         run: |
           git config user.name "droperog-bot"
           git config user.email "bot@droperog.app"
-          if git diff --quiet docs/projects.json; then
+          git add data/state.json data/last_report.txt docs/projects.json
+          if git diff --cached --quiet; then
             echo "No changes"
           else
-            git add docs/projects.json
             git commit -m "Auto-update scan results [skip ci]"
             # اگر اسکن دیگری هم‌زمان push کرده باشد، rebase می‌کنیم و دوباره تلاش می‌کنیم
             for i in 1 2 3; do

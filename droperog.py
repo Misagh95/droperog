@@ -62,6 +62,38 @@ def fetch_json(url: str, timeout: int = 20, params: dict | None = None, retries:
     return None
 
 
+def parse_dt(s: Any) -> datetime | None:
+    """Tolerant date parser: ISO 8601, YYYY-MM-DD, or RFC 1123."""
+    if not s:
+        return None
+    text = str(s).strip()
+    try:
+        d = datetime.fromisoformat(text.replace("Z", "+00:00"))
+        return d if d.tzinfo else d.replace(tzinfo=timezone.utc)
+    except ValueError:
+        pass
+    for fmt in ("%Y-%m-%d", "%a, %d %b %Y %H:%M:%S %z"):
+        try:
+            d = datetime.strptime(text, fmt)
+            return d if d.tzinfo else d.replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+    return None
+
+
+# پروژه‌هایی که لیست‌شدنشان قدیمی‌تر از این باشد، بی‌صدا به state اضافه می‌شوند
+# و در تلگرام به‌عنوان NEW اعلام نمی‌شوند — جلوی اسپم بک‌فیل منابع قدیمی (مثل DropJet) را می‌گیرد
+FRESH_DAYS = 30
+
+
+def is_old_listing(p: dict) -> bool:
+    """True if the project's listing date is confidently older than FRESH_DAYS."""
+    d = parse_dt(p.get("date"))
+    if d is None:
+        return False  # بدون تاریخ → اعلام کن (رفتار قبلی)
+    return (datetime.now(timezone.utc) - d).days > FRESH_DAYS
+
+
 # ─── SOURCES ───────────────────────────────────────────────
 
 def fetch_alphadrops() -> list[dict]:
@@ -114,6 +146,7 @@ def fetch_alphadrops() -> list[dict]:
             "status_raw": a.get("status", ""),
             "funding": a.get("fundingAmount") or "",
             "url": f"https://alphadrops.net/airdrops/{a.get('slug', '')}",
+            "date": added or "",
             "source": "AlphaDrops",
             "trust": trust,
         })
@@ -183,6 +216,7 @@ def fetch_cryptorank() -> list[dict]:
             "status_raw": item.get("status", ""),
             "funding": f"${coin.get('totalRaise', 0):,}" if coin.get("totalRaise") else "",
             "url": f"https://cryptorank.io/price/{coin.get('key', '')}",
+            "date": item.get("createdAt") or "",
             "source": "CryptoRank",
             "trust": trust,
             "cost": cost,
@@ -275,6 +309,7 @@ def fetch_dropjet() -> list[dict]:
             "status_raw": "active",
             "funding": "",
             "url": a.get("link") or "",
+            "date": a.get("date") or a.get("date_gmt") or "",
             "source": "DropJet",
             "trust": trust,
             "investors": inv_names,
@@ -356,6 +391,11 @@ def merge_projects(projects: list[dict]) -> list[dict]:
         m["trust"] = max(m["trust"], p["trust"])
         if funding_rank(p.get("funding")) > funding_rank(m.get("funding")):
             m["funding"] = p.get("funding", "")
+        # قدیمی‌ترین تاریخ لیست‌شدن را نگه دار
+        pd = parse_dt(p.get("date"))
+        md = parse_dt(m.get("date"))
+        if pd and (md is None or pd < md):
+            m["date"] = p.get("date")
         if len(p["name"]) < len(m["name"]):
             m["name"] = p["name"]
         if p["id"] not in m["ids"]:
@@ -656,7 +696,11 @@ def main():
     for p in deduped:
         k = project_key(p)
         if k not in state["projects"]:
-            new_p.append(p)
+            # بک‌فیل بی‌صدا: پروژه‌های با تاریخ لیست‌شدن قدیمی
+            # (مثل کل لیست فعلی DropJet از ۲۰۲۵) به state اضافه می‌شوند
+            # ولی به‌عنوان NEW اعلام نمی‌شوند
+            if not is_old_listing(p):
+                new_p.append(p)
         else:
             old = state["projects"].get(k, {})
             ot = old.get("trust", 0)
