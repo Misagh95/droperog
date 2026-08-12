@@ -1,23 +1,41 @@
 ==========================================================
-  DroperOG v2 — 2026-08-12 12:38:17
+  DroperOG v2 — 2026-08-12 16:43:21
 ==========================================================
 
-  [32mNo new projects[0m
+  [32mNEW (1):[0m
+  🟡 Cade [Social Tasks]  Trust: 60%
+     Chains: ?
+     https://cryptorank.io/price/cade
 
-  [31mREMOVED (9):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, Axis, Syntetika, Aligned Layer
+  [36mUPDATED (17):[0m
+  Soneium: Trust: 65% -> 75%
+  PeakAI: Trust: 73% -> 63%
+  Andrena (DAWN): Trust: 75% -> 85%
+  Level (Peregrine Exploration): Trust: 78% -> 68%
+  Nerite: Trust: 55% -> 65%
+  Sophon: Trust: 75% -> 65%
+  Malda: Trust: 70% -> 60%
+  Squads: Trust: 75% -> 85%
+  Parasail: Trust: 73% -> 83%
+  Catena Labs: Trust: 75% -> 85%
+
+  [31mREMOVED (14):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, 4AI, 3look, Axis, V! DataDAO
 
 --------------------------------------------------
   CATEGORIZED SUMMARY (Trust >= 65)
 --------------------------------------------------
 
-🟣 Testnet (10 — showing 5 high-trust):
+🟣 Testnet (10 — showing 8 high-trust):
   dFusion AI — 83% | ? | $1,500,000 | Testnet, Ambassador program
   Euclid Protocol — 78% | ? | $4,100,000 | Testnet, Social
   Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
+  Soneium — 75% | soneium | Fill The Form, Ambassador program
   Xenea — 75% | ? | Social, Testnet
-  Malda — 70% | ? | Liquidity, Testnet
+  GTE — 75% | ? | $25,942,000 | Testnet, Getting a role
+  Polyhedra Network — 75% | ? | $45,040,000 | Testnet
+  Celo — 72% | ? | $104,500,000 | Testnet
 
-🟢 Mainnet (116 — showing 67 high-trust):
+🟢 Mainnet (113 — showing 65 high-trust):
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Polymarket — 85% | polygon | $2.88B | Explore Polymarket, Trade Markets
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
@@ -26,11 +44,8 @@
   xStocks — 82% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Perpl — 80% | monad | $9.5M | Trade Perps, $1M Volume
   Bulk — 80% | solana | $8M | Stake SOL, Trade Perps (NOT LIVE YET)
-  Level (Peregrine Exploration) — 78% | ? | $6,200,000 | Mainnet, Getting a role
   Phantom — 77% | solana | NA | Use in-app swap feature
   Symbiotic — 75% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points
-  Magicblock — 75% | ? | $10,500,000 | Gaming, Social
-  Sophon — 75% | optimism | $10,000,000 | Social
   N1 — 73% | solana | $7,000,000 | Join Private Beta, Trade Perps
   Kintsu — 73% | monad | $4M | Stake $MON, Use sMON in DeFi
   Ambient — 73% | ethereum, scroll | $6.5M | Trade, Provide Liquidity
@@ -38,10 +53,16 @@
   Senpi — 73% | ? | $4,000,000 | Fill The Form, Trading
   Napier — 73% | ? | $1,000,000 | Liquidity
   Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
+  Optimism — 72% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
+  Zerion — 72% | arbitrum, aurora, avalanche, bnbchain, base, ethereum, fantom, gnosis, optimism, polygon, zksync | $33M | Explore Zerion app, Swap a token pair
+  Quote — 70% | hyperliquid | Undisclosed | Join , Trade
 
-🟡 Social Tasks (687 — showing 352 high-trust):
+🟡 Social Tasks (686 — showing 346 high-trust):
+  Andrena (DAWN) — 85% | ? | $48,500,000 | DePIN
+  Squads — 85% | ? | $40,200,000 | Social
+  Catena Labs — 85% | ? | $48,000,000 | Social
+  Parasail — 83% | ? | $4,000,000 | Social
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
-  Zentry — 82% | ? | $145,840,000 | Social
   Veera — 80% | zksync | $10,016,020 | Social
   KRNL — 78% | ? | $1,700,000 | Bounty Platforms
   OpenSea — 77% | ethereum, polygon, base, arbitrum, optimism, solana, bnbchain, linea, avalanche, abstract | $425.15M | Join the Voyage
@@ -57,11 +78,8 @@
   Aleo — 77% | ? | $298,000,000 | Ambassador program
   Architect — 77% | ? | $52,000,000
   Farcaster — 77% | base, ethereum, zora | $180,000,000 | Social
-  Blockchain.com — 77% | ? | $600,000,000
-  Canton Network — 77% | ton | $812,200,000
-  Doodles — 77% | ? | $54,500,000
 
 --------------------------------------------------
-  Total: 813 | Testnet: 10 | Social Tasks: 687 | Mainnet: 116
+  Total: 809 | Testnet: 10 | Social Tasks: 686 | Mainnet: 113
   Last run: 0 min ago
 ==========================================================
