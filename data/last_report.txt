@@ -1,23 +1,25 @@
 ==========================================================
-  DroperOG v2 — 2026-08-12 16:43:21
+  DroperOG v2 — 2026-08-12 20:29:10
 ==========================================================
 
   [32mNEW (1):[0m
-  🟡 Cade [Social Tasks]  Trust: 60%
+  🟢 Memebook [Mainnet]  Trust: 68%
      Chains: ?
-     https://cryptorank.io/price/cade
+     Funding: $1,000,000
+     Cost: $1
+     https://cryptorank.io/price/memebook
 
-  [36mUPDATED (17):[0m
-  Soneium: Trust: 65% -> 75%
-  PeakAI: Trust: 73% -> 63%
-  Andrena (DAWN): Trust: 75% -> 85%
-  Level (Peregrine Exploration): Trust: 78% -> 68%
-  Nerite: Trust: 55% -> 65%
-  Sophon: Trust: 75% -> 65%
-  Malda: Trust: 70% -> 60%
-  Squads: Trust: 75% -> 85%
-  Parasail: Trust: 73% -> 83%
-  Catena Labs: Trust: 75% -> 85%
+  [36mUPDATED (12):[0m
+  Loaf: Trust: 50% -> 60%
+  Cade: Trust: 60% -> 50%
+  Senpi: Trust: 73% -> 63%
+  Xenea: Trust: 75% -> 65%
+  AEON: Trust: 63% -> 73%
+  predit.market: Trust: 58% -> 68%
+  dFusion AI: Trust: 83% -> 73%
+  Nava AI: Trust: 73% -> 63%
+  Andrena (DAWN): Trust: 85% -> 75%
+  Nerite: Trust: 65% -> 55%
 
   [31mREMOVED (14):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, 4AI, 3look, Axis, V! DataDAO
 
@@ -25,17 +27,14 @@
   CATEGORIZED SUMMARY (Trust >= 65)
 --------------------------------------------------
 
-🟣 Testnet (10 — showing 8 high-trust):
-  dFusion AI — 83% | ? | $1,500,000 | Testnet, Ambassador program
+🟣 Testnet (9 — showing 5 high-trust):
   Euclid Protocol — 78% | ? | $4,100,000 | Testnet, Social
   Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
   Soneium — 75% | soneium | Fill The Form, Ambassador program
-  Xenea — 75% | ? | Social, Testnet
   GTE — 75% | ? | $25,942,000 | Testnet, Getting a role
-  Polyhedra Network — 75% | ? | $45,040,000 | Testnet
   Celo — 72% | ? | $104,500,000 | Testnet
 
-🟢 Mainnet (113 — showing 65 high-trust):
+🟢 Mainnet (116 — showing 68 high-trust):
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Polymarket — 85% | polygon | $2.88B | Explore Polymarket, Trade Markets
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
@@ -46,21 +45,19 @@
   Bulk — 80% | solana | $8M | Stake SOL, Trade Perps (NOT LIVE YET)
   Phantom — 77% | solana | NA | Use in-app swap feature
   Symbiotic — 75% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points
+  Magicblock — 75% | ? | $10,500,000 | Gaming, Social
   N1 — 73% | solana | $7,000,000 | Join Private Beta, Trade Perps
   Kintsu — 73% | monad | $4M | Stake $MON, Use sMON in DeFi
   Ambient — 73% | ethereum, scroll | $6.5M | Trade, Provide Liquidity
   Tashi Network — 73% | ? | $3,000,000 | DePIN, Node
-  Senpi — 73% | ? | $4,000,000 | Fill The Form, Trading
   Napier — 73% | ? | $1,000,000 | Liquidity
   Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
   Optimism — 72% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
   Zerion — 72% | arbitrum, aurora, avalanche, bnbchain, base, ethereum, fantom, gnosis, optimism, polygon, zksync | $33M | Explore Zerion app, Swap a token pair
-  Quote — 70% | hyperliquid | Undisclosed | Join , Trade
+  RedotPay — 72% | ? | $194,000,000 | Mainnet
 
-🟡 Social Tasks (686 — showing 346 high-trust):
-  Andrena (DAWN) — 85% | ? | $48,500,000 | DePIN
+🟡 Social Tasks (685 — showing 347 high-trust):
   Squads — 85% | ? | $40,200,000 | Social
-  Catena Labs — 85% | ? | $48,000,000 | Social
   Parasail — 83% | ? | $4,000,000 | Social
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
   Veera — 80% | zksync | $10,016,020 | Social
@@ -78,8 +75,10 @@
   Aleo — 77% | ? | $298,000,000 | Ambassador program
   Architect — 77% | ? | $52,000,000
   Farcaster — 77% | base, ethereum, zora | $180,000,000 | Social
+  Blockchain.com — 77% | ? | $600,000,000
+  Canton Network — 77% | ton | $812,200,000
 
 --------------------------------------------------
-  Total: 809 | Testnet: 10 | Social Tasks: 686 | Mainnet: 113
+  Total: 810 | Testnet: 9 | Social Tasks: 685 | Mainnet: 116
   Last run: 0 min ago
 ==========================================================
