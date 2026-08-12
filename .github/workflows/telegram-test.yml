@@ -1,0 +1,57 @@
+name: Telegram Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send test Telegram message
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python - <<'EOF'
+          import json
+          import os
+          import urllib.parse
+          import urllib.request
+
+          token = os.environ.get("BOT_TOKEN") or os.environ.get("TELEGRAM_BOT_TOKEN") or ""
+          chat = os.environ.get("CHAT_ID") or os.environ.get("TELEGRAM_CHAT_ID") or ""
+
+          if not token:
+              print("::error::BOT_TOKEN / TELEGRAM_BOT_TOKEN both empty - secret not set")
+              raise SystemExit(1)
+          if not chat:
+              print("::error::CHAT_ID / TELEGRAM_CHAT_ID both empty - secret not set")
+              raise SystemExit(1)
+
+          text = ("🧪 <b>Test message from CI</b>\n\n"
+                  "اگر این پیام را می‌بینی، مسیر GitHub Actions → تلگرام کاملاً کار می‌کند ✅\n"
+                  "(این یک پیام تست است — به‌زودی حذف می‌شود)")
+          data = urllib.parse.urlencode({
+              "chat_id": chat,
+              "text": text,
+              "parse_mode": "HTML",
+              "disable_web_page_preview": "true",
+          }).encode()
+
+          req = urllib.request.Request(
+              f"https://api.telegram.org/bot{token}/sendMessage",
+              data=data,
+              headers={"Content-Type": "application/x-www-form-urlencoded"},
+          )
+          with urllib.request.urlopen(req, timeout=15) as resp:
+              result = json.loads(resp.read())
+
+          ok = bool(result.get("ok"))
+          if not ok:
+              print("::error::Telegram API answered ok=false:", json.dumps(result)[:300])
+              raise SystemExit(1)
+          print("SUCCESS - message sent, message_id =", result["result"]["message_id"])
+          print("chat =", chat)
+          EOF
