@@ -1,23 +1,36 @@
 ==========================================================
-  DroperOG v2 — 2026-08-13 12:38:52
+  DroperOG v2 — 2026-08-13 16:42:26
 ==========================================================
 
-  [32mNo new projects[0m
+  [32mNEW (1):[0m
+  🟡 bakeland [Social Tasks]  Trust: 60%
+     Chains: ?
+     https://cryptorank.io/price/bakeland
 
-  [31mREMOVED (14):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, 4AI, 3look, Axis, V! DataDAO
+  [36mUPDATED (7):[0m
+  Pixie Chess: Trust: 63% -> 73%
+  Variational: Trust: 77% -> 87%
+  Memebook: Trust: 68% -> 58%
+  wisp: Trust: 55% -> 65%
+  world.xyz: Trust: 65% -> 55%
+  Tashi Network: Trust: 73% -> 63%
+  Noah AI: Trust: 55% -> 65%
+
+  [31mREMOVED (15):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, YOM, 4AI, 3look, Axis
 
 --------------------------------------------------
   CATEGORIZED SUMMARY (Trust >= 65)
 --------------------------------------------------
 
-🟣 Testnet (9 — showing 5 high-trust):
+🟣 Testnet (9 — showing 6 high-trust):
+  Variational — 87% | ? | $61,800,000 | Mainnet, Trading
   Euclid Protocol — 78% | ? | $4,100,000 | Testnet, Social
   Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
   Soneium — 75% | soneium | Fill The Form, Ambassador program
   GTE — 75% | ? | $25,942,000 | Testnet, Getting a role
   Celo — 72% | ? | $104,500,000 | Testnet
 
-🟢 Mainnet (116 — showing 68 high-trust):
+🟢 Mainnet (114 — showing 67 high-trust):
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Polymarket — 85% | polygon | $2.88B | Explore Polymarket, Trade Markets
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
@@ -32,14 +45,14 @@
   N1 — 73% | n1 | $7,000,000 | Join Private Beta, Trade Perps
   Kintsu — 73% | monad | $4M | Stake $MON, Use sMON in DeFi
   Ambient — 73% | ethereum, scroll | $6.5M | Trade, Provide Liquidity
-  Tashi Network — 73% | ? | $3,000,000 | DePIN, Node
+  Pixie Chess — 73% | ? | $5,200,000 | Gaming
   Napier — 73% | ? | $1,000,000 | Liquidity
   Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
   Optimism — 72% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
   Zerion — 72% | arbitrum, aurora, avalanche, bnbchain, base, ethereum, fantom, gnosis, optimism, polygon, zksync | $33M | Explore Zerion app, Swap a token pair
   RedotPay — 72% | ? | $194,000,000 | Mainnet
 
-🟡 Social Tasks (685 — showing 347 high-trust):
+🟡 Social Tasks (687 — showing 347 high-trust):
   Squads — 85% | ? | $40,200,000 | Social
   Parasail — 83% | ? | $4,000,000 | Social
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
@@ -48,7 +61,6 @@
   OpenSea — 77% | ethereum, polygon, base, arbitrum, optimism, solana, bnbchain, linea, avalanche, abstract | $425.15M | Join the Voyage
   Rainbow — 77% | ? | $19.5M | Explore Rainbow app, Do one onchain action
   Forte — 77% | ? | $910,000,000
-  Variational — 77% | ? | $61,800,000
   Jupiter — 77% | ? | $172,500,000
   Sui — 77% | sui | $405,370,000
   Arc — 77% | ? | $222,000,000
@@ -60,8 +72,9 @@
   Farcaster — 77% | base, ethereum, zora | $180,000,000 | Social
   Blockchain.com — 77% | ? | $600,000,000
   Canton Network — 77% | ton | $812,200,000
+  Doodles — 77% | ? | $54,500,000
 
 --------------------------------------------------
-  Total: 810 | Testnet: 9 | Social Tasks: 685 | Mainnet: 116
+  Total: 810 | Testnet: 9 | Social Tasks: 687 | Mainnet: 114
   Last run: 0 min ago
 ==========================================================
