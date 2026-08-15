@@ -1,16 +1,24 @@
 ==========================================================
-  DroperOG v2 — 2026-08-14 16:38:09
+  DroperOG v2 — 2026-08-15 00:29:27
 ==========================================================
 
-  [32mNo new projects[0m
+  [32mNEW (1):[0m
+  🟡 ALPHEA [Social Tasks]  Trust: 68%
+     Chains: ?
+     Funding: $5,000,000
+     https://cryptorank.io/price/alphea
 
-  [36mUPDATED (6):[0m
-  Jupiter: Trust: 77% -> 92%
-  bakeland: Trust: 60% -> 50%
-  Pixie Chess: Trust: 73% -> 63%
-  Soneium: Trust: 75% -> 65%
-  Nerite: Trust: 65% -> 55%
-  Catena Labs: Trust: 85% -> 75%
+  [36mUPDATED (12):[0m
+  dFusion AI: Trust: 73% -> 83%
+  42 (prev. Alkimiya): Trust: 78% -> 68%
+  Hudi: Trust: 50% -> 60%
+  Kairo: Trust: 55% -> 65%
+  Noah AI: Trust: 55% -> 65%
+  Jurassic Finance: Trust: 75% -> 65%
+  Andrena (DAWN): Trust: 85% -> 75%
+  Level (Peregrine Exploration): Trust: 68% -> 78%
+  Malda: Trust: 60% -> 70%
+  Parasail: Trust: 83% -> 73%
 
   [31mREMOVED (17):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, YOM, 4AI, Kii Chain, 3look
 
@@ -18,14 +26,13 @@
   CATEGORIZED SUMMARY (Trust >= 65)
 --------------------------------------------------
 
-🟣 Testnet (9 — showing 5 high-trust):
-  KiiChain — 80% | ? | $21,158,146 | Trading, Social
+🟣 Testnet (8 — showing 4 high-trust):
+  dFusion AI — 83% | ? | $1,500,000 | Testnet, Bounty Platforms
   Euclid Protocol — 78% | ? | $4,100,000 | Testnet, Social
   Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
-  GTE — 75% | ? | $25,942,000 | Testnet, Getting a role
-  Celo — 72% | ? | $104,500,000 | Testnet
+  Malda — 70% | ? | Liquidity, Testnet
 
-🟢 Mainnet (115 — showing 67 high-trust):
+🟢 Mainnet (118 — showing 70 high-trust):
   Jupiter — 92% | optimism | $172,500,000 | Trading, Mint NFT
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Polymarket — 85% | polygon | $2.88B | Explore Polymarket, Trade Markets
@@ -35,22 +42,20 @@
   xStocks — 82% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Perpl — 80% | monad | $9.5M | Trade Perps, $1M Volume
   Bulk — 80% | solana | $8M | Stake SOL, Trade Perps (NOT LIVE YET)
-  42 (prev. Alkimiya) — 78% | ? | $7,200,000 | Predictions, Getting a role
+  Level (Peregrine Exploration) — 78% | ? | $6,200,000 | Mainnet, Getting a role
   Phantom — 77% | solana | NA | Use in-app swap feature
   Symbiotic — 75% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points
+  PrismaX — 75% | ? | $11,000,000 | Mainnet, Social
+  Magicblock — 75% | ? | $10,500,000 | Gaming, Social
   N1 — 73% | n1 | $7,000,000 | Join Private Beta, Trade Perps
   Kintsu — 73% | monad | $4M | Stake $MON, Use sMON in DeFi
   Ambient — 73% | ethereum, scroll | $6.5M | Trade, Provide Liquidity
   Napier — 73% | ? | $1,000,000 | Liquidity
   Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
   Optimism — 72% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
-  Zerion — 72% | arbitrum, aurora, avalanche, bnbchain, base, ethereum, fantom, gnosis, optimism, polygon, zksync | $33M | Explore Zerion app, Swap a token pair
-  RedotPay — 72% | ? | $194,000,000 | Mainnet
 
-🟡 Social Tasks (685 — showing 346 high-trust):
-  Andrena (DAWN) — 85% | ? | $48,500,000 | DePIN
+🟡 Social Tasks (684 — showing 350 high-trust):
   Squads — 85% | ? | $40,200,000 | Social
-  Parasail — 83% | ? | $4,000,000 | Social
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
   Veera — 80% | zksync | $10,016,020 | Social
   KRNL — 78% | ? | $1,700,000 | Bounty Platforms
@@ -68,8 +73,10 @@
   Farcaster — 77% | base, ethereum, zora | $180,000,000 | Social
   Blockchain.com — 77% | ? | $600,000,000
   Canton Network — 77% | ton | $812,200,000
+  Doodles — 77% | ? | $54,500,000
+  Turnkey — 77% | ? | $65,000,000
 
 --------------------------------------------------
-  Total: 809 | Testnet: 9 | Social Tasks: 685 | Mainnet: 115
+  Total: 810 | Testnet: 8 | Social Tasks: 684 | Mainnet: 118
   Last run: 0 min ago
 ==========================================================
