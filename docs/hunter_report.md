@@ -1,12 +1,13 @@
-# 🎯 DroperOG Hunter — 2026-08-17 11:02 (تهران)
+# 🎯 DroperOG Hunter — 2026-08-17 16:51 (تهران)
 
 🆕 **1 مورد تازه:**
 
-## 🟣 تست‌نت (1)
+## 🟡 تسک/کمپین (1)
 
-- **LitVM Airdrop Guide: Farm the LiteForge Testnet for Free** (5h پیش)
-  - https://news.google.com/rss/articles/CBMiUkFVX3lxTE9mT25DNWN4eUFHd0E0d0Y4Y1pTM0VyTnU4a0hqVW5RV2RFN3g2M0FXMEllbExlTHhyVWpKNGJjRktNQmpGRlpTcklvekc0SDlrNEE?oc=5
+- **Lighter (LIT)** (3h پیش)
+  - https://cryptorank.io/price/lighter-activity1273
+  - LIT | 🎁 Airdrop | 💰 $68,030,000 | $30 | ⏱ 15min
 
 ---
 
-**چشم‌انداز:** 🟣 تست‌نت: 1 | 🟡 تسک/کمپین: 1 | 🟢 مین‌نت: 1 | 🆕 تازه در ترکر: 6
+**چشم‌انداز:** 🟣 تست‌نت: 1 | 🟡 تسک/کمپین: 2 | 🟢 مین‌نت: 1 | 🆕 تازه در ترکر: 6
