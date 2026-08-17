@@ -1,13 +1,15 @@
-# 🎯 DroperOG Hunter — 2026-08-17 16:51 (تهران)
+# 🎯 DroperOG Hunter — 2026-08-17 22:37 (تهران)
 
-🆕 **1 مورد تازه:**
+🆕 **2 مورد تازه:**
 
-## 🟡 تسک/کمپین (1)
+## 🆕 تازه در ترکر (2)
 
-- **Lighter (LIT)** (3h پیش)
-  - https://cryptorank.io/price/lighter-activity1273
-  - LIT | 🎁 Airdrop | 💰 $68,030,000 | $30 | ⏱ 15min
+- **Beldex (BDX)** (3h پیش)
+  - https://cryptorank.io/price/beldex-activity1275
+  - BDX | 💰 $28,000,000
+- **Amadeus Protocol** (5h پیش)
+  - https://cryptorank.io/price/amadeus-protocol-activity1274
 
 ---
 
-**چشم‌انداز:** 🟣 تست‌نت: 1 | 🟡 تسک/کمپین: 2 | 🟢 مین‌نت: 1 | 🆕 تازه در ترکر: 6
+**چشم‌انداز:** 🟣 تست‌نت: 1 | 🟡 تسک/کمپین: 2 | 🟢 مین‌نت: 1 | 🆕 تازه در ترکر: 8
