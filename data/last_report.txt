@@ -1,27 +1,17 @@
 ==========================================================
-  DroperOG v2 — 2026-08-17 16:12:34
+  DroperOG v2 — 2026-08-17 20:12:43
 ==========================================================
 
-  [32mNEW (2):[0m
-  🟡 Beldex [Social Tasks]  Trust: 70%
-     Chains: ?
-     Funding: $28,000,000
-     https://cryptorank.io/price/beldex
-  🟡 Amadeus Protocol [Social Tasks]  Trust: 50%
-     Chains: ?
-     https://cryptorank.io/price/amadeus-protocol
+  [32mNo new projects[0m
 
-  [36mUPDATED (20):[0m
-  N1: Trust: 73% -> 83%
-  RISEx: Trust: 60% -> 70%
-  MINT: Trust: 65% -> 55%
-  ALPHEA: Trust: 68% -> 58%
-  dFusion AI: Trust: 83% -> 73%
-  Jupiter: Trust: 92% -> 77%
-  TurboFlow: Trust: 58% -> 68%
-  Sats Terminal: Trust: 63% -> 73%
-  wisp: Trust: 65% -> 55%
-  Fact Machine: Trust: 55% -> 65%
+  [36mUPDATED (7):[0m
+  ALPHEA: Trust: 58% -> 73%
+  tren.ch: Trust: 55% -> 65%
+  Beldex: Trust: 70% -> 60%
+  STRATO: Trust: 67% -> 77%
+  AEON: Trust: 73% -> 63%
+  Midnight Network: Trust: 50% -> 60%
+  Reppo: Trust: 70% -> 80%
 
   [31mREMOVED (19):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, YOM, 4AI, Kii Chain, 3look
 
@@ -29,14 +19,15 @@
   CATEGORIZED SUMMARY (Trust >= 65)
 --------------------------------------------------
 
-🟣 Testnet (8 — showing 5 high-trust):
+🟣 Testnet (9 — showing 6 high-trust):
   N1 — 83% | n1 | $7,000,000 | Join Private Beta, Trade Perps
   Euclid Protocol — 78% | ? | $4,100,000 | Testnet, Social
   Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
   Fhenix — 75% | fhenix | $22M | Complete the quests in their Discord server, Testnet
   Malda — 70% | ? | Liquidity, Testnet
+  Cashmere Labs — 65% | ? | Mainnet, Fill The Form
 
-🟢 Mainnet (117 — showing 69 high-trust):
+🟢 Mainnet (115 — showing 69 high-trust):
   xStocks — 87% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Polymarket — 85% | polygon | $2.88B | Explore Polymarket, Trade Markets
@@ -47,8 +38,8 @@
   Bulk — 80% | solana | $8M | Stake SOL, Trade Perps (NOT LIVE YET)
   Level (Peregrine Exploration) — 78% | ? | $6,200,000 | Mainnet, Getting a role
   Phantom — 77% | solana | NA | Use in-app swap feature
+  STRATO — 77% | ? | $52,175,000 | Staking, Fill The Form
   Symbiotic — 75% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points
-  PrismaX — 75% | ? | $11,000,000 | Mainnet, Social
   Magicblock — 75% | ? | $10,500,000 | Gaming, Social
   Sophon — 75% | optimism | $10,000,000 | Social
   Kintsu — 73% | monad | $4M | Stake $MON, Use sMON in DeFi
@@ -58,10 +49,11 @@
   Optimism — 72% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
   Zerion — 72% | arbitrum, aurora, avalanche, bnbchain, base, ethereum, fantom, gnosis, optimism, polygon, zksync | $33M | Explore Zerion app, Swap a token pair
 
-🟡 Social Tasks (685 — showing 350 high-trust):
+🟡 Social Tasks (686 — showing 349 high-trust):
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
   Zentry — 82% | ? | $145,840,000 | Social
   Veera — 80% | zksync | $10,016,020 | Social
+  Reppo — 80% | ? | $22,200,000 | Social
   OpenSea — 77% | ethereum, polygon, base, arbitrum, optimism, solana, bnbchain, linea, avalanche, abstract | $425.15M | Join the Voyage
   Rainbow — 77% | ? | $19.5M | Explore Rainbow app, Do one onchain action
   Jupiter — 77% | ? | $172,500,000
@@ -78,9 +70,8 @@
   Canton Network — 77% | ton | $812,200,000
   Doodles — 77% | ? | $54,500,000
   Turnkey — 77% | ? | $65,000,000
-  Nous Research — 77% | ? | $70,000,000
 
 --------------------------------------------------
-  Total: 810 | Testnet: 8 | Social Tasks: 685 | Mainnet: 117
+  Total: 810 | Testnet: 9 | Social Tasks: 686 | Mainnet: 115
   Last run: 0 min ago
 ==========================================================
