@@ -1,23 +1,42 @@
 ==========================================================
-  DroperOG v2 — 2026-08-17 08:27:58
+  DroperOG v2 — 2026-08-17 16:12:34
 ==========================================================
 
-  [32mNo new projects[0m
+  [32mNEW (2):[0m
+  🟡 Beldex [Social Tasks]  Trust: 70%
+     Chains: ?
+     Funding: $28,000,000
+     https://cryptorank.io/price/beldex
+  🟡 Amadeus Protocol [Social Tasks]  Trust: 50%
+     Chains: ?
+     https://cryptorank.io/price/amadeus-protocol
 
-  [31mREMOVED (17):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, YOM, 4AI, Kii Chain, 3look
+  [36mUPDATED (20):[0m
+  N1: Trust: 73% -> 83%
+  RISEx: Trust: 60% -> 70%
+  MINT: Trust: 65% -> 55%
+  ALPHEA: Trust: 68% -> 58%
+  dFusion AI: Trust: 83% -> 73%
+  Jupiter: Trust: 92% -> 77%
+  TurboFlow: Trust: 58% -> 68%
+  Sats Terminal: Trust: 63% -> 73%
+  wisp: Trust: 65% -> 55%
+  Fact Machine: Trust: 55% -> 65%
+
+  [31mREMOVED (19):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, YOM, 4AI, Kii Chain, 3look
 
 --------------------------------------------------
   CATEGORIZED SUMMARY (Trust >= 65)
 --------------------------------------------------
 
-🟣 Testnet (8 — showing 4 high-trust):
-  dFusion AI — 83% | ? | $1,500,000 | Testnet, Bounty Platforms
+🟣 Testnet (8 — showing 5 high-trust):
+  N1 — 83% | n1 | $7,000,000 | Join Private Beta, Trade Perps
   Euclid Protocol — 78% | ? | $4,100,000 | Testnet, Social
   Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
+  Fhenix — 75% | fhenix | $22M | Complete the quests in their Discord server, Testnet
   Malda — 70% | ? | Liquidity, Testnet
 
-🟢 Mainnet (118 — showing 71 high-trust):
-  Jupiter — 92% | optimism | $172,500,000 | Trading, Mint NFT
+🟢 Mainnet (117 — showing 69 high-trust):
   xStocks — 87% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Polymarket — 85% | polygon | $2.88B | Explore Polymarket, Trade Markets
@@ -31,20 +50,21 @@
   Symbiotic — 75% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points
   PrismaX — 75% | ? | $11,000,000 | Mainnet, Social
   Magicblock — 75% | ? | $10,500,000 | Gaming, Social
-  N1 — 73% | n1 | $7,000,000 | Join Private Beta, Trade Perps
+  Sophon — 75% | optimism | $10,000,000 | Social
   Kintsu — 73% | monad | $4M | Stake $MON, Use sMON in DeFi
   Ambient — 73% | ethereum, scroll | $6.5M | Trade, Provide Liquidity
   Napier — 73% | ? | $1,000,000 | Liquidity
   Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
   Optimism — 72% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
+  Zerion — 72% | arbitrum, aurora, avalanche, bnbchain, base, ethereum, fantom, gnosis, optimism, polygon, zksync | $33M | Explore Zerion app, Swap a token pair
 
-🟡 Social Tasks (684 — showing 350 high-trust):
-  Squads — 85% | ? | $40,200,000 | Social
+🟡 Social Tasks (685 — showing 350 high-trust):
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
+  Zentry — 82% | ? | $145,840,000 | Social
   Veera — 80% | zksync | $10,016,020 | Social
-  KRNL — 78% | ? | $1,700,000 | Bounty Platforms
   OpenSea — 77% | ethereum, polygon, base, arbitrum, optimism, solana, bnbchain, linea, avalanche, abstract | $425.15M | Join the Voyage
   Rainbow — 77% | ? | $19.5M | Explore Rainbow app, Do one onchain action
+  Jupiter — 77% | ? | $172,500,000
   Variational — 77% | ? | $61,800,000
   Forte — 77% | ? | $910,000,000
   Sui — 77% | sui | $405,370,000
@@ -52,15 +72,15 @@
   Praxis Society — 77% | ? | $544,200,000
   Immutable — 77% | ? | $322,380,000
   Aztec — 77% | ? | $183,765,601.9424
-  Aleo — 77% | ? | $298,000,000 | Ambassador program
   Architect — 77% | ? | $52,000,000
   Farcaster — 77% | base, ethereum, zora | $180,000,000 | Social
   Blockchain.com — 77% | ? | $600,000,000
   Canton Network — 77% | ton | $812,200,000
   Doodles — 77% | ? | $54,500,000
   Turnkey — 77% | ? | $65,000,000
+  Nous Research — 77% | ? | $70,000,000
 
 --------------------------------------------------
-  Total: 810 | Testnet: 8 | Social Tasks: 684 | Mainnet: 118
+  Total: 810 | Testnet: 8 | Social Tasks: 685 | Mainnet: 117
   Last run: 0 min ago
 ==========================================================
