@@ -1,10 +1,22 @@
 ==========================================================
-  DroperOG v2 — 2026-08-18 12:18:58
+  DroperOG v2 — 2026-08-18 16:16:30
 ==========================================================
 
   [32mNo new projects[0m
 
-  [31mREMOVED (19):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, YOM, 4AI, Kii Chain, 3look
+  [36mUPDATED (14):[0m
+  Midnight Network: Trust: 60% -> 50%
+  Aleo: Trust: 67% -> 77%
+  Reppo: Trust: 80% -> 70%
+  Addicted: Trust: 65% -> 55%
+  KRNL: Trust: 68% -> 78%
+  Sophon: Trust: 75% -> 65%
+  Malda: Trust: 70% -> 60%
+  Squads: Trust: 75% -> 85%
+  Parasail: Trust: 73% -> 83%
+  Whale: Trust: 65% -> 55%
+
+  [31mREMOVED (21):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, YOM, 4AI, Kii Chain, 3look
 
 --------------------------------------------------
   CATEGORIZED SUMMARY (Trust >= 65)
@@ -15,10 +27,10 @@
   Euclid Protocol — 78% | ? | $4,100,000 | Testnet, Social
   Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
   Fhenix — 75% | fhenix | $22M | Complete the quests in their Discord server, Testnet
-  Malda — 70% | ? | Liquidity, Testnet
+  Celo — 72% | ? | $104,500,000 | Testnet
   Cashmere Labs — 65% | ? | Mainnet, Fill The Form
 
-🟢 Mainnet (115 — showing 66 high-trust):
+🟢 Mainnet (114 — showing 64 high-trust):
   xStocks — 87% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
@@ -32,19 +44,20 @@
   STRATO — 77% | ? | $52,175,000 | Staking, Fill The Form
   Symbiotic — 75% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points
   Magicblock — 75% | ? | $10,500,000 | Gaming, Social
-  Sophon — 75% | optimism | $10,000,000 | Social
   Kintsu — 73% | monad | $4M | Stake $MON, Use sMON in DeFi
   Ambient — 73% | ethereum, scroll | $6.5M | Trade, Provide Liquidity
   Napier — 73% | ? | $1,000,000 | Liquidity
   Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
   Optimism — 72% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
   Zerion — 72% | arbitrum, aurora, avalanche, bnbchain, base, ethereum, fantom, gnosis, optimism, polygon, zksync | $33M | Explore Zerion app, Swap a token pair
+  RedotPay — 72% | ? | $194,000,000 | Mainnet
 
-🟡 Social Tasks (686 — showing 349 high-trust):
+🟡 Social Tasks (685 — showing 346 high-trust):
+  Squads — 85% | ? | $40,200,000 | Social
+  Parasail — 83% | ? | $4,000,000 | Social
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
-  Zentry — 82% | ? | $145,840,000 | Social
   Veera — 80% | zksync | $10,016,020 | Social
-  Reppo — 80% | ? | $22,200,000 | Social
+  KRNL — 78% | ? | $1,700,000 | Bounty Platforms
   OpenSea — 77% | ethereum, polygon, base, arbitrum, optimism, solana, bnbchain, linea, avalanche, abstract | $425.15M | Join the Voyage
   Rainbow — 77% | ? | $19.5M | Explore Rainbow app, Do one onchain action
   Jupiter — 77% | ? | $172,500,000
@@ -55,14 +68,13 @@
   Praxis Society — 77% | ? | $544,200,000
   Immutable — 77% | ? | $322,380,000
   Aztec — 77% | ? | $183,765,601.9424
+  Aleo — 77% | ? | $298,000,000 | Ambassador program
   Architect — 77% | ? | $52,000,000
   Farcaster — 77% | base, ethereum, zora | $180,000,000 | Social
   Blockchain.com — 77% | ? | $600,000,000
   Canton Network — 77% | ton | $812,200,000
-  Doodles — 77% | ? | $54,500,000
-  Turnkey — 77% | ? | $65,000,000
 
 --------------------------------------------------
-  Total: 810 | Testnet: 9 | Social Tasks: 686 | Mainnet: 115
+  Total: 808 | Testnet: 9 | Social Tasks: 685 | Mainnet: 114
   Last run: 0 min ago
 ==========================================================
