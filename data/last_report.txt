@@ -1,36 +1,32 @@
 ==========================================================
-  DroperOG v2 — 2026-08-18 16:16:30
+  DroperOG v2 — 2026-08-18 20:09:36
 ==========================================================
 
   [32mNo new projects[0m
 
-  [36mUPDATED (14):[0m
-  Midnight Network: Trust: 60% -> 50%
-  Aleo: Trust: 67% -> 77%
-  Reppo: Trust: 80% -> 70%
-  Addicted: Trust: 65% -> 55%
-  KRNL: Trust: 68% -> 78%
-  Sophon: Trust: 75% -> 65%
-  Malda: Trust: 70% -> 60%
-  Squads: Trust: 75% -> 85%
-  Parasail: Trust: 73% -> 83%
-  Whale: Trust: 65% -> 55%
+  [36mUPDATED (5):[0m
+  GenLayer: Trust: 68% -> 78%
+  42 (prev. Alkimiya): Trust: 68% -> 78%
+  ALPHEA: Trust: 73% -> 63%
+  tren.ch: Trust: 65% -> 55%
+  Atleta Network: Trust: 70% -> 60%
 
-  [31mREMOVED (21):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, YOM, 4AI, Kii Chain, 3look
+  [31mREMOVED (22):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, YOM, 4AI, Kii Chain, 3look
 
 --------------------------------------------------
   CATEGORIZED SUMMARY (Trust >= 65)
 --------------------------------------------------
 
-🟣 Testnet (9 — showing 6 high-trust):
+🟣 Testnet (9 — showing 7 high-trust):
   N1 — 83% | n1 | $7,000,000 | Join Private Beta, Trade Perps
+  GenLayer — 78% | ? | $7,500,000 | Social, Testnet
   Euclid Protocol — 78% | ? | $4,100,000 | Testnet, Social
   Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
   Fhenix — 75% | fhenix | $22M | Complete the quests in their Discord server, Testnet
+  Polyhedra Network — 75% | ? | $45,040,000 | Testnet
   Celo — 72% | ? | $104,500,000 | Testnet
-  Cashmere Labs — 65% | ? | Mainnet, Fill The Form
 
-🟢 Mainnet (114 — showing 64 high-trust):
+🟢 Mainnet (115 — showing 65 high-trust):
   xStocks — 87% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
@@ -38,6 +34,7 @@
   Pharos — 83% | pharos | $8M | Explore Pharos Network app, Bridge to the network
   Perpl — 80% | monad | $9.5M | Trade Perps, $1M Volume
   Bulk — 80% | solana | $8M | Stake SOL, Trade Perps (NOT LIVE YET)
+  42 (prev. Alkimiya) — 78% | ? | $7,200,000 | Predictions, Bounty Platforms
   Level (Peregrine Exploration) — 78% | ? | $6,200,000 | Mainnet, Getting a role
   Polymarket — 77% | polygon | $2.88B | Explore Polymarket, Trade Markets
   Phantom — 77% | solana | NA | Use in-app swap feature
@@ -50,9 +47,8 @@
   Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
   Optimism — 72% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
   Zerion — 72% | arbitrum, aurora, avalanche, bnbchain, base, ethereum, fantom, gnosis, optimism, polygon, zksync | $33M | Explore Zerion app, Swap a token pair
-  RedotPay — 72% | ? | $194,000,000 | Mainnet
 
-🟡 Social Tasks (685 — showing 346 high-trust):
+🟡 Social Tasks (683 — showing 340 high-trust):
   Squads — 85% | ? | $40,200,000 | Social
   Parasail — 83% | ? | $4,000,000 | Social
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
@@ -75,6 +71,6 @@
   Canton Network — 77% | ton | $812,200,000
 
 --------------------------------------------------
-  Total: 808 | Testnet: 9 | Social Tasks: 685 | Mainnet: 114
+  Total: 807 | Testnet: 9 | Social Tasks: 683 | Mainnet: 115
   Last run: 0 min ago
 ==========================================================
