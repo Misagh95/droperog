@@ -1,12 +1,22 @@
-# 🎯 DroperOG Hunter — 2026-08-19 16:55 (تهران)
+# 🎯 DroperOG Hunter — 2026-08-19 22:32 (تهران)
 
-🆕 **1 مورد تازه:**
+🆕 **3 مورد تازه:**
 
-## 🟡 تسک/کمپین (1)
+## 🔵 پوینت (1)
 
-- **Crypto Airdrops Live in August 2026: 5 Airdrops to Check** (همین الان)
-  - https://news.google.com/rss/articles/CBMilgFBVV95cUxPNzZuU0RzLWtMckt2SHFMckFzSVM2bXR2Z2E1ZHVodXIwczlLZjZEclVXd1VENzBlTVR0VVUtMERGY2dEZ0h5TU5Ka2syYWRnN0UtM3JNRjlrV1RYbkphUFFlSEVIMy1keExTSVV5QkpSckJRNnJPVTBnMXU2VzcwU2xBU1NtcUppQzBPZDM0N21renplVGc?oc=5
+- **Axis Robotics** (4h پیش)
+  - https://s.kaito.ai/cFfmhpP
+  - AI | $12M | 🎯 پوینت فعال | رایگان | 🔗 Ethereum
+
+## 🟡 تسک/کمپین (2)
+
+- **Flop Labs (FLOP)** (همین الان)
+  - https://cryptorank.io/price/flop-labs-activity1277
+  - FLOP | 🎁 Airdrop | رایگان | ⏱ 5min
+- **Entropy** (26h پیش)
+  - https://cryptorank.io/price/entropy-activity1276
+  - 🎁 Airdrop | 💰 $26,950,000 | $20 | ⏱ 15min
 
 ---
 
-**چشم‌انداز:** 🟣 تست‌نت: 1 | 🟡 تسک/کمپین: 2 | 🟢 مین‌نت: 2 | 🆕 تازه در ترکر: 5
+**چشم‌انداز:** 🟣 تست‌نت: 1 | 🔵 پوینت: 1 | 🟡 تسک/کمپین: 4 | 🟢 مین‌نت: 2 | 🆕 تازه در ترکر: 5
