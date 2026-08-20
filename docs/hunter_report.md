@@ -1,6 +1,13 @@
-# 🎯 DroperOG Hunter — 2026-08-20 05:29 (تهران)
+# 🎯 DroperOG Hunter — 2026-08-20 10:52 (تهران)
 
-🔍 این اسکن: هیچ کمپین تازه‌ای (چند روز اخیر) پیدا نشد.
+🆕 **1 مورد تازه:**
+
+## 🟢 مین‌نت (1)
+
+- **entropy** (همین الان)
+  - https://entropy.io/?r=alphadrops
+  - Perps | رایگان | 🔗 Hyperliquid | Entropy allows for perpetuals futures trading of global equities, commodities, a
+
 ---
 
-**چشم‌انداز:** 🟣 تست‌نت: 1 | 🔵 پوینت: 1 | 🟡 تسک/کمپین: 2 | 🟢 مین‌نت: 1 | 🆕 تازه در ترکر: 6
+**چشم‌انداز:** 🔵 پوینت: 1 | 🟡 تسک/کمپین: 2 | 🟢 مین‌نت: 2 | 🆕 تازه در ترکر: 6
