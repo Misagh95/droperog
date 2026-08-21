@@ -1,27 +1,34 @@
 ==========================================================
-  DroperOG v2 — 2026-08-21 08:23:22
+  DroperOG v2 — 2026-08-21 12:20:14
 ==========================================================
 
   [32mNo new projects[0m
 
-  [31mREMOVED (25):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, YOM, 4AI, Kii Chain, Reya Labs (Voltz)
+  [36mUPDATED (4):[0m
+  Midnight Network: Trust: 60% -> 50%
+  Reppo: Trust: 80% -> 70%
+  Catena Labs: Trust: 75% -> 85%
+  TanX: Trust: 65% -> 75%
+
+  [31mREMOVED (26):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, YOM, 4AI, Kii Chain, Reya Labs (Voltz)
 
 --------------------------------------------------
   CATEGORIZED SUMMARY (Trust >= 65)
 --------------------------------------------------
 
-🟣 Testnet (12 — showing 9 high-trust):
+🟣 Testnet (13 — showing 10 high-trust):
   Youmio — 83% | ? | $5,000,000 | Gaming, Social
-  Axis Robotics — 82% | ethereum | $12M | Sign up on Axis Hub, Complete simulation tasks
   Euclid Protocol — 78% | ? | $4,100,000 | Testnet, Social
   Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
+  Axis Robotics — 75% | ethereum | $12M | Sign up on Axis Hub, Complete simulation tasks
   Meridian — 75% | ethereum | Undisclosed | Trade Perps, Deposit USDe
   Polyhedra Network — 75% | ? | $45,040,000 | Testnet
+  Ithaca — 75% | ? | $20,000,000 | Testnet
   Ducat — 73% | ? | $4,000,000 | Social, Testnet
   Celo — 72% | ? | $104,500,000 | Testnet
   Monaco — 70% | ? | Testnet, Trading
 
-🟢 Mainnet (112 — showing 62 high-trust):
+🟢 Mainnet (113 — showing 63 high-trust):
   xStocks — 87% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
@@ -35,20 +42,20 @@
   Phantom — 77% | solana | NA | Use in-app swap feature
   Symbiotic — 75% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points
   Magicblock — 75% | ? | $10,500,000 | Gaming, Social
+  TanX — 75% | ? | $16,500,000 | Trading
   N1 — 73% | n1 | $7,000,000 | Join Private Beta, Trade Perps
   Kintsu — 73% | monad | $4M | Stake $MON, Use sMON in DeFi
   Ambient — 73% | ethereum, scroll | $6.5M | Trade, Provide Liquidity
   Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
   Optimism — 72% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
   Zerion — 72% | arbitrum, aurora, avalanche, bnbchain, base, ethereum, fantom, gnosis, optimism, polygon, zksync | $33M | Explore Zerion app, Swap a token pair
-  RedotPay — 72% | ? | $194,000,000 | Mainnet
 
-🟡 Social Tasks (682 — showing 338 high-trust):
+🟡 Social Tasks (679 — showing 335 high-trust):
   Squads — 85% | ? | $40,200,000 | Social
+  Catena Labs — 85% | ? | $48,000,000 | Social
   Parasail — 83% | ? | $4,000,000 | Social
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
   Veera — 80% | zksync | $10,016,020 | Social
-  Reppo — 80% | ? | $22,200,000 | Social
   OpenSea — 77% | ethereum, polygon, base, arbitrum, optimism, solana, bnbchain, linea, avalanche, abstract | $425.15M | Join the Voyage
   Rainbow — 77% | ? | $19.5M | Explore Rainbow app, Do one onchain action
   Jupiter — 77% | ? | $172,500,000
@@ -66,6 +73,6 @@
   Doodles — 77% | ? | $54,500,000
 
 --------------------------------------------------
-  Total: 806 | Testnet: 12 | Social Tasks: 682 | Mainnet: 112
+  Total: 805 | Testnet: 13 | Social Tasks: 679 | Mainnet: 113
   Last run: 0 min ago
 ==========================================================
