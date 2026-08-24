@@ -1,8 +1,11 @@
 ==========================================================
-  DroperOG v2 — 2026-08-24 12:20:37
+  DroperOG v2 — 2026-08-24 16:21:04
 ==========================================================
 
   [32mNo new projects[0m
+
+  [36mUPDATED (1):[0m
+  PopDEX: Trust: 82% -> 65%
 
   [31mREMOVED (26):[0m 01, Superform, AFK Fishing, Trepa, Netrun, Bonk, YOM, 4AI, Kii Chain, Reya Labs (Voltz)
 
@@ -20,14 +23,13 @@
   Celo — 72% | ? | $104,500,000 | Testnet
   Monaco — 70% | ? | Testnet, Trading
 
-🟢 Mainnet (117 — showing 66 high-trust):
+🟢 Mainnet (116 — showing 65 high-trust):
   xStocks — 87% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
   Infinex — 85% | evm&svmchains | $65.29M | Explore Infinex app, Place a perps trade
   Pharos — 83% | pharos | $8M | Explore Pharos Network app, Bridge to the network
   Teneo Protocol — 83% | ? | $3,000,000 | DePIN, Node
-  PopDEX — 82% | morphtachyon, optimism | $30.00M | Join Private Beta, Trade
   N1 — 80% | n1 | $7M | Join Private Beta, Trade Perps
   Perpl — 80% | monad, optimism | $9.5M | Trade Perps, $1M Volume
   Bulk — 80% | solana | $8M | Stake SOL, Trade Perps (NOT LIVE YET)
@@ -41,8 +43,9 @@
   ChimpX AI — 73% | ? | $3,400,000 | Mint NFT, Ambassador program
   Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
   Optimism — 72% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
+  Zerion — 72% | arbitrum, aurora, avalanche, bnbchain, base, ethereum, fantom, gnosis, optimism, polygon, zksync | $33M | Explore Zerion app, Swap a token pair
 
-🟡 Social Tasks (678 — showing 336 high-trust):
+🟡 Social Tasks (679 — showing 337 high-trust):
   Squads — 85% | ? | $40,200,000 | Social
   Parasail — 83% | ? | $4,000,000 | Social
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
@@ -65,6 +68,6 @@
   Doodles — 77% | ? | $54,500,000
 
 --------------------------------------------------
-  Total: 806 | Testnet: 11 | Social Tasks: 678 | Mainnet: 117
+  Total: 806 | Testnet: 11 | Social Tasks: 679 | Mainnet: 116
   Last run: 0 min ago
 ==========================================================
