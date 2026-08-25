@@ -135,6 +135,9 @@
     },
     "ad_d17d7dfc9635b2fc": {
       "first_seen": "2026-08-25T13:28:18.127798+00:00"
+    },
+    "cr_332d91d19033ea09": {
+      "first_seen": "2026-08-25T19:08:44.324963+00:00"
     }
   },
   "seen_fund_keys": [
@@ -150,5 +153,5 @@
     "sv investment: funding rounds and investments",
     "tradezero funding rounds, token sale review &"
   ],
-  "last_run": "2026-08-25T13:28:18.127824+00:00"
+  "last_run": "2026-08-25T19:08:44.324985+00:00"
 }

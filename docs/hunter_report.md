@@ -1,13 +1,13 @@
-# 🎯 DroperOG Hunter — 2026-08-25 16:58 (تهران)
+# 🎯 DroperOG Hunter — 2026-08-25 22:38 (تهران)
 
 🆕 **1 مورد تازه:**
 
 ## 🆕 تازه در ترکر (1)
 
-- **Flop** (4h پیش)
-  - https://flop.finance/
-  - Tools/Infra, AI | رایگان | 🔗 Bitcoin | Flop Network is an early-stage AI and crypto protocol designed around autonomous
+- **TermiX (TMX)** (24h پیش)
+  - https://cryptorank.io/price/termix-activity1281
+  - TMX
 
 ---
 
-**چشم‌انداز:** 🔵 پوینت: 2 | 🟢 مین‌نت: 2 | 🆕 تازه در ترکر: 5
+**چشم‌انداز:** 🔵 پوینت: 1 | 🟢 مین‌نت: 2 | 🆕 تازه در ترکر: 6
