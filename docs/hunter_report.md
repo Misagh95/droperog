@@ -1,12 +1,19 @@
-# 🎯 DroperOG Hunter — 2026-08-27 13:37 (تهران)
+# 🎯 DroperOG Hunter — 2026-08-28 01:59 (تهران)
 
-🆕 **1 مورد تازه:**
+🆕 **2 مورد تازه:**
 
 ## 🟡 تسک/کمپین (1)
 
-- **Unlock Free Crypto: 7 Real Ways to Score Bonuses &amp; Airdrops Today!** (29h پیش)
-  - https://news.google.com/rss/articles/CBMiXkFVX3lxTE43MG9OY3ZYOXVDNkhTZ1hpODVPRnBQNnFxamdSVUNuZTUxUkkxYWFILVN2S29SZXRUTzBGUUQ2cHRzNWR3WUZaZUxGYTB2cDU4TFlybkxFUVNzYWRxSmc?oc=5
+- **ORO** (2h پیش)
+  - https://cryptorank.io/price/ask-oro-activity1284
+  - 🎁 Points | 💰 $3,000,000 | $40 | ⏱ 30min
+
+## 🆕 تازه در ترکر (1)
+
+- **Ondo Finance (ONDO)** (2h پیش)
+  - https://cryptorank.io/price/ondo-finance-activity1283
+  - ONDO | 💰 $46,040,000
 
 ---
 
-**چشم‌انداز:** 🟡 تسک/کمپین: 1 | 🟢 مین‌نت: 1 | 🆕 تازه در ترکر: 4
+**چشم‌انداز:** 🟡 تسک/کمپین: 2 | 🟢 مین‌نت: 1 | 🆕 تازه در ترکر: 5
