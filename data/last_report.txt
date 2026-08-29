@@ -1,27 +1,20 @@
 ==========================================================
-  DroperOG v2 — 2026-08-28 15:43:45
+  DroperOG v2 — 2026-08-29 00:11:42
 ==========================================================
 
-  [32mNEW (2):[0m
-  🟣 Gyndore [Testnet]  Trust: 60%
-     Chains: ?
-     https://cryptorank.io/price/gyndore
-  🟡 Ondo Finance [Social Tasks]  Trust: 60%
-     Chains: ?
-     Funding: $46,040,000
-     https://cryptorank.io/price/ondo-finance
+  [32mNo new projects[0m
 
-  [36mUPDATED (30):[0m
-  Saturn: Trust: 63% -> 73%
-  Forte: Trust: 77% -> 87%
-  STRATO: Trust: 77% -> 67%
-  Clasho: Trust: 55% -> 65%
-  Cambria: Trust: 58% -> 68%
-  SwarmBase: Trust: 63% -> 73%
-  Apyx: Trust: 73% -> 63%
-  Hotstuff (Prev. Syndr Protocol): Trust: 75% -> 65%
-  AmericanFortress: Trust: 73% -> 63%
-  DogeOS: Trust: 83% -> 73%
+  [36mUPDATED (12):[0m
+  InfiniFi: Trust: 68% -> 78%
+  ChainGPT: Trust: 63% -> 73%
+  Saturn: Trust: 73% -> 63%
+  Forte: Trust: 87% -> 77%
+  Dango: Trust: 73% -> 83%
+  K25.ai: Trust: 65% -> 75%
+  The Pit App: Trust: 55% -> 65%
+  Cambria: Trust: 68% -> 58%
+  SwarmBase: Trust: 73% -> 63%
+  Fraction AI: Trust: 83% -> 73%
 
   [31mREMOVED (29):[0m 01, Superform, T-Rex, AFK Fishing, tren.ch, Trepa, Netrun, Bonk, YOM, 4AI
 
@@ -29,16 +22,15 @@
   CATEGORIZED SUMMARY (Trust >= 65)
 --------------------------------------------------
 
-🟣 Testnet (12 — showing 7 high-trust):
-  Forte — 87% | optimism | $910,000,000 | Testnet, Trading
-  Fraction AI — 83% | ? | $6,000,000 | Trading, Getting a role
+🟣 Testnet (10 — showing 6 high-trust):
+  Dango — 83% | ? | $3,600,000 | Mainnet, Trading
   Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
   Arc — 77% | ? | $222,000,000 | Testnet, Social
   Mawari — 75% | optimism | $17,300,000 | Mainnet, Node
   Malda — 70% | ? | Liquidity, Testnet
   Neura — 65% | ? | Testnet, Gaming
 
-🟢 Mainnet (112 — showing 61 high-trust):
+🟢 Mainnet (114 — showing 60 high-trust):
   xStocks — 87% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
@@ -47,26 +39,26 @@
   N1 — 80% | n1 | $7M | Join Private Beta, Trade Perps
   Perpl — 80% | monad | $9.5M | Trade Perps, $1M Volume
   Bulk — 80% | solana | $8M | Stake SOL, Trade Perps (NOT LIVE YET)
+  InfiniFi — 78% | ? | $3,000,000 | Liquidity, Node
   Polymarket — 77% | polygon | $2.88B | Explore Polymarket, Trade Markets
   Phantom — 77% | solana | NA | Use in-app swap feature, Mainnet
   Symbiotic — 75% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points
   Sophon — 75% | optimism | $10,000,000 | Social
   Kintsu — 73% | monad | $4M | Stake $MON, Use sMON in DeFi
   Ambient — 73% | ethereum, scroll | $6.5M | Trade, Provide Liquidity
-  Saturn — 73% | ? | $2,800,000 | Hold, Liquidity
-  SwarmBase — 73% | base | $7,000,000 | Mint NFT
   Napier — 73% | ? | $1,000,000 | Liquidity
   Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
   Optimism — 72% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
   Zerion — 72% | arbitrum, aurora, avalanche, bnbchain, base, ethereum, fantom, gnosis, optimism, polygon, zksync | $33M | Explore Zerion app, Swap a token pair
+  Arcus — 70% | robinhood | Undisclosed | Join the waitlist, Trade Spot
 
 🟡 Social Tasks (685 — showing 348 high-trust):
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
-  Reppo — 80% | ? | $22,200,000 | Social
   Ping Network — 80% | ? | DePIN
   Hub.xyz — 78% | ? | $1,700,000 | Social
   OpenSea — 77% | ethereum, polygon, base, arbitrum, optimism, solana, bnbchain, linea, avalanche, abstract | $425.15M | Join the Voyage
   Rainbow — 77% | ? | $19.5M | Explore Rainbow app, Do one onchain action
+  Forte — 77% | ? | $910,000,000
   Jupiter — 77% | ? | $172,500,000
   Variational — 77% | ? | $61,800,000
   Sui — 77% | sui | $405,370,000
@@ -83,6 +75,6 @@
   Chaos Labs — 77% | ? | $79,000,000
 
 --------------------------------------------------
-  Total: 809 | Testnet: 12 | Social Tasks: 685 | Mainnet: 112
+  Total: 809 | Testnet: 10 | Social Tasks: 685 | Mainnet: 114
   Last run: 0 min ago
 ==========================================================
