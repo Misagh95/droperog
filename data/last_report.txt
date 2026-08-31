@@ -1,17 +1,33 @@
 ==========================================================
-  DroperOG v2 — 2026-08-31 18:16:50
+  DroperOG v2 — 2026-08-31 23:28:10
 ==========================================================
 
-  [32mNo new projects[0m
+  [32mNEW (4):[0m
+  🟡 VOICE [Social Tasks]  Trust: 50%
+     Chains: ?
+     https://cryptorank.io/price/voice
+  🟡 Chomp [Social Tasks]  Trust: 68%
+     Chains: ?
+     Funding: $3,600,000
+     https://cryptorank.io/price/chomp
+  🟡 DualMint [Social Tasks]  Trust: 60%
+     Chains: ?
+     https://cryptorank.io/price/dualmint
+  🟢 Zec Bit [Mainnet]  Trust: 50%
+     Chains: ?
+     https://cryptorank.io/price/zec-bit
 
-  [36mUPDATED (7):[0m
-  Pacifica: Trust: 55% -> 65%
-  GenLayer: Trust: 73% -> 83%
-  Forte: Trust: 77% -> 87%
-  InfiniFi: Trust: 78% -> 68%
-  ChainGPT: Trust: 73% -> 63%
-  Click: Trust: 50% -> 60%
-  Clasho: Trust: 65% -> 55%
+  [36mUPDATED (30):[0m
+  Pacifica: Trust: 65% -> 55%
+  GenLayer: Trust: 83% -> 73%
+  Forte: Trust: 87% -> 77%
+  MoonPay: Trust: 67% -> 77%
+  Dango: Trust: 83% -> 73%
+  K25.ai: Trust: 75% -> 65%
+  The Pit App: Trust: 65% -> 55%
+  Hash: Trust: 55% -> 65%
+  Unicity: Trust: 63% -> 73%
+  blinq: Trust: 55% -> 65%
 
   [31mREMOVED (29):[0m 01, Superform, T-Rex, AFK Fishing, tren.ch, Trepa, Netrun, Bonk, YOM, 4AI
 
@@ -19,18 +35,13 @@
   CATEGORIZED SUMMARY (Trust >= 65)
 --------------------------------------------------
 
-🟣 Testnet (13 — showing 9 high-trust):
-  Forte — 87% | optimism | $910,000,000 | Testnet, Trading
-  GenLayer — 83% | ? | $7,500,000 | Social, Testnet
-  Dango — 83% | ? | $3,600,000 | Mainnet, Trading
+🟣 Testnet (8 — showing 4 high-trust):
+  GRVT — 80% | ? | $33,300,000 | Bounty Platforms, Social
   Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
-  Arc — 77% | ? | $222,000,000 | Testnet, Social
-  Mawari — 75% | optimism | $17,300,000 | Mainnet, Node
-  Malda — 70% | ? | Liquidity, Testnet
-  Pacifica — 65% | solana | Self-funded | Trade Perps, Trading
-  Neura — 65% | ? | Testnet, Gaming
+  Turnkey — 77% | ? | $65,000,000 | Testnet
+  Unicity — 73% | ? | $3,000,000 | Gaming, Bounty Platforms
 
-🟢 Mainnet (112 — showing 59 high-trust):
+🟢 Mainnet (114 — showing 60 high-trust):
   xStocks — 87% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
@@ -39,42 +50,42 @@
   N1 — 80% | n1 | $7M | Join Private Beta, Trade Perps
   Perpl — 80% | monad | $9.5M | Trade Perps, $1M Volume
   Bulk — 80% | solana | $8M | Stake SOL, Trade Perps (NOT LIVE YET)
+  Fortytwo — 78% | ? | $2,300,000 | Node, Fill The Form
   Polymarket — 77% | polygon | $2.88B | Explore Polymarket, Trade Markets
-  Phantom — 77% | solana | NA | Use in-app swap feature, Mainnet
+  Phantom — 77% | solana | NA | Use in-app swap feature
   Symbiotic — 75% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points
-  Sophon — 75% | optimism | $10,000,000 | Social
   Kintsu — 73% | monad | $4M | Stake $MON, Use sMON in DeFi
   Ambient — 73% | ethereum, scroll | $6.5M | Trade, Provide Liquidity
-  Napier — 73% | ? | $1,000,000 | Liquidity
+  Midl — 73% | ? | $2,400,000 | Gaming, Liquidity
   Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
   Optimism — 72% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
   Zerion — 72% | arbitrum, aurora, avalanche, bnbchain, base, ethereum, fantom, gnosis, optimism, polygon, zksync | $33M | Explore Zerion app, Swap a token pair
   Arcus — 70% | robinhood | Undisclosed | Join the waitlist, Trade Spot
   Quote — 70% | hyperliquid | Undisclosed | Join , Trade
 
-🟡 Social Tasks (684 — showing 345 high-trust):
+🟡 Social Tasks (691 — showing 351 high-trust):
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
+  Zentry — 82% | ? | $145,840,000 | Social
+  Kadena — 80% | ? | $35,150,000 | Bounty Platforms
   Ping Network — 80% | ? | DePIN
-  Hub.xyz — 78% | ? | $1,700,000 | Social
+  MetaCene — 80% | ? | $15,340,000 | Gaming
+  Ecosapiens — 78% | ? | $5,000,000 | Social, Bounty Platforms
   OpenSea — 77% | ethereum, polygon, base, arbitrum, optimism, solana, bnbchain, linea, avalanche, abstract | $425.15M | Join the Voyage
   Rainbow — 77% | ? | $19.5M | Explore Rainbow app, Do one onchain action
+  Forte — 77% | ? | $910,000,000
   Jupiter — 77% | ? | $172,500,000
   Variational — 77% | ? | $61,800,000
+  MoonPay — 77% | optimism | $1,242,000,000 | Wallet Airdrop Status
   Sui — 77% | sui | $405,370,000
+  Arc — 77% | ? | $222,000,000
   Praxis Society — 77% | ? | $544,200,000
   Immutable — 77% | ? | $322,380,000
   Aztec — 77% | ? | $183,765,601.9424
   Architect — 77% | ? | $52,000,000
   Farcaster — 77% | base, ethereum, zora | $180,000,000 | Social
   Blockchain.com — 77% | ? | $600,000,000
-  Canton Network — 77% | ton | $812,200,000
-  Doodles — 77% | ? | $54,500,000
-  Turnkey — 77% | ? | $65,000,000
-  Nous Research — 77% | ? | $70,000,000
-  Chaos Labs — 77% | ? | $79,000,000
-  Axie Infinity — 77% | ? | $313,970,000
 
 --------------------------------------------------
-  Total: 809 | Testnet: 13 | Social Tasks: 684 | Mainnet: 112
+  Total: 813 | Testnet: 8 | Social Tasks: 691 | Mainnet: 114
   Last run: 0 min ago
 ==========================================================
