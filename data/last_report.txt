@@ -1,20 +1,13 @@
 ==========================================================
-  DroperOG v2 — 2026-09-01 18:55:27
+  DroperOG v2 — 2026-09-01 22:08:33
 ==========================================================
 
   [32mNo new projects[0m
 
-  [36mUPDATED (15):[0m
-  Hotstuff (Prev. Syndr Protocol): Trust: 65% -> 75%
-  Injective: Trust: 67% -> 77%
-  Chomp: Trust: 68% -> 58%
-  DualMint: Trust: 60% -> 50%
-  Beep: Trust: 55% -> 65%
-  KOR Protocol: Trust: 63% -> 73%
-  MoonPay: Trust: 77% -> 67%
-  Click: Trust: 60% -> 50%
-  jpeg.fun: Trust: 65% -> 75%
-  Ecosapiens: Trust: 78% -> 68%
+  [36mUPDATED (3):[0m
+  Soneium: Trust: 65% -> 75%
+  Injective: Trust: 77% -> 67%
+  KOR Protocol: Trust: 73% -> 63%
 
   [31mREMOVED (29):[0m 01, Superform, T-Rex, AFK Fishing, tren.ch, Trepa, Netrun, Bonk, YOM, 4AI
 
@@ -22,15 +15,15 @@
   CATEGORIZED SUMMARY (Trust >= 65)
 --------------------------------------------------
 
-🟣 Testnet (8 — showing 6 high-trust):
+🟣 Testnet (9 — showing 6 high-trust):
   N1 — 83% | n1 | $7M | Join Private Beta, Trade Perps
   Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
   Turnkey — 77% | ? | $65,000,000 | Testnet
+  Soneium — 75% | soneium | Bounty Platforms, Fill The Form
   Hotstuff (Prev. Syndr Protocol) — 75% | ? | Liquidity, Mainnet
   Unicity — 73% | ? | $3,000,000 | Gaming, Bounty Platforms
-  pod — 70% | optimism | $10,000,000 | Bounty Platforms, Wallet Airdrop Status
 
-🟢 Mainnet (117 — showing 62 high-trust):
+🟢 Mainnet (116 — showing 61 high-trust):
   xStocks — 87% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
@@ -41,16 +34,16 @@
   Fortytwo — 78% | ? | $2,300,000 | Node, Fill The Form
   Polymarket — 77% | polygon | $2.88B | Explore Polymarket, Trade Markets
   Phantom — 77% | solana | NA | Use in-app swap feature
-  Injective — 77% | ? | $59,700,000 | Bounty Platforms, Ambassador program
   Symbiotic — 75% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points
   Sophon — 75% | optimism | $10,000,000 | Social
   Kintsu — 73% | monad | $4M | Stake $MON, Use sMON in DeFi
   Ambient — 73% | ethereum, scroll | $6.5M | Trade, Provide Liquidity
-  KOR Protocol — 73% | optimism | $7,500,000 | Wallet Airdrop Status, Mint NFT
   Midl — 73% | ? | $2,400,000 | Gaming, Liquidity
   Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
   Optimism — 72% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
   Zerion — 72% | arbitrum, aurora, avalanche, bnbchain, base, ethereum, fantom, gnosis, optimism, polygon, zksync | $33M | Explore Zerion app, Swap a token pair
+  Arcus — 70% | robinhood | Undisclosed | Join the waitlist, Trade Spot
+  Quote — 70% | hyperliquid | Undisclosed | Join , Trade
 
 🟡 Social Tasks (688 — showing 349 high-trust):
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
@@ -75,6 +68,6 @@
   Nous Research — 77% | ? | $70,000,000
 
 --------------------------------------------------
-  Total: 813 | Testnet: 8 | Social Tasks: 688 | Mainnet: 117
+  Total: 813 | Testnet: 9 | Social Tasks: 688 | Mainnet: 116
   Last run: 0 min ago
 ==========================================================
