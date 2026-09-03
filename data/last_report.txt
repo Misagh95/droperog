@@ -1,8 +1,18 @@
 ==========================================================
-  DroperOG v2 — 2026-09-03 18:56:09
+  DroperOG v2 — 2026-09-03 21:58:12
 ==========================================================
 
   [32mNo new projects[0m
+
+  [36mUPDATED (8):[0m
+  Loaf: Trust: 55% -> 65%
+  Gyndore: Trust: 65% -> 55%
+  Variational: Trust: 87% -> 77%
+  Alloco: Trust: 64% -> 54%
+  Pond: Trust: 78% -> 68%
+  XO Market: Trust: 63% -> 73%
+  Unicity: Trust: 73% -> 63%
+  Ronin: Trust: 70% -> 60%
 
   [31mREMOVED (29):[0m 01, Superform, T-Rex, AFK Fishing, tren.ch, Trepa, Netrun, Bonk, YOM, 4AI
 
@@ -10,18 +20,16 @@
   CATEGORIZED SUMMARY (Trust >= 65)
 --------------------------------------------------
 
-🟣 Testnet (13 — showing 9 high-trust):
-  Variational — 87% | ? | $61,800,000 | Mainnet, Trading
+🟣 Testnet (12 — showing 7 high-trust):
   Rome Protocol — 83% | ? | $9,000,000 | Testnet, Getting a role
   Novastro Chain — 78% | ? | $3,200,000 | Bounty Platforms, Testnet
   Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
   Turnkey — 77% | ? | $65,000,000 | Testnet
-  Rialo (Subzero Labs) — 75% | ? | $20,000,000 | Testnet, Getting a role
   Miden — 75% | ? | $25,000,000 | Mint Domain, Testnet
-  Unicity — 73% | ? | $3,000,000 | Gaming, Bounty Platforms
-  Gyndore — 65% | optimism | Wallet Airdrop Status, Bounty Platforms
+  XO Market — 73% | ? | $6,500,000 | Predictions, Fill The Form
+  Loaf — 65% | ? | Testnet, Trading
 
-🟢 Mainnet (112 — showing 61 high-trust):
+🟢 Mainnet (114 — showing 62 high-trust):
   xStocks — 87% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
@@ -43,15 +51,15 @@
   Midl — 73% | ? | $2,400,000 | Gaming, Liquidity
   Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
 
-🟡 Social Tasks (690 — showing 345 high-trust):
+🟡 Social Tasks (689 — showing 345 high-trust):
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
   Zentry — 82% | ? | $145,840,000 | Social
   Kadena — 80% | ? | $35,150,000 | Bounty Platforms
   MetaCene — 80% | ? | $15,340,000 | Gaming
-  Pond — 78% | ? | $7,500,000 | Social, Getting a role
   Ecosapiens — 78% | ? | $5,000,000 | Social, Bounty Platforms
   OpenSea — 77% | ethereum, polygon, base, arbitrum, optimism, solana, bnbchain, linea, avalanche, abstract | $425.15M | Join the Voyage
   Rainbow — 77% | ? | $19.5M | Explore Rainbow app, Do one onchain action
+  Variational — 77% | ? | $61,800,000
   Forte — 77% | ? | $910,000,000
   Jupiter — 77% | ? | $172,500,000
   Sui — 77% | sui | $405,370,000
@@ -66,6 +74,6 @@
   Doodles — 77% | ? | $54,500,000
 
 --------------------------------------------------
-  Total: 815 | Testnet: 13 | Social Tasks: 690 | Mainnet: 112
+  Total: 815 | Testnet: 12 | Social Tasks: 689 | Mainnet: 114
   Last run: 0 min ago
 ==========================================================
