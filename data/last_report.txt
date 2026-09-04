@@ -1,8 +1,14 @@
 ==========================================================
-  DroperOG v2 — 2026-09-04 08:16:29
+  DroperOG v2 — 2026-09-04 15:14:42
 ==========================================================
 
   [32mNo new projects[0m
+
+  [36mUPDATED (4):[0m
+  42 (prev. Alkimiya): Trust: 68% -> 78%
+  Loaf: Trust: 65% -> 55%
+  Miracle: Trust: 50% -> 60%
+  DataHive: Trust: 83% -> 73%
 
   [31mREMOVED (29):[0m 01, Superform, T-Rex, AFK Fishing, tren.ch, Trepa, Netrun, Bonk, YOM, 4AI
 
@@ -10,27 +16,26 @@
   CATEGORIZED SUMMARY (Trust >= 65)
 --------------------------------------------------
 
-🟣 Testnet (12 — showing 7 high-trust):
+🟣 Testnet (11 — showing 6 high-trust):
   Rome Protocol — 83% | ? | $9,000,000 | Testnet, Getting a role
   Novastro Chain — 78% | ? | $3,200,000 | Bounty Platforms, Testnet
   Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
   Turnkey — 77% | ? | $65,000,000 | Testnet
   Miden — 75% | ? | $25,000,000 | Mint Domain, Testnet
   XO Market — 73% | ? | $6,500,000 | Predictions, Fill The Form
-  Loaf — 65% | ? | Testnet, Trading
 
-🟢 Mainnet (114 — showing 62 high-trust):
+🟢 Mainnet (115 — showing 61 high-trust):
   xStocks — 87% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
   Infinex — 85% | evm&svmchains | $65.29M | Explore Infinex app, Place a perps trade
   Pharos — 83% | pharos | $8M | Explore Pharos Network app, Bridge to the network
-  DataHive — 83% | ? | $3,500,000 | DePIN, Bounty Platforms
   dTelecom — 83% | optimism | $1,200,000 | Social, Wallet Airdrop Status
   N1 — 80% | n1 | $7M | Join Private Beta, Trade Perps
   Perpl — 80% | monad | $9.5M | Trade Perps, $1M Volume
   Bulk — 80% | solana | $8M | Stake SOL, Trade Perps (NOT LIVE YET)
   Blockscout — 78% | ? | $3M | Join the Merits program and collect points by completing tasks, using Swapscout, and inviting friend, Collect badges
+  42 (prev. Alkimiya) — 78% | ? | $7,200,000 | Predictions, Bounty Platforms
   Polymarket — 77% | polygon | $2.88B | Explore Polymarket, Trade Markets
   Phantom — 77% | solana | NA | Use in-app swap feature
   Symbiotic — 75% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points
@@ -41,7 +46,7 @@
   Midl — 73% | ? | $2,400,000 | Gaming, Liquidity
   Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
 
-🟡 Social Tasks (689 — showing 345 high-trust):
+🟡 Social Tasks (689 — showing 346 high-trust):
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
   Zentry — 82% | ? | $145,840,000 | Social
   Kadena — 80% | ? | $35,150,000 | Bounty Platforms
@@ -64,6 +69,6 @@
   Doodles — 77% | ? | $54,500,000
 
 --------------------------------------------------
-  Total: 815 | Testnet: 12 | Social Tasks: 689 | Mainnet: 114
+  Total: 815 | Testnet: 11 | Social Tasks: 689 | Mainnet: 115
   Last run: 0 min ago
 ==========================================================
