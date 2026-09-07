@@ -15,7 +15,7 @@
         "ad_efbc889c-c38d-4bc9-9c35-55d57ad88aa4",
         "cr_pascal-activity1243"
       ],
-      "last_seen": "2026-09-07T08:41:10.850003"
+      "last_seen": "2026-09-07T16:43:39.790442"
     },
     "fomo": {
       "name": "Fomo",
@@ -37,7 +37,7 @@
         "ad_417ce81d-0eee-40b8-8244-129a148acda6",
         "cr_fomo-trading-activity1228"
       ],
-      "last_seen": "2026-09-07T08:41:10.850010"
+      "last_seen": "2026-09-07T16:43:39.790449"
     },
     "perpl": {
       "name": "Perpl",
@@ -53,7 +53,7 @@
         "ad_5567c55c-0450-4eaa-a598-7a41221c7faa",
         "cr_perpl-activity808"
       ],
-      "last_seen": "2026-09-07T08:41:10.849951"
+      "last_seen": "2026-09-07T16:43:39.790391"
     },
     "jtx": {
       "name": "JTX",
@@ -70,7 +70,7 @@
         "ad_8952258d-a134-42a0-aa72-4afb2c463a32",
         "cr_jtx-trade-activity1182"
       ],
-      "last_seen": "2026-09-07T08:41:10.850017"
+      "last_seen": "2026-09-07T16:43:39.790455"
     },
     "ondo perps": {
       "name": "Ondo Perps",
@@ -86,7 +86,7 @@
       "ids": [
         "ad_c155b41c-c9cc-44ed-b023-cc7c22d769ac"
       ],
-      "last_seen": "2026-09-07T08:41:10.849960"
+      "last_seen": "2026-09-07T16:43:39.790400"
     },
     "arcus": {
       "name": "Arcus",
@@ -104,7 +104,7 @@
         "ad_26a5bd8f-f1e1-49fe-a7c5-57000e52046a",
         "cr_arcus-activity1232"
       ],
-      "last_seen": "2026-09-07T08:41:10.849896"
+      "last_seen": "2026-09-07T16:43:39.790340"
     },
     "xstocks": {
       "name": "xStocks",
@@ -123,7 +123,7 @@
       "ids": [
         "ad_3e32c545-ef06-4206-b73b-c68d6237338d"
       ],
-      "last_seen": "2026-09-07T08:41:10.849968"
+      "last_seen": "2026-09-07T16:43:39.790409"
     },
     "tori": {
       "name": "Tori Finance",
@@ -140,7 +140,7 @@
         "ad_733176f8-40eb-49d8-96d9-2a840ff037b1",
         "cr_tori-finance-activity1224"
       ],
-      "last_seen": "2026-09-07T08:41:10.850025"
+      "last_seen": "2026-09-07T16:43:39.790463"
     },
     "bulk": {
       "name": "Bulk",
@@ -156,7 +156,7 @@
         "ad_63e46ae3-861b-4456-9954-16501242b667",
         "cr_bulk-activity973"
       ],
-      "last_seen": "2026-09-07T08:41:10.850033"
+      "last_seen": "2026-09-07T16:43:39.790470"
     },
     "polymarket": {
       "name": "Polymarket",
@@ -173,7 +173,7 @@
         "ad_1436cd83-3bb0-4499-8227-63922f944f51",
         "cr_polymarket-activity190"
       ],
-      "last_seen": "2026-09-07T08:41:10.850040"
+      "last_seen": "2026-09-07T16:43:39.790482"
     },
     "meridian": {
       "name": "Meridian",
@@ -191,7 +191,7 @@
         "ad_818b0c0a-5e7e-438e-a050-8089287fa9ff",
         "cr_ethereal-dex-activity684"
       ],
-      "last_seen": "2026-09-07T08:41:10.850047"
+      "last_seen": "2026-09-07T16:43:39.790492"
     },
     "titan": {
       "name": "Titan",
@@ -208,7 +208,7 @@
         "cr_titan-exchange-activity567",
         "cr_titan-network-activity611"
       ],
-      "last_seen": "2026-09-07T08:41:10.850056"
+      "last_seen": "2026-09-07T16:43:39.790505"
     },
     "nansen": {
       "name": "Nansen",
@@ -227,7 +227,7 @@
       "ids": [
         "ad_73fdd060-a37f-441c-bef2-58e80387ab3f"
       ],
-      "last_seen": "2026-09-07T08:41:10.850063"
+      "last_seen": "2026-09-07T16:43:39.790515"
     },
     "dreamcash": {
       "name": "Dreamcash",
@@ -246,7 +246,7 @@
         "ad_527f25a2-761d-4a4b-9935-d04523568542",
         "cr_dreamcash-activity1102"
       ],
-      "last_seen": "2026-09-07T08:41:10.850069"
+      "last_seen": "2026-09-07T16:43:39.790524"
     },
     "phoenix": {
       "name": "Phoenix",
@@ -261,7 +261,7 @@
       "ids": [
         "ad_0856a48a-6f8e-4ed6-9234-4b2e85afc536"
       ],
-      "last_seen": "2026-09-07T08:41:10.850082"
+      "last_seen": "2026-09-07T16:43:39.790539"
     },
     "synq": {
       "name": "Synq",
@@ -277,7 +277,7 @@
       "ids": [
         "ad_295bb1fa-4412-4b6c-bdee-17c06e45fd21"
       ],
-      "last_seen": "2026-09-07T08:41:10.850088"
+      "last_seen": "2026-09-07T16:43:39.790549"
     },
     "pacifica": {
       "name": "Pacifica",
@@ -293,7 +293,7 @@
         "ad_3d8f5839-ab59-4961-a1b7-1bdf0f0f304c",
         "cr_pacifica-activity978"
       ],
-      "last_seen": "2026-09-07T08:41:10.850095"
+      "last_seen": "2026-09-07T16:43:39.790558"
     },
     "cascade": {
       "name": "Cascade",
@@ -306,7 +306,7 @@
       "ids": [
         "ad_d1c7a139-a839-4e4e-b718-b373a6e6eb54"
       ],
-      "last_seen": "2026-09-07T08:41:10.850102"
+      "last_seen": "2026-09-07T16:43:39.790578"
     },
     "nado": {
       "name": "Nado",
@@ -322,7 +322,7 @@
       "ids": [
         "ad_453fee2a-cbee-481d-b2b4-9f7f03ddbb8e"
       ],
-      "last_seen": "2026-09-07T08:41:10.849993"
+      "last_seen": "2026-09-07T16:43:39.790432"
     },
     "standx": {
       "name": "StandX",
@@ -339,7 +339,7 @@
       "ids": [
         "ad_a01c9c17-5ccf-4e20-aecf-645e21e8f565"
       ],
-      "last_seen": "2026-09-07T08:41:10.850112"
+      "last_seen": "2026-09-07T16:43:39.790592"
     },
     "01": {
       "name": "01",
@@ -372,7 +372,7 @@
         "ad_0bea2e81-67b4-43f3-9041-46725e133204",
         "cr_liquid-hyperliquid-activity990"
       ],
-      "last_seen": "2026-09-07T08:41:10.850119"
+      "last_seen": "2026-09-07T16:43:39.790601"
     },
     "tempo": {
       "name": "Tempo",
@@ -389,7 +389,7 @@
         "ad_0a0be9f7-e086-4ecc-8ebc-602206986fa3",
         "cr_tempo-chain-activity1027"
       ],
-      "last_seen": "2026-09-07T08:41:10.850124"
+      "last_seen": "2026-09-07T16:43:39.790610"
     },
     "base": {
       "name": "Base",
@@ -405,7 +405,7 @@
         "ad_bddb6cf4-04b4-47ea-97fc-988f95c7d443",
         "cr_base-activity52"
       ],
-      "last_seen": "2026-09-07T08:41:10.850133"
+      "last_seen": "2026-09-07T16:43:39.790619"
     },
     "hylo": {
       "name": "Hylo",
@@ -422,7 +422,7 @@
         "ad_57e184eb-7ba0-475a-8453-539c16bc8366",
         "cr_hylo-activity879"
       ],
-      "last_seen": "2026-09-07T08:41:10.850141"
+      "last_seen": "2026-09-07T16:43:39.790626"
     },
     "extended": {
       "name": "Extended",
@@ -442,7 +442,7 @@
         "ad_277cade6-bb78-4767-b1dc-6368ddbe9e11",
         "cr_x-10-activity940"
       ],
-      "last_seen": "2026-09-07T08:41:10.850148"
+      "last_seen": "2026-09-07T16:43:39.790633"
     },
     "kintsu": {
       "name": "Kintsu",
@@ -460,7 +460,7 @@
         "cr_kintsu-activity309",
         "cr_kintsu-activity310"
       ],
-      "last_seen": "2026-09-07T08:41:10.850155"
+      "last_seen": "2026-09-07T16:43:39.790640"
     },
     "hibachi": {
       "name": "Hibachi",
@@ -477,7 +477,7 @@
         "ad_c85ca021-16b5-4366-b712-9640cdc51825",
         "cr_hibachi-activity744"
       ],
-      "last_seen": "2026-09-07T08:41:10.850163"
+      "last_seen": "2026-09-07T16:43:39.790648"
     },
     "relay": {
       "name": "Relay",
@@ -509,7 +509,7 @@
         "ad_bda4699a-d85b-4505-bb84-46203df62a93",
         "cr_relay-activity811"
       ],
-      "last_seen": "2026-09-07T08:41:10.850169"
+      "last_seen": "2026-09-07T16:43:39.790654"
     },
     "opensea": {
       "name": "OpenSea",
@@ -535,7 +535,7 @@
         "ad_05f8e3e0-5085-4121-8dc8-c7c880a65ebd",
         "cr_open-sea-activity687"
       ],
-      "last_seen": "2026-09-07T08:41:10.850178"
+      "last_seen": "2026-09-07T16:43:39.790662"
     },
     "infinex": {
       "name": "Infinex",
@@ -551,7 +551,7 @@
       "ids": [
         "ad_a60e92bc-1c24-4f59-b1bc-89d2c4fdc14b"
       ],
-      "last_seen": "2026-09-07T08:41:10.850525"
+      "last_seen": "2026-09-07T16:43:39.790996"
     },
     "based": {
       "name": "Based",
@@ -569,7 +569,7 @@
         "ad_fcbdc4c3-407f-441b-abe8-af9bceae304f",
         "cr_based-social-activity1054"
       ],
-      "last_seen": "2026-09-07T08:41:10.850519"
+      "last_seen": "2026-09-07T16:43:39.790990"
     },
     "metamask": {
       "name": "Metamask",
@@ -587,7 +587,7 @@
       "ids": [
         "ad_a8d3aa7c-e58e-4975-ac23-3e1d52a85627"
       ],
-      "last_seen": "2026-09-07T08:41:10.850184"
+      "last_seen": "2026-09-07T16:43:39.790669"
     },
     "bebop": {
       "name": "Bebop",
@@ -603,7 +603,7 @@
       "ids": [
         "ad_a9646008-aca5-4169-8b9e-384da442f803"
       ],
-      "last_seen": "2026-09-07T08:41:10.850191"
+      "last_seen": "2026-09-07T16:43:39.790675"
     },
     "rysk": {
       "name": "Rysk Finance",
@@ -618,7 +618,7 @@
       "ids": [
         "ad_3f4a7225-858a-42a8-b88a-e8eb20210afe"
       ],
-      "last_seen": "2026-09-07T08:41:10.850197"
+      "last_seen": "2026-09-07T16:43:39.790681"
     },
     "li fi": {
       "name": "Li.Fi",
@@ -650,7 +650,7 @@
         "ad_73e8210c-d4ae-48ce-822a-e082a14ef4fc",
         "cr_li-fi-activity148"
       ],
-      "last_seen": "2026-09-07T08:41:10.850204"
+      "last_seen": "2026-09-07T16:43:39.790688"
     },
     "optimism": {
       "name": "Optimism",
@@ -667,7 +667,7 @@
         "ad_202c65e6-fc02-44cf-aeb4-d6c001f4aa44",
         "cr_optimism-activity461"
       ],
-      "last_seen": "2026-09-07T08:41:10.850211"
+      "last_seen": "2026-09-07T16:43:39.790695"
     },
     "jumper exchange": {
       "name": "Jumper Exchange",
@@ -698,7 +698,7 @@
       "ids": [
         "ad_b3a03ae0-543e-4682-b085-30f6a912b1b5"
       ],
-      "last_seen": "2026-09-07T08:41:10.850218"
+      "last_seen": "2026-09-07T16:43:39.790702"
     },
     "perena": {
       "name": "Perena",
@@ -715,7 +715,7 @@
         "ad_9272724c-65ac-4e64-b749-4039e652e0e5",
         "cr_perena-activity587"
       ],
-      "last_seen": "2026-09-07T08:41:10.850225"
+      "last_seen": "2026-09-07T16:43:39.790709"
     },
     "abstract": {
       "name": "Abstract",
@@ -731,7 +731,7 @@
         "ad_d0074f83-ddd8-4b69-a96e-8c4e745ea03a",
         "cr_abstract-chain-activity348"
       ],
-      "last_seen": "2026-09-07T08:41:10.850234"
+      "last_seen": "2026-09-07T16:43:39.790718"
     },
     "debank": {
       "name": "DeBank",
@@ -748,7 +748,7 @@
         "ad_d4205536-d2af-4539-b220-d87d5676ec20",
         "cr_debank-activity271"
       ],
-      "last_seen": "2026-09-07T08:41:10.850241"
+      "last_seen": "2026-09-07T16:43:39.790724"
     },
     "fhenix": {
       "name": "Fhenix",
@@ -765,7 +765,7 @@
         "ad_7275f480-30e3-46b9-9a8d-d8da07ddae3d",
         "cr_fhenix-activity211"
       ],
-      "last_seen": "2026-09-07T08:41:10.850249"
+      "last_seen": "2026-09-07T16:43:39.790732"
     },
     "symbiotic": {
       "name": "Symbiotic",
@@ -781,7 +781,7 @@
         "ad_52ff94db-c1e3-4939-b4ae-a05fef61ddfb",
         "cr_symbiotic-activity219"
       ],
-      "last_seen": "2026-09-07T08:41:10.850257"
+      "last_seen": "2026-09-07T16:43:39.790739"
     },
     "stork": {
       "name": "Stork",
@@ -795,7 +795,7 @@
         "ad_3172b7b6-f1b6-4238-9e81-40d222e441a8",
         "cr_stork-activity704"
       ],
-      "last_seen": "2026-09-07T08:41:10.850268"
+      "last_seen": "2026-09-07T16:43:39.790750"
     },
     "mayan": {
       "name": "Mayan",
@@ -815,7 +815,7 @@
         "ad_24696e30-bef4-4dbd-a9ab-b7fc0206ff7a",
         "cr_mayan-activity140"
       ],
-      "last_seen": "2026-09-07T08:41:10.850275"
+      "last_seen": "2026-09-07T16:43:39.790756"
     },
     "hyperbeat": {
       "name": "Hyperbeat",
@@ -832,7 +832,7 @@
         "ad_b4818b36-c88b-465f-9471-ca1bdd1470bb",
         "cr_hyperbeat-hype-activity907"
       ],
-      "last_seen": "2026-09-07T08:41:10.850281"
+      "last_seen": "2026-09-07T16:43:39.790762"
     },
     "project x": {
       "name": "Project X",
@@ -849,7 +849,7 @@
         "ad_49b44282-3615-46a9-9a41-a92a86164e21",
         "cr_prjx-x-activity874"
       ],
-      "last_seen": "2026-09-07T08:41:10.850288"
+      "last_seen": "2026-09-07T16:43:39.790769"
     },
     "hyperdrive": {
       "name": "Hyperdrive",
@@ -864,7 +864,7 @@
       "ids": [
         "ad_a7d5225f-eb83-410c-b860-2814139ae8bd"
       ],
-      "last_seen": "2026-09-07T08:41:10.850295"
+      "last_seen": "2026-09-07T16:43:39.790775"
     },
     "hyperlend": {
       "name": "Hyperlend",
@@ -879,7 +879,7 @@
       "ids": [
         "ad_2ee62a7b-3a11-4c51-9146-7c9ccf7dd8bb"
       ],
-      "last_seen": "2026-09-07T08:41:10.850303"
+      "last_seen": "2026-09-07T16:43:39.790783"
     },
     "hypurrfi": {
       "name": "HypurrFi",
@@ -895,7 +895,7 @@
       "ids": [
         "ad_a04d2608-d7d3-4510-a071-ae8197f78824"
       ],
-      "last_seen": "2026-09-07T08:41:10.850310"
+      "last_seen": "2026-09-07T16:43:39.790789"
     },
     "bungee": {
       "name": "Bungee",
@@ -921,7 +921,7 @@
         "ad_281f4c5d-14d0-424c-a235-78e62e0f49a7",
         "cr_bungee-activity451"
       ],
-      "last_seen": "2026-09-07T08:41:10.850315"
+      "last_seen": "2026-09-07T16:43:39.790795"
     },
     "layerswap": {
       "name": "LayerSwap",
@@ -948,7 +948,7 @@
       "ids": [
         "ad_f8785e54-9ceb-4010-8cd6-f3a4bf049722"
       ],
-      "last_seen": "2026-09-07T08:41:10.850342"
+      "last_seen": "2026-09-07T16:43:39.790820"
     },
     "ostium": {
       "name": "Ostium",
@@ -964,7 +964,7 @@
         "ad_4a1fff58-e7a9-47b1-b805-e520abd922da",
         "cr_ostium-labs-activity753"
       ],
-      "last_seen": "2026-09-07T08:41:10.850327"
+      "last_seen": "2026-09-07T16:43:39.790806"
     },
     "swaap": {
       "name": "Swaap",
@@ -980,7 +980,7 @@
       "ids": [
         "ad_ecf8ae8e-f5fa-4993-bfea-b63ff8799ec3"
       ],
-      "last_seen": "2026-09-07T08:41:10.850351"
+      "last_seen": "2026-09-07T16:43:39.790828"
     },
     "derivio": {
       "name": "Derivio",
@@ -997,7 +997,7 @@
         "ad_d13d5044-0224-44fc-9bd1-0c63918d7c08",
         "cr_derivio-activity1145"
       ],
-      "last_seen": "2026-09-07T08:41:10.850358"
+      "last_seen": "2026-09-07T16:43:39.790835"
     },
     "phantom": {
       "name": "Phantom",
@@ -1013,7 +1013,7 @@
         "ad_3050d571-cc5f-44b0-bef0-022ea7c613cd",
         "cr_phantom-app-activity301"
       ],
-      "last_seen": "2026-09-07T08:41:10.850321"
+      "last_seen": "2026-09-07T16:43:39.790800"
     },
     "dappos": {
       "name": "dappOS",
@@ -1035,7 +1035,7 @@
       "ids": [
         "ad_f2edb1c1-d30f-4551-a2dd-006033097bb8"
       ],
-      "last_seen": "2026-09-07T08:41:10.850365"
+      "last_seen": "2026-09-07T16:43:39.790841"
     },
     "blockscout": {
       "name": "Blockscout",
@@ -1055,7 +1055,7 @@
         "cr_blockscout-activity528",
         "dj_2786"
       ],
-      "last_seen": "2026-09-07T08:41:10.850334"
+      "last_seen": "2026-09-07T16:43:39.790813"
     },
     "satori": {
       "name": "Satori",
@@ -1073,7 +1073,7 @@
       "ids": [
         "ad_40e060f3-aaca-41dc-9d2d-adfafa5efc68"
       ],
-      "last_seen": "2026-09-07T08:41:10.850372"
+      "last_seen": "2026-09-07T16:43:39.790848"
     },
     "marginfi": {
       "name": "Marginfi",
@@ -1088,7 +1088,7 @@
       "ids": [
         "ad_5f40dc3f-5422-4eb9-aebe-d39c08f25657"
       ],
-      "last_seen": "2026-09-07T08:41:10.850380"
+      "last_seen": "2026-09-07T16:43:39.790855"
     },
     "syncswap": {
       "name": "SyncSwap",
@@ -1103,7 +1103,7 @@
       "ids": [
         "ad_389dbd1a-dd38-41af-86cd-60ca6fa26c01"
       ],
-      "last_seen": "2026-09-07T08:41:10.850385"
+      "last_seen": "2026-09-07T16:43:39.790861"
     },
     "arrakis": {
       "name": "Arrakis Finance",
@@ -1121,7 +1121,7 @@
       "ids": [
         "ad_6b3ac38b-1a2d-4738-a79a-156b02ec3ed7"
       ],
-      "last_seen": "2026-09-07T08:41:10.850392"
+      "last_seen": "2026-09-07T16:43:39.790867"
     },
     "matcha": {
       "name": "Matcha",
@@ -1140,7 +1140,7 @@
       "ids": [
         "ad_fad0ec03-e988-448f-9fb5-cb0c90b82aa0"
       ],
-      "last_seen": "2026-09-07T08:41:10.850397"
+      "last_seen": "2026-09-07T16:43:39.790872"
     },
     "bracket": {
       "name": "Bracket",
@@ -1157,7 +1157,7 @@
         "ad_df0f7be3-ad8c-4923-a402-8aacd568ba99",
         "cr_bracket-labs-activity326"
       ],
-      "last_seen": "2026-09-07T08:41:10.850405"
+      "last_seen": "2026-09-07T16:43:39.790879"
     },
     "ambit": {
       "name": "Ambit Finance",
@@ -1174,7 +1174,7 @@
       "ids": [
         "ad_b2eba9ee-9cdb-4cb7-a7ee-231d85528372"
       ],
-      "last_seen": "2026-09-07T08:41:10.850412"
+      "last_seen": "2026-09-07T16:43:39.790887"
     },
     "ambient": {
       "name": "Ambient",
@@ -1193,7 +1193,7 @@
         "cr_ambient-activity750",
         "cr_ambient-finance-activity399"
       ],
-      "last_seen": "2026-09-07T08:41:10.850418"
+      "last_seen": "2026-09-07T16:43:39.790893"
     },
     "noya": {
       "name": "Noya",
@@ -1209,7 +1209,7 @@
       "ids": [
         "ad_9ca8bd4d-b1c5-4fb8-b866-633c87afd539"
       ],
-      "last_seen": "2026-09-07T08:41:10.850426"
+      "last_seen": "2026-09-07T16:43:39.790901"
     },
     "hinkal": {
       "name": "Hinkal Protocol",
@@ -1232,7 +1232,7 @@
       "ids": [
         "ad_029f8aa4-404b-4010-88b4-1bc8a33e401d"
       ],
-      "last_seen": "2026-09-07T08:41:10.850432"
+      "last_seen": "2026-09-07T16:43:39.790907"
     },
     "vessel": {
       "name": "Vessel",
@@ -1250,7 +1250,7 @@
         "cr_vessel-activity339",
         "cr_vessel-activity333"
       ],
-      "last_seen": "2026-09-07T08:41:10.850440"
+      "last_seen": "2026-09-07T16:43:39.790915"
     },
     "gudchain": {
       "name": "Gudchain",
@@ -1266,7 +1266,7 @@
       "ids": [
         "ad_dc7e529a-a7da-4282-b1b0-2951a1cb8309"
       ],
-      "last_seen": "2026-09-07T08:41:10.850446"
+      "last_seen": "2026-09-07T16:43:39.790922"
     },
     "acre": {
       "name": "Acre",
@@ -1281,7 +1281,7 @@
       "ids": [
         "ad_69992c1f-0d13-4487-8a37-bb10a5906dd0"
       ],
-      "last_seen": "2026-09-07T08:41:10.850453"
+      "last_seen": "2026-09-07T16:43:39.790928"
     },
     "astria": {
       "name": "Astria",
@@ -1296,7 +1296,7 @@
       "ids": [
         "ad_85f759b7-d4d1-45b2-9e44-8b2c19757c8e"
       ],
-      "last_seen": "2026-09-07T08:41:10.850460"
+      "last_seen": "2026-09-07T16:43:39.790934"
     },
     "cozy": {
       "name": "Cozy Finance",
@@ -1312,7 +1312,7 @@
       "ids": [
         "ad_383598fd-96ae-4e54-9de4-c3053d61c761"
       ],
-      "last_seen": "2026-09-07T08:41:10.850466"
+      "last_seen": "2026-09-07T16:43:39.790941"
     },
     "arch": {
       "name": "Arch Network",
@@ -1328,7 +1328,7 @@
         "ad_636b0c77-32f8-4f48-805e-d0426e1b7b25",
         "cr_arch-network-activity491"
       ],
-      "last_seen": "2026-09-07T08:41:10.850475"
+      "last_seen": "2026-09-07T16:43:39.790949"
     },
     "defi saver": {
       "name": "DeFi Saver",
@@ -1345,7 +1345,7 @@
       "ids": [
         "ad_25916876-7aa4-47d7-9015-8e3f36651f6b"
       ],
-      "last_seen": "2026-09-07T08:41:10.850481"
+      "last_seen": "2026-09-07T16:43:39.790954"
     },
     "ratex": {
       "name": "RateX",
@@ -1360,7 +1360,7 @@
       "ids": [
         "ad_71206d9a-8c16-4c7f-a233-a776c9276e61"
       ],
-      "last_seen": "2026-09-07T08:41:10.850488"
+      "last_seen": "2026-09-07T16:43:39.790961"
     },
     "pharos": {
       "name": "Pharos",
@@ -1380,7 +1380,7 @@
         "ad_184dd3eb-a3bc-42d0-a793-8f2011f864b5",
         "dj_3087"
       ],
-      "last_seen": "2026-09-07T08:41:10.850495"
+      "last_seen": "2026-09-07T16:43:39.790968"
     },
     "ethgas": {
       "name": "ETHGAS",
@@ -1395,7 +1395,7 @@
       "ids": [
         "ad_e145937d-1a72-48b4-a7eb-507c2a095f1e"
       ],
-      "last_seen": "2026-09-07T08:41:10.850505"
+      "last_seen": "2026-09-07T16:43:39.790977"
     },
     "lighter": {
       "name": "Lighter",
@@ -1414,7 +1414,7 @@
         "ad_c9575245-0907-4da3-b6ea-03c6fdabae0e",
         "cr_lighter-activity1273"
       ],
-      "last_seen": "2026-09-07T08:41:10.850512"
+      "last_seen": "2026-09-07T16:43:39.790984"
     },
     "superform": {
       "name": "Superform",
@@ -1447,7 +1447,7 @@
         "ad_b2596875-cb4a-4837-bea1-ed2bf3b7b0c5",
         "cr_rainbow-activity949"
       ],
-      "last_seen": "2026-09-07T08:41:10.850535"
+      "last_seen": "2026-09-07T16:43:39.791006"
     },
     "defillama": {
       "name": "DefiLlama",
@@ -1479,7 +1479,7 @@
       "ids": [
         "ad_bbd7d9ff-df64-4082-b89f-3c3a2ac1b24b"
       ],
-      "last_seen": "2026-09-07T08:41:10.850542"
+      "last_seen": "2026-09-07T16:43:39.791013"
     },
     "zerion": {
       "name": "Zerion",
@@ -1507,7 +1507,7 @@
       "ids": [
         "ad_bef7ce3b-bf23-43e6-abda-17ebb65a8e88"
       ],
-      "last_seen": "2026-09-07T08:41:10.850549"
+      "last_seen": "2026-09-07T16:43:39.791020"
     },
     "carrot": {
       "name": "Carrot",
@@ -1522,7 +1522,7 @@
       "ids": [
         "ad_12c3a10b-65da-4c5c-a12d-ad8887eb6fea"
       ],
-      "last_seen": "2026-09-07T08:41:10.850561"
+      "last_seen": "2026-09-07T16:43:39.791030"
     },
     "k25 ai": {
       "name": "K25.ai",
@@ -1533,7 +1533,7 @@
       "ids": [
         "cr_k-25-ai-activity1195"
       ],
-      "last_seen": "2026-09-07T08:41:10.851281"
+      "last_seen": "2026-09-07T16:43:39.791728"
     },
     "t rex": {
       "name": "T-Rex",
@@ -1555,7 +1555,7 @@
       "ids": [
         "cr_the-pit-app-activity1252"
       ],
-      "last_seen": "2026-09-07T08:41:10.851289"
+      "last_seen": "2026-09-07T16:43:39.791736"
     },
     "waterx": {
       "name": "WaterX",
@@ -1566,7 +1566,7 @@
       "ids": [
         "cr_waterx-activity1215"
       ],
-      "last_seen": "2026-09-07T08:41:10.851295"
+      "last_seen": "2026-09-07T16:43:39.791742"
     },
     "clasho": {
       "name": "Clasho",
@@ -1577,7 +1577,7 @@
       "ids": [
         "cr_clasho-activity1206"
       ],
-      "last_seen": "2026-09-07T08:41:10.851301"
+      "last_seen": "2026-09-07T16:43:39.791747"
     },
     "startale": {
       "name": "Startale",
@@ -1588,7 +1588,7 @@
       "ids": [
         "cr_startale-labs-activity1141"
       ],
-      "last_seen": "2026-09-07T08:41:10.851007"
+      "last_seen": "2026-09-07T16:43:39.791448"
     },
     "cambria": {
       "name": "Cambria",
@@ -1599,7 +1599,7 @@
       "ids": [
         "cr_cambria-activity1251"
       ],
-      "last_seen": "2026-09-07T08:41:10.851307"
+      "last_seen": "2026-09-07T16:43:39.791754"
     },
     "swarmbase": {
       "name": "SwarmBase",
@@ -1612,7 +1612,7 @@
       "ids": [
         "cr_swarm-base-activity1132"
       ],
-      "last_seen": "2026-09-07T08:41:10.851313"
+      "last_seen": "2026-09-07T16:43:39.791760"
     },
     "clash of coins": {
       "name": "Clash of Coins",
@@ -1623,7 +1623,7 @@
       "ids": [
         "cr_clash-of-coins-activity1103"
       ],
-      "last_seen": "2026-09-07T08:41:10.851321"
+      "last_seen": "2026-09-07T16:43:39.791767"
     },
     "apyx": {
       "name": "Apyx",
@@ -1634,7 +1634,7 @@
       "ids": [
         "cr_apyx-activity1111"
       ],
-      "last_seen": "2026-09-07T08:41:10.851327"
+      "last_seen": "2026-09-07T16:43:39.791774"
     },
     "stripchain": {
       "name": "StripChain",
@@ -1645,7 +1645,7 @@
       "ids": [
         "cr_stripchain-activity1248"
       ],
-      "last_seen": "2026-09-07T08:41:10.851150"
+      "last_seen": "2026-09-07T16:43:39.791604"
     },
     "hotstuff": {
       "name": "Hotstuff (Prev. Syndr Protocol)",
@@ -1656,7 +1656,7 @@
       "ids": [
         "cr_hotstuff-activity1046"
       ],
-      "last_seen": "2026-09-07T08:41:10.850716"
+      "last_seen": "2026-09-07T16:43:39.791178"
     },
     "americanfortress": {
       "name": "AmericanFortress",
@@ -1667,7 +1667,7 @@
       "ids": [
         "cr_american-fortress-activity1147"
       ],
-      "last_seen": "2026-09-07T08:41:10.851334"
+      "last_seen": "2026-09-07T16:43:39.791781"
     },
     "dogeos": {
       "name": "DogeOS",
@@ -1678,7 +1678,7 @@
       "ids": [
         "cr_dogeos-activity795"
       ],
-      "last_seen": "2026-09-07T08:41:10.851340"
+      "last_seen": "2026-09-07T16:43:39.791787"
     },
     "variational": {
       "name": "Variational",
@@ -1689,7 +1689,7 @@
       "ids": [
         "cr_variational-activity496"
       ],
-      "last_seen": "2026-09-07T08:41:10.850685"
+      "last_seen": "2026-09-07T16:43:39.791149"
     },
     "afk fishing": {
       "name": "AFK Fishing",
@@ -1711,7 +1711,7 @@
       "ids": [
         "cr_boost-activity1199"
       ],
-      "last_seen": "2026-09-07T08:41:10.851137"
+      "last_seen": "2026-09-07T16:43:39.791590"
     },
     "axis robotics": {
       "name": "Axis Robotics",
@@ -1727,7 +1727,7 @@
         "ad_65fc8ded-e3f8-4e12-be0b-7f187429b8ac",
         "cr_axis-ai-activity1105"
       ],
-      "last_seen": "2026-09-07T08:41:10.849918"
+      "last_seen": "2026-09-07T16:43:39.790360"
     },
     "enjin": {
       "name": "Enjin Coin",
@@ -1738,20 +1738,23 @@
       "ids": [
         "cr_enjin-coin-activity1246"
       ],
-      "last_seen": "2026-09-07T08:41:10.851347"
+      "last_seen": "2026-09-07T16:43:39.791794"
     },
     "canopy": {
       "name": "Canopy Network",
-      "trust": 68,
-      "category": "task_farmer",
-      "categories": [],
+      "trust": 73,
+      "category": "testnet",
+      "categories": [
+        "gaming",
+        "testnet"
+      ],
       "chains": [
         "optimism"
       ],
       "ids": [
         "cr_canopy-network-activity1101"
       ],
-      "last_seen": "2026-09-07T08:41:10.850605"
+      "last_seen": "2026-09-07T16:43:39.791036"
     },
     "skew": {
       "name": "Skew",
@@ -1762,7 +1765,7 @@
       "ids": [
         "cr_skew-trade-activity1245"
       ],
-      "last_seen": "2026-09-07T08:41:10.851353"
+      "last_seen": "2026-09-07T16:43:39.791800"
     },
     "aave": {
       "name": "Aave",
@@ -1773,7 +1776,7 @@
       "ids": [
         "cr_aave-activity1244"
       ],
-      "last_seen": "2026-09-07T08:41:10.851359"
+      "last_seen": "2026-09-07T16:43:39.791806"
     },
     "txflow": {
       "name": "TxFlow",
@@ -1784,7 +1787,7 @@
       "ids": [
         "cr_txflow-activity1231"
       ],
-      "last_seen": "2026-09-07T08:41:10.850756"
+      "last_seen": "2026-09-07T16:43:39.791220"
     },
     "surf": {
       "name": "Surf",
@@ -1795,7 +1798,7 @@
       "ids": [
         "cr_surf-ai-activity1026"
       ],
-      "last_seen": "2026-09-07T08:41:10.851365"
+      "last_seen": "2026-09-07T16:43:39.791811"
     },
     "monaco": {
       "name": "Monaco",
@@ -1806,7 +1809,7 @@
       "ids": [
         "cr_monaco-trading-activity1095"
       ],
-      "last_seen": "2026-09-07T08:41:10.851371"
+      "last_seen": "2026-09-07T16:43:39.791817"
     },
     "ducat": {
       "name": "Ducat",
@@ -1817,7 +1820,7 @@
       "ids": [
         "cr_ducat-activity820"
       ],
-      "last_seen": "2026-09-07T08:41:10.851377"
+      "last_seen": "2026-09-07T16:43:39.791823"
     },
     "checkpoint": {
       "name": "Checkpoint",
@@ -1832,7 +1835,7 @@
       "ids": [
         "cr_checkpoint-activity1213"
       ],
-      "last_seen": "2026-09-07T08:41:10.851189"
+      "last_seen": "2026-09-07T16:43:39.791642"
     },
     "aiw3": {
       "name": "AIW3",
@@ -1843,7 +1846,7 @@
       "ids": [
         "cr_aiw-3-activity1201"
       ],
-      "last_seen": "2026-09-07T08:41:10.851196"
+      "last_seen": "2026-09-07T16:43:39.791648"
     },
     "imperial": {
       "name": "Imperial",
@@ -1854,7 +1857,7 @@
       "ids": [
         "cr_imperial-activity1187"
       ],
-      "last_seen": "2026-09-07T08:41:10.851383"
+      "last_seen": "2026-09-07T16:43:39.791829"
     },
     "robinhood chain": {
       "name": "Robinhood Chain",
@@ -1867,7 +1870,7 @@
       "ids": [
         "cr_robinhood-chain-activity1096"
       ],
-      "last_seen": "2026-09-07T08:41:10.850764"
+      "last_seen": "2026-09-07T16:43:39.791228"
     },
     "forte": {
       "name": "Forte",
@@ -1878,7 +1881,7 @@
       "ids": [
         "cr_forte-activity938"
       ],
-      "last_seen": "2026-09-07T08:41:10.850779"
+      "last_seen": "2026-09-07T16:43:39.791241"
     },
     "tren ch": {
       "name": "tren.ch",
@@ -1900,7 +1903,7 @@
       "ids": [
         "cr_koto-trade-activity1241"
       ],
-      "last_seen": "2026-09-07T08:41:10.850980"
+      "last_seen": "2026-09-07T16:43:39.791423"
     },
     "strato": {
       "name": "STRATO",
@@ -1911,7 +1914,7 @@
       "ids": [
         "cr_strato-activity1197"
       ],
-      "last_seen": "2026-09-07T08:41:10.850839"
+      "last_seen": "2026-09-07T16:43:39.791300"
     },
     "n1": {
       "name": "N1",
@@ -1929,7 +1932,7 @@
         "ad_734bac62-42e5-4f7a-ba0f-43a1250d491f",
         "cr_layer-n-activity775"
       ],
-      "last_seen": "2026-09-07T08:41:10.849933"
+      "last_seen": "2026-09-07T16:43:39.790374"
     },
     "datahive": {
       "name": "DataHive",
@@ -1940,7 +1943,7 @@
       "ids": [
         "cr_datahive-activity984"
       ],
-      "last_seen": "2026-09-07T08:41:10.851202"
+      "last_seen": "2026-09-07T16:43:39.791654"
     },
     "turboflow": {
       "name": "TurboFlow",
@@ -1951,7 +1954,7 @@
       "ids": [
         "cr_surf-protocol-activity1225"
       ],
-      "last_seen": "2026-09-07T08:41:10.851390"
+      "last_seen": "2026-09-07T16:43:39.791835"
     },
     "sats terminal": {
       "name": "Sats Terminal",
@@ -1962,7 +1965,7 @@
       "ids": [
         "cr_sats-terminal-activity1240"
       ],
-      "last_seen": "2026-09-07T08:41:10.851397"
+      "last_seen": "2026-09-07T16:43:39.791842"
     },
     "hudi": {
       "name": "Hudi",
@@ -1973,7 +1976,7 @@
       "ids": [
         "cr_hudi-trade-activity1239"
       ],
-      "last_seen": "2026-09-07T08:41:10.851404"
+      "last_seen": "2026-09-07T16:43:39.791848"
     },
     "jupiter": {
       "name": "Jupiter",
@@ -1984,7 +1987,7 @@
       "ids": [
         "cr_jupiter-stattion-activity486"
       ],
-      "last_seen": "2026-09-07T08:41:10.851013"
+      "last_seen": "2026-09-07T16:43:39.791455"
     },
     "prismax": {
       "name": "PrismaX",
@@ -1995,7 +1998,7 @@
       "ids": [
         "cr_prisma-x-activity847"
       ],
-      "last_seen": "2026-09-07T08:41:10.851410"
+      "last_seen": "2026-09-07T16:43:39.791854"
     },
     "grvt": {
       "name": "GRVT",
@@ -2006,7 +2009,7 @@
       "ids": [
         "cr_grvt-activity321"
       ],
-      "last_seen": "2026-09-07T08:41:10.851250"
+      "last_seen": "2026-09-07T16:43:39.791698"
     },
     "renaiss": {
       "name": "Renaiss Protocol",
@@ -2017,7 +2020,7 @@
       "ids": [
         "cr_renaiss-protocol-activity1003"
       ],
-      "last_seen": "2026-09-07T08:41:10.851237"
+      "last_seen": "2026-09-07T16:43:39.791686"
     },
     "noise": {
       "name": "Noise",
@@ -2028,7 +2031,7 @@
       "ids": [
         "cr_noise-activity1067"
       ],
-      "last_seen": "2026-09-07T08:41:10.851417"
+      "last_seen": "2026-09-07T16:43:39.791860"
     },
     "touchmarket": {
       "name": "Touchmarket",
@@ -2039,7 +2042,7 @@
       "ids": [
         "cr_touch-market-activity1238"
       ],
-      "last_seen": "2026-09-07T08:41:10.851423"
+      "last_seen": "2026-09-07T16:43:39.791867"
     },
     "wisp": {
       "name": "wisp",
@@ -2050,7 +2053,7 @@
       "ids": [
         "cr_wisp-activity1237"
       ],
-      "last_seen": "2026-09-07T08:41:10.851430"
+      "last_seen": "2026-09-07T16:43:39.791872"
     },
     "pear": {
       "name": "Pear",
@@ -2061,7 +2064,7 @@
       "ids": [
         "cr_pear-trade-activity1219"
       ],
-      "last_seen": "2026-09-07T08:41:10.851436"
+      "last_seen": "2026-09-07T16:43:39.791878"
     },
     "kor": {
       "name": "KOR Protocol",
@@ -2072,7 +2075,7 @@
       "ids": [
         "cr_kor-protocol-activity1236"
       ],
-      "last_seen": "2026-09-07T08:41:10.851243"
+      "last_seen": "2026-09-07T16:43:39.791692"
     },
     "xeffy": {
       "name": "Xeffy",
@@ -2083,7 +2086,7 @@
       "ids": [
         "cr_xeffy-activity1205"
       ],
-      "last_seen": "2026-09-07T08:41:10.851442"
+      "last_seen": "2026-09-07T16:43:39.791884"
     },
     "tbook": {
       "name": "TBook",
@@ -2094,7 +2097,7 @@
       "ids": [
         "cr_tbook-activity974"
       ],
-      "last_seen": "2026-09-07T08:41:10.851123"
+      "last_seen": "2026-09-07T16:43:39.791557"
     },
     "osero": {
       "name": "Osero",
@@ -2105,7 +2108,7 @@
       "ids": [
         "cr_osero-activity1234"
       ],
-      "last_seen": "2026-09-07T08:41:10.850959"
+      "last_seen": "2026-09-07T16:43:39.791403"
     },
     "omenx": {
       "name": "OmenX",
@@ -2116,7 +2119,7 @@
       "ids": [
         "cr_omenx-activity1143"
       ],
-      "last_seen": "2026-09-07T08:41:10.851262"
+      "last_seen": "2026-09-07T16:43:39.791710"
     },
     "truecurrent": {
       "name": "TrueCurrent",
@@ -2127,7 +2130,7 @@
       "ids": [
         "cr_truecurrent-activity1233"
       ],
-      "last_seen": "2026-09-07T08:41:10.851117"
+      "last_seen": "2026-09-07T16:43:39.791551"
     },
     "soneium": {
       "name": "Soneium",
@@ -2143,7 +2146,7 @@
         "cr_soneium-activity371",
         "dj_2428"
       ],
-      "last_seen": "2026-09-07T08:41:10.850708"
+      "last_seen": "2026-09-07T16:43:39.791170"
     },
     "world xyz": {
       "name": "world.xyz",
@@ -2154,7 +2157,7 @@
       "ids": [
         "cr_world-xyz-activity1230"
       ],
-      "last_seen": "2026-09-07T08:41:10.851449"
+      "last_seen": "2026-09-07T16:43:39.791891"
     },
     "tashi": {
       "name": "Tashi Network",
@@ -2165,7 +2168,7 @@
       "ids": [
         "cr_tashi-network-activity1024"
       ],
-      "last_seen": "2026-09-07T08:41:10.851455"
+      "last_seen": "2026-09-07T16:43:39.791897"
     },
     "senpi": {
       "name": "Senpi",
@@ -2176,7 +2179,7 @@
       "ids": [
         "cr_senpi-activity982"
       ],
-      "last_seen": "2026-09-07T08:41:10.851461"
+      "last_seen": "2026-09-07T16:43:39.791903"
     },
     "xenea": {
       "name": "Xenea",
@@ -2187,7 +2190,7 @@
       "ids": [
         "cr_xenea-activity557"
       ],
-      "last_seen": "2026-09-07T08:41:10.851467"
+      "last_seen": "2026-09-07T16:43:39.791909"
     },
     "peakai": {
       "name": "PeakAI",
@@ -2198,7 +2201,7 @@
       "ids": [
         "cr_peakai-activity1223"
       ],
-      "last_seen": "2026-09-07T08:41:10.851474"
+      "last_seen": "2026-09-07T16:43:39.791914"
     },
     "flipper": {
       "name": "Flipper",
@@ -2209,7 +2212,7 @@
       "ids": [
         "cr_flipper-activity1227"
       ],
-      "last_seen": "2026-09-07T08:41:10.851480"
+      "last_seen": "2026-09-07T16:43:39.791920"
     },
     "theo": {
       "name": "Theo",
@@ -2220,7 +2223,7 @@
       "ids": [
         "cr_theonetwork-activity783"
       ],
-      "last_seen": "2026-09-07T08:41:10.851486"
+      "last_seen": "2026-09-07T16:43:39.791926"
     },
     "trepa": {
       "name": "Trepa",
@@ -2242,7 +2245,7 @@
       "ids": [
         "cr_d-3-global-activity662"
       ],
-      "last_seen": "2026-09-07T08:41:10.851103"
+      "last_seen": "2026-09-07T16:43:39.791538"
     },
     "ritual": {
       "name": "Ritual",
@@ -2253,7 +2256,7 @@
       "ids": [
         "cr_ritual-activity777"
       ],
-      "last_seen": "2026-09-07T08:41:10.851492"
+      "last_seen": "2026-09-07T16:43:39.791932"
     },
     "cambrian": {
       "name": "Cambrian Network",
@@ -2264,7 +2267,7 @@
       "ids": [
         "cr_cambrian-network-activity755"
       ],
-      "last_seen": "2026-09-07T08:41:10.851499"
+      "last_seen": "2026-09-07T16:43:39.791939"
     },
     "concrete": {
       "name": "Concrete",
@@ -2275,7 +2278,7 @@
       "ids": [
         "cr_concrete-activity1011"
       ],
-      "last_seen": "2026-09-07T08:41:10.850933"
+      "last_seen": "2026-09-07T16:43:39.791376"
     },
     "onyx odds": {
       "name": "Onyx Odds",
@@ -2286,7 +2289,7 @@
       "ids": [
         "cr_onyx-odds-activity1229"
       ],
-      "last_seen": "2026-09-07T08:41:10.851506"
+      "last_seen": "2026-09-07T16:43:39.791945"
     },
     "hertzflow": {
       "name": "HertzFlow",
@@ -2297,7 +2300,7 @@
       "ids": [
         "cr_hertzflow-activity1178"
       ],
-      "last_seen": "2026-09-07T08:41:10.850846"
+      "last_seen": "2026-09-07T16:43:39.791306"
     },
     "arcnova": {
       "name": "ArcNova",
@@ -2308,7 +2311,7 @@
       "ids": [
         "cr_arcnova-activity1217"
       ],
-      "last_seen": "2026-09-07T08:41:10.850953"
+      "last_seen": "2026-09-07T16:43:39.791397"
     },
     "hypernova": {
       "name": "Hypernova",
@@ -2319,7 +2322,7 @@
       "ids": [
         "cr_hypernova-activity1203"
       ],
-      "last_seen": "2026-09-07T08:41:10.850649"
+      "last_seen": "2026-09-07T16:43:39.791112"
     },
     "sovra": {
       "name": "Sovra",
@@ -2330,7 +2333,7 @@
       "ids": [
         "cr_sovra-activity1226"
       ],
-      "last_seen": "2026-09-07T08:41:10.851512"
+      "last_seen": "2026-09-07T16:43:39.791951"
     },
     "offline": {
       "name": "Offline Protocol",
@@ -2341,7 +2344,7 @@
       "ids": [
         "cr_offline-protocol-activity727"
       ],
-      "last_seen": "2026-09-07T08:41:10.850898"
+      "last_seen": "2026-09-07T16:43:39.791342"
     },
     "arcium": {
       "name": "Arcium (Elusiv)",
@@ -2352,7 +2355,7 @@
       "ids": [
         "cr_elusiv-activity392"
       ],
-      "last_seen": "2026-09-07T08:41:10.851520"
+      "last_seen": "2026-09-07T16:43:39.791958"
     },
     "netrun": {
       "name": "Netrun",
@@ -2374,7 +2377,7 @@
       "ids": [
         "cr_pudgy-penguins-activity797"
       ],
-      "last_seen": "2026-09-07T08:41:10.851527"
+      "last_seen": "2026-09-07T16:43:39.791964"
     },
     "kast": {
       "name": "KAST",
@@ -2385,7 +2388,7 @@
       "ids": [
         "cr_kast-activity1121"
       ],
-      "last_seen": "2026-09-07T08:41:10.851533"
+      "last_seen": "2026-09-07T16:43:39.791970"
     },
     "tplus": {
       "name": "Tplus",
@@ -2396,7 +2399,7 @@
       "ids": [
         "cr_tplus-activity1221"
       ],
-      "last_seen": "2026-09-07T08:41:10.851539"
+      "last_seen": "2026-09-07T16:43:39.791976"
     },
     "astros": {
       "name": "Astros",
@@ -2407,7 +2410,7 @@
       "ids": [
         "cr_astros-2-activity1222"
       ],
-      "last_seen": "2026-09-07T08:41:10.851545"
+      "last_seen": "2026-09-07T16:43:39.791982"
     },
     "backed": {
       "name": "Backed (xStocks)",
@@ -2418,7 +2421,7 @@
       "ids": [
         "cr_backed-activity1126"
       ],
-      "last_seen": "2026-09-07T08:41:10.851552"
+      "last_seen": "2026-09-07T16:43:39.791988"
     },
     "pred": {
       "name": "PRED",
@@ -2429,7 +2432,7 @@
       "ids": [
         "cr_pred-activity1106"
       ],
-      "last_seen": "2026-09-07T08:41:10.851558"
+      "last_seen": "2026-09-07T16:43:39.791994"
     },
     "rax": {
       "name": "RAX Finance",
@@ -2440,7 +2443,7 @@
       "ids": [
         "cr_rax-finance-activity1073"
       ],
-      "last_seen": "2026-09-07T08:41:10.851130"
+      "last_seen": "2026-09-07T16:43:39.791578"
     },
     "re": {
       "name": "Re Protocol",
@@ -2451,7 +2454,7 @@
       "ids": [
         "cr_re-activity942"
       ],
-      "last_seen": "2026-09-07T08:41:10.851565"
+      "last_seen": "2026-09-07T16:43:39.792000"
     },
     "sekai": {
       "name": "SEKAI",
@@ -2462,7 +2465,7 @@
       "ids": [
         "cr_sekai-2-activity1220"
       ],
-      "last_seen": "2026-09-07T08:41:10.851571"
+      "last_seen": "2026-09-07T16:43:39.792006"
     },
     "beep": {
       "name": "Beep",
@@ -2473,7 +2476,7 @@
       "ids": [
         "cr_beep-lab-activity1128"
       ],
-      "last_seen": "2026-09-07T08:41:10.851230"
+      "last_seen": "2026-09-07T16:43:39.791679"
     },
     "42": {
       "name": "42 (prev. Alkimiya)",
@@ -2484,7 +2487,7 @@
       "ids": [
         "cr_alkimiya-activity804"
       ],
-      "last_seen": "2026-09-07T08:41:10.850635"
+      "last_seen": "2026-09-07T16:43:39.791098"
     },
     "ekiden": {
       "name": "Ekiden",
@@ -2495,7 +2498,7 @@
       "ids": [
         "cr_ekiden-activity1207"
       ],
-      "last_seen": "2026-09-07T08:41:10.851577"
+      "last_seen": "2026-09-07T16:43:39.792012"
     },
     "interstate": {
       "name": "Interstate",
@@ -2506,7 +2509,7 @@
       "ids": [
         "cr_interstate-activity1218"
       ],
-      "last_seen": "2026-09-07T08:41:10.851585"
+      "last_seen": "2026-09-07T16:43:39.792019"
     },
     "kairos": {
       "name": "Kairos",
@@ -2517,7 +2520,7 @@
       "ids": [
         "cr_kairos-trade-activity1050"
       ],
-      "last_seen": "2026-09-07T08:41:10.851096"
+      "last_seen": "2026-09-07T16:43:39.791532"
     },
     "predict fun": {
       "name": "predict.fun",
@@ -2528,7 +2531,7 @@
       "ids": [
         "cr_predict-fun-activity1019"
       ],
-      "last_seen": "2026-09-07T08:41:10.851592"
+      "last_seen": "2026-09-07T16:43:39.792025"
     },
     "raiku": {
       "name": "Raiku",
@@ -2539,7 +2542,7 @@
       "ids": [
         "cr_raiku-activity945"
       ],
-      "last_seen": "2026-09-07T08:41:10.851598"
+      "last_seen": "2026-09-07T16:43:39.792031"
     },
     "bonk": {
       "name": "Bonk",
@@ -2565,7 +2568,7 @@
       "ids": [
         "cr_barter-defi-activity1216"
       ],
-      "last_seen": "2026-09-07T08:41:10.851604"
+      "last_seen": "2026-09-07T16:43:39.792036"
     },
     "fermah": {
       "name": "Fermah",
@@ -2576,7 +2579,7 @@
       "ids": [
         "cr_fermah-activity447"
       ],
-      "last_seen": "2026-09-07T08:41:10.851611"
+      "last_seen": "2026-09-07T16:43:39.792042"
     },
     "injective": {
       "name": "Injective",
@@ -2587,7 +2590,7 @@
       "ids": [
         "cr_injective-protocol-activity1214"
       ],
-      "last_seen": "2026-09-07T08:41:10.850722"
+      "last_seen": "2026-09-07T16:43:39.791185"
     },
     "superluminal": {
       "name": "Superluminal",
@@ -2598,7 +2601,7 @@
       "ids": [
         "cr_superluminal-activity1212"
       ],
-      "last_seen": "2026-09-07T08:41:10.851618"
+      "last_seen": "2026-09-07T16:43:39.792049"
     },
     "totalis": {
       "name": "Totalis",
@@ -2609,7 +2612,7 @@
       "ids": [
         "cr_totalis-activity1211"
       ],
-      "last_seen": "2026-09-07T08:41:10.851624"
+      "last_seen": "2026-09-07T16:43:39.792054"
     },
     "fiamma": {
       "name": "Fiamma",
@@ -2620,7 +2623,7 @@
       "ids": [
         "cr_fiamma-activity575"
       ],
-      "last_seen": "2026-09-07T08:41:10.851631"
+      "last_seen": "2026-09-07T16:43:39.792060"
     },
     "chimpx ai": {
       "name": "ChimpX AI",
@@ -2631,7 +2634,7 @@
       "ids": [
         "cr_chimp-exchange-activity1208"
       ],
-      "last_seen": "2026-09-07T08:41:10.850912"
+      "last_seen": "2026-09-07T16:43:39.791356"
     },
     "cysic": {
       "name": "Cysic",
@@ -2646,7 +2649,7 @@
         "cr_cysic-activity1210",
         "dj_2456"
       ],
-      "last_seen": "2026-09-07T08:41:10.851639"
+      "last_seen": "2026-09-07T16:43:39.792069"
     },
     "altura": {
       "name": "Altura",
@@ -2657,7 +2660,7 @@
       "ids": [
         "cr_altura-defi-activity1017"
       ],
-      "last_seen": "2026-09-07T08:41:10.851646"
+      "last_seen": "2026-09-07T16:43:39.792075"
     },
     "fast": {
       "name": "Fast Protocol",
@@ -2669,7 +2672,7 @@
         "cr_pi-squared-activity819",
         "cr_fast-protocol-activity1013"
       ],
-      "last_seen": "2026-09-07T08:41:10.851652"
+      "last_seen": "2026-09-07T16:43:39.792081"
     },
     "tangent": {
       "name": "Tangent",
@@ -2680,7 +2683,7 @@
       "ids": [
         "cr_tangent-finance-activity1193"
       ],
-      "last_seen": "2026-09-07T08:41:10.851658"
+      "last_seen": "2026-09-07T16:43:39.792087"
     },
     "divvy": {
       "name": "Divvy",
@@ -2691,7 +2694,7 @@
       "ids": [
         "cr_divvy-activity1209"
       ],
-      "last_seen": "2026-09-07T08:41:10.850671"
+      "last_seen": "2026-09-07T16:43:39.791135"
     },
     "yom": {
       "name": "YOM",
@@ -2702,7 +2705,7 @@
       "ids": [
         "cr_yom-new-activity1007"
       ],
-      "last_seen": "2026-09-07T08:41:10.850619"
+      "last_seen": "2026-09-07T16:43:39.791084"
     },
     "exponent": {
       "name": "Exponent",
@@ -2713,7 +2716,7 @@
       "ids": [
         "cr_exponent-activity1177"
       ],
-      "last_seen": "2026-09-07T08:41:10.851665"
+      "last_seen": "2026-09-07T16:43:39.792093"
     },
     "cycles": {
       "name": "Cycles",
@@ -2724,7 +2727,7 @@
       "ids": [
         "cr_cycles-activity1204"
       ],
-      "last_seen": "2026-09-07T08:41:10.851671"
+      "last_seen": "2026-09-07T16:43:39.792099"
     },
     "caster": {
       "name": "Caster",
@@ -2735,7 +2738,7 @@
       "ids": [
         "cr_caster-activity1181"
       ],
-      "last_seen": "2026-09-07T08:41:10.851677"
+      "last_seen": "2026-09-07T16:43:39.792105"
     },
     "shift": {
       "name": "Shift",
@@ -2746,7 +2749,7 @@
       "ids": [
         "cr_shiftrwa-activity1179"
       ],
-      "last_seen": "2026-09-07T08:41:10.851089"
+      "last_seen": "2026-09-07T16:43:39.791526"
     },
     "pod": {
       "name": "pod",
@@ -2757,7 +2760,7 @@
       "ids": [
         "cr_pod-network-activity660"
       ],
-      "last_seen": "2026-09-07T08:41:10.850729"
+      "last_seen": "2026-09-07T16:43:39.791192"
     },
     "action model": {
       "name": "Action Model",
@@ -2768,7 +2771,7 @@
       "ids": [
         "cr_action-model-activity1092"
       ],
-      "last_seen": "2026-09-07T08:41:10.850885"
+      "last_seen": "2026-09-07T16:43:39.791327"
     },
     "zoth": {
       "name": "Zoth",
@@ -2779,7 +2782,7 @@
       "ids": [
         "cr_zoth-activity235"
       ],
-      "last_seen": "2026-09-07T08:41:10.851683"
+      "last_seen": "2026-09-07T16:43:39.792111"
     },
     "the beacon": {
       "name": "The Beacon",
@@ -2790,7 +2793,7 @@
       "ids": [
         "cr_the-beacon-activity230"
       ],
-      "last_seen": "2026-09-07T08:41:10.851690"
+      "last_seen": "2026-09-07T16:43:39.792118"
     },
     "kucoin": {
       "name": "KuCoin Token",
@@ -2801,7 +2804,7 @@
       "ids": [
         "cr_kucoin-shares-activity1200"
       ],
-      "last_seen": "2026-09-07T08:41:10.851697"
+      "last_seen": "2026-09-07T16:43:39.792124"
     },
     "popdex": {
       "name": "PopDEX",
@@ -2814,7 +2817,7 @@
       "ids": [
         "cr_popde-activity1198"
       ],
-      "last_seen": "2026-09-07T08:41:10.851703"
+      "last_seen": "2026-09-07T16:43:39.792130"
     },
     "grove": {
       "name": "Grove",
@@ -2825,7 +2828,7 @@
       "ids": [
         "cr_grove-finance-activity1194"
       ],
-      "last_seen": "2026-09-07T08:41:10.851709"
+      "last_seen": "2026-09-07T16:43:39.792136"
     },
     "konnex": {
       "name": "Konnex",
@@ -2836,7 +2839,7 @@
       "ids": [
         "cr_konnex-activity1071"
       ],
-      "last_seen": "2026-09-07T08:41:10.851716"
+      "last_seen": "2026-09-07T16:43:39.792142"
     },
     "sui": {
       "name": "Sui",
@@ -2849,7 +2852,7 @@
       "ids": [
         "cr_sui-activity220"
       ],
-      "last_seen": "2026-09-07T08:41:10.851722"
+      "last_seen": "2026-09-07T16:43:39.792148"
     },
     "iopn": {
       "name": "IOPn",
@@ -2862,7 +2865,7 @@
       "ids": [
         "cr_io-pn-activity844"
       ],
-      "last_seen": "2026-09-07T08:41:10.851729"
+      "last_seen": "2026-09-07T16:43:39.792154"
     },
     "tomoland": {
       "name": "Tomoland",
@@ -2873,7 +2876,7 @@
       "ids": [
         "cr_tomoland-activity1192"
       ],
-      "last_seen": "2026-09-07T08:41:10.851735"
+      "last_seen": "2026-09-07T16:43:39.792160"
     },
     "nexus": {
       "name": "Nexus",
@@ -2884,7 +2887,7 @@
       "ids": [
         "cr_nexus-laboratories-activity462"
       ],
-      "last_seen": "2026-09-07T08:41:10.851742"
+      "last_seen": "2026-09-07T16:43:39.792166"
     },
     "sphinx": {
       "name": "Sphinx Protocol",
@@ -2895,7 +2898,7 @@
       "ids": [
         "cr_sphinx-protocol-activity998"
       ],
-      "last_seen": "2026-09-07T08:41:10.850737"
+      "last_seen": "2026-09-07T16:43:39.791199"
     },
     "nof1": {
       "name": "Nof1",
@@ -2906,7 +2909,7 @@
       "ids": [
         "cr_nof-1-activity1188"
       ],
-      "last_seen": "2026-09-07T08:41:10.851748"
+      "last_seen": "2026-09-07T16:43:39.792171"
     },
     "4ai": {
       "name": "4AI",
@@ -2928,7 +2931,7 @@
       "ids": [
         "cr_euphoria-eth-activity902"
       ],
-      "last_seen": "2026-09-07T08:41:10.851754"
+      "last_seen": "2026-09-07T16:43:39.792178"
     },
     "outcome": {
       "name": "Outcome",
@@ -2939,7 +2942,7 @@
       "ids": [
         "cr_outcome-activity1083"
       ],
-      "last_seen": "2026-09-07T08:41:10.850785"
+      "last_seen": "2026-09-07T16:43:39.791248"
     },
     "kii chain": {
       "name": "Kii Chain",
@@ -2961,7 +2964,7 @@
       "ids": [
         "cr_charms-ai-activity1186"
       ],
-      "last_seen": "2026-09-07T08:41:10.851761"
+      "last_seen": "2026-09-07T16:43:39.792184"
     },
     "supervillain": {
       "name": "Supervillain Labs",
@@ -2972,7 +2975,7 @@
       "ids": [
         "cr_supervillain-activity1001"
       ],
-      "last_seen": "2026-09-07T08:41:10.851768"
+      "last_seen": "2026-09-07T16:43:39.792191"
     },
     "spicenet": {
       "name": "Spicenet",
@@ -2987,7 +2990,7 @@
       "ids": [
         "cr_spicenet-activity981"
       ],
-      "last_seen": "2026-09-07T08:41:10.851774"
+      "last_seen": "2026-09-07T16:43:39.792196"
     },
     "allscale": {
       "name": "AllScale",
@@ -2998,18 +3001,18 @@
       "ids": [
         "cr_allscale-activity1021"
       ],
-      "last_seen": "2026-09-07T08:41:10.850973"
+      "last_seen": "2026-09-07T16:43:39.791416"
     },
     "chaingpt": {
       "name": "ChainGPT",
-      "trust": 68,
+      "trust": 63,
       "category": "task_farmer",
       "categories": [],
       "chains": [],
       "ids": [
         "cr_chain-gpt-activity688"
       ],
-      "last_seen": "2026-09-07T08:41:10.850805"
+      "last_seen": "2026-09-07T16:43:39.791267"
     },
     "xo market": {
       "name": "XO Market",
@@ -3027,7 +3030,7 @@
       "ids": [
         "cr_xo-market-activity892"
       ],
-      "last_seen": "2026-09-07T08:41:10.851780"
+      "last_seen": "2026-09-07T16:43:39.792202"
     },
     "dtelecom": {
       "name": "dTelecom",
@@ -3046,7 +3049,7 @@
       "ids": [
         "cr_dtelecom-activity1094"
       ],
-      "last_seen": "2026-09-07T08:41:10.851786"
+      "last_seen": "2026-09-07T16:43:39.792208"
     },
     "aurus": {
       "name": "Aurus",
@@ -3059,7 +3062,7 @@
       "ids": [
         "cr_aurus-sol-activity1185"
       ],
-      "last_seen": "2026-09-07T08:41:10.851794"
+      "last_seen": "2026-09-07T16:43:39.792216"
     },
     "slush": {
       "name": "Slush",
@@ -3072,7 +3075,7 @@
       "ids": [
         "cr_slush-wallet-activity1184"
       ],
-      "last_seen": "2026-09-07T08:41:10.851801"
+      "last_seen": "2026-09-07T16:43:39.792222"
     },
     "hash": {
       "name": "Hash",
@@ -3083,7 +3086,7 @@
       "ids": [
         "cr_hash-mining-activity1183"
       ],
-      "last_seen": "2026-09-07T08:41:10.851807"
+      "last_seen": "2026-09-07T16:43:39.792228"
     },
     "unicity": {
       "name": "Unicity",
@@ -3094,7 +3097,7 @@
       "ids": [
         "cr_unicity-activity1158"
       ],
-      "last_seen": "2026-09-07T08:41:10.851813"
+      "last_seen": "2026-09-07T16:43:39.792234"
     },
     "elastics": {
       "name": "Elastics",
@@ -3105,7 +3108,7 @@
       "ids": [
         "cr_elastics-activity1180"
       ],
-      "last_seen": "2026-09-07T08:41:10.851820"
+      "last_seen": "2026-09-07T16:43:39.792240"
     },
     "miracle": {
       "name": "Miracle",
@@ -3118,7 +3121,7 @@
       "ids": [
         "cr_miracle-trade-activity1112"
       ],
-      "last_seen": "2026-09-07T08:41:10.851183"
+      "last_seen": "2026-09-07T16:43:39.791637"
     },
     "blinq": {
       "name": "blinq",
@@ -3129,7 +3132,7 @@
       "ids": [
         "cr_blinq-activity1125"
       ],
-      "last_seen": "2026-09-07T08:41:10.851826"
+      "last_seen": "2026-09-07T16:43:39.792246"
     },
     "hit": {
       "name": "Hit",
@@ -3140,7 +3143,7 @@
       "ids": [
         "cr_hit-one-activity1118"
       ],
-      "last_seen": "2026-09-07T08:41:10.851832"
+      "last_seen": "2026-09-07T16:43:39.792252"
     },
     "mawari": {
       "name": "Mawari",
@@ -3151,7 +3154,7 @@
       "ids": [
         "cr_mawari-activity703"
       ],
-      "last_seen": "2026-09-07T08:41:10.851838"
+      "last_seen": "2026-09-07T16:43:39.792258"
     },
     "dango": {
       "name": "Dango",
@@ -3162,7 +3165,7 @@
       "ids": [
         "cr_dango-activity733"
       ],
-      "last_seen": "2026-09-07T08:41:10.851274"
+      "last_seen": "2026-09-07T16:43:39.791722"
     },
     "spout": {
       "name": "Spout Finance",
@@ -3173,7 +3176,7 @@
       "ids": [
         "cr_spout-finance-activity1176"
       ],
-      "last_seen": "2026-09-07T08:41:10.851845"
+      "last_seen": "2026-09-07T16:43:39.792265"
     },
     "arc": {
       "name": "Arc",
@@ -3184,7 +3187,7 @@
       "ids": [
         "cr_arc-chain-activity911"
       ],
-      "last_seen": "2026-09-07T08:41:10.851851"
+      "last_seen": "2026-09-07T16:43:39.792271"
     },
     "fraction ai": {
       "name": "Fraction AI",
@@ -3201,7 +3204,7 @@
         "cr_fraction-ai-activity653",
         "dj_3016"
       ],
-      "last_seen": "2026-09-07T08:41:10.851873"
+      "last_seen": "2026-09-07T16:43:39.792281"
     },
     "genlayer": {
       "name": "GenLayer",
@@ -3212,7 +3215,7 @@
       "ids": [
         "cr_genlayer-activity756"
       ],
-      "last_seen": "2026-09-07T08:41:10.850772"
+      "last_seen": "2026-09-07T16:43:39.791235"
     },
     "fortune": {
       "name": "Fortune Protocol",
@@ -3225,7 +3228,7 @@
       "ids": [
         "cr_fortune-protocol-activity1175"
       ],
-      "last_seen": "2026-09-07T08:41:10.851170"
+      "last_seen": "2026-09-07T16:43:39.791623"
     },
     "rise": {
       "name": "RISE",
@@ -3236,7 +3239,7 @@
       "ids": [
         "cr_rise-chain-activity452"
       ],
-      "last_seen": "2026-09-07T08:41:10.851880"
+      "last_seen": "2026-09-07T16:43:39.792286"
     },
     "sushi": {
       "name": "Sushi",
@@ -3247,7 +3250,7 @@
       "ids": [
         "cr_sushi-activity1173"
       ],
-      "last_seen": "2026-09-07T08:41:10.851886"
+      "last_seen": "2026-09-07T16:43:39.792293"
     },
     "onsight": {
       "name": "Onsight",
@@ -3258,7 +3261,7 @@
       "ids": [
         "cr_onsight-activity1156"
       ],
-      "last_seen": "2026-09-07T08:41:10.851893"
+      "last_seen": "2026-09-07T16:43:39.792299"
     },
     "aro": {
       "name": "ARO Network",
@@ -3269,7 +3272,7 @@
       "ids": [
         "cr_aro-network-activity1077"
       ],
-      "last_seen": "2026-09-07T08:41:10.851899"
+      "last_seen": "2026-09-07T16:43:39.792305"
     },
     "janus defi": {
       "name": "Janus DeFi",
@@ -3280,7 +3283,7 @@
       "ids": [
         "cr_janus-defi-activity1170"
       ],
-      "last_seen": "2026-09-07T08:41:10.851907"
+      "last_seen": "2026-09-07T16:43:39.792312"
     },
     "ultrade": {
       "name": "ULTRADE",
@@ -3291,7 +3294,7 @@
       "ids": [
         "cr_ultrade-activity1169"
       ],
-      "last_seen": "2026-09-07T08:41:10.851913"
+      "last_seen": "2026-09-07T16:43:39.792318"
     },
     "youmio": {
       "name": "Youmio",
@@ -3302,7 +3305,7 @@
       "ids": [
         "cr_today-activity919"
       ],
-      "last_seen": "2026-09-07T08:41:10.851919"
+      "last_seen": "2026-09-07T16:43:39.792324"
     },
     "teneo": {
       "name": "Teneo Protocol",
@@ -3313,7 +3316,7 @@
       "ids": [
         "cr_teneo-protocol-activity686"
       ],
-      "last_seen": "2026-09-07T08:41:10.851926"
+      "last_seen": "2026-09-07T16:43:39.792331"
     },
     "swapper": {
       "name": "Swapper Finance",
@@ -3324,7 +3327,7 @@
       "ids": [
         "cr_swapper-finance-activity1150"
       ],
-      "last_seen": "2026-09-07T08:41:10.851932"
+      "last_seen": "2026-09-07T16:43:39.792336"
     },
     "alphanet": {
       "name": "AlphaNet",
@@ -3335,7 +3338,7 @@
       "ids": [
         "cr_alphanet-activity1168"
       ],
-      "last_seen": "2026-09-07T08:41:10.851939"
+      "last_seen": "2026-09-07T16:43:39.792342"
     },
     "fact machine": {
       "name": "Fact Machine",
@@ -3346,7 +3349,7 @@
       "ids": [
         "cr_fact-machine-activity1167"
       ],
-      "last_seen": "2026-09-07T08:41:10.851946"
+      "last_seen": "2026-09-07T16:43:39.792349"
     },
     "kairo": {
       "name": "Kairo",
@@ -3357,7 +3360,7 @@
       "ids": [
         "cr_kairo-activity1166"
       ],
-      "last_seen": "2026-09-07T08:41:10.851952"
+      "last_seen": "2026-09-07T16:43:39.792355"
     },
     "noah ai": {
       "name": "Noah AI",
@@ -3368,7 +3371,7 @@
       "ids": [
         "cr_noah-ai-activity1165"
       ],
-      "last_seen": "2026-09-07T08:41:10.851958"
+      "last_seen": "2026-09-07T16:43:39.792361"
     },
     "aeon": {
       "name": "AEON",
@@ -3379,7 +3382,7 @@
       "ids": [
         "cr_aeon-xyz-activity1164"
       ],
-      "last_seen": "2026-09-07T08:41:10.851964"
+      "last_seen": "2026-09-07T16:43:39.792367"
     },
     "predit market": {
       "name": "predit.market",
@@ -3390,7 +3393,7 @@
       "ids": [
         "cr_predit-market-activity1162"
       ],
-      "last_seen": "2026-09-07T08:41:10.851972"
+      "last_seen": "2026-09-07T16:43:39.792373"
     },
     "carte": {
       "name": "CARTE",
@@ -3401,7 +3404,7 @@
       "ids": [
         "cr_carte-activity1149"
       ],
-      "last_seen": "2026-09-07T08:41:10.851978"
+      "last_seen": "2026-09-07T16:43:39.792379"
     },
     "byzanlink": {
       "name": "Byzanlink",
@@ -3414,7 +3417,7 @@
       "ids": [
         "cr_byzanlink-activity1119"
       ],
-      "last_seen": "2026-09-07T08:41:10.851216"
+      "last_seen": "2026-09-07T16:43:39.791667"
     },
     "jurassic": {
       "name": "Jurassic Finance",
@@ -3425,7 +3428,7 @@
       "ids": [
         "cr_jurassic-finance-activity1160"
       ],
-      "last_seen": "2026-09-07T08:41:10.851984"
+      "last_seen": "2026-09-07T16:43:39.792386"
     },
     "human tech": {
       "name": "human.tech (prev.Holonym)",
@@ -3436,7 +3439,7 @@
       "ids": [
         "cr_holonym-activity891"
       ],
-      "last_seen": "2026-09-07T08:41:10.851992"
+      "last_seen": "2026-09-07T16:43:39.792394"
     },
     "dfusion ai": {
       "name": "dFusion AI",
@@ -3447,7 +3450,7 @@
       "ids": [
         "cr_dfusion-ai-activity1144"
       ],
-      "last_seen": "2026-09-07T08:41:10.851000"
+      "last_seen": "2026-09-07T16:43:39.791442"
     },
     "nava ai": {
       "name": "Nava AI",
@@ -3458,7 +3461,7 @@
       "ids": [
         "cr_nava-ai-activity1159"
       ],
-      "last_seen": "2026-09-07T08:41:10.851999"
+      "last_seen": "2026-09-07T16:43:39.792399"
     },
     "sumex": {
       "name": "SUMEX",
@@ -3469,7 +3472,7 @@
       "ids": [
         "cr_sumex-activity1099"
       ],
-      "last_seen": "2026-09-07T08:41:10.852005"
+      "last_seen": "2026-09-07T16:43:39.792405"
     },
     "ralio": {
       "name": "Ralio",
@@ -3480,7 +3483,7 @@
       "ids": [
         "cr_ralio-activity1157"
       ],
-      "last_seen": "2026-09-07T08:41:10.852011"
+      "last_seen": "2026-09-07T16:43:39.792411"
     },
     "cronos": {
       "name": "Cronos",
@@ -3491,7 +3494,7 @@
       "ids": [
         "cr_crypto-com-cro-activity1154"
       ],
-      "last_seen": "2026-09-07T08:41:10.852017"
+      "last_seen": "2026-09-07T16:43:39.792417"
     },
     "praxis society": {
       "name": "Praxis Society",
@@ -3502,7 +3505,7 @@
       "ids": [
         "cr_praxis-society-activity475"
       ],
-      "last_seen": "2026-09-07T08:41:10.852024"
+      "last_seen": "2026-09-07T16:43:39.792424"
     },
     "saturn": {
       "name": "Saturn",
@@ -3513,7 +3516,7 @@
       "ids": [
         "cr_saturn-protocol-activity1153"
       ],
-      "last_seen": "2026-09-07T08:41:10.850819"
+      "last_seen": "2026-09-07T16:43:39.791280"
     },
     "knidos": {
       "name": "Knidos",
@@ -3524,7 +3527,7 @@
       "ids": [
         "cr_knidoslabs-activity1152"
       ],
-      "last_seen": "2026-09-07T08:41:10.852030"
+      "last_seen": "2026-09-07T16:43:39.792430"
     },
     "horizen": {
       "name": "Horizen",
@@ -3535,7 +3538,7 @@
       "ids": [
         "cr_zencash-activity1104"
       ],
-      "last_seen": "2026-09-07T08:41:10.852037"
+      "last_seen": "2026-09-07T16:43:39.792436"
     },
     "splyce": {
       "name": "Splyce Finance",
@@ -3546,7 +3549,7 @@
       "ids": [
         "cr_splyce-finance-activity1151"
       ],
-      "last_seen": "2026-09-07T08:41:10.852043"
+      "last_seen": "2026-09-07T16:43:39.792442"
     },
     "incentiv": {
       "name": "Incentiv",
@@ -3557,7 +3560,7 @@
       "ids": [
         "cr_incentiv-activity669"
       ],
-      "last_seen": "2026-09-07T08:41:10.852050"
+      "last_seen": "2026-09-07T16:43:39.792448"
     },
     "solflare": {
       "name": "Solflare",
@@ -3570,7 +3573,7 @@
       "ids": [
         "cr_solflare-activity1035"
       ],
-      "last_seen": "2026-09-07T08:41:10.852056"
+      "last_seen": "2026-09-07T16:43:39.792454"
     },
     "quip": {
       "name": "Quip Network",
@@ -3581,7 +3584,7 @@
       "ids": [
         "cr_quip-network-activity1093"
       ],
-      "last_seen": "2026-09-07T08:41:10.852062"
+      "last_seen": "2026-09-07T16:43:39.792461"
     },
     "pixie chess": {
       "name": "Pixie Chess",
@@ -3592,7 +3595,7 @@
       "ids": [
         "cr_pixie-chess-activity1148"
       ],
-      "last_seen": "2026-09-07T08:41:10.851036"
+      "last_seen": "2026-09-07T16:43:39.791475"
     },
     "pin ai": {
       "name": "PIN AI",
@@ -3607,7 +3610,7 @@
         "cr_pin-ai-activity425",
         "dj_2808"
       ],
-      "last_seen": "2026-09-07T08:41:10.852072"
+      "last_seen": "2026-09-07T16:43:39.792470"
     },
     "fair shares": {
       "name": "Fair Shares",
@@ -3618,7 +3621,7 @@
       "ids": [
         "cr_fair-shares-activity1090"
       ],
-      "last_seen": "2026-09-07T08:41:10.852079"
+      "last_seen": "2026-09-07T16:43:39.792476"
     },
     "brix": {
       "name": "BRIX",
@@ -3629,7 +3632,7 @@
       "ids": [
         "cr_brix-money-activity1142"
       ],
-      "last_seen": "2026-09-07T08:41:10.852085"
+      "last_seen": "2026-09-07T16:43:39.792481"
     },
     "ip world": {
       "name": "ip.world",
@@ -3651,7 +3654,7 @@
       "ids": [
         "cr_utexo-activity1124"
       ],
-      "last_seen": "2026-09-07T08:41:10.852099"
+      "last_seen": "2026-09-07T16:43:39.792495"
     },
     "verse8": {
       "name": "Verse8",
@@ -3662,7 +3665,7 @@
       "ids": [
         "cr_verse-8-activity1040"
       ],
-      "last_seen": "2026-09-07T08:41:10.850946"
+      "last_seen": "2026-09-07T16:43:39.791391"
     },
     "minara": {
       "name": "Minara",
@@ -3673,7 +3676,7 @@
       "ids": [
         "cr_minara-activity1058"
       ],
-      "last_seen": "2026-09-07T08:41:10.852106"
+      "last_seen": "2026-09-07T16:43:39.792500"
     },
     "reya": {
       "name": "Reya Labs (Voltz)",
@@ -3695,7 +3698,7 @@
       "ids": [
         "cr_3-f-labs-activity1138"
       ],
-      "last_seen": "2026-09-07T08:41:10.852112"
+      "last_seen": "2026-09-07T16:43:39.792506"
     },
     "watch fun": {
       "name": "Watch.fun",
@@ -3706,7 +3709,7 @@
       "ids": [
         "cr_watch-fun-activity1137"
       ],
-      "last_seen": "2026-09-07T08:41:10.852120"
+      "last_seen": "2026-09-07T16:43:39.792513"
     },
     "golden tides": {
       "name": "Golden Tides",
@@ -3717,7 +3720,7 @@
       "ids": [
         "cr_golden-tides-activity1136"
       ],
-      "last_seen": "2026-09-07T08:41:10.852127"
+      "last_seen": "2026-09-07T16:43:39.792519"
     },
     "perle": {
       "name": "Perle (Prev. Kiva Ai)",
@@ -3728,7 +3731,7 @@
       "ids": [
         "cr_kiva-ai-activity904"
       ],
-      "last_seen": "2026-09-07T08:41:10.852134"
+      "last_seen": "2026-09-07T16:43:39.792526"
     },
     "lora": {
       "name": "Lora Finance",
@@ -3739,7 +3742,7 @@
       "ids": [
         "cr_lora-finance-activity1135"
       ],
-      "last_seen": "2026-09-07T08:41:10.852141"
+      "last_seen": "2026-09-07T16:43:39.792532"
     },
     "legend trade": {
       "name": "legend.trade",
@@ -3750,7 +3753,7 @@
       "ids": [
         "cr_legend-trade-activity986"
       ],
-      "last_seen": "2026-09-07T08:41:10.851043"
+      "last_seen": "2026-09-07T16:43:39.791483"
     },
     "glider": {
       "name": "Glider",
@@ -3761,7 +3764,7 @@
       "ids": [
         "cr_glider-activity771"
       ],
-      "last_seen": "2026-09-07T08:41:10.852147"
+      "last_seen": "2026-09-07T16:43:39.792537"
     },
     "watt2trade": {
       "name": "Watt2Trade",
@@ -3772,7 +3775,7 @@
       "ids": [
         "cr_watt-2-trade-activity1130"
       ],
-      "last_seen": "2026-09-07T08:41:10.852154"
+      "last_seen": "2026-09-07T16:43:39.792544"
     },
     "sixpence": {
       "name": "Sixpence",
@@ -3783,7 +3786,7 @@
       "ids": [
         "cr_openlayer-activity568"
       ],
-      "last_seen": "2026-09-07T08:41:10.852160"
+      "last_seen": "2026-09-07T16:43:39.792550"
     },
     "immutable": {
       "name": "Immutable",
@@ -3794,7 +3797,7 @@
       "ids": [
         "cr_immutable-x-activity968"
       ],
-      "last_seen": "2026-09-07T08:41:10.852167"
+      "last_seen": "2026-09-07T16:43:39.792556"
     },
     "kalshi": {
       "name": "Kalshi",
@@ -3805,7 +3808,7 @@
       "ids": [
         "cr_kalshi-activity994"
       ],
-      "last_seen": "2026-09-07T08:41:10.852174"
+      "last_seen": "2026-09-07T16:43:39.792572"
     },
     "godark": {
       "name": "GoDark",
@@ -3816,7 +3819,7 @@
       "ids": [
         "cr_godark-activity1127"
       ],
-      "last_seen": "2026-09-07T08:41:10.852180"
+      "last_seen": "2026-09-07T16:43:39.792578"
     },
     "monday trade": {
       "name": "Monday Trade",
@@ -3827,7 +3830,7 @@
       "ids": [
         "cr_monday-trade-activity1082"
       ],
-      "last_seen": "2026-09-07T08:41:10.852187"
+      "last_seen": "2026-09-07T16:43:39.792584"
     },
     "vlayer": {
       "name": "Vlayer",
@@ -3838,7 +3841,7 @@
       "ids": [
         "cr_vlayer-activity658"
       ],
-      "last_seen": "2026-09-07T08:41:10.852194"
+      "last_seen": "2026-09-07T16:43:39.792590"
     },
     "mocaverse": {
       "name": "Mocaverse",
@@ -3849,7 +3852,7 @@
       "ids": [
         "cr_mocaverse-activity1076"
       ],
-      "last_seen": "2026-09-07T08:41:10.852200"
+      "last_seen": "2026-09-07T16:43:39.792597"
     },
     "linera": {
       "name": "Linera",
@@ -3862,7 +3865,7 @@
       "ids": [
         "cr_linera-activity286"
       ],
-      "last_seen": "2026-09-07T08:41:10.852206"
+      "last_seen": "2026-09-07T16:43:39.792603"
     },
     "limit break": {
       "name": "Limit Break",
@@ -3873,7 +3876,7 @@
       "ids": [
         "cr_limit-break-activity1123"
       ],
-      "last_seen": "2026-09-07T08:41:10.852214"
+      "last_seen": "2026-09-07T16:43:39.792610"
     },
     "shelby": {
       "name": "Shelby",
@@ -3884,7 +3887,7 @@
       "ids": [
         "cr_shelby-activity1120"
       ],
-      "last_seen": "2026-09-07T08:41:10.852220"
+      "last_seen": "2026-09-07T16:43:39.792615"
     },
     "nexira": {
       "name": "Nexira",
@@ -3912,7 +3915,7 @@
         "ad_b9cb2d4f-57c0-43d6-8a9b-30403f7f507c",
         "cr_qfex-activity1117"
       ],
-      "last_seen": "2026-09-07T08:41:10.849926"
+      "last_seen": "2026-09-07T16:43:39.790367"
     },
     "seismic": {
       "name": "Seismic",
@@ -3923,7 +3926,7 @@
       "ids": [
         "cr_seismicsys-activity721"
       ],
-      "last_seen": "2026-09-07T08:41:10.852227"
+      "last_seen": "2026-09-07T16:43:39.792622"
     },
     "sonic": {
       "name": "Sonic",
@@ -3935,7 +3938,7 @@
         "cr_sonic-activity1116",
         "cr_sonic-activity332"
       ],
-      "last_seen": "2026-09-07T08:41:10.852233"
+      "last_seen": "2026-09-07T16:43:39.792627"
     },
     "oshi": {
       "name": "Oshi",
@@ -3946,7 +3949,7 @@
       "ids": [
         "cr_oshi-anime-activity650"
       ],
-      "last_seen": "2026-09-07T08:41:10.852239"
+      "last_seen": "2026-09-07T16:43:39.792633"
     },
     "plutonai": {
       "name": "PlutonAI",
@@ -3959,7 +3962,7 @@
       "ids": [
         "cr_plutonai-activity1115"
       ],
-      "last_seen": "2026-09-07T08:41:10.852245"
+      "last_seen": "2026-09-07T16:43:39.792639"
     },
     "probable": {
       "name": "Probable",
@@ -3981,7 +3984,7 @@
       "ids": [
         "cr_stormrae-activity1114"
       ],
-      "last_seen": "2026-09-07T08:41:10.852252"
+      "last_seen": "2026-09-07T16:43:39.792645"
     },
     "ventuals": {
       "name": "Ventuals",
@@ -3992,7 +3995,7 @@
       "ids": [
         "cr_ventuals-activity913"
       ],
-      "last_seen": "2026-09-07T08:41:10.852258"
+      "last_seen": "2026-09-07T16:43:39.792651"
     },
     "t54": {
       "name": "t54 Labs",
@@ -4003,7 +4006,7 @@
       "ids": [
         "cr_t-54-labs-activity1113"
       ],
-      "last_seen": "2026-09-07T08:41:10.852265"
+      "last_seen": "2026-09-07T16:43:39.792657"
     },
     "decibel": {
       "name": "Decibel",
@@ -4014,7 +4017,7 @@
       "ids": [
         "cr_decibel-activity1006"
       ],
-      "last_seen": "2026-09-07T08:41:10.850939"
+      "last_seen": "2026-09-07T16:43:39.791384"
     },
     "upshot": {
       "name": "Upshot",
@@ -4025,7 +4028,7 @@
       "ids": [
         "cr_upshot-activity1079"
       ],
-      "last_seen": "2026-09-07T08:41:10.851143"
+      "last_seen": "2026-09-07T16:43:39.791597"
     },
     "inventmoney": {
       "name": "InventMoney",
@@ -4036,7 +4039,7 @@
       "ids": [
         "cr_the-invention-network-activity1110"
       ],
-      "last_seen": "2026-09-07T08:41:10.852272"
+      "last_seen": "2026-09-07T16:43:39.792664"
     },
     "kash": {
       "name": "Kash",
@@ -4047,7 +4050,7 @@
       "ids": [
         "cr_kash-activity1109"
       ],
-      "last_seen": "2026-09-07T08:41:10.852277"
+      "last_seen": "2026-09-07T16:43:39.792669"
     },
     "xitadel": {
       "name": "Xitadel",
@@ -4058,7 +4061,7 @@
       "ids": [
         "cr_xitadel-activity983"
       ],
-      "last_seen": "2026-09-07T08:41:10.852284"
+      "last_seen": "2026-09-07T16:43:39.792675"
     },
     "3look": {
       "name": "3look",
@@ -4080,7 +4083,7 @@
       "ids": [
         "cr_huntertales-activity976"
       ],
-      "last_seen": "2026-09-07T08:41:10.852291"
+      "last_seen": "2026-09-07T16:43:39.792682"
     },
     "mwx": {
       "name": "MWX",
@@ -4091,7 +4094,7 @@
       "ids": [
         "cr_mwx-activity1107"
       ],
-      "last_seen": "2026-09-07T08:41:10.852297"
+      "last_seen": "2026-09-07T16:43:39.792688"
     },
     "mahojin": {
       "name": "Mahojin",
@@ -4102,7 +4105,7 @@
       "ids": [
         "cr_mahojin-activity1100"
       ],
-      "last_seen": "2026-09-07T08:41:10.852303"
+      "last_seen": "2026-09-07T16:43:39.792693"
     },
     "polynomial": {
       "name": "Polynomial",
@@ -4113,7 +4116,7 @@
       "ids": [
         "cr_polynomial-protocol-activity331"
       ],
-      "last_seen": "2026-09-07T08:41:10.852310"
+      "last_seen": "2026-09-07T16:43:39.792700"
     },
     "browser cash": {
       "name": "Browser Cash",
@@ -4124,7 +4127,7 @@
       "ids": [
         "cr_browser-cash-activity935"
       ],
-      "last_seen": "2026-09-07T08:41:10.852317"
+      "last_seen": "2026-09-07T16:43:39.792707"
     },
     "vibe trading": {
       "name": "Vibe Trading",
@@ -4135,7 +4138,7 @@
       "ids": [
         "cr_vibe-trading-activity1098"
       ],
-      "last_seen": "2026-09-07T08:41:10.852322"
+      "last_seen": "2026-09-07T16:43:39.792712"
     },
     "nuva": {
       "name": "Nuva Finance",
@@ -4146,7 +4149,7 @@
       "ids": [
         "cr_nuva-finance-activity991"
       ],
-      "last_seen": "2026-09-07T08:41:10.852328"
+      "last_seen": "2026-09-07T16:43:39.792718"
     },
     "bullshot": {
       "name": "Bullshot",
@@ -4157,7 +4160,7 @@
       "ids": [
         "cr_bullshot-activity1097"
       ],
-      "last_seen": "2026-09-07T08:41:10.850866"
+      "last_seen": "2026-09-07T16:43:39.791313"
     },
     "tenbin": {
       "name": "Tenbin Labs",
@@ -4168,7 +4171,7 @@
       "ids": [
         "cr_tenbin-labs-activity1091"
       ],
-      "last_seen": "2026-09-07T08:41:10.852335"
+      "last_seen": "2026-09-07T16:43:39.792724"
     },
     "oasis": {
       "name": "Oasis",
@@ -4190,7 +4193,7 @@
       "ids": [
         "cr_bitrobot-activity1037"
       ],
-      "last_seen": "2026-09-07T08:41:10.851057"
+      "last_seen": "2026-09-07T16:43:39.791495"
     },
     "yellow": {
       "name": "Yellow",
@@ -4201,7 +4204,7 @@
       "ids": [
         "cr_yellow-activity427"
       ],
-      "last_seen": "2026-09-07T08:41:10.852341"
+      "last_seen": "2026-09-07T16:43:39.792730"
     },
     "blockcast": {
       "name": "Blockcast",
@@ -4212,7 +4215,7 @@
       "ids": [
         "cr_blockcast-activity1087"
       ],
-      "last_seen": "2026-09-07T08:41:10.852347"
+      "last_seen": "2026-09-07T16:43:39.792737"
     },
     "aztec": {
       "name": "Aztec",
@@ -4223,7 +4226,7 @@
       "ids": [
         "cr_aztec-activity520"
       ],
-      "last_seen": "2026-09-07T08:41:10.852353"
+      "last_seen": "2026-09-07T16:43:39.792743"
     },
     "kindred": {
       "name": "Kindred",
@@ -4234,7 +4237,7 @@
       "ids": [
         "cr_kindred-activity937"
       ],
-      "last_seen": "2026-09-07T08:41:10.852360"
+      "last_seen": "2026-09-07T16:43:39.792749"
     },
     "ratio": {
       "name": "Ratio",
@@ -4245,7 +4248,7 @@
       "ids": [
         "cr_ratio-activity1085"
       ],
-      "last_seen": "2026-09-07T08:41:10.852366"
+      "last_seen": "2026-09-07T16:43:39.792755"
     },
     "voyage": {
       "name": "Voyage",
@@ -4259,7 +4262,7 @@
       "ids": [
         "cr_voyage-activity966"
       ],
-      "last_seen": "2026-09-07T08:41:10.852373"
+      "last_seen": "2026-09-07T16:43:39.792762"
     },
     "cap": {
       "name": "CAP",
@@ -4283,7 +4286,7 @@
       "ids": [
         "cr_strata-money-activity932"
       ],
-      "last_seen": "2026-09-07T08:41:10.852379"
+      "last_seen": "2026-09-07T16:43:39.792768"
     },
     "optimai": {
       "name": "OptimAI Network",
@@ -4299,7 +4302,7 @@
       "ids": [
         "cr_optimai-network-activity1084"
       ],
-      "last_seen": "2026-09-07T08:41:10.852386"
+      "last_seen": "2026-09-07T16:43:39.792775"
     },
     "miden": {
       "name": "Miden",
@@ -4313,7 +4316,7 @@
       "ids": [
         "cr_miden-activity785"
       ],
-      "last_seen": "2026-09-07T08:41:10.852391"
+      "last_seen": "2026-09-07T16:43:39.792779"
     },
     "boink": {
       "name": "BOINK",
@@ -4337,7 +4340,7 @@
       "ids": [
         "cr_ronin-activity1080"
       ],
-      "last_seen": "2026-09-07T08:41:10.852397"
+      "last_seen": "2026-09-07T16:43:39.792785"
     },
     "fortytwo": {
       "name": "Fortytwo",
@@ -4348,7 +4351,7 @@
       "ids": [
         "cr_fortytwo-ai-activity724"
       ],
-      "last_seen": "2026-09-07T08:41:10.852403"
+      "last_seen": "2026-09-07T16:43:39.792793"
     },
     "corners": {
       "name": "Corners",
@@ -4359,7 +4362,7 @@
       "ids": [
         "cr_corners-market-activity1075"
       ],
-      "last_seen": "2026-09-07T08:41:10.852409"
+      "last_seen": "2026-09-07T16:43:39.792799"
     },
     "spaace": {
       "name": "Spaace",
@@ -4370,7 +4373,7 @@
       "ids": [
         "cr_spaace-activity1056"
       ],
-      "last_seen": "2026-09-07T08:41:10.852415"
+      "last_seen": "2026-09-07T16:43:39.792806"
     },
     "edgen": {
       "name": "Edgen",
@@ -4381,7 +4384,7 @@
       "ids": [
         "cr_opensocial-activity915"
       ],
-      "last_seen": "2026-09-07T08:41:10.852421"
+      "last_seen": "2026-09-07T16:43:39.792812"
     },
     "hyena": {
       "name": "HyENA",
@@ -4392,7 +4395,7 @@
       "ids": [
         "cr_hyenatrade-activity1074"
       ],
-      "last_seen": "2026-09-07T08:41:10.852427"
+      "last_seen": "2026-09-07T16:43:39.792817"
     },
     "donut": {
       "name": "Donut",
@@ -4403,7 +4406,7 @@
       "ids": [
         "cr_donut-browser-activity824"
       ],
-      "last_seen": "2026-09-07T08:41:10.852433"
+      "last_seen": "2026-09-07T16:43:39.792823"
     },
     "neura": {
       "name": "Neura",
@@ -4414,7 +4417,7 @@
       "ids": [
         "cr_neura-activity156"
       ],
-      "last_seen": "2026-09-07T08:41:10.852439"
+      "last_seen": "2026-09-07T16:43:39.792828"
     },
     "remix": {
       "name": "Remix",
@@ -4425,7 +4428,7 @@
       "ids": [
         "cr_remix-gg-activity1072"
       ],
-      "last_seen": "2026-09-07T08:41:10.852444"
+      "last_seen": "2026-09-07T16:43:39.792834"
     },
     "fluton": {
       "name": "Fluton",
@@ -4438,7 +4441,7 @@
       "ids": [
         "cr_fluton-activity1055"
       ],
-      "last_seen": "2026-09-07T08:41:10.852450"
+      "last_seen": "2026-09-07T16:43:39.792839"
     },
     "midnight": {
       "name": "Midnight Network",
@@ -4449,7 +4452,7 @@
       "ids": [
         "cr_midnight-network-activity1069"
       ],
-      "last_seen": "2026-09-07T08:41:10.852457"
+      "last_seen": "2026-09-07T16:43:39.792847"
     },
     "rails": {
       "name": "Rails",
@@ -4460,7 +4463,7 @@
       "ids": [
         "cr_rails-activity988"
       ],
-      "last_seen": "2026-09-07T08:41:10.852463"
+      "last_seen": "2026-09-07T16:43:39.792853"
     },
     "magicblock": {
       "name": "Magicblock",
@@ -4471,7 +4474,7 @@
       "ids": [
         "cr_magicblock-activity426"
       ],
-      "last_seen": "2026-09-07T08:41:10.852470"
+      "last_seen": "2026-09-07T16:43:39.792859"
     },
     "vanish": {
       "name": "Vanish",
@@ -4482,7 +4485,7 @@
       "ids": [
         "cr_vanish-activity1065"
       ],
-      "last_seen": "2026-09-07T08:41:10.852476"
+      "last_seen": "2026-09-07T16:43:39.792865"
     },
     "veera": {
       "name": "Veera",
@@ -4495,7 +4498,7 @@
       "ids": [
         "cr_veera-activity1063"
       ],
-      "last_seen": "2026-09-07T08:41:10.852482"
+      "last_seen": "2026-09-07T16:43:39.792871"
     },
     "synthesis": {
       "name": "Synthesis",
@@ -4506,7 +4509,7 @@
       "ids": [
         "cr_synthesis-activity1062"
       ],
-      "last_seen": "2026-09-07T08:41:10.852488"
+      "last_seen": "2026-09-07T16:43:39.792877"
     },
     "aleo": {
       "name": "Aleo",
@@ -4517,7 +4520,7 @@
       "ids": [
         "cr_aleo-activity1061"
       ],
-      "last_seen": "2026-09-07T08:41:10.852494"
+      "last_seen": "2026-09-07T16:43:39.792883"
     },
     "andrena": {
       "name": "Andrena (DAWN)",
@@ -4528,7 +4531,7 @@
       "ids": [
         "cr_andrena-activity328"
       ],
-      "last_seen": "2026-09-07T08:41:10.852501"
+      "last_seen": "2026-09-07T16:43:39.792889"
     },
     "orbt": {
       "name": "ORBT",
@@ -4539,7 +4542,7 @@
       "ids": [
         "cr_orbt-activity1042"
       ],
-      "last_seen": "2026-09-07T08:41:10.852507"
+      "last_seen": "2026-09-07T16:43:39.792895"
     },
     "nunchi": {
       "name": "Nunchi",
@@ -4550,7 +4553,7 @@
       "ids": [
         "cr_nunchi-activity1057"
       ],
-      "last_seen": "2026-09-07T08:41:10.852512"
+      "last_seen": "2026-09-07T16:43:39.792900"
     },
     "lys": {
       "name": "LYS Labs",
@@ -4561,7 +4564,7 @@
       "ids": [
         "cr_lys-labs-activity926"
       ],
-      "last_seen": "2026-09-07T08:41:10.852518"
+      "last_seen": "2026-09-07T16:43:39.792906"
     },
     "inference": {
       "name": "Inference Labs",
@@ -4573,7 +4576,7 @@
         "cr_inference-labs-activity1053",
         "cr_inference-lmm-activity985"
       ],
-      "last_seen": "2026-09-07T08:41:10.852525"
+      "last_seen": "2026-09-07T16:43:39.792912"
     },
     "polarise": {
       "name": "Polarise (prev. Pawnfi)",
@@ -4584,7 +4587,7 @@
       "ids": [
         "cr_pawnfi-activity1051"
       ],
-      "last_seen": "2026-09-07T08:41:10.852532"
+      "last_seen": "2026-09-07T16:43:39.792919"
     },
     "dubhe engine": {
       "name": "Dubhe Engine",
@@ -4595,7 +4598,7 @@
       "ids": [
         "cr_dubhe-engine-activity810"
       ],
-      "last_seen": "2026-09-07T08:41:10.852539"
+      "last_seen": "2026-09-07T16:43:39.792926"
     },
     "rocket": {
       "name": "Rocket",
@@ -4606,7 +4609,7 @@
       "ids": [
         "cr_rocket-prediction-activity1049"
       ],
-      "last_seen": "2026-09-07T08:41:10.852545"
+      "last_seen": "2026-09-07T16:43:39.792932"
     },
     "hellotrade": {
       "name": "HelloTrade",
@@ -4617,7 +4620,7 @@
       "ids": [
         "cr_hellotrade-activity1048"
       ],
-      "last_seen": "2026-09-07T08:41:10.852551"
+      "last_seen": "2026-09-07T16:43:39.792938"
     },
     "bullpen": {
       "name": "Bullpen",
@@ -4628,7 +4631,7 @@
       "ids": [
         "cr_bullpen-activity1047"
       ],
-      "last_seen": "2026-09-07T08:41:10.852557"
+      "last_seen": "2026-09-07T16:43:39.792946"
     },
     "architect": {
       "name": "Architect",
@@ -4639,7 +4642,7 @@
       "ids": [
         "cr_architect-activity1045"
       ],
-      "last_seen": "2026-09-07T08:41:10.852563"
+      "last_seen": "2026-09-07T16:43:39.792952"
     },
     "deepnodeai": {
       "name": "DeepNodeAI",
@@ -4650,7 +4653,7 @@
       "ids": [
         "cr_deepnodeai-activity1044"
       ],
-      "last_seen": "2026-09-07T08:41:10.852570"
+      "last_seen": "2026-09-07T16:43:39.792958"
     },
     "geo": {
       "name": "Geo",
@@ -4661,7 +4664,7 @@
       "ids": [
         "cr_geo-activity1041"
       ],
-      "last_seen": "2026-09-07T08:41:10.852576"
+      "last_seen": "2026-09-07T16:43:39.792964"
     },
     "codex": {
       "name": "Codex",
@@ -4672,7 +4675,7 @@
       "ids": [
         "cr_codex-pbc-activity1000"
       ],
-      "last_seen": "2026-09-07T08:41:10.852582"
+      "last_seen": "2026-09-07T16:43:39.792970"
     },
     "pip world": {
       "name": "PiP World",
@@ -4683,7 +4686,7 @@
       "ids": [
         "cr_pip-world-activity1039"
       ],
-      "last_seen": "2026-09-07T08:41:10.852588"
+      "last_seen": "2026-09-07T16:43:39.792977"
     },
     "duffle": {
       "name": "Duffle",
@@ -4694,7 +4697,7 @@
       "ids": [
         "cr_duffle-activity962"
       ],
-      "last_seen": "2026-09-07T08:41:10.852594"
+      "last_seen": "2026-09-07T16:43:39.792983"
     },
     "rhuna": {
       "name": "Rhuna",
@@ -4705,7 +4708,7 @@
       "ids": [
         "cr_rhuna-activity958"
       ],
-      "last_seen": "2026-09-07T08:41:10.852601"
+      "last_seen": "2026-09-07T16:43:39.792990"
     },
     "cerebro": {
       "name": "Cerebro",
@@ -4716,7 +4719,7 @@
       "ids": [
         "cr_cerebro-activity866"
       ],
-      "last_seen": "2026-09-07T08:41:10.852607"
+      "last_seen": "2026-09-07T16:43:39.792996"
     },
     "ellipsis": {
       "name": "Ellipsis Labs (Phoenix Trade)",
@@ -4727,7 +4730,7 @@
       "ids": [
         "cr_ellipsis-labs-activity71"
       ],
-      "last_seen": "2026-09-07T08:41:10.855017"
+      "last_seen": "2026-09-07T16:43:39.795247"
     },
     "axis": {
       "name": "Axis",
@@ -4749,7 +4752,7 @@
       "ids": [
         "cr_zaiffer-activity1002"
       ],
-      "last_seen": "2026-09-07T08:41:10.852613"
+      "last_seen": "2026-09-07T16:43:39.793002"
     },
     "soar": {
       "name": "SOAR",
@@ -4760,7 +4763,7 @@
       "ids": [
         "cr_launchonsoar-activity1029"
       ],
-      "last_seen": "2026-09-07T08:41:10.851070"
+      "last_seen": "2026-09-07T16:43:39.791508"
     },
     "fin": {
       "name": "Fin (Prev. TipLink)",
@@ -4773,7 +4776,7 @@
       "ids": [
         "cr_fin-activity1028"
       ],
-      "last_seen": "2026-09-07T08:41:10.852620"
+      "last_seen": "2026-09-07T16:43:39.793009"
     },
     "spekter games": {
       "name": "Spekter Games",
@@ -4784,7 +4787,7 @@
       "ids": [
         "cr_spekter-games-activity858"
       ],
-      "last_seen": "2026-09-07T08:41:10.852627"
+      "last_seen": "2026-09-07T16:43:39.793017"
     },
     "diamante": {
       "name": "Diamante",
@@ -4795,7 +4798,7 @@
       "ids": [
         "cr_diamante-activity1025"
       ],
-      "last_seen": "2026-09-07T08:41:10.852633"
+      "last_seen": "2026-09-07T16:43:39.793023"
     },
     "magma": {
       "name": "Magma Finance",
@@ -4806,7 +4809,7 @@
       "ids": [
         "cr_magma-finance-activity864"
       ],
-      "last_seen": "2026-09-07T08:41:10.852639"
+      "last_seen": "2026-09-07T16:43:39.793029"
     },
     "valantis": {
       "name": "Valantis",
@@ -4817,7 +4820,7 @@
       "ids": [
         "cr_valantis-activity1023"
       ],
-      "last_seen": "2026-09-07T08:41:10.852646"
+      "last_seen": "2026-09-07T16:43:39.793036"
     },
     "gondor": {
       "name": "Gondor",
@@ -4828,7 +4831,7 @@
       "ids": [
         "cr_gondor-activity1022"
       ],
-      "last_seen": "2026-09-07T08:41:10.852652"
+      "last_seen": "2026-09-07T16:43:39.793041"
     },
     "chainers": {
       "name": "Chainers",
@@ -4839,7 +4842,7 @@
       "ids": [
         "cr_chainers-activity1020"
       ],
-      "last_seen": "2026-09-07T08:41:10.852658"
+      "last_seen": "2026-09-07T16:43:39.793047"
     },
     "inco": {
       "name": "Inco Network",
@@ -4850,7 +4853,7 @@
       "ids": [
         "cr_inco-network-activity142"
       ],
-      "last_seen": "2026-09-07T08:41:10.852664"
+      "last_seen": "2026-09-07T16:43:39.793053"
     },
     "project zero": {
       "name": "Project Zero",
@@ -4861,7 +4864,7 @@
       "ids": [
         "cr_project-zero-activity1015"
       ],
-      "last_seen": "2026-09-07T08:41:10.852671"
+      "last_seen": "2026-09-07T16:43:39.793060"
     },
     "sunrise": {
       "name": "Sunrise",
@@ -4872,7 +4875,7 @@
       "ids": [
         "cr_sunrisebridge-activity1014"
       ],
-      "last_seen": "2026-09-07T08:41:10.852677"
+      "last_seen": "2026-09-07T16:43:39.793065"
     },
     "terminal": {
       "name": "Terminal Finance",
@@ -4883,7 +4886,7 @@
       "ids": [
         "cr_terminal-finance-activity933"
       ],
-      "last_seen": "2026-09-07T08:41:10.852683"
+      "last_seen": "2026-09-07T16:43:39.793072"
     },
     "crunchdao": {
       "name": "CrunchDAO",
@@ -4894,7 +4897,7 @@
       "ids": [
         "cr_crunchdao-activity1012"
       ],
-      "last_seen": "2026-09-07T08:41:10.852690"
+      "last_seen": "2026-09-07T16:43:39.793078"
     },
     "daylight": {
       "name": "Daylight",
@@ -4905,7 +4908,7 @@
       "ids": [
         "cr_daylight-activity1010"
       ],
-      "last_seen": "2026-09-07T08:41:10.852696"
+      "last_seen": "2026-09-07T16:43:39.793083"
     },
     "thrive": {
       "name": "Thrive Protocol",
@@ -4916,7 +4919,7 @@
       "ids": [
         "cr_thrive-protocol-activity1009"
       ],
-      "last_seen": "2026-09-07T08:41:10.852703"
+      "last_seen": "2026-09-07T16:43:39.793090"
     },
     "tread fi": {
       "name": "Tread.fi",
@@ -4927,7 +4930,7 @@
       "ids": [
         "cr_tread-fi-activity1008"
       ],
-      "last_seen": "2026-09-07T08:41:10.850700"
+      "last_seen": "2026-09-07T16:43:39.791164"
     },
     "ten": {
       "name": "Ten (Obscuro)",
@@ -4940,7 +4943,7 @@
       "ids": [
         "cr_tenprotocol-activity205"
       ],
-      "last_seen": "2026-09-07T08:41:10.852709"
+      "last_seen": "2026-09-07T16:43:39.793096"
     },
     "reflect": {
       "name": "Reflect",
@@ -4951,7 +4954,7 @@
       "ids": [
         "cr_reflects-activity929"
       ],
-      "last_seen": "2026-09-07T08:41:10.852715"
+      "last_seen": "2026-09-07T16:43:39.793102"
     },
     "oro": {
       "name": "ORO",
@@ -4963,7 +4966,7 @@
         "cr_ask-oro-activity1284",
         "cr_oro-activity1005"
       ],
-      "last_seen": "2026-09-07T08:41:10.850627"
+      "last_seen": "2026-09-07T16:43:39.791091"
     },
     "self": {
       "name": "Self Protocol",
@@ -4974,7 +4977,7 @@
       "ids": [
         "cr_self-protocol-activity1004"
       ],
-      "last_seen": "2026-09-07T08:41:10.852721"
+      "last_seen": "2026-09-07T16:43:39.793108"
     },
     "azuki": {
       "name": "Azuki",
@@ -4985,7 +4988,7 @@
       "ids": [
         "cr_azuki-nft-activity411"
       ],
-      "last_seen": "2026-09-07T08:41:10.852727"
+      "last_seen": "2026-09-07T16:43:39.793114"
     },
     "optimum": {
       "name": "Optimum",
@@ -4998,7 +5001,7 @@
       "ids": [
         "cr_optimum-activity768"
       ],
-      "last_seen": "2026-09-07T08:41:10.852734"
+      "last_seen": "2026-09-07T16:43:39.793120"
     },
     "perceptron": {
       "name": "Perceptron Network",
@@ -5009,7 +5012,7 @@
       "ids": [
         "cr_block-mesh-network-activity514"
       ],
-      "last_seen": "2026-09-07T08:41:10.852741"
+      "last_seen": "2026-09-07T16:43:39.793126"
     },
     "kyuzo s friends": {
       "name": "Kyuzo's Friends",
@@ -5020,7 +5023,7 @@
       "ids": [
         "cr_kyuzos-friends-activity999"
       ],
-      "last_seen": "2026-09-07T08:41:10.852748"
+      "last_seen": "2026-09-07T16:43:39.793134"
     },
     "hop": {
       "name": "Hop",
@@ -5033,7 +5036,7 @@
       "ids": [
         "cr_hop-aggregator-activity487"
       ],
-      "last_seen": "2026-09-07T08:41:10.852754"
+      "last_seen": "2026-09-07T16:43:39.793139"
     },
     "otherside": {
       "name": "Otherside",
@@ -5044,7 +5047,7 @@
       "ids": [
         "cr_otherside-activity997"
       ],
-      "last_seen": "2026-09-07T08:41:10.852761"
+      "last_seen": "2026-09-07T16:43:39.793146"
     },
     "zeko": {
       "name": "Zeko",
@@ -5055,7 +5058,7 @@
       "ids": [
         "cr_zeko-activity791"
       ],
-      "last_seen": "2026-09-07T08:41:10.852767"
+      "last_seen": "2026-09-07T16:43:39.793151"
     },
     "ferra": {
       "name": "Ferra",
@@ -5066,7 +5069,7 @@
       "ids": [
         "cr_ferra-activity996"
       ],
-      "last_seen": "2026-09-07T08:41:10.852772"
+      "last_seen": "2026-09-07T16:43:39.793157"
     },
     "1st": {
       "name": "1st",
@@ -5077,7 +5080,7 @@
       "ids": [
         "cr_1st-activity995"
       ],
-      "last_seen": "2026-09-07T08:41:10.852779"
+      "last_seen": "2026-09-07T16:43:39.793163"
     },
     "technotainment": {
       "name": "Technotainment",
@@ -5088,7 +5091,7 @@
       "ids": [
         "cr_technotainment-activity993"
       ],
-      "last_seen": "2026-09-07T08:41:10.852786"
+      "last_seen": "2026-09-07T16:43:39.793170"
     },
     "arbitrum": {
       "name": "Arbitrum",
@@ -5101,7 +5104,7 @@
       "ids": [
         "cr_arbitrum-activity931"
       ],
-      "last_seen": "2026-09-07T08:41:10.852792"
+      "last_seen": "2026-09-07T16:43:39.793176"
     },
     "ccp games": {
       "name": "CCP Games",
@@ -5112,7 +5115,7 @@
       "ids": [
         "cr_ccp-games-activity409"
       ],
-      "last_seen": "2026-09-07T08:41:10.852799"
+      "last_seen": "2026-09-07T16:43:39.793182"
     },
     "rift": {
       "name": "Rift",
@@ -5123,7 +5126,7 @@
       "ids": [
         "cr_rift-activity992"
       ],
-      "last_seen": "2026-09-07T08:41:10.852805"
+      "last_seen": "2026-09-07T16:43:39.793188"
     },
     "gopher": {
       "name": "Gopher (prev. Masa)",
@@ -5136,7 +5139,7 @@
       "ids": [
         "cr_masa-activity954"
       ],
-      "last_seen": "2026-09-07T08:41:10.852812"
+      "last_seen": "2026-09-07T16:43:39.793194"
     },
     "nexpace": {
       "name": "NEXPACE",
@@ -5147,7 +5150,7 @@
       "ids": [
         "cr_nexpace-activity989"
       ],
-      "last_seen": "2026-09-07T08:41:10.852819"
+      "last_seen": "2026-09-07T16:43:39.793200"
     },
     "chronosworlds": {
       "name": "ChronosWorlds",
@@ -5158,7 +5161,7 @@
       "ids": [
         "cr_chronosworlds-activity207"
       ],
-      "last_seen": "2026-09-07T08:41:10.852826"
+      "last_seen": "2026-09-07T16:43:39.793207"
     },
     "creek": {
       "name": "Creek",
@@ -5169,7 +5172,7 @@
       "ids": [
         "cr_creek-activity987"
       ],
-      "last_seen": "2026-09-07T08:41:10.852832"
+      "last_seen": "2026-09-07T16:43:39.793212"
     },
     "tea fi": {
       "name": "Tea-Fi",
@@ -5180,7 +5183,7 @@
       "ids": [
         "cr_tea-fi-activity927"
       ],
-      "last_seen": "2026-09-07T08:41:10.852838"
+      "last_seen": "2026-09-07T16:43:39.793219"
     },
     "hyli": {
       "name": "Hyli",
@@ -5191,7 +5194,7 @@
       "ids": [
         "cr_hyle-activity817"
       ],
-      "last_seen": "2026-09-07T08:41:10.852844"
+      "last_seen": "2026-09-07T16:43:39.793224"
     },
     "sova": {
       "name": "Sova",
@@ -5202,7 +5205,7 @@
       "ids": [
         "cr_sova-activity961"
       ],
-      "last_seen": "2026-09-07T08:41:10.852851"
+      "last_seen": "2026-09-07T16:43:39.793230"
     },
     "zar": {
       "name": "ZAR",
@@ -5213,7 +5216,7 @@
       "ids": [
         "cr_zar-activity789"
       ],
-      "last_seen": "2026-09-07T08:41:10.852870"
+      "last_seen": "2026-09-07T16:43:39.793235"
     },
     "farcaster": {
       "name": "Farcaster",
@@ -5231,7 +5234,7 @@
         "cr_farcaster-activity192",
         "dj_2801"
       ],
-      "last_seen": "2026-09-07T08:41:10.852880"
+      "last_seen": "2026-09-07T16:43:39.793242"
     },
     "multipli": {
       "name": "Multipli",
@@ -5264,7 +5267,7 @@
       "ids": [
         "cr_lineup-games-activity977"
       ],
-      "last_seen": "2026-09-07T08:41:10.852888"
+      "last_seen": "2026-09-07T16:43:39.793249"
     },
     "city": {
       "name": "City Protocol (Prev. Cooking City)",
@@ -5275,7 +5278,7 @@
       "ids": [
         "cr_cooking-city-activity825"
       ],
-      "last_seen": "2026-09-07T08:41:10.852895"
+      "last_seen": "2026-09-07T16:43:39.793257"
     },
     "wormhole": {
       "name": "Wormhole",
@@ -5286,7 +5289,7 @@
       "ids": [
         "cr_wormhole-activity574"
       ],
-      "last_seen": "2026-09-07T08:41:10.852902"
+      "last_seen": "2026-09-07T16:43:39.793264"
     },
     "entry": {
       "name": "Entry (Prev. Zekret Protocol)",
@@ -5297,7 +5300,7 @@
       "ids": [
         "cr_entry-activity972"
       ],
-      "last_seen": "2026-09-07T08:41:10.852909"
+      "last_seen": "2026-09-07T16:43:39.793271"
     },
     "rekt games": {
       "name": "Rekt Games",
@@ -5308,7 +5311,7 @@
       "ids": [
         "cr_rekt-games-activity960"
       ],
-      "last_seen": "2026-09-07T08:41:10.852916"
+      "last_seen": "2026-09-07T16:43:39.793277"
     },
     "honeypot": {
       "name": "Honeypot Finance",
@@ -5319,7 +5322,7 @@
       "ids": [
         "cr_honeypot-finance-activity971"
       ],
-      "last_seen": "2026-09-07T08:41:10.852923"
+      "last_seen": "2026-09-07T16:43:39.793283"
     },
     "mantle": {
       "name": "Mantle",
@@ -5330,7 +5333,7 @@
       "ids": [
         "cr_mantlexyz-activity970"
       ],
-      "last_seen": "2026-09-07T08:41:10.852929"
+      "last_seen": "2026-09-07T16:43:39.793289"
     },
     "pact swap": {
       "name": "Pact Swap",
@@ -5341,7 +5344,7 @@
       "ids": [
         "cr_pact-swap-activity969"
       ],
-      "last_seen": "2026-09-07T08:41:10.852934"
+      "last_seen": "2026-09-07T16:43:39.793294"
     },
     "mento": {
       "name": "Mento",
@@ -5352,7 +5355,7 @@
       "ids": [
         "cr_mento-activity967"
       ],
-      "last_seen": "2026-09-07T08:41:10.852940"
+      "last_seen": "2026-09-07T16:43:39.793300"
     },
     "primus": {
       "name": "Primus Labs (prev. PADO)",
@@ -5363,7 +5366,7 @@
       "ids": [
         "cr_pado-labs-activity698"
       ],
-      "last_seen": "2026-09-07T08:41:10.850664"
+      "last_seen": "2026-09-07T16:43:39.791127"
     },
     "blockchain com": {
       "name": "Blockchain.com",
@@ -5374,7 +5377,7 @@
       "ids": [
         "cr_blockchain-com-activity920"
       ],
-      "last_seen": "2026-09-07T08:41:10.852947"
+      "last_seen": "2026-09-07T16:43:39.793307"
     },
     "canton": {
       "name": "Canton Network",
@@ -5387,7 +5390,7 @@
       "ids": [
         "cr_digital-asset-activity936"
       ],
-      "last_seen": "2026-09-07T08:41:10.852954"
+      "last_seen": "2026-09-07T16:43:39.793313"
     },
     "sandchain": {
       "name": "SANDchain",
@@ -5398,7 +5401,7 @@
       "ids": [
         "cr_sandchain-activity964"
       ],
-      "last_seen": "2026-09-07T08:41:10.852961"
+      "last_seen": "2026-09-07T16:43:39.793319"
     },
     "xmtp": {
       "name": "XMTP",
@@ -5409,7 +5412,7 @@
       "ids": [
         "cr_xmtp-activity963"
       ],
-      "last_seen": "2026-09-07T08:41:10.852967"
+      "last_seen": "2026-09-07T16:43:39.793325"
     },
     "rome": {
       "name": "Rome Protocol",
@@ -5426,7 +5429,7 @@
       "ids": [
         "cr_rome-protocol-activity539"
       ],
-      "last_seen": "2026-09-07T08:41:10.852973"
+      "last_seen": "2026-09-07T16:43:39.793330"
     },
     "drosera": {
       "name": "Drosera",
@@ -5442,7 +5445,7 @@
       "ids": [
         "cr_drosera-activity883"
       ],
-      "last_seen": "2026-09-07T08:41:10.852979"
+      "last_seen": "2026-09-07T16:43:39.793335"
     },
     "everlyn": {
       "name": "Everlyn",
@@ -5455,7 +5458,7 @@
       "ids": [
         "cr_everlyn-activity925"
       ],
-      "last_seen": "2026-09-07T08:41:10.852985"
+      "last_seen": "2026-09-07T16:43:39.793340"
     },
     "midl": {
       "name": "Midl",
@@ -5472,7 +5475,7 @@
       "ids": [
         "cr_midl-activity888"
       ],
-      "last_seen": "2026-09-07T08:41:10.852992"
+      "last_seen": "2026-09-07T16:43:39.793347"
     },
     "melee": {
       "name": "Melee",
@@ -5483,7 +5486,7 @@
       "ids": [
         "cr_melee-activity946"
       ],
-      "last_seen": "2026-09-07T08:41:10.850799"
+      "last_seen": "2026-09-07T16:43:39.791261"
     },
     "psy": {
       "name": "Psy Protocol (Prev. QED Protocol)",
@@ -5497,7 +5500,7 @@
       "ids": [
         "cr_qed-protocol-activity953"
       ],
-      "last_seen": "2026-09-07T08:41:10.852999"
+      "last_seen": "2026-09-07T16:43:39.793354"
     },
     "radiant": {
       "name": "Radiant",
@@ -5508,7 +5511,7 @@
       "ids": [
         "cr_radiant-game-activity956"
       ],
-      "last_seen": "2026-09-07T08:41:10.853005"
+      "last_seen": "2026-09-07T16:43:39.793360"
     },
     "jpeg fun": {
       "name": "jpeg.fun",
@@ -5519,7 +5522,7 @@
       "ids": [
         "cr_jpeg-fun-activity955"
       ],
-      "last_seen": "2026-09-07T08:41:10.853012"
+      "last_seen": "2026-09-07T16:43:39.793367"
     },
     "vana": {
       "name": "Vana",
@@ -5537,7 +5540,7 @@
         "cr_vana-activity944",
         "dj_2890"
       ],
-      "last_seen": "2026-09-07T08:41:10.853019"
+      "last_seen": "2026-09-07T16:43:39.793374"
     },
     "hub xyz": {
       "name": "Hub.xyz",
@@ -5548,7 +5551,7 @@
       "ids": [
         "cr_hub-xyz-activity690"
       ],
-      "last_seen": "2026-09-07T08:41:10.853026"
+      "last_seen": "2026-09-07T16:43:39.793380"
     },
     "reppo": {
       "name": "Reppo",
@@ -5559,7 +5562,7 @@
       "ids": [
         "cr_reppo-activity951"
       ],
-      "last_seen": "2026-09-07T08:41:10.853033"
+      "last_seen": "2026-09-07T16:43:39.793386"
     },
     "addicted": {
       "name": "Addicted",
@@ -5570,7 +5573,7 @@
       "ids": [
         "cr_addicted-activity950"
       ],
-      "last_seen": "2026-09-07T08:41:10.853039"
+      "last_seen": "2026-09-07T16:43:39.793391"
     },
     "level": {
       "name": "Level (Peregrine Exploration)",
@@ -5581,7 +5584,7 @@
       "ids": [
         "cr_peregrine-exploration-activity377"
       ],
-      "last_seen": "2026-09-07T08:41:10.853047"
+      "last_seen": "2026-09-07T16:43:39.793398"
     },
     "redotpay": {
       "name": "RedotPay",
@@ -5592,7 +5595,7 @@
       "ids": [
         "cr_redotpay-activity947"
       ],
-      "last_seen": "2026-09-07T08:41:10.853053"
+      "last_seen": "2026-09-07T16:43:39.793404"
     },
     "euclid": {
       "name": "Euclid Protocol",
@@ -5603,7 +5606,7 @@
       "ids": [
         "cr_euclid-protocol-activity780"
       ],
-      "last_seen": "2026-09-07T08:41:10.853059"
+      "last_seen": "2026-09-07T16:43:39.793410"
     },
     "pluralis research": {
       "name": "Pluralis Research",
@@ -5614,7 +5617,7 @@
       "ids": [
         "cr_pluralis-research-activity765"
       ],
-      "last_seen": "2026-09-07T08:41:10.853066"
+      "last_seen": "2026-09-07T16:43:39.793418"
     },
     "krnl": {
       "name": "KRNL",
@@ -5625,7 +5628,7 @@
       "ids": [
         "cr_krnl-activity683"
       ],
-      "last_seen": "2026-09-07T08:41:10.853072"
+      "last_seen": "2026-09-07T16:43:39.793423"
     },
     "gte": {
       "name": "GTE",
@@ -5636,7 +5639,7 @@
       "ids": [
         "cr_gte-activity649"
       ],
-      "last_seen": "2026-09-07T08:41:10.850743"
+      "last_seen": "2026-09-07T16:43:39.791206"
     },
     "nerite": {
       "name": "Nerite",
@@ -5647,7 +5650,7 @@
       "ids": [
         "cr_nerite-activity943"
       ],
-      "last_seen": "2026-09-07T08:41:10.853078"
+      "last_seen": "2026-09-07T16:43:39.793429"
     },
     "syntetika": {
       "name": "Syntetika",
@@ -5669,7 +5672,7 @@
       "ids": [
         "cr_neova-activity561"
       ],
-      "last_seen": "2026-09-07T08:41:10.853084"
+      "last_seen": "2026-09-07T16:43:39.793435"
     },
     "twine": {
       "name": "Twine",
@@ -5680,7 +5683,7 @@
       "ids": [
         "cr_twine-activity629"
       ],
-      "last_seen": "2026-09-07T08:41:10.853090"
+      "last_seen": "2026-09-07T16:43:39.793441"
     },
     "project 0": {
       "name": "Project 0 (prev. marginfi)",
@@ -5691,7 +5694,7 @@
       "ids": [
         "cr_marginfi-activity80"
       ],
-      "last_seen": "2026-09-07T08:41:10.853098"
+      "last_seen": "2026-09-07T16:43:39.793448"
     },
     "lombard": {
       "name": "Lombard",
@@ -5702,7 +5705,7 @@
       "ids": [
         "cr_lombard-activity383"
       ],
-      "last_seen": "2026-09-07T08:41:10.853104"
+      "last_seen": "2026-09-07T16:43:39.793454"
     },
     "poseidon": {
       "name": "Poseidon",
@@ -5713,7 +5716,7 @@
       "ids": [
         "cr_poseidon-ip-activity928"
       ],
-      "last_seen": "2026-09-07T08:41:10.853110"
+      "last_seen": "2026-09-07T16:43:39.793460"
     },
     "cashmere": {
       "name": "Cashmere Labs",
@@ -5724,7 +5727,7 @@
       "ids": [
         "cr_cashmere-labs-activity875"
       ],
-      "last_seen": "2026-09-07T08:41:10.850905"
+      "last_seen": "2026-09-07T16:43:39.791349"
     },
     "giwa": {
       "name": "GIWA",
@@ -5735,7 +5738,7 @@
       "ids": [
         "cr_giwa-activity939"
       ],
-      "last_seen": "2026-09-07T08:41:10.853116"
+      "last_seen": "2026-09-07T16:43:39.793465"
     },
     "altius": {
       "name": "Altius",
@@ -5746,7 +5749,7 @@
       "ids": [
         "cr_altius-activity689"
       ],
-      "last_seen": "2026-09-07T08:41:10.853122"
+      "last_seen": "2026-09-07T16:43:39.793471"
     },
     "gyld": {
       "name": "Gyld Finance",
@@ -5757,7 +5760,7 @@
       "ids": [
         "cr_gyld-finance-activity934"
       ],
-      "last_seen": "2026-09-07T08:41:10.853129"
+      "last_seen": "2026-09-07T16:43:39.793477"
     },
     "drft party": {
       "name": "DRFT Party",
@@ -5768,7 +5771,7 @@
       "ids": [
         "cr_drft-party-activity324"
       ],
-      "last_seen": "2026-09-07T08:41:10.853135"
+      "last_seen": "2026-09-07T16:43:39.793483"
     },
     "pipe": {
       "name": "Pipe Network",
@@ -5785,7 +5788,7 @@
         "cr_pipe-network-activity542",
         "dj_2820"
       ],
-      "last_seen": "2026-09-07T08:41:10.853143"
+      "last_seen": "2026-09-07T16:43:39.793491"
     },
     "rialo": {
       "name": "Rialo (Subzero Labs)",
@@ -5796,7 +5799,7 @@
       "ids": [
         "cr_rialo-activity896"
       ],
-      "last_seen": "2026-09-07T08:41:10.850693"
+      "last_seen": "2026-09-07T16:43:39.791156"
     },
     "walrus": {
       "name": "Walrus",
@@ -5807,7 +5810,7 @@
       "ids": [
         "cr_walrus-protocol-activity745"
       ],
-      "last_seen": "2026-09-07T08:41:10.853150"
+      "last_seen": "2026-09-07T16:43:39.793497"
     },
     "block stranding": {
       "name": "Block Stranding",
@@ -5818,7 +5821,7 @@
       "ids": [
         "cr_block-stranding-activity887"
       ],
-      "last_seen": "2026-09-07T08:41:10.853157"
+      "last_seen": "2026-09-07T16:43:39.793503"
     },
     "hemi": {
       "name": "Hemi",
@@ -5829,7 +5832,7 @@
       "ids": [
         "cr_hemi-network-activity420"
       ],
-      "last_seen": "2026-09-07T08:41:10.853163"
+      "last_seen": "2026-09-07T16:43:39.793509"
     },
     "inspect": {
       "name": "Inspect",
@@ -5840,7 +5843,7 @@
       "ids": [
         "cr_inspect-activity923"
       ],
-      "last_seen": "2026-09-07T08:41:10.853170"
+      "last_seen": "2026-09-07T16:43:39.793515"
     },
     "cryptocat": {
       "name": "CryptoCat",
@@ -5851,7 +5854,7 @@
       "ids": [
         "cr_cryptocat-io-activity921"
       ],
-      "last_seen": "2026-09-07T08:41:10.853177"
+      "last_seen": "2026-09-07T16:43:39.793521"
     },
     "8lends": {
       "name": "8lends",
@@ -5873,7 +5876,7 @@
       "ids": [
         "cr_native-protocol-activity836"
       ],
-      "last_seen": "2026-09-07T08:41:10.853183"
+      "last_seen": "2026-09-07T16:43:39.793527"
     },
     "near mobile": {
       "name": "NEAR Mobile",
@@ -5884,7 +5887,7 @@
       "ids": [
         "cr_near-mobile-activity917"
       ],
-      "last_seen": "2026-09-07T08:41:10.853190"
+      "last_seen": "2026-09-07T16:43:39.793534"
     },
     "commi": {
       "name": "Commi",
@@ -5895,7 +5898,7 @@
       "ids": [
         "cr_commi-activity914"
       ],
-      "last_seen": "2026-09-07T08:41:10.853196"
+      "last_seen": "2026-09-07T16:43:39.793540"
     },
     "unto": {
       "name": "Unto",
@@ -5906,7 +5909,7 @@
       "ids": [
         "cr_unto-activity912"
       ],
-      "last_seen": "2026-09-07T08:41:10.853202"
+      "last_seen": "2026-09-07T16:43:39.793545"
     },
     "privy": {
       "name": "Privy",
@@ -5917,7 +5920,7 @@
       "ids": [
         "cr_privy-activity909"
       ],
-      "last_seen": "2026-09-07T08:41:10.853208"
+      "last_seen": "2026-09-07T16:43:39.793551"
     },
     "etherscan": {
       "name": "Etherscan",
@@ -5930,7 +5933,7 @@
       "ids": [
         "cr_etherscan-activity908"
       ],
-      "last_seen": "2026-09-07T08:41:10.853214"
+      "last_seen": "2026-09-07T16:43:39.793557"
     },
     "side": {
       "name": "Side Protocol",
@@ -5941,7 +5944,7 @@
       "ids": [
         "cr_side-rotocol-activity155"
       ],
-      "last_seen": "2026-09-07T08:41:10.853221"
+      "last_seen": "2026-09-07T16:43:39.793571"
     },
     "doodles": {
       "name": "Doodles",
@@ -5952,7 +5955,7 @@
       "ids": [
         "cr_doodles-activity905"
       ],
-      "last_seen": "2026-09-07T08:41:10.853227"
+      "last_seen": "2026-09-07T16:43:39.793577"
     },
     "hackquest": {
       "name": "HackQuest",
@@ -5963,7 +5966,7 @@
       "ids": [
         "cr_hackquest-activity903"
       ],
-      "last_seen": "2026-09-07T08:41:10.853233"
+      "last_seen": "2026-09-07T16:43:39.793583"
     },
     "bytenova": {
       "name": "ByteNova",
@@ -5974,7 +5977,7 @@
       "ids": [
         "cr_bytenova-activity769"
       ],
-      "last_seen": "2026-09-07T08:41:10.853240"
+      "last_seen": "2026-09-07T16:43:39.793589"
     },
     "truenorth": {
       "name": "TrueNorth",
@@ -5985,7 +5988,7 @@
       "ids": [
         "cr_truenorth-activity901"
       ],
-      "last_seen": "2026-09-07T08:41:10.853246"
+      "last_seen": "2026-09-07T16:43:39.793595"
     },
     "guild": {
       "name": "Guild",
@@ -5996,7 +5999,7 @@
       "ids": [
         "cr_guild-activity607"
       ],
-      "last_seen": "2026-09-07T08:41:10.853252"
+      "last_seen": "2026-09-07T16:43:39.793601"
     },
     "luminex": {
       "name": "Luminex",
@@ -6007,7 +6010,7 @@
       "ids": [
         "cr_luminex-activity900"
       ],
-      "last_seen": "2026-09-07T08:41:10.853259"
+      "last_seen": "2026-09-07T16:43:39.793607"
     },
     "amped": {
       "name": "Amped Finance",
@@ -6018,7 +6021,7 @@
       "ids": [
         "cr_amped-finance-activity899"
       ],
-      "last_seen": "2026-09-07T08:41:10.853265"
+      "last_seen": "2026-09-07T16:43:39.793613"
     },
     "l3e7": {
       "name": "L3E7",
@@ -6029,7 +6032,7 @@
       "ids": [
         "cr_l-3-e-7-activity889"
       ],
-      "last_seen": "2026-09-07T08:41:10.853272"
+      "last_seen": "2026-09-07T16:43:39.793619"
     },
     "coinshift": {
       "name": "Coinshift",
@@ -6040,7 +6043,7 @@
       "ids": [
         "cr_coinshift-activity813"
       ],
-      "last_seen": "2026-09-07T08:41:10.853279"
+      "last_seen": "2026-09-07T16:43:39.793625"
     },
     "solo": {
       "name": "Solo",
@@ -6053,7 +6056,7 @@
       "ids": [
         "cr_solo-solochain-activity898"
       ],
-      "last_seen": "2026-09-07T08:41:10.853285"
+      "last_seen": "2026-09-07T16:43:39.793630"
     },
     "karrier one": {
       "name": "Karrier One",
@@ -6064,7 +6067,7 @@
       "ids": [
         "cr_karrier-one-activity867"
       ],
-      "last_seen": "2026-09-07T08:41:10.853292"
+      "last_seen": "2026-09-07T16:43:39.793637"
     },
     "uomi": {
       "name": "Uomi",
@@ -6075,7 +6078,7 @@
       "ids": [
         "cr_uomi-activity893"
       ],
-      "last_seen": "2026-09-07T08:41:10.853298"
+      "last_seen": "2026-09-07T16:43:39.793642"
     },
     "quantum": {
       "name": "Quantum (prev. Cytonic)",
@@ -6088,7 +6091,7 @@
       "ids": [
         "cr_cytonic-activity540"
       ],
-      "last_seen": "2026-09-07T08:41:10.853305"
+      "last_seen": "2026-09-07T16:43:39.793649"
     },
     "fairblock": {
       "name": "Fairblock Network",
@@ -6099,7 +6102,7 @@
       "ids": [
         "cr_fairblock-network-activity890"
       ],
-      "last_seen": "2026-09-07T08:41:10.853312"
+      "last_seen": "2026-09-07T16:43:39.793656"
     },
     "naoris": {
       "name": "Naoris Protocol",
@@ -6110,7 +6113,7 @@
       "ids": [
         "cr_naorisprotocol-activity665"
       ],
-      "last_seen": "2026-09-07T08:41:10.853319"
+      "last_seen": "2026-09-07T16:43:39.793662"
     },
     "gaia": {
       "name": "Gaia",
@@ -6121,7 +6124,7 @@
       "ids": [
         "cr_gaianet-activity645"
       ],
-      "last_seen": "2026-09-07T08:41:10.853325"
+      "last_seen": "2026-09-07T16:43:39.793668"
     },
     "voya games": {
       "name": "VOYA Games",
@@ -6132,7 +6135,7 @@
       "ids": [
         "cr_voya-games-activity828"
       ],
-      "last_seen": "2026-09-07T08:41:10.853332"
+      "last_seen": "2026-09-07T16:43:39.793674"
     },
     "drake": {
       "name": "Drake",
@@ -6143,7 +6146,7 @@
       "ids": [
         "cr_drake-monad-activity834"
       ],
-      "last_seen": "2026-09-07T08:41:10.853339"
+      "last_seen": "2026-09-07T16:43:39.793680"
     },
     "circles": {
       "name": "Circles",
@@ -6154,7 +6157,7 @@
       "ids": [
         "cr_circles-activity594"
       ],
-      "last_seen": "2026-09-07T08:41:10.853346"
+      "last_seen": "2026-09-07T16:43:39.793686"
     },
     "botanix": {
       "name": "Botanix Labs",
@@ -6165,7 +6168,7 @@
       "ids": [
         "cr_botanix-labs-activity180"
       ],
-      "last_seen": "2026-09-07T08:41:10.853353"
+      "last_seen": "2026-09-07T16:43:39.793692"
     },
     "defx": {
       "name": "Defx",
@@ -6183,7 +6186,7 @@
         "cr_defx-activity885",
         "dj_2598"
       ],
-      "last_seen": "2026-09-07T08:41:10.853362"
+      "last_seen": "2026-09-07T16:43:39.793700"
     },
     "quranium": {
       "name": "Quranium",
@@ -6194,7 +6197,7 @@
       "ids": [
         "cr_quranium-activity884"
       ],
-      "last_seen": "2026-09-07T08:41:10.853369"
+      "last_seen": "2026-09-07T16:43:39.793706"
     },
     "superposition": {
       "name": "Superposition",
@@ -6205,7 +6208,7 @@
       "ids": [
         "cr_superposition-activity255"
       ],
-      "last_seen": "2026-09-07T08:41:10.853376"
+      "last_seen": "2026-09-07T16:43:39.793712"
     },
     "octra": {
       "name": "Octra",
@@ -6216,7 +6219,7 @@
       "ids": [
         "cr_octra-activity860"
       ],
-      "last_seen": "2026-09-07T08:41:10.853382"
+      "last_seen": "2026-09-07T16:43:39.793718"
     },
     "avalanche": {
       "name": "Avalanche",
@@ -6229,7 +6232,7 @@
       "ids": [
         "cr_avalanche-activity604"
       ],
-      "last_seen": "2026-09-07T08:41:10.853388"
+      "last_seen": "2026-09-07T16:43:39.793724"
     },
     "tabi": {
       "name": "Tabi",
@@ -6242,7 +6245,7 @@
         "cr_tabichain-activity580",
         "dj_1280"
       ],
-      "last_seen": "2026-09-07T08:41:10.853394"
+      "last_seen": "2026-09-07T16:43:39.793729"
     },
     "bloom": {
       "name": "Bloom",
@@ -6253,7 +6256,7 @@
       "ids": [
         "cr_bloom-social-activity882"
       ],
-      "last_seen": "2026-09-07T08:41:10.853400"
+      "last_seen": "2026-09-07T16:43:39.793735"
     },
     "ranger": {
       "name": "Ranger",
@@ -6264,7 +6267,7 @@
       "ids": [
         "cr_ranger-activity881"
       ],
-      "last_seen": "2026-09-07T08:41:10.853406"
+      "last_seen": "2026-09-07T16:43:39.793741"
     },
     "shaga": {
       "name": "Shaga",
@@ -6275,7 +6278,7 @@
       "ids": [
         "cr_shaga-activity327"
       ],
-      "last_seen": "2026-09-07T08:41:10.853412"
+      "last_seen": "2026-09-07T16:43:39.793746"
     },
     "genome": {
       "name": "Genome",
@@ -6286,7 +6289,7 @@
       "ids": [
         "cr_genome-activity761"
       ],
-      "last_seen": "2026-09-07T08:41:10.853419"
+      "last_seen": "2026-09-07T16:43:39.793752"
     },
     "party icons": {
       "name": "Party Icons",
@@ -6297,7 +6300,7 @@
       "ids": [
         "cr_party-icons-activity526"
       ],
-      "last_seen": "2026-09-07T08:41:10.853425"
+      "last_seen": "2026-09-07T16:43:39.793758"
     },
     "superfluid": {
       "name": "Superfluid",
@@ -6308,7 +6311,7 @@
       "ids": [
         "cr_superfluid-activity325"
       ],
-      "last_seen": "2026-09-07T08:41:10.853432"
+      "last_seen": "2026-09-07T16:43:39.793765"
     },
     "huddle01": {
       "name": "Huddle01",
@@ -6319,7 +6322,7 @@
       "ids": [
         "cr_huddle-01-activity764"
       ],
-      "last_seen": "2026-09-07T08:41:10.853439"
+      "last_seen": "2026-09-07T16:43:39.793771"
     },
     "try your best": {
       "name": "Try Your Best",
@@ -6330,7 +6333,7 @@
       "ids": [
         "cr_try-your-best-activity876"
       ],
-      "last_seen": "2026-09-07T08:41:10.853447"
+      "last_seen": "2026-09-07T16:43:39.793778"
     },
     "scade xyz": {
       "name": "Scade.xyz",
@@ -6341,7 +6344,7 @@
       "ids": [
         "cr_scade-xyz-activity873"
       ],
-      "last_seen": "2026-09-07T08:41:10.853453"
+      "last_seen": "2026-09-07T16:43:39.793784"
     },
     "infinifi": {
       "name": "InfiniFi",
@@ -6352,7 +6355,7 @@
       "ids": [
         "cr_infinifi-activity682"
       ],
-      "last_seen": "2026-09-07T08:41:10.850792"
+      "last_seen": "2026-09-07T16:43:39.791254"
     },
     "zypher": {
       "name": "Zypher Network",
@@ -6363,7 +6366,7 @@
       "ids": [
         "cr_zypher-activity872"
       ],
-      "last_seen": "2026-09-07T08:41:10.853460"
+      "last_seen": "2026-09-07T16:43:39.793790"
     },
     "onebalance": {
       "name": "OneBalance",
@@ -6374,7 +6377,7 @@
       "ids": [
         "cr_onebalance-activity862"
       ],
-      "last_seen": "2026-09-07T08:41:10.853467"
+      "last_seen": "2026-09-07T16:43:39.793796"
     },
     "gradient": {
       "name": "Gradient Network",
@@ -6385,7 +6388,7 @@
       "ids": [
         "cr_gradient-network-activity410"
       ],
-      "last_seen": "2026-09-07T08:41:10.853473"
+      "last_seen": "2026-09-07T16:43:39.793803"
     },
     "oro ai": {
       "name": "ORO AI",
@@ -6396,7 +6399,7 @@
       "ids": [
         "cr_oro-ai-activity760"
       ],
-      "last_seen": "2026-09-07T08:41:10.853480"
+      "last_seen": "2026-09-07T16:43:39.793809"
     },
     "tusky": {
       "name": "Tusky",
@@ -6407,7 +6410,7 @@
       "ids": [
         "cr_tusky-activity870"
       ],
-      "last_seen": "2026-09-07T08:41:10.853486"
+      "last_seen": "2026-09-07T16:43:39.793814"
     },
     "kuru": {
       "name": "Kuru",
@@ -6418,7 +6421,7 @@
       "ids": [
         "cr_kuru-activity869"
       ],
-      "last_seen": "2026-09-07T08:41:10.853492"
+      "last_seen": "2026-09-07T16:43:39.793820"
     },
     "distinct possibility studios": {
       "name": "Distinct Possibility Studios",
@@ -6429,7 +6432,7 @@
       "ids": [
         "cr_distinct-possibility-studios-activity868"
       ],
-      "last_seen": "2026-09-07T08:41:10.853500"
+      "last_seen": "2026-09-07T16:43:39.793828"
     },
     "ordeez": {
       "name": "Ordeez",
@@ -6440,7 +6443,7 @@
       "ids": [
         "cr_ordeez-activity865"
       ],
-      "last_seen": "2026-09-07T08:41:10.853506"
+      "last_seen": "2026-09-07T16:43:39.793834"
     },
     "sunscreen": {
       "name": "Sunscreen",
@@ -6451,7 +6454,7 @@
       "ids": [
         "cr_sunscreen-activity861"
       ],
-      "last_seen": "2026-09-07T08:41:10.853513"
+      "last_seen": "2026-09-07T16:43:39.793840"
     },
     "unichain": {
       "name": "Unichain",
@@ -6472,7 +6475,7 @@
         "cr_unichain-activity464",
         "dj_2914"
       ],
-      "last_seen": "2026-09-07T08:41:10.853522"
+      "last_seen": "2026-09-07T16:43:39.793850"
     },
     "bagel": {
       "name": "Bagel Labs",
@@ -6483,7 +6486,7 @@
       "ids": [
         "cr_the-bagel-network-activity859"
       ],
-      "last_seen": "2026-09-07T08:41:10.853529"
+      "last_seen": "2026-09-07T16:43:39.793856"
     },
     "fluence": {
       "name": "Fluence",
@@ -6505,7 +6508,7 @@
       "ids": [
         "cr_mavryk-network-activity713"
       ],
-      "last_seen": "2026-09-07T08:41:10.853535"
+      "last_seen": "2026-09-07T16:43:39.793862"
     },
     "lens": {
       "name": "Lens Protocol",
@@ -6516,7 +6519,7 @@
       "ids": [
         "cr_lens-protocol-activity705"
       ],
-      "last_seen": "2026-09-07T08:41:10.853541"
+      "last_seen": "2026-09-07T16:43:39.793868"
     },
     "upshift": {
       "name": "Upshift",
@@ -6536,7 +6539,7 @@
         "ad_ff888096-9dc8-4232-b0e9-df80f530d637",
         "cr_upshift-activity853"
       ],
-      "last_seen": "2026-09-07T08:41:10.849986"
+      "last_seen": "2026-09-07T16:43:39.790426"
     },
     "uptopia": {
       "name": "Uptopia",
@@ -6549,7 +6552,7 @@
       "ids": [
         "cr_uptopia-activity852"
       ],
-      "last_seen": "2026-09-07T08:41:10.853547"
+      "last_seen": "2026-09-07T16:43:39.793874"
     },
     "aisol": {
       "name": "AiSol",
@@ -6562,7 +6565,7 @@
       "ids": [
         "cr_aisolfi-activity833"
       ],
-      "last_seen": "2026-09-07T08:41:10.853554"
+      "last_seen": "2026-09-07T16:43:39.793880"
     },
     "embr": {
       "name": "Embr Labs",
@@ -6573,7 +6576,7 @@
       "ids": [
         "cr_embr-labs-activity774"
       ],
-      "last_seen": "2026-09-07T08:41:10.853560"
+      "last_seen": "2026-09-07T16:43:39.793886"
     },
     "fifa rivals": {
       "name": "FIFA Rivals",
@@ -6584,7 +6587,7 @@
       "ids": [
         "cr_fifa-rivals-activity558"
       ],
-      "last_seen": "2026-09-07T08:41:10.853567"
+      "last_seen": "2026-09-07T16:43:39.793893"
     },
     "axiom": {
       "name": "Axiom",
@@ -6595,7 +6598,7 @@
       "ids": [
         "cr_axiomexchange-activity840"
       ],
-      "last_seen": "2026-09-07T08:41:10.853573"
+      "last_seen": "2026-09-07T16:43:39.793898"
     },
     "zo": {
       "name": "ZO",
@@ -6606,7 +6609,7 @@
       "ids": [
         "cr_zo-activity841"
       ],
-      "last_seen": "2026-09-07T08:41:10.853580"
+      "last_seen": "2026-09-07T16:43:39.793904"
     },
     "super": {
       "name": "Super Protocol",
@@ -6621,7 +6624,7 @@
       "ids": [
         "cr_super-protocol-activity838"
       ],
-      "last_seen": "2026-09-07T08:41:10.853587"
+      "last_seen": "2026-09-07T16:43:39.793911"
     },
     "ecosapiens": {
       "name": "Ecosapiens",
@@ -6636,7 +6639,7 @@
       "ids": [
         "cr_ecosapiens-activity667"
       ],
-      "last_seen": "2026-09-07T08:41:10.853595"
+      "last_seen": "2026-09-07T16:43:39.793919"
     },
     "kadena": {
       "name": "Kadena",
@@ -6649,7 +6652,7 @@
       "ids": [
         "cr_kadena-activity814"
       ],
-      "last_seen": "2026-09-07T08:41:10.853603"
+      "last_seen": "2026-09-07T16:43:39.793926"
     },
     "turnkey": {
       "name": "Turnkey",
@@ -6662,7 +6665,7 @@
       "ids": [
         "cr_turnkey-activity445"
       ],
-      "last_seen": "2026-09-07T08:41:10.853609"
+      "last_seen": "2026-09-07T16:43:39.793931"
     },
     "radius": {
       "name": "Radius",
@@ -6677,7 +6680,7 @@
       "ids": [
         "cr_radius-activity809"
       ],
-      "last_seen": "2026-09-07T08:41:10.853616"
+      "last_seen": "2026-09-07T16:43:39.793938"
     },
     "ping": {
       "name": "Ping Network",
@@ -6688,7 +6691,7 @@
       "ids": [
         "cr_ping-network-activity794"
       ],
-      "last_seen": "2026-09-07T08:41:10.853623"
+      "last_seen": "2026-09-07T16:43:39.793944"
     },
     "sophon": {
       "name": "Sophon",
@@ -6701,7 +6704,7 @@
       "ids": [
         "cr_sophon-xyz-activity832"
       ],
-      "last_seen": "2026-09-07T08:41:10.853629"
+      "last_seen": "2026-09-07T16:43:39.793950"
     },
     "malda": {
       "name": "Malda",
@@ -6712,7 +6715,7 @@
       "ids": [
         "cr_malda-activity723"
       ],
-      "last_seen": "2026-09-07T08:41:10.853635"
+      "last_seen": "2026-09-07T16:43:39.793956"
     },
     "rumi": {
       "name": "Rumi",
@@ -6723,7 +6726,7 @@
       "ids": [
         "cr_rumi-activity822"
       ],
-      "last_seen": "2026-09-07T08:41:10.853640"
+      "last_seen": "2026-09-07T16:43:39.793961"
     },
     "avitus": {
       "name": "Avitus",
@@ -6734,7 +6737,7 @@
       "ids": [
         "cr_avitus-activity815"
       ],
-      "last_seen": "2026-09-07T08:41:10.853646"
+      "last_seen": "2026-09-07T16:43:39.793967"
     },
     "zealy": {
       "name": "Zealy (Crew3)",
@@ -6745,7 +6748,7 @@
       "ids": [
         "cr_zealy-activity827"
       ],
-      "last_seen": "2026-09-07T08:41:10.853653"
+      "last_seen": "2026-09-07T16:43:39.793973"
     },
     "squads": {
       "name": "Squads",
@@ -6756,7 +6759,7 @@
       "ids": [
         "cr_squads-activity821"
       ],
-      "last_seen": "2026-09-07T08:41:10.853659"
+      "last_seen": "2026-09-07T16:43:39.793979"
     },
     "parasail": {
       "name": "Parasail",
@@ -6767,7 +6770,7 @@
       "ids": [
         "cr_parasail-activity741"
       ],
-      "last_seen": "2026-09-07T08:41:10.853665"
+      "last_seen": "2026-09-07T16:43:39.793985"
     },
     "catena": {
       "name": "Catena Labs",
@@ -6778,7 +6781,7 @@
       "ids": [
         "cr_catena-labs-activity816"
       ],
-      "last_seen": "2026-09-07T08:41:10.853672"
+      "last_seen": "2026-09-07T16:43:39.793991"
     },
     "avalon": {
       "name": "Avalon",
@@ -6790,7 +6793,7 @@
         "cr_avalon-activity170",
         "cr_avalon-finance-activity401"
       ],
-      "last_seen": "2026-09-07T08:41:10.853678"
+      "last_seen": "2026-09-07T16:43:39.793997"
     },
     "bluefin": {
       "name": "Bluefin",
@@ -6801,7 +6804,7 @@
       "ids": [
         "cr_bluefin-activity805"
       ],
-      "last_seen": "2026-09-07T08:41:10.853684"
+      "last_seen": "2026-09-07T16:43:39.794002"
     },
     "chakra": {
       "name": "Chakra Labs",
@@ -6812,7 +6815,7 @@
       "ids": [
         "cr_chakra-labs-activity798"
       ],
-      "last_seen": "2026-09-07T08:41:10.853690"
+      "last_seen": "2026-09-07T16:43:39.794008"
     },
     "soul": {
       "name": "Soul Labs",
@@ -6823,7 +6826,7 @@
       "ids": [
         "cr_soul-labs-activity778"
       ],
-      "last_seen": "2026-09-07T08:41:10.853696"
+      "last_seen": "2026-09-07T16:43:39.794014"
     },
     "polymer": {
       "name": "Polymer Labs",
@@ -6834,7 +6837,7 @@
       "ids": [
         "cr_polymer-labs-activity793"
       ],
-      "last_seen": "2026-09-07T08:41:10.853702"
+      "last_seen": "2026-09-07T16:43:39.794020"
     },
     "aida": {
       "name": "AIDA",
@@ -6845,7 +6848,7 @@
       "ids": [
         "cr_aida-activity788"
       ],
-      "last_seen": "2026-09-07T08:41:10.853708"
+      "last_seen": "2026-09-07T16:43:39.794025"
     },
     "giverep": {
       "name": "GiveRep",
@@ -6856,7 +6859,7 @@
       "ids": [
         "cr_give-rep-activity784"
       ],
-      "last_seen": "2026-09-07T08:41:10.853714"
+      "last_seen": "2026-09-07T16:43:39.794031"
     },
     "infrared": {
       "name": "Infrared",
@@ -6867,7 +6870,7 @@
       "ids": [
         "cr_infrared-activity251"
       ],
-      "last_seen": "2026-09-07T08:41:10.853720"
+      "last_seen": "2026-09-07T16:43:39.794037"
     },
     "nous research": {
       "name": "Nous Research",
@@ -6878,7 +6881,7 @@
       "ids": [
         "cr_nous-research-activity781"
       ],
-      "last_seen": "2026-09-07T08:41:10.853727"
+      "last_seen": "2026-09-07T16:43:39.794044"
     },
     "omni": {
       "name": "Omni Network",
@@ -6889,7 +6892,7 @@
       "ids": [
         "cr_omni-network-activity369"
       ],
-      "last_seen": "2026-09-07T08:41:10.853734"
+      "last_seen": "2026-09-07T16:43:39.794050"
     },
     "ava": {
       "name": "Ava Protocol",
@@ -6900,7 +6903,7 @@
       "ids": [
         "cr_oak-network-activity772"
       ],
-      "last_seen": "2026-09-07T08:41:10.853740"
+      "last_seen": "2026-09-07T16:43:39.794056"
     },
     "pond": {
       "name": "Pond",
@@ -6911,7 +6914,7 @@
       "ids": [
         "cr_pond-activity573"
       ],
-      "last_seen": "2026-09-07T08:41:10.851208"
+      "last_seen": "2026-09-07T16:43:39.791660"
     },
     "shogun": {
       "name": "Shogun",
@@ -6922,7 +6925,7 @@
       "ids": [
         "cr_shogun-activity770"
       ],
-      "last_seen": "2026-09-07T08:41:10.853746"
+      "last_seen": "2026-09-07T16:43:39.794061"
     },
     "jiritsu": {
       "name": "Jiritsu Network",
@@ -6933,7 +6936,7 @@
       "ids": [
         "cr_jiritsu-network-activity767"
       ],
-      "last_seen": "2026-09-07T08:41:10.853752"
+      "last_seen": "2026-09-07T16:43:39.794067"
     },
     "decent dao": {
       "name": "Decent DAO",
@@ -6944,7 +6947,7 @@
       "ids": [
         "cr_decentdao-activity766"
       ],
-      "last_seen": "2026-09-07T08:41:10.853759"
+      "last_seen": "2026-09-07T16:43:39.794074"
     },
     "uplink": {
       "name": "Uplink",
@@ -6957,7 +6960,7 @@
       "ids": [
         "cr_uplink-xyz-activity449"
       ],
-      "last_seen": "2026-09-07T08:41:10.853765"
+      "last_seen": "2026-09-07T16:43:39.794079"
     },
     "swisstronik": {
       "name": "Swisstronik",
@@ -6968,7 +6971,7 @@
       "ids": [
         "cr_swisstronik-activity297"
       ],
-      "last_seen": "2026-09-07T08:41:10.853773"
+      "last_seen": "2026-09-07T16:43:39.794085"
     },
     "wunder social": {
       "name": "Wunder.Social",
@@ -6979,7 +6982,7 @@
       "ids": [
         "cr_wunder-social-activity763"
       ],
-      "last_seen": "2026-09-07T08:41:10.853780"
+      "last_seen": "2026-09-07T16:43:39.794092"
     },
     "t1": {
       "name": "t1 Protocol",
@@ -6990,7 +6993,7 @@
       "ids": [
         "cr_t-1-protocol-activity758"
       ],
-      "last_seen": "2026-09-07T08:41:10.853786"
+      "last_seen": "2026-09-07T16:43:39.794098"
     },
     "quotechain": {
       "name": "QuoteChain",
@@ -7001,7 +7004,7 @@
       "ids": [
         "cr_quote-chain-activity759"
       ],
-      "last_seen": "2026-09-07T08:41:10.853793"
+      "last_seen": "2026-09-07T16:43:39.794104"
     },
     "intract": {
       "name": "Intract",
@@ -7012,7 +7015,7 @@
       "ids": [
         "cr_intract-activity465"
       ],
-      "last_seen": "2026-09-07T08:41:10.853800"
+      "last_seen": "2026-09-07T16:43:39.794109"
     },
     "litas": {
       "name": "Litas",
@@ -7023,7 +7026,7 @@
       "ids": [
         "cr_litas-io-activity659"
       ],
-      "last_seen": "2026-09-07T08:41:10.853806"
+      "last_seen": "2026-09-07T16:43:39.794115"
     },
     "3dos": {
       "name": "3DOS",
@@ -7034,7 +7037,7 @@
       "ids": [
         "cr_3-dos-activity751"
       ],
-      "last_seen": "2026-09-07T08:41:10.853812"
+      "last_seen": "2026-09-07T16:43:39.794121"
     },
     "odx": {
       "name": "ODX",
@@ -7045,7 +7048,7 @@
       "ids": [
         "cr_ordinox-activity748"
       ],
-      "last_seen": "2026-09-07T08:41:10.853819"
+      "last_seen": "2026-09-07T16:43:39.794127"
     },
     "harpie": {
       "name": "Harpie",
@@ -7056,7 +7059,7 @@
       "ids": [
         "cr_harpie-activity672"
       ],
-      "last_seen": "2026-09-07T08:41:10.853825"
+      "last_seen": "2026-09-07T16:43:39.794132"
     },
     "skytrade": {
       "name": "SkyTrade",
@@ -7067,7 +7070,7 @@
       "ids": [
         "cr_skytrade-activity747"
       ],
-      "last_seen": "2026-09-07T08:41:10.853832"
+      "last_seen": "2026-09-07T16:43:39.794138"
     },
     "aptos": {
       "name": "Aptos",
@@ -7081,7 +7084,7 @@
         "cr_aptos-activity746",
         "cr_aptos-activity482"
       ],
-      "last_seen": "2026-09-07T08:41:10.853837"
+      "last_seen": "2026-09-07T16:43:39.794144"
     },
     "moremarkets": {
       "name": "MoreMarkets (prev Nuffle Labs)",
@@ -7092,7 +7095,7 @@
       "ids": [
         "cr_nuffle-labs-activity372"
       ],
-      "last_seen": "2026-09-07T08:41:10.853845"
+      "last_seen": "2026-09-07T16:43:39.794151"
     },
     "push": {
       "name": "Push Protocol",
@@ -7103,7 +7106,7 @@
       "ids": [
         "cr_push-protocol-activity455"
       ],
-      "last_seen": "2026-09-07T08:41:10.853851"
+      "last_seen": "2026-09-07T16:43:39.794157"
     },
     "inertia": {
       "name": "Inertia",
@@ -7120,7 +7123,7 @@
         "cr_inertia-activity720",
         "dj_3055"
       ],
-      "last_seen": "2026-09-07T08:41:10.853867"
+      "last_seen": "2026-09-07T16:43:39.794165"
     },
     "helix": {
       "name": "Helix Labs",
@@ -7131,7 +7134,7 @@
       "ids": [
         "cr_helix-labs-activity714"
       ],
-      "last_seen": "2026-09-07T08:41:10.853873"
+      "last_seen": "2026-09-07T16:43:39.794171"
     },
     "exabits": {
       "name": "Exabits",
@@ -7142,7 +7145,7 @@
       "ids": [
         "cr_exabits-activity673"
       ],
-      "last_seen": "2026-09-07T08:41:10.853880"
+      "last_seen": "2026-09-07T16:43:39.794177"
     },
     "goat gaming": {
       "name": "GOAT Gaming",
@@ -7153,7 +7156,7 @@
       "ids": [
         "cr_goat-gaming-activity418"
       ],
-      "last_seen": "2026-09-07T08:41:10.853886"
+      "last_seen": "2026-09-07T16:43:39.794184"
     },
     "yeet": {
       "name": "Yeet",
@@ -7164,7 +7167,7 @@
       "ids": [
         "cr_yeet-bet-activity735"
       ],
-      "last_seen": "2026-09-07T08:41:10.853892"
+      "last_seen": "2026-09-07T16:43:39.794189"
     },
     "persistence": {
       "name": "Persistence",
@@ -7175,7 +7178,7 @@
       "ids": [
         "cr_persistence-activity734"
       ],
-      "last_seen": "2026-09-07T08:41:10.853899"
+      "last_seen": "2026-09-07T16:43:39.794196"
     },
     "halliday": {
       "name": "Halliday",
@@ -7186,7 +7189,7 @@
       "ids": [
         "cr_halliday-activity732"
       ],
-      "last_seen": "2026-09-07T08:41:10.853906"
+      "last_seen": "2026-09-07T16:43:39.794202"
     },
     "templar": {
       "name": "Templar Protocol",
@@ -7197,7 +7200,7 @@
       "ids": [
         "cr_templar-protocol-activity731"
       ],
-      "last_seen": "2026-09-07T08:41:10.853913"
+      "last_seen": "2026-09-07T16:43:39.794208"
     },
     "toggle": {
       "name": "Toggle",
@@ -7208,7 +7211,7 @@
       "ids": [
         "cr_toggle-activity730"
       ],
-      "last_seen": "2026-09-07T08:41:10.853919"
+      "last_seen": "2026-09-07T16:43:39.794214"
     },
     "aura": {
       "name": "aura",
@@ -7220,7 +7223,7 @@
         "cr_aura-protocolorg-activity1261",
         "cr_aura-fun-activity729"
       ],
-      "last_seen": "2026-09-07T08:41:10.851163"
+      "last_seen": "2026-09-07T16:43:39.791617"
     },
     "drop": {
       "name": "Drop Protocol",
@@ -7233,7 +7236,7 @@
       "ids": [
         "cr_drop-protocol-activity504"
       ],
-      "last_seen": "2026-09-07T08:41:10.853925"
+      "last_seen": "2026-09-07T16:43:39.794220"
     },
     "chaos": {
       "name": "Chaos Labs",
@@ -7244,7 +7247,7 @@
       "ids": [
         "cr_chaos-labs-activity728"
       ],
-      "last_seen": "2026-09-07T08:41:10.853932"
+      "last_seen": "2026-09-07T16:43:39.794226"
     },
     "ammo": {
       "name": "AMMO",
@@ -7255,7 +7258,7 @@
       "ids": [
         "cr_ammo-activity694"
       ],
-      "last_seen": "2026-09-07T08:41:10.853939"
+      "last_seen": "2026-09-07T16:43:39.794232"
     },
     "magmadao": {
       "name": "MagmaDAO",
@@ -7266,7 +7269,7 @@
       "ids": [
         "cr_magmadao-activity706"
       ],
-      "last_seen": "2026-09-07T08:41:10.853945"
+      "last_seen": "2026-09-07T16:43:39.794238"
     },
     "axie infinity": {
       "name": "Axie Infinity",
@@ -7277,7 +7280,7 @@
       "ids": [
         "cr_axie-infinity-activity722"
       ],
-      "last_seen": "2026-09-07T08:41:10.853952"
+      "last_seen": "2026-09-07T16:43:39.794244"
     },
     "gridix": {
       "name": "Gridix",
@@ -7288,7 +7291,7 @@
       "ids": [
         "cr_gridix-activity717"
       ],
-      "last_seen": "2026-09-07T08:41:10.853958"
+      "last_seen": "2026-09-07T16:43:39.794250"
     },
     "sahara ai": {
       "name": "Sahara AI",
@@ -7300,7 +7303,7 @@
         "cr_sahara-activity343",
         "cr_sahara-activity357"
       ],
-      "last_seen": "2026-09-07T08:41:10.853965"
+      "last_seen": "2026-09-07T16:43:39.794256"
     },
     "hyperbolic": {
       "name": "Hyperbolic Labs",
@@ -7311,7 +7314,7 @@
       "ids": [
         "cr_hyperbolic-labs-activity715"
       ],
-      "last_seen": "2026-09-07T08:41:10.853972"
+      "last_seen": "2026-09-07T16:43:39.794263"
     },
     "redstone": {
       "name": "RedStone",
@@ -7324,7 +7327,7 @@
       "ids": [
         "cr_redstone-activity298"
       ],
-      "last_seen": "2026-09-07T08:41:10.853978"
+      "last_seen": "2026-09-07T16:43:39.794269"
     },
     "qiro": {
       "name": "Qiro Finance",
@@ -7335,7 +7338,7 @@
       "ids": [
         "cr_qiro-finance-activity671"
       ],
-      "last_seen": "2026-09-07T08:41:10.853984"
+      "last_seen": "2026-09-07T16:43:39.794275"
     },
     "echelon": {
       "name": "Echelon",
@@ -7346,7 +7349,7 @@
       "ids": [
         "cr_echelon-market-activity709"
       ],
-      "last_seen": "2026-09-07T08:41:10.853990"
+      "last_seen": "2026-09-07T16:43:39.794280"
     },
     "fastlane": {
       "name": "FastLane Labs",
@@ -7357,7 +7360,7 @@
       "ids": [
         "cr_fast-lane-labs-activity710"
       ],
-      "last_seen": "2026-09-07T08:41:10.853997"
+      "last_seen": "2026-09-07T16:43:39.794286"
     },
     "dymension wizards": {
       "name": "Dymension Wizards",
@@ -7368,7 +7371,7 @@
       "ids": [
         "cr_dymension-wizards-activity679"
       ],
-      "last_seen": "2026-09-07T08:41:10.854004"
+      "last_seen": "2026-09-07T16:43:39.794293"
     },
     "legend": {
       "name": "Legend",
@@ -7379,7 +7382,7 @@
       "ids": [
         "cr_legend-wallet-activity680"
       ],
-      "last_seen": "2026-09-07T08:41:10.854010"
+      "last_seen": "2026-09-07T16:43:39.794299"
     },
     "arkham": {
       "name": "Arkham",
@@ -7390,7 +7393,7 @@
       "ids": [
         "cr_arkham-activity537"
       ],
-      "last_seen": "2026-09-07T08:41:10.854016"
+      "last_seen": "2026-09-07T16:43:39.794305"
     },
     "din": {
       "name": "DIN (Previously Web3Go)",
@@ -7401,7 +7404,7 @@
       "ids": [
         "cr_web-3-go-activity186"
       ],
-      "last_seen": "2026-09-07T08:41:10.854023"
+      "last_seen": "2026-09-07T16:43:39.794311"
     },
     "bluwhale": {
       "name": "Bluwhale",
@@ -7412,7 +7415,7 @@
       "ids": [
         "cr_bluwhale-activity676"
       ],
-      "last_seen": "2026-09-07T08:41:10.854029"
+      "last_seen": "2026-09-07T16:43:39.794317"
     },
     "cvex": {
       "name": "CVEX",
@@ -7423,7 +7426,7 @@
       "ids": [
         "cr_cvex-activity670"
       ],
-      "last_seen": "2026-09-07T08:41:10.854035"
+      "last_seen": "2026-09-07T16:43:39.794323"
     },
     "credible": {
       "name": "Credible",
@@ -7434,7 +7437,7 @@
       "ids": [
         "cr_credible-activity668"
       ],
-      "last_seen": "2026-09-07T08:41:10.854042"
+      "last_seen": "2026-09-07T16:43:39.794329"
     },
     "infinigods": {
       "name": "InfiniGods",
@@ -7445,7 +7448,7 @@
       "ids": [
         "cr_infinigods-activity485"
       ],
-      "last_seen": "2026-09-07T08:41:10.854048"
+      "last_seen": "2026-09-07T16:43:39.794335"
     },
     "gravity": {
       "name": "Gravity",
@@ -7456,7 +7459,7 @@
       "ids": [
         "cr_gravitychain-activity559"
       ],
-      "last_seen": "2026-09-07T08:41:10.854055"
+      "last_seen": "2026-09-07T16:43:39.794341"
     },
     "mantis": {
       "name": "Mantis",
@@ -7467,7 +7470,7 @@
       "ids": [
         "cr_mantis-svm-activity507"
       ],
-      "last_seen": "2026-09-07T08:41:10.854061"
+      "last_seen": "2026-09-07T16:43:39.794347"
     },
     "sandwatchai": {
       "name": "SandwatchAI",
@@ -7478,7 +7481,7 @@
       "ids": [
         "cr_sandwatch-ai-activity651"
       ],
-      "last_seen": "2026-09-07T08:41:10.854067"
+      "last_seen": "2026-09-07T16:43:39.794353"
     },
     "nebula lending": {
       "name": "Nebula Lending",
@@ -7489,7 +7492,7 @@
       "ids": [
         "cr_nebula-lending-activity648"
       ],
-      "last_seen": "2026-09-07T08:41:10.854073"
+      "last_seen": "2026-09-07T16:43:39.794359"
     },
     "1money": {
       "name": "1Money",
@@ -7500,7 +7503,7 @@
       "ids": [
         "cr_one-money-activity647"
       ],
-      "last_seen": "2026-09-07T08:41:10.854079"
+      "last_seen": "2026-09-07T16:43:39.794365"
     },
     "kalp": {
       "name": "Kalp",
@@ -7511,7 +7514,7 @@
       "ids": [
         "cr_kalp-activity646"
       ],
-      "last_seen": "2026-09-07T08:41:10.854085"
+      "last_seen": "2026-09-07T16:43:39.794370"
     },
     "slingshot": {
       "name": "SlingShot",
@@ -7522,7 +7525,7 @@
       "ids": [
         "cr_slingshot-activity458"
       ],
-      "last_seen": "2026-09-07T08:41:10.854092"
+      "last_seen": "2026-09-07T16:43:39.794377"
     },
     "solv": {
       "name": "Solv Protocol",
@@ -7535,7 +7538,7 @@
       "ids": [
         "cr_solv-protocol-activity277"
       ],
-      "last_seen": "2026-09-07T08:41:10.854098"
+      "last_seen": "2026-09-07T16:43:39.794382"
     },
     "kyros": {
       "name": "Kyros",
@@ -7546,7 +7549,7 @@
       "ids": [
         "cr_kyros-activity644"
       ],
-      "last_seen": "2026-09-07T08:41:10.854104"
+      "last_seen": "2026-09-07T16:43:39.794388"
     },
     "safefolio wallet": {
       "name": "SafeFolio Wallet",
@@ -7557,7 +7560,7 @@
       "ids": [
         "cr_safefolio-wallet-activity643"
       ],
-      "last_seen": "2026-09-07T08:41:10.854111"
+      "last_seen": "2026-09-07T16:43:39.794395"
     },
     "azura": {
       "name": "Azura",
@@ -7568,7 +7571,7 @@
       "ids": [
         "cr_azura-activity642"
       ],
-      "last_seen": "2026-09-07T08:41:10.854117"
+      "last_seen": "2026-09-07T16:43:39.794401"
     },
     "alpha": {
       "name": "Alpha Network",
@@ -7579,7 +7582,7 @@
       "ids": [
         "cr_kekkai-activity639"
       ],
-      "last_seen": "2026-09-07T08:41:10.854124"
+      "last_seen": "2026-09-07T16:43:39.794407"
     },
     "cadabra": {
       "name": "Cadabra Finance",
@@ -7590,7 +7593,7 @@
       "ids": [
         "cr_cadabra-finance-activity637"
       ],
-      "last_seen": "2026-09-07T08:41:10.854130"
+      "last_seen": "2026-09-07T16:43:39.794414"
     },
     "depined": {
       "name": "DePINed",
@@ -7601,7 +7604,7 @@
       "ids": [
         "cr_depined-activity636"
       ],
-      "last_seen": "2026-09-07T08:41:10.854136"
+      "last_seen": "2026-09-07T16:43:39.794420"
     },
     "pixelport": {
       "name": "Pixelport",
@@ -7612,7 +7615,7 @@
       "ids": [
         "cr_pixelport-activity626"
       ],
-      "last_seen": "2026-09-07T08:41:10.854143"
+      "last_seen": "2026-09-07T16:43:39.794426"
     },
     "glow": {
       "name": "Glow",
@@ -7623,7 +7626,7 @@
       "ids": [
         "cr_glow-solar-activity632"
       ],
-      "last_seen": "2026-09-07T08:41:10.854148"
+      "last_seen": "2026-09-07T16:43:39.794432"
     },
     "zksync": {
       "name": "zkSync",
@@ -7636,7 +7639,7 @@
       "ids": [
         "cr_zksync-activity627"
       ],
-      "last_seen": "2026-09-07T08:41:10.854154"
+      "last_seen": "2026-09-07T16:43:39.794438"
     },
     "myriad": {
       "name": "MYRIAD",
@@ -7647,7 +7650,7 @@
       "ids": [
         "cr_myriad-markets-activity624"
       ],
-      "last_seen": "2026-09-07T08:41:10.854160"
+      "last_seen": "2026-09-07T16:43:39.794443"
     },
     "astrol": {
       "name": "Astrol",
@@ -7659,7 +7662,7 @@
         "cr_astrol-activity619",
         "cr_astrol-activity492"
       ],
-      "last_seen": "2026-09-07T08:41:10.854166"
+      "last_seen": "2026-09-07T16:43:39.794449"
     },
     "uxuy": {
       "name": "UXUY",
@@ -7670,7 +7673,7 @@
       "ids": [
         "cr_uxuy-activity617"
       ],
-      "last_seen": "2026-09-07T08:41:10.854172"
+      "last_seen": "2026-09-07T16:43:39.794455"
     },
     "midas": {
       "name": "Midas",
@@ -7681,7 +7684,7 @@
       "ids": [
         "cr_midas-app-activity616"
       ],
-      "last_seen": "2026-09-07T08:41:10.854178"
+      "last_seen": "2026-09-07T16:43:39.794460"
     },
     "cardano": {
       "name": "Cardano",
@@ -7703,7 +7706,7 @@
       "ids": [
         "cr_heiko-activity590"
       ],
-      "last_seen": "2026-09-07T08:41:10.854184"
+      "last_seen": "2026-09-07T16:43:39.794466"
     },
     "otoco": {
       "name": "OtoCo",
@@ -7714,7 +7717,7 @@
       "ids": [
         "cr_oto-co-activity610"
       ],
-      "last_seen": "2026-09-07T08:41:10.854190"
+      "last_seen": "2026-09-07T16:43:39.794472"
     },
     "echo": {
       "name": "Echo",
@@ -7727,7 +7730,7 @@
       "ids": [
         "cr_echo-activity606"
       ],
-      "last_seen": "2026-09-07T08:41:10.854196"
+      "last_seen": "2026-09-07T16:43:39.794477"
     },
     "de charge": {
       "name": "De Charge",
@@ -7740,7 +7743,7 @@
       "ids": [
         "cr_de-charge-activity605"
       ],
-      "last_seen": "2026-09-07T08:41:10.854205"
+      "last_seen": "2026-09-07T16:43:39.794485"
     },
     "open": {
       "name": "Open",
@@ -7755,7 +7758,7 @@
       "ids": [
         "cr_open-activity602"
       ],
-      "last_seen": "2026-09-07T08:41:10.854212"
+      "last_seen": "2026-09-07T16:43:39.794492"
     },
     "ninja blaze": {
       "name": "Ninja Blaze",
@@ -7770,7 +7773,7 @@
       "ids": [
         "cr_ninja-blaze-activity598"
       ],
-      "last_seen": "2026-09-07T08:41:10.854219"
+      "last_seen": "2026-09-07T16:43:39.794499"
     },
     "whale": {
       "name": "Whale",
@@ -7781,7 +7784,7 @@
       "ids": [
         "cr_wheel-of-whales-activity599"
       ],
-      "last_seen": "2026-09-07T08:41:10.854226"
+      "last_seen": "2026-09-07T16:43:39.794505"
     },
     "print world": {
       "name": "print.world",
@@ -7792,7 +7795,7 @@
       "ids": [
         "cr_print-world-activity596"
       ],
-      "last_seen": "2026-09-07T08:41:10.854233"
+      "last_seen": "2026-09-07T16:43:39.794512"
     },
     "neptune": {
       "name": "Neptune Protocol",
@@ -7803,7 +7806,7 @@
       "ids": [
         "cr_neptune-protocol-eclipse-activity593"
       ],
-      "last_seen": "2026-09-07T08:41:10.854239"
+      "last_seen": "2026-09-07T16:43:39.794518"
     },
     "manifest": {
       "name": "Manifest",
@@ -7814,7 +7817,7 @@
       "ids": [
         "cr_manifest-sol-activity589"
       ],
-      "last_seen": "2026-09-07T08:41:10.854245"
+      "last_seen": "2026-09-07T16:43:39.794524"
     },
     "pentagon games": {
       "name": "Pentagon Games",
@@ -7825,7 +7828,7 @@
       "ids": [
         "cr_pentagon-games-activity334"
       ],
-      "last_seen": "2026-09-07T08:41:10.854252"
+      "last_seen": "2026-09-07T16:43:39.794530"
     },
     "naptha ai": {
       "name": "Naptha AI",
@@ -7836,7 +7839,7 @@
       "ids": [
         "cr_naptha-ai-activity588"
       ],
-      "last_seen": "2026-09-07T08:41:10.854258"
+      "last_seen": "2026-09-07T16:43:39.794537"
     },
     "aligned layer": {
       "name": "Aligned Layer",
@@ -7858,7 +7861,7 @@
       "ids": [
         "cr_polyhedra-network-activity585"
       ],
-      "last_seen": "2026-09-07T08:41:10.854265"
+      "last_seen": "2026-09-07T16:43:39.794543"
     },
     "atleta": {
       "name": "Atleta Network",
@@ -7871,7 +7874,7 @@
         "cr_atleta-network-activity200",
         "cr_atleta-network-activity296"
       ],
-      "last_seen": "2026-09-07T08:41:10.854272"
+      "last_seen": "2026-09-07T16:43:39.794550"
     },
     "ithaca": {
       "name": "Ithaca",
@@ -7883,7 +7886,7 @@
         "cr_ithaca-activity467",
         "cr_ithaca-protocol-activity198"
       ],
-      "last_seen": "2026-09-07T08:41:10.854278"
+      "last_seen": "2026-09-07T16:43:39.794555"
     },
     "adrastea": {
       "name": "Adrastea Finance",
@@ -7905,7 +7908,7 @@
       "ids": [
         "cr_only-layer-activity576"
       ],
-      "last_seen": "2026-09-07T08:41:10.854285"
+      "last_seen": "2026-09-07T16:43:39.794568"
     },
     "jpool staked sol": {
       "name": "JPool Staked SOL",
@@ -7918,7 +7921,7 @@
       "ids": [
         "cr_jsol-activity532"
       ],
-      "last_seen": "2026-09-07T08:41:10.854291"
+      "last_seen": "2026-09-07T16:43:39.794574"
     },
     "taiko": {
       "name": "Taiko",
@@ -7930,7 +7933,7 @@
         "cr_taikoxyz-activity212",
         "dj_1467"
       ],
-      "last_seen": "2026-09-07T08:41:10.854297"
+      "last_seen": "2026-09-07T16:43:39.794580"
     },
     "perennial": {
       "name": "Perennial",
@@ -7941,7 +7944,7 @@
       "ids": [
         "cr_perennial-activity570"
       ],
-      "last_seen": "2026-09-07T08:41:10.854304"
+      "last_seen": "2026-09-07T16:43:39.794586"
     },
     "swaylend": {
       "name": "Swaylend",
@@ -7952,7 +7955,7 @@
       "ids": [
         "cr_swaylend-activity569"
       ],
-      "last_seen": "2026-09-07T08:41:10.854309"
+      "last_seen": "2026-09-07T16:43:39.794592"
     },
     "starknet": {
       "name": "StarkNet",
@@ -7965,7 +7968,7 @@
       "ids": [
         "cr_starknet-activity565"
       ],
-      "last_seen": "2026-09-07T08:41:10.854316"
+      "last_seen": "2026-09-07T16:43:39.794598"
     },
     "chirp": {
       "name": "Chirp Network",
@@ -7976,7 +7979,7 @@
       "ids": [
         "cr_chirp-network-activity560"
       ],
-      "last_seen": "2026-09-07T08:41:10.854322"
+      "last_seen": "2026-09-07T16:43:39.794605"
     },
     "gram": {
       "name": "Gram (prev. Toncoin)",
@@ -7989,7 +7992,7 @@
       "ids": [
         "cr_toncoin-activity285"
       ],
-      "last_seen": "2026-09-07T08:41:10.854329"
+      "last_seen": "2026-09-07T16:43:39.794612"
     },
     "yuga": {
       "name": "Yuga Labs",
@@ -8000,7 +8003,7 @@
       "ids": [
         "cr_yuga-labs-activity299"
       ],
-      "last_seen": "2026-09-07T08:41:10.854336"
+      "last_seen": "2026-09-07T16:43:39.794618"
     },
     "uprising": {
       "name": "Uprising",
@@ -8011,7 +8014,7 @@
       "ids": [
         "cr_uprising-activity552"
       ],
-      "last_seen": "2026-09-07T08:41:10.854342"
+      "last_seen": "2026-09-07T16:43:39.794624"
     },
     "akave": {
       "name": "Akave",
@@ -8022,7 +8025,7 @@
       "ids": [
         "cr_akave-chain-activity547"
       ],
-      "last_seen": "2026-09-07T08:41:10.854348"
+      "last_seen": "2026-09-07T16:43:39.794630"
     },
     "rango exchange": {
       "name": "Rango Exchange",
@@ -8033,7 +8036,7 @@
       "ids": [
         "cr_rango-exchange-activity245"
       ],
-      "last_seen": "2026-09-07T08:41:10.854355"
+      "last_seen": "2026-09-07T16:43:39.794637"
     },
     "bio": {
       "name": "BIO Protocol",
@@ -8044,7 +8047,7 @@
       "ids": [
         "cr_bio-protocol-activity543"
       ],
-      "last_seen": "2026-09-07T08:41:10.854362"
+      "last_seen": "2026-09-07T16:43:39.794642"
     },
     "lumoz": {
       "name": "Lumoz",
@@ -8055,7 +8058,7 @@
       "ids": [
         "cr_opside-activity535"
       ],
-      "last_seen": "2026-09-07T08:41:10.854368"
+      "last_seen": "2026-09-07T16:43:39.794648"
     },
     "starpower": {
       "name": "Starpower",
@@ -8066,7 +8069,7 @@
       "ids": [
         "cr_starpower-activity527"
       ],
-      "last_seen": "2026-09-07T08:41:10.854374"
+      "last_seen": "2026-09-07T16:43:39.794654"
     },
     "monitok": {
       "name": "Monitok",
@@ -8077,7 +8080,7 @@
       "ids": [
         "cr_monitok-activity523"
       ],
-      "last_seen": "2026-09-07T08:41:10.854381"
+      "last_seen": "2026-09-07T16:43:39.794660"
     },
     "sonefi": {
       "name": "SoneFi",
@@ -8096,7 +8099,7 @@
         "cr_sonefi-activity437",
         "dj_2762"
       ],
-      "last_seen": "2026-09-07T08:41:10.854388"
+      "last_seen": "2026-09-07T16:43:39.794667"
     },
     "bedrock": {
       "name": "Bedrock",
@@ -8107,7 +8110,7 @@
       "ids": [
         "cr_bedrockdefi-activity519"
       ],
-      "last_seen": "2026-09-07T08:41:10.854395"
+      "last_seen": "2026-09-07T16:43:39.794673"
     },
     "mintify": {
       "name": "Mintify",
@@ -8118,7 +8121,7 @@
       "ids": [
         "cr_mintify-activity515"
       ],
-      "last_seen": "2026-09-07T08:41:10.854401"
+      "last_seen": "2026-09-07T16:43:39.794678"
     },
     "alliance games": {
       "name": "Alliance Games",
@@ -8129,7 +8132,7 @@
       "ids": [
         "cr_alliance-games-activity510"
       ],
-      "last_seen": "2026-09-07T08:41:10.854408"
+      "last_seen": "2026-09-07T16:43:39.794685"
     },
     "renta": {
       "name": "Renta Network",
@@ -8140,7 +8143,7 @@
       "ids": [
         "cr_renta-network-activity494"
       ],
-      "last_seen": "2026-09-07T08:41:10.854414"
+      "last_seen": "2026-09-07T16:43:39.794691"
     },
     "defund": {
       "name": "DeFund",
@@ -8151,7 +8154,7 @@
       "ids": [
         "cr_defund-activity470"
       ],
-      "last_seen": "2026-09-07T08:41:10.854420"
+      "last_seen": "2026-09-07T16:43:39.794696"
     },
     "dusted": {
       "name": "Dusted",
@@ -8162,7 +8165,7 @@
       "ids": [
         "cr_dusted-activity493"
       ],
-      "last_seen": "2026-09-07T08:41:10.854427"
+      "last_seen": "2026-09-07T16:43:39.794702"
     },
     "data": {
       "name": "Data Network",
@@ -8174,7 +8177,7 @@
         "cr_story-protocol-activity488",
         "cr_story-protocol-activity356"
       ],
-      "last_seen": "2026-09-07T08:41:10.854433"
+      "last_seen": "2026-09-07T16:43:39.794708"
     },
     "neon": {
       "name": "Neon",
@@ -8185,7 +8188,7 @@
       "ids": [
         "cr_neon-labs-activity421"
       ],
-      "last_seen": "2026-09-07T08:41:10.854439"
+      "last_seen": "2026-09-07T16:43:39.794714"
     },
     "infinityai": {
       "name": "InfinityAI",
@@ -8196,7 +8199,7 @@
       "ids": [
         "cr_infinityai-activity479"
       ],
-      "last_seen": "2026-09-07T08:41:10.854445"
+      "last_seen": "2026-09-07T16:43:39.794720"
     },
     "syrup": {
       "name": "Syrup",
@@ -8207,7 +8210,7 @@
       "ids": [
         "cr_syrupfi-activity478"
       ],
-      "last_seen": "2026-09-07T08:41:10.854452"
+      "last_seen": "2026-09-07T16:43:39.794725"
     },
     "storm trade": {
       "name": "Storm Trade",
@@ -8218,7 +8221,7 @@
       "ids": [
         "cr_storm-trade-activity430"
       ],
-      "last_seen": "2026-09-07T08:41:10.854459"
+      "last_seen": "2026-09-07T16:43:39.794732"
     },
     "azra games": {
       "name": "Azra Games",
@@ -8229,7 +8232,7 @@
       "ids": [
         "cr_azra-games-activity473"
       ],
-      "last_seen": "2026-09-07T08:41:10.854465"
+      "last_seen": "2026-09-07T16:43:39.794738"
     },
     "ether fi": {
       "name": "ether.fi",
@@ -8242,7 +8245,7 @@
       "ids": [
         "cr_ether-fi-activity412"
       ],
-      "last_seen": "2026-09-07T08:41:10.854472"
+      "last_seen": "2026-09-07T16:43:39.794744"
     },
     "ready player me": {
       "name": "Ready Player Me",
@@ -8254,7 +8257,7 @@
         "cr_ready-player-me-activity457",
         "cr_ready-player-me-activity456"
       ],
-      "last_seen": "2026-09-07T08:41:10.854479"
+      "last_seen": "2026-09-07T16:43:39.794751"
     },
     "onchain heroes": {
       "name": "Onchain Heroes",
@@ -8271,7 +8274,7 @@
         "cr_onchain-heroes-activity454",
         "dj_2540"
       ],
-      "last_seen": "2026-09-07T08:41:10.854487"
+      "last_seen": "2026-09-07T16:43:39.794759"
     },
     "bunni": {
       "name": "Bunni",
@@ -8282,7 +8285,7 @@
       "ids": [
         "cr_timeless-activity448"
       ],
-      "last_seen": "2026-09-07T08:41:10.854493"
+      "last_seen": "2026-09-07T16:43:39.794765"
     },
     "eragon": {
       "name": "ERAGON",
@@ -8295,7 +8298,7 @@
       "ids": [
         "cr_eragon-activity446"
       ],
-      "last_seen": "2026-09-07T08:41:10.854499"
+      "last_seen": "2026-09-07T16:43:39.794770"
     },
     "sight ai": {
       "name": "Sight AI",
@@ -8306,7 +8309,7 @@
       "ids": [
         "cr_sight-ai-activity443"
       ],
-      "last_seen": "2026-09-07T08:41:10.854506"
+      "last_seen": "2026-09-07T16:43:39.794776"
     },
     "everreach": {
       "name": "Everreach Labs",
@@ -8317,7 +8320,7 @@
       "ids": [
         "cr_everreach-labs-activity442"
       ],
-      "last_seen": "2026-09-07T08:41:10.854512"
+      "last_seen": "2026-09-07T16:43:39.794783"
     },
     "open campus": {
       "name": "Open Campus",
@@ -8330,7 +8333,7 @@
       "ids": [
         "cr_open-campus-activity441"
       ],
-      "last_seen": "2026-09-07T08:41:10.854519"
+      "last_seen": "2026-09-07T16:43:39.794789"
     },
     "unemeta": {
       "name": "UneMeta",
@@ -8341,7 +8344,7 @@
       "ids": [
         "cr_une-meta-activity438"
       ],
-      "last_seen": "2026-09-07T08:41:10.854525"
+      "last_seen": "2026-09-07T16:43:39.794795"
     },
     "moku": {
       "name": "Moku",
@@ -8355,7 +8358,7 @@
         "cr_moku-activity436",
         "dj_2581"
       ],
-      "last_seen": "2026-09-07T08:41:10.854532"
+      "last_seen": "2026-09-07T16:43:39.794801"
     },
     "the sandbox": {
       "name": "The Sandbox",
@@ -8366,7 +8369,7 @@
       "ids": [
         "cr_sandbox-activity435"
       ],
-      "last_seen": "2026-09-07T08:41:10.854539"
+      "last_seen": "2026-09-07T16:43:39.794807"
     },
     "xoob": {
       "name": "XOOB",
@@ -8377,7 +8380,7 @@
       "ids": [
         "cr_xoob-activity431"
       ],
-      "last_seen": "2026-09-07T08:41:10.854545"
+      "last_seen": "2026-09-07T16:43:39.794813"
     },
     "freee xyz": {
       "name": "Freee.xyz",
@@ -8388,7 +8391,7 @@
       "ids": [
         "cr_freee-xyz-activity428"
       ],
-      "last_seen": "2026-09-07T08:41:10.854552"
+      "last_seen": "2026-09-07T16:43:39.794819"
     },
     "sphereone": {
       "name": "SphereOne",
@@ -8399,7 +8402,7 @@
       "ids": [
         "cr_sphereone-activity419"
       ],
-      "last_seen": "2026-09-07T08:41:10.854559"
+      "last_seen": "2026-09-07T16:43:39.794825"
     },
     "mycel": {
       "name": "Mycel",
@@ -8410,7 +8413,7 @@
       "ids": [
         "cr_mycel-activity423"
       ],
-      "last_seen": "2026-09-07T08:41:10.854565"
+      "last_seen": "2026-09-07T16:43:39.794831"
     },
     "allin bets": {
       "name": "ALLiN BETS",
@@ -8421,7 +8424,7 @@
       "ids": [
         "cr_allinbets-activity416"
       ],
-      "last_seen": "2026-09-07T08:41:10.854571"
+      "last_seen": "2026-09-07T16:43:39.794837"
     },
     "deagentai": {
       "name": "DeAgentAI",
@@ -8432,7 +8435,7 @@
       "ids": [
         "cr_deagentai-activity413"
       ],
-      "last_seen": "2026-09-07T08:41:10.854578"
+      "last_seen": "2026-09-07T16:43:39.794843"
     },
     "dune": {
       "name": "Dune",
@@ -8443,7 +8446,7 @@
       "ids": [
         "cr_dune-analytics-activity194"
       ],
-      "last_seen": "2026-09-07T08:41:10.854584"
+      "last_seen": "2026-09-07T16:43:39.794849"
     },
     "deek": {
       "name": "Deek Network",
@@ -8454,7 +8457,7 @@
       "ids": [
         "cr_zeek-network-activity408"
       ],
-      "last_seen": "2026-09-07T08:41:10.854590"
+      "last_seen": "2026-09-07T16:43:39.794854"
     },
     "curvance": {
       "name": "Curvance",
@@ -8465,7 +8468,7 @@
       "ids": [
         "cr_curvance-activity352"
       ],
-      "last_seen": "2026-09-07T08:41:10.854596"
+      "last_seen": "2026-09-07T16:43:39.794860"
     },
     "sending": {
       "name": "Sending Network",
@@ -8477,7 +8480,7 @@
         "cr_sending-labs-activity396",
         "cr_sending-labs-activity167"
       ],
-      "last_seen": "2026-09-07T08:41:10.854603"
+      "last_seen": "2026-09-07T16:43:39.794866"
     },
     "popp": {
       "name": "PoPP",
@@ -8490,7 +8493,7 @@
       "ids": [
         "cr_popp-activity395"
       ],
-      "last_seen": "2026-09-07T08:41:10.854609"
+      "last_seen": "2026-09-07T16:43:39.794872"
     },
     "space mavericks": {
       "name": "Space Mavericks",
@@ -8501,7 +8504,7 @@
       "ids": [
         "cr_space-mavericks-activity387"
       ],
-      "last_seen": "2026-09-07T08:41:10.854616"
+      "last_seen": "2026-09-07T16:43:39.794878"
     },
     "alphaorbeta": {
       "name": "AlphaOrBeta",
@@ -8512,7 +8515,7 @@
       "ids": [
         "cr_alpha-or-beta-activity386"
       ],
-      "last_seen": "2026-09-07T08:41:10.854622"
+      "last_seen": "2026-09-07T16:43:39.794885"
     },
     "unisat": {
       "name": "UniSat",
@@ -8523,7 +8526,7 @@
       "ids": [
         "cr_unisat-activity385"
       ],
-      "last_seen": "2026-09-07T08:41:10.854628"
+      "last_seen": "2026-09-07T16:43:39.794890"
     },
     "layerzero": {
       "name": "LayerZero",
@@ -8534,7 +8537,7 @@
       "ids": [
         "cr_layerzero-activity384"
       ],
-      "last_seen": "2026-09-07T08:41:10.854635"
+      "last_seen": "2026-09-07T16:43:39.794896"
     },
     "xyra": {
       "name": "Xyra Labs",
@@ -8545,7 +8548,7 @@
       "ids": [
         "cr_kana-labs-activity382"
       ],
-      "last_seen": "2026-09-07T08:41:10.854641"
+      "last_seen": "2026-09-07T16:43:39.794902"
     },
     "gameplay galaxy": {
       "name": "Gameplay Galaxy",
@@ -8556,7 +8559,7 @@
       "ids": [
         "cr_gameplay-galaxy-activity381"
       ],
-      "last_seen": "2026-09-07T08:41:10.854648"
+      "last_seen": "2026-09-07T16:43:39.794909"
     },
     "nubit": {
       "name": "Nubit",
@@ -8569,7 +8572,7 @@
         "cr_nubit-activity210",
         "dj_2050"
       ],
-      "last_seen": "2026-09-07T08:41:10.854654"
+      "last_seen": "2026-09-07T16:43:39.794914"
     },
     "adot": {
       "name": "Adot",
@@ -8580,7 +8583,7 @@
       "ids": [
         "cr_adot-activity376"
       ],
-      "last_seen": "2026-09-07T08:41:10.854660"
+      "last_seen": "2026-09-07T16:43:39.794920"
     },
     "gomble games": {
       "name": "Gomble Games",
@@ -8591,7 +8594,7 @@
       "ids": [
         "cr_rumby-stars-activity373"
       ],
-      "last_seen": "2026-09-07T08:41:10.854667"
+      "last_seen": "2026-09-07T16:43:39.794926"
     },
     "manta": {
       "name": "Manta Network",
@@ -8602,7 +8605,7 @@
       "ids": [
         "cr_manta-network-activity374"
       ],
-      "last_seen": "2026-09-07T08:41:10.854674"
+      "last_seen": "2026-09-07T16:43:39.794932"
     },
     "pixelrealm": {
       "name": "PixelRealm",
@@ -8613,7 +8616,7 @@
       "ids": [
         "cr_nftb-activity370"
       ],
-      "last_seen": "2026-09-07T08:41:10.854680"
+      "last_seen": "2026-09-07T16:43:39.794938"
     },
     "ark": {
       "name": "Ark Labs",
@@ -8624,7 +8627,7 @@
       "ids": [
         "cr_ark-labs-activity365"
       ],
-      "last_seen": "2026-09-07T08:41:10.854687"
+      "last_seen": "2026-09-07T16:43:39.794944"
     },
     "fogrotten runes wizards cult": {
       "name": "Fogrotten Runes Wizards Cult",
@@ -8635,7 +8638,7 @@
       "ids": [
         "cr_forgotten-runes-activity363"
       ],
-      "last_seen": "2026-09-07T08:41:10.854695"
+      "last_seen": "2026-09-07T16:43:39.794952"
     },
     "koi": {
       "name": "KOI",
@@ -8646,7 +8649,7 @@
       "ids": [
         "cr_koiprotocol-activity359"
       ],
-      "last_seen": "2026-09-07T08:41:10.854702"
+      "last_seen": "2026-09-07T16:43:39.794958"
     },
     "nucleus": {
       "name": "Nucleus",
@@ -8657,7 +8660,7 @@
       "ids": [
         "cr_nucleusearn-activity341"
       ],
-      "last_seen": "2026-09-07T08:41:10.854708"
+      "last_seen": "2026-09-07T16:43:39.794964"
     },
     "ion": {
       "name": "Ion Protocol",
@@ -8668,7 +8671,7 @@
       "ids": [
         "cr_ion-protocol-activity338"
       ],
-      "last_seen": "2026-09-07T08:41:10.854714"
+      "last_seen": "2026-09-07T16:43:39.794970"
     },
     "sonic svm": {
       "name": "Sonic SVM",
@@ -8679,7 +8682,7 @@
       "ids": [
         "cr_mirrorworld-activity337"
       ],
-      "last_seen": "2026-09-07T08:41:10.854721"
+      "last_seen": "2026-09-07T16:43:39.794976"
     },
     "kayen": {
       "name": "KAYEN Protocol",
@@ -8690,7 +8693,7 @@
       "ids": [
         "cr_kayen-protocol-activity336"
       ],
-      "last_seen": "2026-09-07T08:41:10.854727"
+      "last_seen": "2026-09-07T16:43:39.794982"
     },
     "poply": {
       "name": "Poply",
@@ -8703,7 +8706,7 @@
       "ids": [
         "cr_poply-activity329"
       ],
-      "last_seen": "2026-09-07T08:41:10.854734"
+      "last_seen": "2026-09-07T16:43:39.794988"
     },
     "pokeyquest": {
       "name": "PokeyQuest",
@@ -8714,7 +8717,7 @@
       "ids": [
         "cr_pokeyquest-activity306"
       ],
-      "last_seen": "2026-09-07T08:41:10.854740"
+      "last_seen": "2026-09-07T16:43:39.794994"
     },
     "dew": {
       "name": "Dew",
@@ -8725,7 +8728,7 @@
       "ids": [
         "cr_dew-hq-activity318"
       ],
-      "last_seen": "2026-09-07T08:41:10.854746"
+      "last_seen": "2026-09-07T16:43:39.795000"
     },
     "playfull": {
       "name": "Playfull (Earn Alliance)",
@@ -8736,7 +8739,7 @@
       "ids": [
         "cr_earn-alliance-activity317"
       ],
-      "last_seen": "2026-09-07T08:41:10.854754"
+      "last_seen": "2026-09-07T16:43:39.795007"
     },
     "novastro chain": {
       "name": "Novastro Chain",
@@ -8750,7 +8753,7 @@
       "ids": [
         "cr_novastro-chain-activity311"
       ],
-      "last_seen": "2026-09-07T08:41:10.854759"
+      "last_seen": "2026-09-07T16:43:39.795012"
     },
     "metacene": {
       "name": "MetaCene",
@@ -8763,7 +8766,7 @@
       "ids": [
         "cr_metacene-activity313"
       ],
-      "last_seen": "2026-09-07T08:41:10.854767"
+      "last_seen": "2026-09-07T16:43:39.795020"
     },
     "blade games": {
       "name": "Blade Games",
@@ -8776,7 +8779,7 @@
       "ids": [
         "cr_blade-games-activity305"
       ],
-      "last_seen": "2026-09-07T08:41:10.854774"
+      "last_seen": "2026-09-07T16:43:39.795026"
     },
     "zentry": {
       "name": "Zentry",
@@ -8789,7 +8792,7 @@
       "ids": [
         "cr_zentry-activity304"
       ],
-      "last_seen": "2026-09-07T08:41:10.854781"
+      "last_seen": "2026-09-07T16:43:39.795032"
     },
     "prerich": {
       "name": "Prerich",
@@ -8800,7 +8803,7 @@
       "ids": [
         "cr_prerich-activity300"
       ],
-      "last_seen": "2026-09-07T08:41:10.854787"
+      "last_seen": "2026-09-07T16:43:39.795038"
     },
     "napier": {
       "name": "Napier",
@@ -8811,7 +8814,7 @@
       "ids": [
         "cr_napier-activity294"
       ],
-      "last_seen": "2026-09-07T08:41:10.854794"
+      "last_seen": "2026-09-07T16:43:39.795044"
     },
     "squid": {
       "name": "Squid",
@@ -8822,7 +8825,7 @@
       "ids": [
         "cr_squidrouter-activity291"
       ],
-      "last_seen": "2026-09-07T08:41:10.854800"
+      "last_seen": "2026-09-07T16:43:39.795050"
     },
     "build": {
       "name": "Build",
@@ -8833,7 +8836,7 @@
       "ids": [
         "cr_build-2-activity284"
       ],
-      "last_seen": "2026-09-07T08:41:10.854806"
+      "last_seen": "2026-09-07T16:43:39.795055"
     },
     "celo": {
       "name": "Celo",
@@ -8844,7 +8847,7 @@
       "ids": [
         "cr_celo-activity281"
       ],
-      "last_seen": "2026-09-07T08:41:10.854812"
+      "last_seen": "2026-09-07T16:43:39.795061"
     },
     "tanx": {
       "name": "TanX",
@@ -8855,7 +8858,7 @@
       "ids": [
         "cr_tanx-activity267"
       ],
-      "last_seen": "2026-09-07T08:41:10.854818"
+      "last_seen": "2026-09-07T16:43:39.795066"
     },
     "brahma": {
       "name": "Brahma",
@@ -8866,7 +8869,7 @@
       "ids": [
         "cr_brahma-activity266"
       ],
-      "last_seen": "2026-09-07T08:41:10.854824"
+      "last_seen": "2026-09-07T16:43:39.795072"
     },
     "backwoods": {
       "name": "Backwoods",
@@ -8877,7 +8880,7 @@
       "ids": [
         "cr_backwoods-activity263"
       ],
-      "last_seen": "2026-09-07T08:41:10.854830"
+      "last_seen": "2026-09-07T16:43:39.795078"
     },
     "pancakeswap": {
       "name": "PancakeSwap",
@@ -8888,7 +8891,7 @@
       "ids": [
         "cr_pancakeswap-activity264"
       ],
-      "last_seen": "2026-09-07T08:41:10.854835"
+      "last_seen": "2026-09-07T16:43:39.795083"
     },
     "u2u": {
       "name": "U2U Network",
@@ -8899,7 +8902,7 @@
       "ids": [
         "cr_unicorn-ultra-activity262"
       ],
-      "last_seen": "2026-09-07T08:41:10.854841"
+      "last_seen": "2026-09-07T16:43:39.795089"
     },
     "kakarot zkevm": {
       "name": "Kakarot zkEVM",
@@ -8910,7 +8913,7 @@
       "ids": [
         "cr_kakarot-zkevm-activity260"
       ],
-      "last_seen": "2026-09-07T08:41:10.854848"
+      "last_seen": "2026-09-07T16:43:39.795095"
     },
     "gameswift": {
       "name": "GameSwift",
@@ -8921,7 +8924,7 @@
       "ids": [
         "cr_gameswift-activity256"
       ],
-      "last_seen": "2026-09-07T08:41:10.854861"
+      "last_seen": "2026-09-07T16:43:39.795101"
     },
     "mellow": {
       "name": "Mellow Protocol",
@@ -8932,7 +8935,7 @@
       "ids": [
         "cr_mellow-protocol-activity218"
       ],
-      "last_seen": "2026-09-07T08:41:10.854867"
+      "last_seen": "2026-09-07T16:43:39.795107"
     },
     "tapswap": {
       "name": "TapSwap",
@@ -8943,7 +8946,7 @@
       "ids": [
         "cr_tapswap-activity244"
       ],
-      "last_seen": "2026-09-07T08:41:10.854872"
+      "last_seen": "2026-09-07T16:43:39.795111"
     },
     "archway": {
       "name": "Archway",
@@ -8954,7 +8957,7 @@
       "ids": [
         "cr_archway-activity242"
       ],
-      "last_seen": "2026-09-07T08:41:10.854878"
+      "last_seen": "2026-09-07T16:43:39.795117"
     },
     "olive": {
       "name": "Olive",
@@ -8965,7 +8968,7 @@
       "ids": [
         "cr_polysynth-activity237"
       ],
-      "last_seen": "2026-09-07T08:41:10.854884"
+      "last_seen": "2026-09-07T16:43:39.795122"
     },
     "fantasy top": {
       "name": "fantasy.top",
@@ -8978,7 +8981,7 @@
       "ids": [
         "cr_fantasy-top-activity233"
       ],
-      "last_seen": "2026-09-07T08:41:10.854891"
+      "last_seen": "2026-09-07T16:43:39.795129"
     },
     "zeus": {
       "name": "Zeus Network",
@@ -8989,7 +8992,7 @@
       "ids": [
         "cr_zeus-network-activity231"
       ],
-      "last_seen": "2026-09-07T08:41:10.854897"
+      "last_seen": "2026-09-07T16:43:39.795135"
     },
     "mint blockchain": {
       "name": "Mint Blockchain",
@@ -9000,7 +9003,7 @@
       "ids": [
         "cr_mint-activity229"
       ],
-      "last_seen": "2026-09-07T08:41:10.854904"
+      "last_seen": "2026-09-07T16:43:39.795141"
     },
     "synfutures": {
       "name": "SynFutures",
@@ -9011,7 +9014,7 @@
       "ids": [
         "cr_synfutures-activity228"
       ],
-      "last_seen": "2026-09-07T08:41:10.854910"
+      "last_seen": "2026-09-07T16:43:39.795148"
     },
     "treasure": {
       "name": "Treasure",
@@ -9022,7 +9025,7 @@
       "ids": [
         "cr_magic-activity223"
       ],
-      "last_seen": "2026-09-07T08:41:10.854917"
+      "last_seen": "2026-09-07T16:43:39.795153"
     },
     "alienswap": {
       "name": "AlienSwap",
@@ -9033,7 +9036,7 @@
       "ids": [
         "cr_alienswap-activity222"
       ],
-      "last_seen": "2026-09-07T08:41:10.854922"
+      "last_seen": "2026-09-07T16:43:39.795158"
     },
     "photon": {
       "name": "Photon",
@@ -9046,7 +9049,7 @@
       "ids": [
         "cr_photon-labs-activity216"
       ],
-      "last_seen": "2026-09-07T08:41:10.854928"
+      "last_seen": "2026-09-07T16:43:39.795164"
     },
     "rabby wallet": {
       "name": "Rabby Wallet",
@@ -9057,7 +9060,7 @@
       "ids": [
         "cr_rabby-wallet-activity215"
       ],
-      "last_seen": "2026-09-07T08:41:10.854935"
+      "last_seen": "2026-09-07T16:43:39.795170"
     },
     "certik": {
       "name": "CertiK",
@@ -9068,7 +9071,7 @@
       "ids": [
         "cr_certik-activity184"
       ],
-      "last_seen": "2026-09-07T08:41:10.854942"
+      "last_seen": "2026-09-07T16:43:39.795176"
     },
     "panoptic": {
       "name": "Panoptic",
@@ -9081,7 +9084,7 @@
       "ids": [
         "cr_panoptic-activity188"
       ],
-      "last_seen": "2026-09-07T08:41:10.854948"
+      "last_seen": "2026-09-07T16:43:39.795182"
     },
     "pixelverse": {
       "name": "Pixelverse",
@@ -9092,7 +9095,7 @@
       "ids": [
         "cr_pixelverse-pixfi-activity183"
       ],
-      "last_seen": "2026-09-07T08:41:10.854954"
+      "last_seen": "2026-09-07T16:43:39.795188"
     },
     "nexis": {
       "name": "Nexis",
@@ -9103,7 +9106,7 @@
       "ids": [
         "cr_nexis-activity179"
       ],
-      "last_seen": "2026-09-07T08:41:10.854960"
+      "last_seen": "2026-09-07T16:43:39.795194"
     },
     "catalyst": {
       "name": "Catalyst",
@@ -9114,7 +9117,7 @@
       "ids": [
         "cr_catalyst-activity178"
       ],
-      "last_seen": "2026-09-07T08:41:10.854967"
+      "last_seen": "2026-09-07T16:43:39.795200"
     },
     "aevo": {
       "name": "Aevo",
@@ -9125,7 +9128,7 @@
       "ids": [
         "cr_aevo-activity174"
       ],
-      "last_seen": "2026-09-07T08:41:10.854973"
+      "last_seen": "2026-09-07T16:43:39.795206"
     },
     "eoracle": {
       "name": "Eoracle",
@@ -9137,7 +9140,7 @@
         "cr_eoracle-activity165",
         "cr_eoracle-activity164"
       ],
-      "last_seen": "2026-09-07T08:41:10.854979"
+      "last_seen": "2026-09-07T16:43:39.795211"
     },
     "persona": {
       "name": "Persona",
@@ -9148,7 +9151,7 @@
       "ids": [
         "cr_persona-activity158"
       ],
-      "last_seen": "2026-09-07T08:41:10.854985"
+      "last_seen": "2026-09-07T16:43:39.795217"
     },
     "iskra": {
       "name": "Iskra",
@@ -9159,7 +9162,7 @@
       "ids": [
         "cr_iskra-activity141"
       ],
-      "last_seen": "2026-09-07T08:41:10.854991"
+      "last_seen": "2026-09-07T16:43:39.795223"
     },
     "prom": {
       "name": "Prom",
@@ -9170,7 +9173,7 @@
       "ids": [
         "cr_prometeus-activity138"
       ],
-      "last_seen": "2026-09-07T08:41:10.854997"
+      "last_seen": "2026-09-07T16:43:39.795229"
     },
     "nirvana": {
       "name": "Nirvana",
@@ -9181,7 +9184,7 @@
       "ids": [
         "cr_nirvana-activity43"
       ],
-      "last_seen": "2026-09-07T08:41:10.855003"
+      "last_seen": "2026-09-07T16:43:39.795234"
     },
     "dflow": {
       "name": "DFlow",
@@ -9192,7 +9195,7 @@
       "ids": [
         "cr_dflow-activity57"
       ],
-      "last_seen": "2026-09-07T08:41:10.855009"
+      "last_seen": "2026-09-07T16:43:39.795240"
     },
     "dogmond": {
       "name": "dogmond",
@@ -9203,7 +9206,7 @@
       "ids": [
         "cr_dogmond-activity49"
       ],
-      "last_seen": "2026-09-07T08:41:10.855024"
+      "last_seen": "2026-09-07T16:43:39.795253"
     },
     "risex": {
       "name": "RISEx",
@@ -9222,7 +9225,7 @@
         "ad_b0dbd9e3-f98b-49ae-b5d6-c575f45a1228",
         "cr_risex-activity1043"
       ],
-      "last_seen": "2026-09-07T08:41:10.849976"
+      "last_seen": "2026-09-07T16:43:39.790416"
     },
     "quote": {
       "name": "Quote",
@@ -9239,7 +9242,7 @@
         "ad_d4b3ed75-bc1c-4c94-856f-4ec0c9c430fe",
         "cr_quote-activity1259"
       ],
-      "last_seen": "2026-09-07T08:41:10.849941"
+      "last_seen": "2026-09-07T16:43:39.790381"
     },
     "mint": {
       "name": "MINT",
@@ -9251,7 +9254,7 @@
         "cr_mint-casino-activity1247",
         "dj_1462"
       ],
-      "last_seen": "2026-09-07T08:41:10.850993"
+      "last_seen": "2026-09-07T16:43:39.791435"
     },
     "fx100": {
       "name": "FX100",
@@ -9262,7 +9265,7 @@
       "ids": [
         "cr_fx-100-activity1269"
       ],
-      "last_seen": "2026-09-07T08:41:10.851077"
+      "last_seen": "2026-09-07T16:43:39.791514"
     },
     "iris": {
       "name": "IRIS",
@@ -9273,7 +9276,7 @@
       "ids": [
         "cr_iris-credit-activity1268"
       ],
-      "last_seen": "2026-09-07T08:41:10.851083"
+      "last_seen": "2026-09-07T16:43:39.791520"
     },
     "vangrid": {
       "name": "Vangrid",
@@ -9284,7 +9287,7 @@
       "ids": [
         "cr_vangrid-activity1266"
       ],
-      "last_seen": "2026-09-07T08:41:10.851110"
+      "last_seen": "2026-09-07T16:43:39.791544"
     },
     "c8ntinuum": {
       "name": "c8ntinuum",
@@ -9295,7 +9298,7 @@
       "ids": [
         "cr_c8ntinuum-activity1265"
       ],
-      "last_seen": "2026-09-07T08:41:10.850833"
+      "last_seen": "2026-09-07T16:43:39.791293"
     },
     "stellar": {
       "name": "Stellar",
@@ -9306,7 +9309,7 @@
       "ids": [
         "cr_stellar-activity1262"
       ],
-      "last_seen": "2026-09-07T08:41:10.851157"
+      "last_seen": "2026-09-07T16:43:39.791611"
     },
     "nodiens": {
       "name": "Nodiens",
@@ -9319,7 +9322,7 @@
       "ids": [
         "cr_nodiens-activity1260"
       ],
-      "last_seen": "2026-09-07T08:41:10.851177"
+      "last_seen": "2026-09-07T16:43:39.791631"
     },
     "umia": {
       "name": "Umia",
@@ -9343,7 +9346,7 @@
       "ids": [
         "cr_rialto-exchange-activity1250"
       ],
-      "last_seen": "2026-09-07T08:41:10.851223"
+      "last_seen": "2026-09-07T16:43:39.791673"
     },
     "beezie": {
       "name": "Beezie",
@@ -9354,7 +9357,7 @@
       "ids": [
         "cr_beezie-activity1257"
       ],
-      "last_seen": "2026-09-07T08:41:10.850642"
+      "last_seen": "2026-09-07T16:43:39.791105"
     },
     "moonpay": {
       "name": "MoonPay",
@@ -9365,7 +9368,7 @@
       "ids": [
         "cr_moonpay-activity1256"
       ],
-      "last_seen": "2026-09-07T08:41:10.851256"
+      "last_seen": "2026-09-07T16:43:39.791704"
     },
     "loaf": {
       "name": "Loaf",
@@ -9376,7 +9379,7 @@
       "ids": [
         "cr_loaf-activity1255"
       ],
-      "last_seen": "2026-09-07T08:41:10.850656"
+      "last_seen": "2026-09-07T16:43:39.791119"
     },
     "wager predict": {
       "name": "Wager Predict",
@@ -9398,7 +9401,7 @@
       "ids": [
         "cr_click-trade-activity1253"
       ],
-      "last_seen": "2026-09-07T08:41:10.851268"
+      "last_seen": "2026-09-07T16:43:39.791716"
     },
     "aligned": {
       "name": "Aligned",
@@ -9409,7 +9412,7 @@
       "ids": [
         "cr_aligned-layer-activity169"
       ],
-      "last_seen": "2026-09-07T08:41:10.850926"
+      "last_seen": "2026-09-07T16:43:39.791369"
     },
     "haust": {
       "name": "Haust Network",
@@ -9429,7 +9432,7 @@
       "ids": [
         "dj_3168"
       ],
-      "last_seen": "2026-09-07T08:41:10.855033"
+      "last_seen": "2026-09-07T16:43:39.795262"
     },
     "sign": {
       "name": "Sign Protocol",
@@ -9446,7 +9449,7 @@
       "ids": [
         "dj_3039"
       ],
-      "last_seen": "2026-09-07T08:41:10.855049"
+      "last_seen": "2026-09-07T16:43:39.795277"
     },
     "theoriqai": {
       "name": "TheoriqAI",
@@ -9460,7 +9463,7 @@
       "ids": [
         "dj_2975"
       ],
-      "last_seen": "2026-09-07T08:41:10.855064"
+      "last_seen": "2026-09-07T16:43:39.795292"
     },
     "talus": {
       "name": "Talus Network",
@@ -9474,7 +9477,7 @@
       "ids": [
         "dj_2862"
       ],
-      "last_seen": "2026-09-07T08:41:10.855078"
+      "last_seen": "2026-09-07T16:43:39.795306"
     },
     "confidential layer": {
       "name": "Confidential Layer",
@@ -9488,7 +9491,7 @@
       "ids": [
         "dj_2847"
       ],
-      "last_seen": "2026-09-07T08:41:10.855087"
+      "last_seen": "2026-09-07T16:43:39.795313"
     },
     "farcaster dog": {
       "name": "Farcaster Dog",
@@ -9504,7 +9507,7 @@
       "ids": [
         "dj_2838"
       ],
-      "last_seen": "2026-09-07T08:41:10.855097"
+      "last_seen": "2026-09-07T16:43:39.795323"
     },
     "paws": {
       "name": "PAWS",
@@ -9520,7 +9523,7 @@
       "ids": [
         "dj_2794"
       ],
-      "last_seen": "2026-09-07T08:41:10.855107"
+      "last_seen": "2026-09-07T16:43:39.795333"
     },
     "loopfi": {
       "name": "LoopFi",
@@ -9537,7 +9540,7 @@
       "ids": [
         "dj_2770"
       ],
-      "last_seen": "2026-09-07T08:41:10.855116"
+      "last_seen": "2026-09-07T16:43:39.795342"
     },
     "blockmesh": {
       "name": "BlockMesh",
@@ -9554,7 +9557,7 @@
       "ids": [
         "dj_2757"
       ],
-      "last_seen": "2026-09-07T08:41:10.855130"
+      "last_seen": "2026-09-07T16:43:39.795356"
     },
     "etherdrops": {
       "name": "EtherDrops",
@@ -9573,7 +9576,7 @@
       "ids": [
         "dj_2749"
       ],
-      "last_seen": "2026-09-07T08:41:10.855140"
+      "last_seen": "2026-09-07T16:43:39.795365"
     },
     "bulbaswap": {
       "name": "BulbaSwap",
@@ -9589,7 +9592,7 @@
       "ids": [
         "dj_2743"
       ],
-      "last_seen": "2026-09-07T08:41:10.855147"
+      "last_seen": "2026-09-07T16:43:39.795372"
     },
     "ably": {
       "name": "Ably",
@@ -9605,7 +9608,7 @@
       "ids": [
         "dj_2720"
       ],
-      "last_seen": "2026-09-07T08:41:10.855158"
+      "last_seen": "2026-09-07T16:43:39.795382"
     },
     "gravita": {
       "name": "Gravita Protocol",
@@ -9624,7 +9627,7 @@
       "ids": [
         "dj_2714"
       ],
-      "last_seen": "2026-09-07T08:41:10.855167"
+      "last_seen": "2026-09-07T16:43:39.795390"
     },
     "quai": {
       "name": "Quai Network",
@@ -9640,7 +9643,7 @@
       "ids": [
         "dj_2680"
       ],
-      "last_seen": "2026-09-07T08:41:10.855180"
+      "last_seen": "2026-09-07T16:43:39.795403"
     },
     "alphabot": {
       "name": "Alphabot",
@@ -9656,7 +9659,7 @@
       "ids": [
         "dj_2666"
       ],
-      "last_seen": "2026-09-07T08:41:10.855197"
+      "last_seen": "2026-09-07T16:43:39.795419"
     },
     "brainedge": {
       "name": "Brainedge",
@@ -9672,7 +9675,7 @@
       "ids": [
         "dj_2656"
       ],
-      "last_seen": "2026-09-07T08:41:10.855210"
+      "last_seen": "2026-09-07T16:43:39.795432"
     },
     "not pixel": {
       "name": "Not Pixel",
@@ -9687,7 +9690,7 @@
       "ids": [
         "dj_2640"
       ],
-      "last_seen": "2026-09-07T08:41:10.855224"
+      "last_seen": "2026-09-07T16:43:39.795445"
     },
     "blum": {
       "name": "Blum",
@@ -9704,7 +9707,7 @@
       "ids": [
         "dj_2627"
       ],
-      "last_seen": "2026-09-07T08:41:10.855231"
+      "last_seen": "2026-09-07T16:43:39.795452"
     },
     "zaros": {
       "name": "Zaros",
@@ -9721,7 +9724,7 @@
       "ids": [
         "dj_2604"
       ],
-      "last_seen": "2026-09-07T08:41:10.855238"
+      "last_seen": "2026-09-07T16:43:39.795459"
     },
     "debridge": {
       "name": "deBridge",
@@ -9743,7 +9746,7 @@
       "ids": [
         "dj_2590"
       ],
-      "last_seen": "2026-09-07T08:41:10.855246"
+      "last_seen": "2026-09-07T16:43:39.795466"
     },
     "blackbird": {
       "name": "Blackbird",
@@ -9758,7 +9761,7 @@
       "ids": [
         "dj_2575"
       ],
-      "last_seen": "2026-09-07T08:41:10.855256"
+      "last_seen": "2026-09-07T16:43:39.795475"
     },
     "toki": {
       "name": "TOKI",
@@ -9778,7 +9781,7 @@
       "ids": [
         "dj_2562"
       ],
-      "last_seen": "2026-09-07T08:41:10.855265"
+      "last_seen": "2026-09-07T16:43:39.795484"
     },
     "hyperswap": {
       "name": "HyperSwap",
@@ -9794,7 +9797,7 @@
       "ids": [
         "dj_2556"
       ],
-      "last_seen": "2026-09-07T08:41:10.855270"
+      "last_seen": "2026-09-07T16:43:39.795489"
     },
     "b3 fun": {
       "name": "B3 fun",
@@ -9810,7 +9813,7 @@
       "ids": [
         "dj_2549"
       ],
-      "last_seen": "2026-09-07T08:41:10.855283"
+      "last_seen": "2026-09-07T16:43:39.795502"
     },
     "talent": {
       "name": "Talent Protocol",
@@ -9828,7 +9831,7 @@
       "ids": [
         "dj_2520"
       ],
-      "last_seen": "2026-09-07T08:41:10.855297"
+      "last_seen": "2026-09-07T16:43:39.795516"
     },
     "blocklords": {
       "name": "BlockLords",
@@ -9846,7 +9849,7 @@
       "ids": [
         "dj_2497"
       ],
-      "last_seen": "2026-09-07T08:41:10.855313"
+      "last_seen": "2026-09-07T16:43:39.795531"
     },
     "copra": {
       "name": "Copra",
@@ -9861,7 +9864,7 @@
       "ids": [
         "dj_2451"
       ],
-      "last_seen": "2026-09-07T08:41:10.855321"
+      "last_seen": "2026-09-07T16:43:39.795539"
     },
     "derive": {
       "name": "Derive (Lyra Finance)",
@@ -9877,7 +9880,7 @@
       "ids": [
         "dj_2416"
       ],
-      "last_seen": "2026-09-07T08:41:10.855329"
+      "last_seen": "2026-09-07T16:43:39.795547"
     },
     "beranames": {
       "name": "Beranames",
@@ -9892,7 +9895,7 @@
       "ids": [
         "dj_2403"
       ],
-      "last_seen": "2026-09-07T08:41:10.855341"
+      "last_seen": "2026-09-07T16:43:39.795558"
     },
     "harmonix": {
       "name": "Harmonix",
@@ -9907,7 +9910,7 @@
       "ids": [
         "dj_2387"
       ],
-      "last_seen": "2026-09-07T08:41:10.855348"
+      "last_seen": "2026-09-07T16:43:39.795574"
     },
     "bool": {
       "name": "Bool Network",
@@ -9922,7 +9925,7 @@
       "ids": [
         "dj_2296"
       ],
-      "last_seen": "2026-09-07T08:41:10.855362"
+      "last_seen": "2026-09-07T16:43:39.795588"
     },
     "cove": {
       "name": "Cove Finance",
@@ -9933,7 +9936,7 @@
       "ids": [
         "dj_2288"
       ],
-      "last_seen": "2026-09-07T08:41:10.855371"
+      "last_seen": "2026-09-07T16:43:39.795596"
     },
     "gasp": {
       "name": "Gasp (Mangata)",
@@ -9944,7 +9947,7 @@
       "ids": [
         "dj_2269"
       ],
-      "last_seen": "2026-09-07T08:41:10.855377"
+      "last_seen": "2026-09-07T16:43:39.795603"
     },
     "liveart": {
       "name": "LiveArt",
@@ -9958,7 +9961,7 @@
       "ids": [
         "dj_1953"
       ],
-      "last_seen": "2026-09-07T08:41:10.855393"
+      "last_seen": "2026-09-07T16:43:39.795618"
     },
     "alienx": {
       "name": "AlienX",
@@ -9969,7 +9972,7 @@
       "ids": [
         "dj_1925"
       ],
-      "last_seen": "2026-09-07T08:41:10.855401"
+      "last_seen": "2026-09-07T16:43:39.795625"
     },
     "initia": {
       "name": "Initia",
@@ -9986,7 +9989,7 @@
       "ids": [
         "dj_1851"
       ],
-      "last_seen": "2026-09-07T08:41:10.855415"
+      "last_seen": "2026-09-07T16:43:39.795638"
     },
     "movement": {
       "name": "Movement",
@@ -9997,7 +10000,7 @@
       "ids": [
         "dj_1843"
       ],
-      "last_seen": "2026-09-07T08:41:10.855428"
+      "last_seen": "2026-09-07T16:43:39.795651"
     },
     "elys": {
       "name": "Elys Network",
@@ -10008,7 +10011,7 @@
       "ids": [
         "dj_1825"
       ],
-      "last_seen": "2026-09-07T08:41:10.855440"
+      "last_seen": "2026-09-07T16:43:39.795663"
     },
     "moongate": {
       "name": "Moongate",
@@ -10019,7 +10022,7 @@
       "ids": [
         "dj_1772"
       ],
-      "last_seen": "2026-09-07T08:41:10.855453"
+      "last_seen": "2026-09-07T16:43:39.795674"
     },
     "burnt": {
       "name": "Burnt (XION)",
@@ -10036,7 +10039,7 @@
       "ids": [
         "dj_1755"
       ],
-      "last_seen": "2026-09-07T08:41:10.855466"
+      "last_seen": "2026-09-07T16:43:39.795688"
     },
     "ai arena": {
       "name": "Ai Arena",
@@ -10047,7 +10050,7 @@
       "ids": [
         "dj_1694"
       ],
-      "last_seen": "2026-09-07T08:41:10.855478"
+      "last_seen": "2026-09-07T16:43:39.795699"
     },
     "xterio": {
       "name": "Xterio",
@@ -10058,7 +10061,7 @@
       "ids": [
         "dj_1623"
       ],
-      "last_seen": "2026-09-07T08:41:10.855490"
+      "last_seen": "2026-09-07T16:43:39.795710"
     },
     "holoworld ai": {
       "name": "Holoworld AI",
@@ -10069,7 +10072,7 @@
       "ids": [
         "dj_1550"
       ],
-      "last_seen": "2026-09-07T08:41:10.855499"
+      "last_seen": "2026-09-07T16:43:39.795719"
     },
     "venom": {
       "name": "Venom",
@@ -10080,7 +10083,7 @@
       "ids": [
         "dj_1310"
       ],
-      "last_seen": "2026-09-07T08:41:10.855511"
+      "last_seen": "2026-09-07T16:43:39.795731"
     },
     "berachain": {
       "name": "Berachain",
@@ -10091,7 +10094,7 @@
       "ids": [
         "dj_1289"
       ],
-      "last_seen": "2026-09-07T08:41:10.855519"
+      "last_seen": "2026-09-07T16:43:39.795738"
     },
     "10n8 airdrop": {
       "name": "10n8 Airdrop",
@@ -10102,7 +10105,7 @@
       "ids": [
         "dj_1277"
       ],
-      "last_seen": "2026-09-07T08:41:10.855532"
+      "last_seen": "2026-09-07T16:43:39.795750"
     },
     "babylon chain": {
       "name": "Babylon Chain",
@@ -10113,7 +10116,7 @@
       "ids": [
         "dj_1221"
       ],
-      "last_seen": "2026-09-07T08:41:10.855544"
+      "last_seen": "2026-09-07T16:43:39.795762"
     },
     "lava": {
       "name": "Lava Network",
@@ -10124,7 +10127,7 @@
       "ids": [
         "dj_1181"
       ],
-      "last_seen": "2026-09-07T08:41:10.855556"
+      "last_seen": "2026-09-07T16:43:39.795774"
     },
     "carv": {
       "name": "CARV",
@@ -10144,7 +10147,7 @@
       "ids": [
         "dj_1142"
       ],
-      "last_seen": "2026-09-07T08:41:10.855570"
+      "last_seen": "2026-09-07T16:43:39.795787"
     },
     "zetachain": {
       "name": "Zetachain",
@@ -10155,7 +10158,7 @@
       "ids": [
         "dj_966"
       ],
-      "last_seen": "2026-09-07T08:41:10.855577"
+      "last_seen": "2026-09-07T16:43:39.795794"
     },
     "linea": {
       "name": "Linea",
@@ -10171,7 +10174,7 @@
       "ids": [
         "dj_962"
       ],
-      "last_seen": "2026-09-07T08:41:10.855591"
+      "last_seen": "2026-09-07T16:43:39.795806"
     },
     "dop": {
       "name": "DOP",
@@ -10182,7 +10185,7 @@
       "ids": [
         "dj_896"
       ],
-      "last_seen": "2026-09-07T08:41:10.855599"
+      "last_seen": "2026-09-07T16:43:39.795815"
     },
     "cade": {
       "name": "Cade",
@@ -10193,7 +10196,7 @@
       "ids": [
         "cr_cade-activity1267"
       ],
-      "last_seen": "2026-09-07T08:41:10.851063"
+      "last_seen": "2026-09-07T16:43:39.791502"
     },
     "memebook": {
       "name": "Memebook",
@@ -10204,7 +10207,7 @@
       "ids": [
         "cr_memebook-activity1270"
       ],
-      "last_seen": "2026-09-07T08:41:10.851050"
+      "last_seen": "2026-09-07T16:43:39.791489"
     },
     "bakeland": {
       "name": "bakeland",
@@ -10215,7 +10218,7 @@
       "ids": [
         "cr_bakeland-activity1271"
       ],
-      "last_seen": "2026-09-07T08:41:10.851028"
+      "last_seen": "2026-09-07T16:43:39.791468"
     },
     "kiichain": {
       "name": "KiiChain",
@@ -10226,7 +10229,7 @@
       "ids": [
         "cr_kii-chain-activity886"
       ],
-      "last_seen": "2026-09-07T08:41:10.851021"
+      "last_seen": "2026-09-07T16:43:39.791462"
     },
     "alphea": {
       "name": "ALPHEA",
@@ -10237,7 +10240,7 @@
       "ids": [
         "cr_alphea-activity1272"
       ],
-      "last_seen": "2026-09-07T08:41:10.850966"
+      "last_seen": "2026-09-07T16:43:39.791409"
     },
     "beldex": {
       "name": "Beldex",
@@ -10248,7 +10251,7 @@
       "ids": [
         "cr_beldex-activity1275"
       ],
-      "last_seen": "2026-09-07T08:41:10.850986"
+      "last_seen": "2026-09-07T16:43:39.791429"
     },
     "amadeus": {
       "name": "Amadeus Protocol",
@@ -10259,7 +10262,7 @@
       "ids": [
         "cr_amadeus-protocol-activity1274"
       ],
-      "last_seen": "2026-09-07T08:41:10.850813"
+      "last_seen": "2026-09-07T16:43:39.791274"
     },
     "flop": {
       "name": "Flop",
@@ -10277,7 +10280,7 @@
         "ad_ba27c4b3-7a88-4baf-b78a-6c21c8058803",
         "cr_flop-labs-activity1277"
       ],
-      "last_seen": "2026-09-07T08:41:10.849878"
+      "last_seen": "2026-09-07T16:43:39.790323"
     },
     "entropy": {
       "name": "entropy",
@@ -10294,7 +10297,7 @@
         "ad_2517957d-421c-4f42-b33d-2f20b7a0a4ea",
         "cr_entropy-2-activity1276"
       ],
-      "last_seen": "2026-09-07T08:41:10.849906"
+      "last_seen": "2026-09-07T16:43:39.790348"
     },
     "neosoul": {
       "name": "NeoSoul",
@@ -10305,7 +10308,7 @@
       "ids": [
         "cr_neo-soul-activity1278"
       ],
-      "last_seen": "2026-09-07T08:41:10.850919"
+      "last_seen": "2026-09-07T16:43:39.791362"
     },
     "hedera": {
       "name": "Hedera",
@@ -10318,7 +10321,7 @@
       "ids": [
         "cr_hedera-hashgraph-activity1280"
       ],
-      "last_seen": "2026-09-07T08:41:10.850750"
+      "last_seen": "2026-09-07T16:43:39.791214"
     },
     "rexy": {
       "name": "Rexy (prev. T-Rex)",
@@ -10329,7 +10332,7 @@
       "ids": [
         "cr_t-rex-activity801"
       ],
-      "last_seen": "2026-09-07T08:41:10.850877"
+      "last_seen": "2026-09-07T16:43:39.791320"
     },
     "termix": {
       "name": "TermiX",
@@ -10340,7 +10343,7 @@
       "ids": [
         "cr_termix-activity1281"
       ],
-      "last_seen": "2026-09-07T08:41:10.850891"
+      "last_seen": "2026-09-07T16:43:39.791335"
     },
     "remix world": {
       "name": "remix.world (Prev. ip.world)",
@@ -10351,7 +10354,7 @@
       "ids": [
         "cr_ip-world-activity1140"
       ],
-      "last_seen": "2026-09-07T08:41:10.852093"
+      "last_seen": "2026-09-07T16:43:39.792489"
     },
     "gyndore": {
       "name": "Gyndore",
@@ -10362,7 +10365,7 @@
       "ids": [
         "cr_gyndore-activity1282"
       ],
-      "last_seen": "2026-09-07T08:41:10.850678"
+      "last_seen": "2026-09-07T16:43:39.791142"
     },
     "ondo": {
       "name": "Ondo Finance",
@@ -10373,22 +10376,18 @@
       "ids": [
         "cr_ondo-finance-activity1283"
       ],
-      "last_seen": "2026-09-07T08:41:10.850826"
+      "last_seen": "2026-09-07T16:43:39.791287"
     },
     "voice": {
       "name": "VOICE",
       "trust": 50,
-      "category": "mainnet",
-      "categories": [
-        "bounty platforms",
-        "social",
-        "getting a role"
-      ],
+      "category": "task_farmer",
+      "categories": [],
       "chains": [],
       "ids": [
         "cr_voice-activity1288"
       ],
-      "last_seen": "2026-09-07T08:41:10.850583"
+      "last_seen": "2026-09-07T16:43:39.791058"
     },
     "chomp": {
       "name": "Chomp",
@@ -10402,7 +10401,7 @@
       "ids": [
         "cr_chomp-activity1287"
       ],
-      "last_seen": "2026-09-07T08:41:10.850576"
+      "last_seen": "2026-09-07T16:43:39.791050"
     },
     "dualmint": {
       "name": "DualMint",
@@ -10416,7 +10415,7 @@
       "ids": [
         "cr_dualmint-activity1286"
       ],
-      "last_seen": "2026-09-07T08:41:10.850568"
+      "last_seen": "2026-09-07T16:43:39.791043"
     },
     "zec bit": {
       "name": "Zec Bit",
@@ -10438,7 +10437,7 @@
       "ids": [
         "cr_alloco-activity1290"
       ],
-      "last_seen": "2026-09-07T08:41:10.850598"
+      "last_seen": "2026-09-07T16:43:39.791071"
     },
     "forecast": {
       "name": "Forecast",
@@ -10449,7 +10448,7 @@
       "ids": [
         "cr_forecast-activity1289"
       ],
-      "last_seen": "2026-09-07T08:41:10.850591"
+      "last_seen": "2026-09-07T16:43:39.791064"
     },
     "memebitcoin": {
       "name": "MemeBitcoin",
@@ -10460,10 +10459,10 @@
       "ids": [
         "cr_meme-bitcoin-activity1291"
       ],
-      "last_seen": "2026-09-07T08:41:10.850613"
+      "last_seen": "2026-09-07T16:43:39.791078"
     }
   },
-  "last_run": "2026-09-07T08:41:10.855601+00:00",
+  "last_run": "2026-09-07T16:43:39.795816+00:00",
   "seen_ids": [
     "ad_5f40dc3f-5422-4eb9-aebe-d39c08f25657",
     "ad_0de2e27c-bf81-4aac-a432-7400e09e5f38",
