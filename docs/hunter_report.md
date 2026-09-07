@@ -1,12 +1,19 @@
-# 🎯 DroperOG Hunter — 2026-09-07 16:25 (تهران)
+# 🎯 DroperOG Hunter — 2026-09-08 01:12 (تهران)
 
-🆕 **1 مورد تازه:**
+🆕 **2 مورد تازه:**
 
-## 🟣 تست‌نت (1)
+## 🔵 پوینت (1)
 
-- **Testnet Airdrops 2026: 5 Crypto Projects and Their Reward Potential** (6h پیش)
-  - https://news.google.com/rss/articles/CBMiigFBVV95cUxNT1BLX19HYklmRll6MlBuUGpOZ1RnNGNlNEdUc3diLXFQZDg2UkZBZzM2RkV2LU1EWDAtS0ZLRDJpSE1BbmtVN0dnYlRPbWw2SXUxZkZISjNTT2RiWHRNUjQ0cnlySFRVbFFuTjg5cnF0ZjFCdWhrQWtWemJpQzR6aVg5VERUMDZUY1E?oc=5
+- **Midas Markets** (2h پیش)
+  - https://cryptorank.io/price/midas-markets-activity1292
+  - 🎁 Points | $60 | ⏱ 25min
+
+## 🟡 تسک/کمپین (1)
+
+- **REP** (1h پیش)
+  - https://cryptorank.io/price/rep-hq-activity1293
+  - 🎁 Airdrop | رایگان | ⏱ 5min
 
 ---
 
-**چشم‌انداز:** 🟣 تست‌نت: 1 | 🟡 تسک/کمپین: 5 | 🆕 تازه در ترکر: 3
+**چشم‌انداز:** 🟣 تست‌نت: 2 | 🔵 پوینت: 1 | 🟡 تسک/کمپین: 1 | 🟢 مین‌نت: 1 | 🆕 تازه در ترکر: 5
