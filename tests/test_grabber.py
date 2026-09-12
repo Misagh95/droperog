@@ -6,6 +6,7 @@ class names match telethon's, which is exactly why it is duck-typed.
 Run with:  python -m pytest tests/ -q
 """
 
+import importlib.util
 import json
 import sys
 from datetime import datetime, timedelta, timezone
@@ -534,7 +535,7 @@ def test_selftest_verdict_when_credentials_are_missing(monkeypatch, tmp_path, ca
     assert (tmp_path / "selftest.txt").exists()
 
 
-def test_selftest_is_green_with_credentials(monkeypatch, tmp_path):
+def test_selftest_sees_credentials_and_a_healthy_pipeline(monkeypatch, tmp_path, capsys):
     monkeypatch.setattr(grabber, "DEMO_DELAY", 0)
     monkeypatch.setattr(grabber, "STATE_FILE", tmp_path / "state.json")
     monkeypatch.setattr(grabber, "SELFTEST_REPORT", tmp_path / "selftest.txt")
@@ -542,7 +543,14 @@ def test_selftest_is_green_with_credentials(monkeypatch, tmp_path):
                         lambda: {"api_id": "1", "api_hash": "h", "phone": "+1"})
 
     args = grabber.parse_args(["--selftest", "--out", str(tmp_path / "out")])
-    assert grabber.selftest(args) == 0
+    code = grabber.selftest(args)
+    out = capsys.readouterr().out
+
+    assert "[FAIL] credentials" not in out
+    assert "[ OK ] credentials" in out          # the credentials really travel through
+    assert "[ OK ] download pipeline" in out
+    # green overall only when telethon is actually importable — CI may not install it
+    assert code == (0 if importlib.util.find_spec("telethon") else 1)
 
 
 def test_demo_runs_offline_and_leaves_real_state_alone(monkeypatch, tmp_path):
