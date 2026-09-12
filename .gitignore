@@ -4,5 +4,11 @@ __pycache__/
 data/state.json
 data/run_log.txt
 data/hunter_log.txt
+data/grabber_state.json
+data/demo_state.json
+data/grabber_selftest.txt
+data/grabber_report.txt
+data/grabber.session*
+downloads/
 .env
 !env.example
