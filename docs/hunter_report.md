@@ -1,6 +1,13 @@
-# 🎯 DroperOG Hunter — 2026-09-08 20:17 (تهران)
+# 🎯 DroperOG Hunter — 2026-09-21 18:12 (تهران)
 
-🔍 این اسکن: هیچ کمپین تازه‌ای (چند روز اخیر) پیدا نشد.
+🆕 **1 مورد تازه:**
+
+## 🟢 مین‌نت (1)
+
+- **World** (5d پیش)
+  - https://world.xyz/?ref=6SQVNZHM
+  - Predictions | رایگان | 🔗 Solana | A fully on-chain prediction market built on Solana that lets users trade contrac
+
 ---
 
-**چشم‌انداز:** 🟣 تست‌نت: 2 | 🔵 پوینت: 1 | 🟡 تسک/کمپین: 3 | 🆕 تازه در ترکر: 3
+**چشم‌انداز:** 🟢 مین‌نت: 1
