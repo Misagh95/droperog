@@ -4,7 +4,11 @@ $taskName = "DroperOG"
 $scriptPath = Join-Path $PSScriptRoot "run.bat"
 schtasks /Delete /TN $taskName /F 2>$null
 $action = New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c `"$scriptPath`""
-$trigger = New-ScheduledTaskTrigger -Daily -At "00:00" -RepetitionInterval (New-TimeSpan -Hours $Hours) -RepetitionDuration ([TimeSpan]::MaxValue)
+# -Once + RepetitionInterval (بدون RepetitionDuration) = تکرار بی‌پایان.
+# حالت قبلی (-Daily + [TimeSpan]::MaxValue) روی برخی نسخه‌های ویندوز خطا می‌دهد.
+$trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).Date -RepetitionInterval (New-TimeSpan -Hours $Hours)
+$settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -MultipleInstances IgnoreNew `
+    -ExecutionTimeLimit (New-TimeSpan -Minutes 30)
 $principal = New-ScheduledTaskPrincipal -UserId "SYSTEM" -LogonType ServiceAccount -RunLevel Highest
-Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Principal $principal -Force
+Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Settings $settings -Principal $principal -Force
 Write-Host "DroperOG scheduled: every $Hours hours"

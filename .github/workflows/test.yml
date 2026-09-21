@@ -19,7 +19,8 @@ jobs:
           python-version: '3.11'
           cache: pip
 
-      - run: pip install requests pytest
+      # telethon هم نصب می‌شود تا مسیرهای واقعی grabber هم import/تست شوند
+      - run: pip install -r requirements.txt pytest
 
       - name: Run tests
         run: python -m pytest tests/ -q

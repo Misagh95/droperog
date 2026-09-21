@@ -594,3 +594,51 @@ def test_grab_chat_respects_size_and_date_filters(monkeypatch, tmp_path):
     assert stats["found"] == 1   # 2 KB photo below --min-size, old pdf before --since
     downloaded = [p.name for p in (tmp_path / "out").rglob("*") if p.is_file()]
     assert len(downloaded) == 1 and downloaded[0].endswith("_3_fresh.pdf")
+
+
+
+# ─── --limit semantics (newest-first) + env precedence ───────────
+
+def test_limit_scans_newest_first_on_a_fresh_state(monkeypatch, tmp_path):
+    monkeypatch.setattr(grabber, "STATE_FILE", tmp_path / "state.json")
+    args = grabber.parse_args(["--chat", "me", "--limit", "5", "--out",
+                               str(tmp_path / "out"), "--sleep", "0"])
+    state = grabber.load_state()
+    client, _ = _run(args, state, _three_messages(), tmp_path)
+    assert args["oldest"] is False
+    assert client.calls[0]["reverse"] is False      # با --limit از جدیدترین شروع کن
+    assert client.calls[0]["limit"] == 5
+
+
+def test_limit_keeps_old_ascending_behavior_with_oldest_flag(monkeypatch, tmp_path):
+    monkeypatch.setattr(grabber, "STATE_FILE", tmp_path / "state.json")
+    args = grabber.parse_args(["--chat", "me", "--limit", "5", "--oldest",
+                               "--out", str(tmp_path / "out"), "--sleep", "0"])
+    state = grabber.load_state()
+    client, _ = _run(args, state, _three_messages(), tmp_path)
+    assert args["oldest"] is True
+    assert client.calls[0]["reverse"] is True       # رفتار قبلی (از قدیم) با --oldest
+
+
+def test_incremental_limit_still_catches_up_from_watermark(monkeypatch, tmp_path):
+    monkeypatch.setattr(grabber, "STATE_FILE", tmp_path / "state.json")
+    state = grabber.load_state()
+    state["chats"]["1"] = {"title": "G", "last_id": 40}
+    args = grabber.parse_args(["--chat", "me", "--limit", "5", "--out",
+                               str(tmp_path / "out"), "--sleep", "0"])
+    client, _ = _run(args, state, _three_messages(), tmp_path)
+    assert client.calls[0]["reverse"] is True       # دنبال کردن از watermark نزولی نیست
+    assert client.calls[0]["min_id"] == 40
+
+
+def test_load_env_process_env_wins_over_dotenv(monkeypatch, tmp_path):
+    (tmp_path / ".env").write_text("TG_API_ID=111\nTG_API_HASH=fromfile\n", "utf-8")
+    monkeypatch.setattr(grabber, "BASE", tmp_path)
+    monkeypatch.setenv("TG_API_ID", "222")
+    for name in ("TELEGRAM_API_ID", "API_ID", "TELEGRAM_API_HASH", "API_HASH",
+                 "TG_PHONE", "PHONE"):
+        monkeypatch.delenv(name, raising=False)
+    monkeypatch.delenv("TG_API_HASH", raising=False)
+    env = grabber.load_env()
+    assert env["api_id"] == "222"                    # env واقعی بر .env غلبه میکند
+    assert env["api_hash"] == "fromfile"             # و جاهای خالی از .env پر میشوند

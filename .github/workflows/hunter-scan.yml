@@ -28,7 +28,22 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
+      - name: Restore hunter state (rolling 'state' branch)
+        run: |
+          git config user.name "droperog-bot"
+          git config user.email "bot@droperog.app"
+          if git fetch --depth=1 origin state 2>/dev/null; then
+            mkdir -p data
+            git show FETCH_HEAD:data/hunter_state.json > data/hunter_state.json 2>/dev/null \
+              && echo "hunter state restored: $(wc -c < data/hunter_state.json) bytes" \
+              || echo "state branch has no hunter_state.json yet"
+          else
+            echo "no state branch yet — first run"
+          fi
+
       - name: Run hunter (early detection)
+        id: hunter
+        continue-on-error: true
         run: python hunter.py --telegram
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
@@ -36,20 +51,83 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
-      - name: Commit hunter state + report
+      - name: Commit hunter reports (main branch)
+        if: always()
         run: |
-          git config user.name "droperog-bot"
-          git config user.email "bot@droperog.app"
-          git add data/hunter_state.json data/hunter_report.txt data/triage.csv docs/hunter_report.md
+          [ -f data/hunter_report.txt ] && git add data/hunter_report.txt
+          [ -f data/triage.csv ] && git add data/triage.csv
+          [ -f docs/hunter_report.md ] && git add docs/hunter_report.md
+          # hunter_state.json روی شاخه‌ی state می‌رود، نه main
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "Auto-update hunter state [skip ci]"
-            # اگر اسکن دیگری هم‌زمان push کرده باشد، rebase می‌کنیم و دوباره تلاش می‌کنیم
+            git rm -q --cached data/hunter_state.json 2>/dev/null || true
+            git commit -m "Auto-update hunter reports [skip ci]"
             for i in 1 2 3; do
-              git pull --rebase origin main && git push && exit 0
+              git pull --rebase origin main && git push && break
               echo "Push failed (attempt $i), retrying..."
               sleep 5
             done
-            exit 1
           fi
+
+      - name: Save hunter state (rolling 'state' branch, merged with scan state)
+        if: always()
+        run: |
+          git config user.name "droperog-bot"
+          git config user.email "bot@droperog.app"
+          if [ ! -f data/hunter_state.json ]; then
+            echo "no data/hunter_state.json — nothing to save"
+            exit 0
+          fi
+          export GIT_INDEX_FILE="$PWD/.git.state-index"
+          rm -f "$GIT_INDEX_FILE"
+          git read-tree --empty
+          git add -f data/hunter_state.json
+          # اگر شاخه‌ی state از قبل state.json اسکنر را دارد، آن را هم نگه دار
+          if git fetch --depth=1 origin state 2>/dev/null; then
+            if git show FETCH_HEAD:data/state.json > /tmp/scan_state.json 2>/dev/null; then
+              mkdir -p data
+              cp /tmp/scan_state.json data/state.json
+              git add -f data/state.json
+            fi
+          fi
+          tree=$(git write-tree)
+          commit=$(git commit-tree "$tree" -m "hunter state: rolling snapshot $(date -u +%FT%TZ)")
+          git push -f origin "$commit:refs/heads/state"
+          unset GIT_INDEX_FILE
+          rm -f .git.state-index
+          echo "state branch updated"
+
+      - name: Report hunter health
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, pathlib, sys
+          p = pathlib.Path("data/hunter_status.json")
+          if not p.exists():
+              print("::error::data/hunter_status.json missing — hunter never finished")
+              sys.exit(1)
+          s = json.loads(p.read_text("utf-8"))
+          print("hunter status:", json.dumps(s, ensure_ascii=False))
+          if s.get("status") == "aborted":
+              print("::error::hunter aborted — no source returned data")
+              sys.exit(1)
+          for src in s.get("failed_sources") or []:
+              print(f"::warning::broken source: {src}")
+          if not s.get("telegram_delivered", True):
+              print("::warning::Telegram delivery failed — the alert repeats on the next run")
+          if s.get("status") != "ok":
+              print("::error::hunter run degraded")
+              sys.exit(1)
+          print("hunter healthy ✅")
+          PY
+
+      - name: Job summary
+        if: always()
+        run: |
+          {
+            echo "### DroperOG Hunter"
+            echo '```'
+            tail -n 30 data/hunter_report.txt 2>/dev/null || echo "(no report)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

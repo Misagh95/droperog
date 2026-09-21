@@ -25,27 +25,103 @@ jobs:
           python-version: '3.11'
           cache: pip
       - run: pip install -r requirements.txt
+
+      - name: Restore scan state (rolling 'state' branch)
+        run: |
+          git config user.name "droperog-bot"
+          git config user.email "bot@droperog.app"
+          if git fetch --depth=1 origin state 2>/dev/null; then
+            mkdir -p data
+            git show FETCH_HEAD:data/state.json > data/state.json
+            echo "state restored: $(wc -c < data/state.json) bytes"
+          else
+            echo "no state branch yet — first run (everything will look new)"
+          fi
+
+      # خروجی غیرصفر یعنی «اسکن ناقص» — گام Report scan health آن را قرمز می‌کند
+      # اما گام‌های زیر با always() اجرا می‌شوند تا state/report از دست نرود.
       - name: Run scanner
+        id: scan
+        continue-on-error: true
         run: python droperog.py
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      - name: Commit scan state + Pages JSON
+
+      - name: Commit reports (main branch)
+        if: always()
         run: |
-          git config user.name "droperog-bot"
-          git config user.email "bot@droperog.app"
-          git add data/state.json data/last_report.txt docs/projects.json
+          [ -f data/last_report.txt ] && git add data/last_report.txt
+          [ -f docs/projects.json ] && git add docs/projects.json
+          # state در .gitignore است و اینجا هرگز کامیت نمی‌شود (شاخه‌ی state جای آن است)
           if git diff --cached --quiet; then
-            echo "No changes"
+            echo "No report changes"
           else
+            # اگر قبلاً state.json ترک شده بود، ترک‌کردنش را هم ثبت کن
+            git rm -q --cached data/state.json 2>/dev/null || true
             git commit -m "Auto-update scan results [skip ci]"
-            # اگر اسکن دیگری هم‌زمان push کرده باشد، rebase می‌کنیم و دوباره تلاش می‌کنیم
             for i in 1 2 3; do
-              git pull --rebase origin main && git push && exit 0
+              git pull --rebase origin main && git push && break
               echo "Push failed (attempt $i), retrying..."
               sleep 5
             done
-            exit 1
           fi
+
+      # state ماشینی روی شاخه‌ی state با یک کامیت یتیم (force-push) می‌نشیند:
+      # تاریخچه‌ی main باد نمی‌کند (~۲۶۰KB در هر اجرا) و دلتا هم حفظ می‌شود.
+      - name: Save machine state (rolling 'state' branch)
+        if: always()
+        run: |
+          git config user.name "droperog-bot"
+          git config user.email "bot@droperog.app"
+          if [ ! -f data/state.json ]; then
+            echo "no data/state.json — nothing to save"
+            exit 0
+          fi
+          export GIT_INDEX_FILE="$PWD/.git.state-index"
+          rm -f "$GIT_INDEX_FILE"
+          git read-tree --empty
+          git add -f data/state.json
+          tree=$(git write-tree)
+          commit=$(git commit-tree "$tree" -m "state: rolling snapshot $(date -u +%FT%TZ)")
+          git push -f origin "$commit:refs/heads/state"
+          unset GIT_INDEX_FILE
+          rm -f .git.state-index
+          echo "state branch updated (single squashed commit)"
+
+      - name: Report scan health
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, pathlib, sys
+          p = pathlib.Path("data/scan_status.json")
+          if not p.exists():
+              print("::error::data/scan_status.json missing — scanner never finished")
+              sys.exit(1)
+          s = json.loads(p.read_text("utf-8"))
+          print("scan status:", json.dumps(s, ensure_ascii=False))
+          if s.get("status") == "aborted":
+              print("::error::scan aborted — no source returned data (see data/run_log.txt)")
+              sys.exit(1)
+          for src in s.get("failed_sources") or []:
+              print(f"::warning::broken source: {src}")
+          if not s.get("telegram_delivered", True):
+              print("::warning::Telegram delivery failed — the alert repeats on the next run")
+          if s.get("status") != "ok":
+              print("::error::scan degraded — results incomplete this run")
+              sys.exit(1)
+          print("scan healthy ✅")
+          PY
+
+      - name: Job summary
+        if: always()
+        run: |
+          {
+            echo "### DroperOG scan"
+            echo '```'
+            tail -n 40 data/last_report.txt 2>/dev/null || echo "(no report)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+

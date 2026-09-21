@@ -42,7 +42,10 @@ except ImportError:
     print("Install requests: pip install requests")
     sys.exit(1)
 
-sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+try:  # Windows consoles default to cp1252 and choke on the report glyphs
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
 
 BASE = Path(__file__).parent
 DATA_DIR = BASE / "data"
@@ -55,8 +58,22 @@ HUNTER_REPORT = DATA_DIR / "hunter_report.txt"
 HUNTER_REPORT_MD = DOCS_DIR / "hunter_report.md"
 TRIAGE_CSV = DATA_DIR / "triage.csv"
 HUNTER_LOG = DATA_DIR / "hunter_log.txt"
+HUNTER_STATUS = DATA_DIR / "hunter_status.json"
 
 STATE_VERSION = 3
+
+# کدهای خروجی — CI باید وقتی اسکن ناقص/لغو شده قرمز شود، نه سبز
+EXIT_OK = 0
+EXIT_DEGRADED = 1     # اسکن انجام شد ولی منبعی خراب بود یا پیام تحویل نشد
+EXIT_ABORTED = 2      # هیچ منبعی داده نداد
+
+# یک منبع خراب نباید کل اسکن را بکشد؛ فقط وقتی *هیچ* منبعی داده ندهد لغو میشود
+SOURCE_HOSTS = {"alphadrops": "alphadrops.net", "cryptorank": "cryptorank.io",
+                "dropjet": "dropjet.co", "news": "news.google.com"}
+
+STALE_HOURS = float(os.environ.get("HUNTER_STALE_HOURS", "12"))
+ALERT_COOLDOWN_HOURS = float(os.environ.get("HUNTER_ALERT_COOLDOWN_HOURS", "6"))
+SEEN_MAX_DAYS = int(os.environ.get("HUNTER_SEEN_DAYS", "90"))
 
 # URLs that failed completely after retries — a failed fetch must not be
 # treated as "everything disappeared" (no false REMOVED / state reset).
@@ -513,18 +530,129 @@ def age_str(dt: datetime | None) -> str:
 # ─── state / خروجی ────────────────────────────────────────────────────
 
 def load_state() -> dict:
+    """State قبلی را برمیگرداند. `seen` حتی وقتی STATE_VERSION عوض شود حفظ
+    میشود تا نسخهبندی باعث اعلام انبوه «همه چیز تازه است» نشود."""
     if HUNTER_STATE.exists():
         try:
             st = json.loads(HUNTER_STATE.read_text("utf-8"))
-            if st.get("v") == STATE_VERSION:
-                return st
+            if isinstance(st, dict):
+                seen = st.get("seen") if isinstance(st.get("seen"), dict) else {}
+                return {"v": STATE_VERSION, "seen": seen, "last_run": st.get("last_run")}
         except Exception:
             pass
     return {"v": STATE_VERSION, "seen": {}}
 
 
+def prune_seen(state: dict, days: int = SEEN_MAX_DAYS) -> int:
+    """حافظهی seen را هرس میکند تا hunter_state.json بیپایان رشد نکند."""
+    seen = state.get("seen") or {}
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+    stale = []
+    for key, val in seen.items():
+        first = parse_dt((val or {}).get("first_seen"))
+        if first is not None and first < cutoff:
+            stale.append(key)
+    for key in stale:
+        seen.pop(key, None)
+    return len(stale)
+
+
+def select_new_items(all_items: list[dict], seen: dict) -> list[dict]:
+    """آیتمهای تازهای که قبلاً ندیدهایم را برمیگرداند و **همهی** آیتمهای
+    این اسکن را در `seen` ثبت میکند.
+
+    نکتهی مهم: آیتمهایی که فقط بهخاطر همنامی با آیتم دیگری از نمایش حذف
+    میشوند هم باید seen شوند، وگرنه در اجرای بعدی بهعنوان «تازه» ظاهر
+    میشدند (باگ تکرار پیام برای پروژهی تکراری بین دو منبع).
+    """
+    new_items: list[dict] = []
+    seen_names: set[str] = set()
+    now = datetime.now(timezone.utc)
+    for it in all_items:
+        iid = it.get("id") or ""
+        if iid and iid in seen:
+            continue
+        if iid:
+            seen[iid] = {"first_seen": now.isoformat()}
+        nm = (it.get("name") or "").strip()
+        if not nm:
+            continue
+        nm_key = nm.lower()[:45] if it.get("source") in ("gnews", "news") else nm.lower()
+        if nm_key in seen_names:
+            continue
+        seen_names.add(nm_key)
+        it["first_seen"] = now
+        new_items.append(it)
+    return new_items
+
+
 def save_state(state: dict):
-    HUNTER_STATE.write_text(json.dumps(state, indent=2, ensure_ascii=False), "utf-8")
+    try:
+        HUNTER_STATE.write_text(json.dumps(state, indent=2, ensure_ascii=False), "utf-8")
+    except Exception as e:
+        log(f"  State save failed: {e}")
+
+
+# ─── وضعیت اجرا / نگهبان (watchdog) ────────────────────────
+
+def failed_source_names(urls: list[str]) -> list[str]:
+    """نام منابعی که fetch آنها شکست خورده (از روی URL خطادار)."""
+    names: list[str] = []
+    for url in urls:
+        for name, host in SOURCE_HOSTS.items():
+            if host in url and name not in names:
+                names.append(name)
+    return names
+
+
+def load_status() -> dict:
+    if HUNTER_STATUS.exists():
+        try:
+            data = json.loads(HUNTER_STATUS.read_text("utf-8"))
+            if isinstance(data, dict):
+                return data
+        except Exception:
+            pass
+    return {}
+
+
+def save_status(status: dict):
+    try:
+        HUNTER_STATUS.write_text(json.dumps(status, indent=2, ensure_ascii=False), "utf-8")
+    except Exception as e:
+        log(f"  Status save failed: {e}")
+
+
+def staleness_hours(status: dict) -> float | None:
+    last = parse_dt(status.get("last_success"))
+    if last is None:
+        return None
+    return (datetime.now(timezone.utc) - last).total_seconds() / 3600
+
+
+def build_warning(failed: list[str], prev: dict, delivered_prev: bool = True) -> str | None:
+    parts = []
+    if failed:
+        parts.append(f"⚠ منبع خراب: {', '.join(failed)} — این اسکن ناقص است")
+    stale = staleness_hours(prev)
+    if stale is not None and stale >= STALE_HOURS:
+        parts.append(f"⚠ آخرین اسکن کامل {stale:.0f} ساعت پیش بوده")
+    elif prev.get("status") == "aborted" and not parts:
+        parts.append("⚠ اجرای قبلی هیچ منبعی نداشت (اسکن لغو شد)")
+    elif not delivered_prev and not parts:
+        parts.append("⚠ ارسال پیام تلگرام در اجرای قبل ناموفق بود")
+    return " | ".join(parts) if parts else None
+
+
+def alert_due(prev: dict, warning: str | None) -> bool:
+    """آیا این هشدار را بفرستیم؟ (با cooldown تا اسپم نشود)"""
+    if not warning:
+        return False
+    last = parse_dt(prev.get("last_alert"))
+    if last is not None:
+        if (datetime.now(timezone.utc) - last).total_seconds() < ALERT_COOLDOWN_HOURS * 3600:
+            return False
+    return True
 
 
 def append_triage(items: list[dict]):
@@ -545,40 +673,110 @@ def esc(s: object) -> str:
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
+# تلگرام طول پیام را با «واحد UTF-16» میشمارد (هر ایموجی ۲ واحد)، پس سقف
+# کاراکتری قدیمی (۳۸۰۰) میتوانست از ۴۰۹۶ واحد رد شود و پیام رد شود.
+TELEGRAM_LIMIT = 4096
+MESSAGE_BUDGET = 3800
+
+_TAG_RE = re.compile(r"<(/?)([a-zA-Z]+)[^>]*>")
+
+
+def utf16_len(text: str) -> int:
+    return len(text.encode("utf-16-le")) // 2
+
+
+def _open_tags(text: str) -> list[str]:
+    stack: list[str] = []
+    for m in _TAG_RE.finditer(text):
+        closing, name = m.group(1), m.group(2).lower()
+        if closing:
+            if name in stack:
+                while stack:
+                    if stack.pop() == name:
+                        break
+        else:
+            stack.append(name)
+    return stack
+
+
+def _plain_text(text: str) -> str:
+    """HTML را به متن ساده تبدیل میکند (fallback وقتی HTML رد شود)."""
+    text = re.sub(r"<br\s*/?>", "\n", text)
+    text = re.sub(r"</?(?:b|strong|i|em|u|s|code|pre|blockquote)(?:\s[^>]*)?>", "", text)
+    return (text.replace("&lt;", "<").replace("&gt;", ">").replace("&amp;", "&"))
+
+
+def split_messages(blocks: list[str], budget: int = MESSAGE_BUDGET) -> list[str]:
+    """بلوکهای متوازنتگ را در چند پیام میبندد تا سقف UTF-16 تلگرام رد نشود."""
+    messages: list[str] = []
+    current: list[str] = []
+    size = 0
+    for block in blocks:
+        block = block if utf16_len(block) <= budget else _truncate_html(block, budget)
+        bsize = utf16_len(block) + 1
+        if current and size + bsize > budget:
+            messages.append("\n".join(current))
+            current, size = [], 0
+        current.append(block)
+        size += bsize
+    if current:
+        messages.append("\n".join(current))
+    return messages or [""]
+
+
 def _truncate_html(text: str, limit: int = 3800) -> str:
-    """Cut at a newline boundary so Telegram HTML tags stay well-formed."""
-    if len(text) <= limit:
+    """Cut at a line boundary, never inside a tag, and close what stays open."""
+    if utf16_len(text) <= limit:
         return text
-    cut = text.rfind("\n", 0, limit)
-    if cut < 0:
-        cut = limit
-    return text[:cut] + "\n…"
+    cut = text.rfind("\n", 0, min(limit, len(text)))
+    head = text[:cut] if cut > 0 else text[:limit]
+    lt = head.rfind("<")
+    if lt > head.rfind(">"):
+        head = head[:lt]
+    tail = "\n…"
+    closers = "".join(f"</{t}>" for t in reversed(_open_tags(head)))
+    while head and utf16_len(head + closers + tail) > limit:
+        cut = head.rfind("\n")
+        head = head[:cut] if cut > 0 else head[:-1]
+        closers = "".join(f"</{t}>" for t in reversed(_open_tags(head)))
+    return head + closers + tail
 
 
-def build_telegram_message(new_items: list[dict], fresh: dict) -> str:
-    now = now_tehran()
-    header = (f"🎯 <b>DroperOG Hunter</b> — {now.strftime('%Y-%m-%d %H:%M')} (تهران)\n"
-              f"────────────────────")
-
-    if not new_items:
-        body = ("\n🔍 این اسکن: هیچ کمپین تازه‌ای (چند روز اخیر) پیدا نشد.\n"
-                "📊 چشم‌انداز: " + "  |  ".join(
-                    f"{CAT_LABEL[c]}: {fresh.get(c, 0)}" for c in CAT_ORDER if fresh.get(c, 0)) +
-                "\n📋 جزئیات: docs/hunter_report.md")
-        return f"{header}\n{body}"
-
-    # defensive dedup by name — main() already dedups, but never show a
-    # project twice in one message
+def _unique_by_name(items: list[dict]) -> list[dict]:
     seen_names = set()
-    uniq_items = []
-    for it in new_items:
+    uniq = []
+    for it in items:
         k = (it.get("name") or "").strip().lower()
         if not k or k in seen_names:
             continue
         seen_names.add(k)
-        uniq_items.append(it)
+        uniq.append(it)
+    return uniq
 
-    lines = [header, f"\n🆕 <b>{len(uniq_items)} مورد تازه:</b>"]
+
+def build_telegram_blocks(new_items: list[dict], fresh: dict,
+                          warning: str | None = None) -> list[str]:
+    """پیام hunter بهصورت بلوکهای متوازنتگ — هر بلوک یک واحد کامل HTML،
+    پس برش پیام هیچوقت تگی را نصف نمیکند."""
+    now = now_tehran()
+    header = (f"🎯 <b>DroperOG Hunter</b> — {now.strftime('%Y-%m-%d %H:%M')} (تهران)\n"
+              f"────────────────────")
+    blocks = [header]
+    if warning:
+        blocks.append(f"<b>{esc(warning)}</b>")
+
+    if not new_items:
+        summary = "  |  ".join(f"{CAT_LABEL[c]}: {fresh.get(c, 0)}"
+                              for c in CAT_ORDER if fresh.get(c, 0))
+        body = ["🔍 این اسکن: هیچ کمپین تازه‌ای (چند روز اخیر) پیدا نشد."]
+        if summary:
+            body.append(f"📊 چشم‌انداز: {summary}")
+        body.append("📋 جزئیات: docs/hunter_report.md")
+        blocks.append("\n".join(body))
+        return blocks
+
+    uniq_items = _unique_by_name(new_items)
+    blocks.append(f"🆕 <b>{len(uniq_items)} مورد تازه:</b>")
     caps = {"testnet": 8, "points": 4, "task": 5,
             "mainnet": 5, "network": 6, "newtracked": 6, "unknown": 3}
 
@@ -587,54 +785,87 @@ def build_telegram_message(new_items: list[dict], fresh: dict) -> str:
                        key=lambda x: x.get("date") or x.get("first_seen"), reverse=True)
         if not items:
             continue
-        lines.append(f"\n{CAT_LABEL[cat]} ({len(items)}):")
+        blocks.append(f"{CAT_LABEL[cat]} ({len(items)}):")
         for p in items[: caps.get(cat, 5)]:
             age = age_str(p.get("date"))
             nm = p["name"]
             if len(nm) > 70:
                 nm = nm[:67] + "..."
-            lines.append(f"<b>{esc(nm)}</b> {CAT_LABEL.get(p['category'], '')} {age}")
-            lines.append(f"🔗 {p['url']}")
+            block = [f"<b>{esc(nm)}</b> {CAT_LABEL.get(p['category'], '')} {age}",
+                     f"🔗 {esc(p.get('url') or '')}"]
             if p.get("desc"):
-                lines.append(f"<blockquote>{esc(p['desc'])}</blockquote>")
+                block.append(f"<blockquote>{esc(p['desc'])}</blockquote>")
+            blocks.append("\n".join(block))
         if len(items) > caps.get(cat, 5):
-            lines.append(f"  … و {len(items) - caps[cat]} مورد دیگر")
+            blocks.append(f"  … و {len(items) - caps[cat]} مورد دیگر")
 
     summary = "  |  ".join(f"{CAT_LABEL[c]}: {fresh.get(c, 0)}" for c in CAT_ORDER if fresh.get(c, 0))
-    lines.append(f"\n📊 <b>چشم‌انداز:</b> {summary}")
-    lines.append("📋 جزئیات کامل: docs/hunter_report.md")
+    footer = ["📊 <b>چشم‌انداز:</b> " + summary if summary else "📊 <b>چشم‌انداز:</b> —",
+              "📋 جزئیات کامل: docs/hunter_report.md"]
+    blocks.append("\n".join(footer))
+    return blocks
 
-    return _truncate_html("\n".join(lines))
+
+def build_telegram_messages(new_items: list[dict], fresh: dict,
+                            warning: str | None = None) -> list[str]:
+    """همان پیام، اما بستهبندیشده در چند پیام زیر سقف UTF-16 تلگرام."""
+    return split_messages(build_telegram_blocks(new_items, fresh, warning))
 
 
-def send_telegram(text: str, dry_run: bool = False):
+def build_telegram_message(new_items: list[dict], fresh: dict,
+                           warning: str | None = None) -> str:
+    """نمای تکرشتهای پیام (سازگاری با تست/گزارش) — ارسال واقعی چندبخشی است."""
+    return "\n".join(build_telegram_messages(new_items, fresh, warning))
+
+
+def _telegram_post(payload: dict) -> bool:
+    try:
+        r = requests.post(f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
+                          json=payload, timeout=15)
+        if r.status_code == 200:
+            try:
+                return bool(r.json().get("ok"))
+            except Exception:
+                return False
+        log(f"  Telegram error: HTTP {r.status_code}: {r.text[:200]}")
+        return False
+    except Exception as e:
+        log(f"  Telegram error: {e}")
+        return False
+
+
+def send_telegram(blocks: list[str] | str, dry_run: bool = False) -> bool:
+    """ارسال (چندبخشی). True = تحویل شد یا چیزی برای تحویل نبود."""
+    if isinstance(blocks, str):
+        blocks = [blocks]
+
     if dry_run:
+        text = "\n".join(blocks)
         print("\n────────── [DRY-RUN: پیام تلگرام] ──────────")
         print(text)
         print("────────────────────────────────────────────")
-        return
+        return True
     if not BOT_TOKEN or not CHAT_ID:
         log("  Telegram: BOT_TOKEN یا CHAT_ID تنظیم نشده — رد شد")
-        return
-    try:
-        r = requests.post(
-            f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
-            json={"chat_id": CHAT_ID, "text": text, "parse_mode": "HTML",
-                  "disable_web_page_preview": True},
-            timeout=15,
-        )
-        ok = False
-        if r.status_code == 200:
-            try:
-                ok = bool(r.json().get("ok"))
-            except Exception:
-                ok = False
-        if ok:
-            log("  Telegram sent")
-        else:
-            log(f"  Telegram error: HTTP {r.status_code}: {r.text[:200]}")
-    except Exception as e:
-        log(f"  Telegram error: {e}")
+        return True
+
+    messages = split_messages(blocks)
+    total = len(messages)
+    for i, msg in enumerate(messages, 1):
+        body = msg if total == 1 else f"<i>({i}/{total})</i>\n{msg}"
+        ok = _telegram_post({"chat_id": CHAT_ID, "text": body, "parse_mode": "HTML",
+                             "disable_web_page_preview": True})
+        if not ok:
+            log(f"  Telegram: HTML بخش {i}/{total} رد شد — تلاش دوباره با متن ساده")
+            ok = _telegram_post({"chat_id": CHAT_ID, "text": _plain_text(body),
+                                 "disable_web_page_preview": True})
+        if not ok:
+            log(f"  Telegram: بخش {i}/{total} تحویل نشد (state ذخیره نمیشود)")
+            return False
+        if i < total:
+            time.sleep(0.6)
+    log(f"  Telegram sent ({total} message(s))")
+    return True
 
 
 def build_markdown_report(new_items: list[dict], fresh: dict) -> str:
@@ -665,13 +896,17 @@ def build_markdown_report(new_items: list[dict], fresh: dict) -> str:
     return "\n".join(lines)
 
 
-def build_report(new_items: list[dict], fresh: dict) -> str:
+def build_report(new_items: list[dict], fresh: dict,
+                 triage_added: bool = False, failed_sources=None) -> str:
     lines = []
     sep = "=" * 60
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     lines.append(sep)
     lines.append(f"  DroperOG Hunter v3 — {now}   (شکار زودهنگام)")
     lines.append(sep)
+
+    if failed_sources:
+        lines.append(f"\n  ⚠ منبع خراب: {', '.join(failed_sources)} — این اسکن ناقص است")
 
     if not new_items:
         lines.append("\n  🆕 هیچ کمپین تازه‌ای (چند روز اخیر) پیدا نشد.")
@@ -684,13 +919,18 @@ def build_report(new_items: list[dict], fresh: dict) -> str:
             if p.get("desc"):
                 lines.append(f"      {p['desc']}")
 
-    lines.append(f"\n{'-' * 50}")
-    lines.append("  📊 چشم‌انداز این اسکن:")
-    for cat in CAT_ORDER:
-        if fresh.get(cat):
-            lines.append(f"  {CAT_LABEL[cat]}: {fresh[cat]}")
+    overview = [CAT_LABEL[cat] for cat in CAT_ORDER if fresh.get(cat)]
+    if overview:
+        lines.append(f"\n{'-' * 50}")
+        lines.append("  📊 چشم‌انداز این اسکن:")
+        for cat in CAT_ORDER:
+            if fresh.get(cat):
+                lines.append(f"  {CAT_LABEL[cat]}: {fresh[cat]}")
     lines.append(sep)
-    lines.append("  📌 triage.csv به‌روزرسانی شد — بارانداز با خودته.")
+    if triage_added:
+        lines.append("  📌 triage.csv به‌روزرسانی شد — بارانداز با خودته.")
+    else:
+        lines.append("  📌 triage.csv تغییری نکرد (مورد تازه‌ای نبود).")
     lines.append(sep)
     return "\n".join(lines)
 
@@ -715,15 +955,20 @@ except Exception:
     pass
 
 
-def main():
+def main() -> int:
+    started = datetime.now(timezone.utc)
     log("DroperOG Hunter v3 starting...\n")
 
     send_flag = "--telegram" in sys.argv
     always_flag = "--always" in sys.argv
     dry_run = "--dry-run" in sys.argv
 
+    prev_status = load_status()
     state = load_state()
-    seen = state.get("seen", {})
+    seen = state.get("seen") or {}
+    pruned = prune_seen(state)
+    if pruned:
+        log(f"  هرس حافظه: {pruned} شناسه‌ی قدیمی از seen حذف شد")
 
     log(f"Fetching 4 sources in parallel (AlphaDrops fresh {FRESH_DAYS}d, "
         f"CryptoRank fresh {FRESH_DAYS}d, DropJet fresh {FRESH_DAYS}d, "
@@ -740,34 +985,34 @@ def main():
     log(f"  AlphaDrops: {len(alpha)} | CryptoRank: {len(campaigns)} | "
         f"DropJet: {len(dropjet)} | News: {len(airdrop_news)}")
 
-    critical_failures = [u for u in FETCH_ERRORS
-                         if "alphadrops" in u or "cryptorank" in u]
-    if critical_failures:
-        log(f"  Critical source(s) failed: {critical_failures} — aborting scan.")
-        log("  Keeping previous state to avoid false REMOVED reports.")
-        return
-    if FETCH_ERRORS:
-        log(f"  {len(FETCH_ERRORS)} non-critical fetch(es) failed (news) — continuing.")
+    failed = failed_source_names(FETCH_ERRORS)
+    warning = build_warning(failed, prev_status,
+                            delivered_prev=prev_status.get("telegram_delivered", True))
+    alert = warning if alert_due(prev_status, warning) else None
 
-
+    # یک منبع خراب کل اسکن را نمیکشد — فقط وقتی هیچ منبعی داده ندهد لغو میشود
+    if not (alpha or campaigns or dropjet or airdrop_news):
+        log(f"  هیچ منبعی داده نداد (خطاها: {FETCH_ERRORS or 'هیچ'}) — اسکن لغو شد.")
+        alerted = False
+        if alert:
+            alerted = send_telegram(build_telegram_blocks([], {}, warning=alert),
+                                    dry_run=dry_run)
+        now_iso = datetime.now(timezone.utc).isoformat()
+        save_status({
+            "status": "aborted", "failed_sources": failed,
+            "telegram_delivered": alerted, "finished_at": now_iso,
+            "duration_s": round((datetime.now(timezone.utc) - started).total_seconds(), 1),
+            "last_success": prev_status.get("last_success"),
+            "last_alert": now_iso if alerted else prev_status.get("last_alert"),
+        })
+        return EXIT_ABORTED
+    if failed:
+        log(f"  ⚠ منابع خطادار: {', '.join(failed)} — با منابع سالم ادامه میدهیم")
 
     all_items = alpha + campaigns + dropjet + airdrop_news
 
-    # فقط موارد واقعاً جدید برای ما
-    new_items = []
-    seen_names = set()
-    for it in all_items:
-        if it["id"] in seen:
-            continue
-        nm = it["name"].strip().lower()
-        nm_key = nm[:45] if it["source"] in ("gnews", "news") else nm
-        if nm_key in seen_names or not nm:
-            continue
-        seen_names.add(nm_key)
-        first_seen = datetime.now(timezone.utc)
-        it["first_seen"] = first_seen
-        seen[it["id"]] = {"first_seen": first_seen.isoformat()}
-        new_items.append(it)
+    # فقط موارد واقعاً جدید برای ما (همهی آیتمها در seen ثبت میشوند)
+    new_items = select_new_items(all_items, seen)
 
     fresh = {}
     for it in all_items:
@@ -775,13 +1020,15 @@ def main():
 
     state["seen"] = seen
     state["last_run"] = datetime.now(timezone.utc).isoformat()
-    save_state(state)
 
+    triage_added = False
     if new_items:
         append_triage(new_items)
+        triage_added = True
         log(f"   {len(new_items)} مورد جدید به triage.csv اضافه شد")
 
-    report = build_report(new_items, fresh)
+    report = build_report(new_items, fresh, triage_added=triage_added,
+                          failed_sources=failed)
     print("\n" + report)
     HUNTER_REPORT.write_text(report, "utf-8")
     log(f"Report -> {HUNTER_REPORT}")
@@ -793,12 +1040,39 @@ def main():
     except Exception as e:
         log(f"Markdown error: {e}")
 
-    if send_flag and (new_items or always_flag):
-        msg = build_telegram_message(new_items, fresh)
-        send_telegram(msg, dry_run=dry_run)
+    delivered = True
+    if send_flag and (new_items or always_flag or alert):
+        blocks = build_telegram_messages(new_items, fresh, warning=alert)
+        delivered = send_telegram(blocks, dry_run=dry_run)
     elif send_flag:
         log("  Telegram: مورد تازه‌ای نیست (برای پیام در هر حالت: --always)")
 
+    # state فقط بعد از تحویل موفق ذخیره میشود تا خبر از دست نرود
+    if delivered:
+        save_state(state)
+    else:
+        log("  ⚠ تلگرام تحویل نشد — state ذخیره نشد تا این خبر دوباره اعلام شود")
+
+    finished = datetime.now(timezone.utc).isoformat()
+    healthy = delivered and not failed
+    save_status({
+        "status": "ok" if healthy else "degraded",
+        "failed_sources": failed,
+        "telegram_delivered": delivered,
+        "new_items": len(new_items),
+        "finished_at": finished,
+        "duration_s": round((datetime.now(timezone.utc) - started).total_seconds(), 1),
+        "last_success": finished if healthy else prev_status.get("last_success"),
+        "last_alert": finished if alert else prev_status.get("last_alert"),
+    })
+    log(f"  status={'ok' if healthy else 'degraded'}  sources_failed={failed or '-'}  "
+        f"telegram={'ok' if delivered else 'FAILED'}")
+
+    if healthy:
+        return EXIT_OK
+    log(f"  ⚠ اسکن ناقص — کد خروجی {EXIT_DEGRADED} (CI باید این را نشان دهد)")
+    return EXIT_DEGRADED
+
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

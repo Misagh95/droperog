@@ -1,7 +1,15 @@
 __pycache__/
 *.pyc
 .pytest_cache/
+
+# ── state ماشینی ──────────────────────────────────────────────
+# این فایل‌ها *هرگز* روی main کامیت نمی‌شوند؛ روی شاخه‌ی rolling «state»
+# نگه داشته می‌شوند تا تاریخچه‌ی main باد نکند (هر اجرا ~۲۶۰KB).
 data/state.json
+data/hunter_state.json
+data/scan_status.json
+data/hunter_status.json
+
 data/run_log.txt
 data/hunter_log.txt
 data/grabber_state.json
@@ -11,4 +19,4 @@ data/grabber_report.txt
 data/grabber.session*
 downloads/
 .env
-!env.example
+!.env.example

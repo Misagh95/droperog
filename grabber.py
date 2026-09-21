@@ -343,7 +343,8 @@ ENV_ALIASES = {
 
 
 def load_env() -> dict:
-    """Read .env (same tolerant parser as droperog.py) + process env."""
+    """Read .env + process env. متغیر محیطی واقعی بر .env اولویت دارد (مثل
+    droperog.py) تا اجرای CI/بات هرگز با مقادیر قدیمی .env گمراه نشود."""
     values: dict[str, str] = {}
     env_file = BASE / ".env"
     if env_file.exists():
@@ -356,7 +357,7 @@ def load_env() -> dict:
         except Exception:
             pass
     for k, v in os.environ.items():
-        values.setdefault(k, v)
+        values[k] = v
     out = {}
     for field, names in ENV_ALIASES.items():
         for n in names:
@@ -383,7 +384,9 @@ DroperOG Grabber — دانلود گروهی فایل‌های چت‌های خ�
   --types LIST     photo,video,video_note,document,audio,voice,gif,sticker
                    یا all  (پیش‌فرض: همه جز sticker)
   --min-size SZ    حداقل حجم مثل 5MB       --max-size SZ   حداکثر حجم
-  --limit N        حداکثر پیام در هر چت     --since DATE    از تاریخ YYYY-MM-DD
+  --limit N        حداکثر پیام در هر چت (پیش‌فرض: N پیام *تازه‌ترین*)
+  --oldest         با --limit از قدیمی‌ترین پیام‌ها شروع کن (رفتار قبلی)
+  --since DATE     از تاریخ YYYY-MM-DD
   --until DATE     تا تاریخ                --out DIR       پوشه‌ی مقصد (پیش‌فرض downloads/)
   --sleep SEC      فاصله‌ی بین فایل‌ها (پیش‌فرض 1.0)
   --full           نادیده گرفتن state و اسکن کامل (فایل‌های موجود باز پرش می‌شوند)
@@ -401,6 +404,7 @@ def parse_args(argv: list[str]) -> dict:
         "types": list(DEFAULT_KINDS), "min_size": 0, "max_size": 0,
         "limit": 0, "since": None, "until": None, "out": str(DEFAULT_OUT),
         "sleep": 1.0, "full": False, "thumbs": False, "dry_run": False,
+        "oldest": False,
         "demo": False, "selftest": False, "help": False, "error": None,
     }
     i = 0
@@ -426,6 +430,8 @@ def parse_args(argv: list[str]) -> dict:
             args["all"] = True
         elif a == "--full":
             args["full"] = True
+        elif a == "--oldest":
+            args["oldest"] = True
         elif a == "--thumbs":
             args["thumbs"] = True
         elif a == "--dry-run":
@@ -581,11 +587,18 @@ async def grab_chat(client, entity, spec, args, state, kinds, stats) -> None:
 
     out_dir = Path(args["out"]).expanduser() / chat_dir_name(title, chat_key)
     limit = args["limit"] or None
+    # با --limit روی اسکن تازه (بدون watermark) کاربر انتظار «تازهترین N پیام» را
+    # دارد؛ Telethon با reverse=True قدیمیترین N را میدهد. با --oldest میتوان
+    # رفتار قبلی (از قدیم به جدید) را خواست.
+    descending = bool(limit) and (args["full"] or not last_id) and not args["oldest"]
+    if descending:
+        log(f"  newest-first: only the latest {limit} message(s)")
     max_id_seen = last_id
     scanned = 0
 
     try:
-        messages = client.iter_messages(entity, min_id=last_id, limit=limit, reverse=True)
+        messages = client.iter_messages(entity, min_id=last_id, limit=limit,
+                                        reverse=not descending)
         async for msg in messages:
             scanned += 1
             if scanned % 200 == 0:  # checkpoint: crash-safe incremental progress
@@ -593,6 +606,8 @@ async def grab_chat(client, entity, spec, args, state, kinds, stats) -> None:
                                             "updated": datetime.now(timezone.utc).isoformat()}
                 save_state(state)
             if not msg.media:
+                # پیام متنی هیچوقت فایل نمیشود، پس watermark را جلو میبرد
+                max_id_seen = max(max_id_seen, msg.id)
                 continue
             when = getattr(msg, "date", None)
             if args["since"] and when and when < args["since"]:

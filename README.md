@@ -22,6 +22,14 @@ python droperog.py
 - **Trust Score:** 0-95% based on funding, rating, status, and metadata
 - **State persistence:** only deltas shown after the first run
 - **Scheduling:** Windows Task Scheduler every 4h
+- **Honest health reporting:** a single broken source never kills the scan.
+  Exit codes: `0` ok · `1` degraded (source down / Telegram failed) · `2` aborted
+  (no source returned data). Every run also writes `data/scan_status.json` for CI.
+- **Watchdog:** if the last fully-healthy scan is older than 12h, the bot warns
+  on Telegram (with a 6h cooldown so it doesn't spam).
+- **No lost alerts:** Telegram messages are split under the 4096-unit limit and
+  state is only persisted *after* a successful delivery — a failed send means
+  the news is re-announced on the next run instead of silently vanishing.
 
 ## Schedule (Windows Task Scheduler)
 

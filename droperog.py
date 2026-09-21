@@ -15,18 +15,35 @@ except ImportError:
     print("Install requests: pip install requests")
     sys.exit(1)
 
-sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+try:  # Windows consoles default to cp1252 and choke on the report glyphs
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
 
 BASE = Path(__file__).parent
 DATA_DIR = BASE / "data"
 STATE_FILE = DATA_DIR / "state.json"
 REPORT_FILE = DATA_DIR / "last_report.txt"
 LOG_FILE = DATA_DIR / "run_log.txt"
+STATUS_FILE = DATA_DIR / "scan_status.json"
 DATA_DIR.mkdir(exist_ok=True)
+
+# کدهای خروجی — CI باید وقتی اسکن ناقص/لغو شده قرمز شود، نه سبز
+EXIT_OK = 0
+EXIT_DEGRADED = 1     # اسکن انجام شد ولی یک منبع خراب بود یا پیام تلگرام تحویل نشد
+EXIT_ABORTED = 2      # هیچ منبعی داده نداد → هیچ گزارشی تولید نشد
 
 # URLs whose fetch failed completely after retries — used to avoid
 # treating a network outage as "projects removed".
 FETCH_ERRORS: list[str] = []
+
+# یک منبع خراب نباید کل اسکن را بکشد؛ فقط وقتی *همه* منابع بمیرند اسکن لغو میشود
+SOURCE_HOSTS = {"alphadrops": "alphadrops.net", "cryptorank": "cryptorank.io",
+                "dropjet": "dropjet.co"}
+
+# watchdog: اگر آخرین اسکن موفق قدیمیتر از این باشد (یا منبعی خراب باشد) هشدار میدهیم
+STALE_HOURS = float(os.environ.get("DROPEROG_STALE_HOURS", "12"))
+ALERT_COOLDOWN_HOURS = float(os.environ.get("DROPEROG_ALERT_COOLDOWN_HOURS", "6"))
 
 
 def log(msg: str):
@@ -92,6 +109,71 @@ def is_old_listing(p: dict) -> bool:
     if d is None:
         return False  # بدون تاریخ → اعلام کن (رفتار قبلی)
     return (datetime.now(timezone.utc) - d).days > FRESH_DAYS
+
+
+# ─── SOURCE HEALTH / STATUS / WATCHDOG ─────────────────────
+
+def failed_source_names(urls: list[str]) -> list[str]:
+    """نام منابعی که fetch آنها شکست خورده (از روی URL خطادار)."""
+    names: list[str] = []
+    for url in urls:
+        for name, host in SOURCE_HOSTS.items():
+            if host in url and name not in names:
+                names.append(name)
+    return names
+
+
+def load_status() -> dict:
+    """وضعیت آخرین اجرا (heartbeat) — مبنای watchdog."""
+    if STATUS_FILE.exists():
+        try:
+            data = json.loads(STATUS_FILE.read_text("utf-8"))
+            if isinstance(data, dict):
+                return data
+        except Exception:
+            pass
+    return {}
+
+
+def save_status(status: dict):
+    try:
+        STATUS_FILE.write_text(json.dumps(status, indent=2, ensure_ascii=False), "utf-8")
+    except Exception as e:
+        log(f"  Status save failed: {e}")
+
+
+def staleness_hours(status: dict) -> float | None:
+    """چند ساعت از آخرین اسکن موفق گذشته؟ None اگر هیچ اسکن موفقی ثبت نشده."""
+    last = parse_dt(status.get("last_success"))
+    if last is None:
+        return None
+    return (datetime.now(timezone.utc) - last).total_seconds() / 3600
+
+
+def build_warning(failed: list[str], prev: dict, delivered_prev: bool = True) -> str | None:
+    """متن هشدار این اجرا (یا None اگر چیزی برای هشدار نیست)."""
+    parts = []
+    if failed:
+        parts.append(f"⚠ منبع خراب: {', '.join(failed)} — این اسکن ناقص است")
+    stale = staleness_hours(prev)
+    if stale is not None and stale >= STALE_HOURS:
+        parts.append(f"⚠ آخرین اسکن کامل {stale:.0f} ساعت پیش بوده")
+    elif prev.get("status") == "aborted" and not parts:
+        parts.append("⚠ اجرای قبلی هیچ منبعی نداشت (اسکن لغو شد)")
+    elif not delivered_prev and not parts:
+        parts.append("⚠ ارسال پیام تلگرام در اجرای قبل ناموفق بود")
+    return " | ".join(parts) if parts else None
+
+
+def alert_due(prev: dict, warning: str | None) -> bool:
+    """آیا این هشدار را بفرستیم؟ (با cooldown تا هر ۴ ساعت اسپم نشود)"""
+    if not warning:
+        return False
+    last = parse_dt(prev.get("last_alert"))
+    if last is not None:
+        if (datetime.now(timezone.utc) - last).total_seconds() < ALERT_COOLDOWN_HOURS * 3600:
+            return False
+    return True
 
 
 # ─── SOURCES ───────────────────────────────────────────────
@@ -346,13 +428,24 @@ def funding_rank(funding: Any) -> int:
     return 2
 
 
+# فقط پسوندهایی که «همان پروژه» را نشان میدهند (نه برند/موجودیت متفاوت)
+SAFE_SUFFIXES = (" protocol", " finance", " foundation", " dao", " airdrop",
+                 " official", " project")
+
+
 def normalize_name(name: str) -> str:
-    """Normalize a project name for dedup: strip token symbols in parens,
-    common suffixes and punctuation."""
+    """Normalize a project name for dedup: strip a trailing token symbol in
+    parentheses, safe legal-form suffixes and punctuation.
+
+    فقط پسوندهای «حقوقی/ساختاری» حذف میشوند. پسوندهای پرخطر (labs / network /
+    coin / token / project) دیگر حذف نمیشوند چون دو پروژهی متفاوت را به یک
+    کلید تبدیل میکردند (Sui Labs و Sui Network و SUI → همه «sui») و باعث
+    گمشدن پروژه میشدند.
+    """
     n = name.lower().strip()
-    n = re.sub(r"\s*\([^)]*\)", "", n)  # "Polymarket (POLY)" -> "polymarket"
-    for suf in (" protocol", " network", " finance", " foundation", " labs",
-                " lab", " token", " coin", " project", " official"):
+    # "Polymarket (POLY)" / "Sui (SUI)" → فقط پرانتز انتهایی که نماد توکن است
+    n = re.sub(r"\s*\(\s*[a-z0-9$]{1,8}\s*\)\s*$", "", n)
+    for suf in SAFE_SUFFIXES:
         if n.endswith(suf):
             n = n[: -len(suf)]
             break
@@ -405,34 +498,58 @@ def merge_projects(projects: list[dict]) -> list[dict]:
 
 # ─── CATEGORIZATION ────────────────────────────────────────
 
+NEGATION_RE = re.compile(
+    r"\b(?:no|not|without|zero|free\s+of)\s+(?:need\s+(?:for|of)\s+|any\s+)?"
+    r"(?:deposit|liquidity|stake|staking|trade|trading|swap|bridge|mint|cost|fee|fees"
+    r"|purchase|investment|gas)\b")
+FREE_OF_RE = re.compile(
+    r"\b(?:deposit|fee|fees|cost|investment|liquidity|gas)[\s-]+free\b")
+
+
+def clean_keyword_text(text: str) -> str:
+    """حذف عبارتهای نفی تا کلماتکلیدی باعث false positive نشوند
+    («no deposit needed» نباید پروژه را میننت کند)."""
+    text = NEGATION_RE.sub(" ", text)
+    text = FREE_OF_RE.sub(" ", text)
+    return re.sub(r"\s+", " ", text)
+
+
+def kw_hit(text: str, keywords) -> bool:
+    """تطبیق کلمهکلیدی در مرز کلمه (تا «task» داخل «multitask» گیر نکند)."""
+    for kw in keywords:
+        if re.search(rf"\b{re.escape(kw)}", text):
+            return True
+    return False
+
+
 def categorize(project: dict) -> str:
     name = (project.get("name") or "").lower()
     cats = " ".join(project.get("categories") or []).lower()
     tasks = " ".join(project.get("tasks") or []).lower()
     desc = (project.get("desc") or "").lower()
-    text = f"{name} {cats} {tasks} {desc}"
+    text = clean_keyword_text(f"{name} {cats} {tasks} {desc}")
     cost = project.get("cost") or 0
     time_min = project.get("time") or 0
     reward = (project.get("reward_type") or "").lower()
 
-    if any(kw in text for kw in ("testnet", "sepolia", "faucet", "devnet")):
+    if kw_hit(text, ("testnet", "sepolia", "faucet", "devnet")):
         return "testnet"
-    if "mint nft" in text:
+    if kw_hit(text, ("mint nft",)):
         return "mainnet"
-    if any(kw in text for kw in ("trading", "swap", "bridge", "stake", "perps", "perpetual",
-                                 "deposit", "liquidity", "lend", "borrow", "mainnet")):
+    if kw_hit(text, ("trading", "trade", "swap", "bridge", "stake", "staking", "perps",
+                     "perpetual", "deposit", "liquidity", "lend", "borrow", "mainnet")):
         return "mainnet"
     if cost > 0:
         return "mainnet"
     if time_min > 60:
         return "mainnet"
-    if any(kw in text for kw in ("social", "quest", "galxe", "task", "bounty", "ambassador",
-                                 "discord", "telegram", "twitter", "follow", "retweet", "quiz",
-                                 "survey", "form", "referral", "check-in", "getting a role")):
+    if kw_hit(text, ("social", "quest", "galxe", "task", "bounty", "ambassador",
+                     "discord", "telegram", "twitter", "follow", "retweet", "quiz",
+                     "survey", "form", "referral", "check-in", "getting a role")):
         return "task_farmer"
     if cost == 0 and time_min <= 30:
         return "task_farmer"
-    if "whitelist" in reward or "waitlist" in reward:
+    if kw_hit(reward, ("whitelist", "waitlist")):
         return "task_farmer"
     return "task_farmer"
 
@@ -444,7 +561,7 @@ CAT_COLOR = {"testnet": "\033[35m", "task_farmer": "\033[33m", "mainnet": "\033[
 
 # ─── STATE ─────────────────────────────────────────────────
 
-STATE_SCHEMA = 2
+STATE_SCHEMA = 3
 
 
 def load_state() -> dict:
@@ -461,7 +578,8 @@ def save_state(state: dict):
 
 
 def migrate_state(state: dict):
-    """Migrate v1 state (keyed by source id) to v2 (keyed by project key)."""
+    """Migrate v1 state (keyed by source id) to v2 (keyed by project key).
+    v3: کلیدها با قواعد امن‌تر normalize_name دوباره محاسبه میشوند."""
     if state.get("schema") == STATE_SCHEMA:
         return
     migrated = {}
@@ -470,7 +588,12 @@ def migrate_state(state: dict):
             k = project_key(rec)
             if k and k not in migrated:
                 r = dict(rec)
-                r["ids"] = [pid]
+                # idهای منابع را حفظ کن (لازم برای گارد «منبع خراب» در تشخیص REMOVED)؛
+                # کلید قدیمی فقط اگر خودش id منبع بود به فهرست اضافه میشود
+                ids = [i for i in (r.get("ids") or []) if isinstance(i, str)]
+                if isinstance(pid, str) and re.match(r"^(ad|cr|dj)_", pid) and pid not in ids:
+                    ids.append(pid)
+                r["ids"] = ids
                 migrated[k] = r
     state["projects"] = migrated
     state["schema"] = STATE_SCHEMA
@@ -478,11 +601,34 @@ def migrate_state(state: dict):
         log(f"  Migrated state to schema {STATE_SCHEMA}: {len(migrated)} project(s)")
 
 
+def _record_sources(rec: dict) -> set[str]:
+    """منابع شناختهشده‌ی یک رکورد state از روی پیشوند idها (ad_/cr_/dj_)."""
+    srcs: set[str] = set()
+    for i in rec.get("ids") or []:
+        if not isinstance(i, str):
+            continue
+        if i.startswith("ad_"):
+            srcs.add("alphadrops")
+        elif i.startswith("cr_"):
+            srcs.add("cryptorank")
+        elif i.startswith("dj_"):
+            srcs.add("dropjet")
+    return srcs
+
+
 def prune_state(state: dict, days: int = 60):
-    """Drop projects not seen for `days` so state.json doesn't grow forever."""
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=days)).isoformat()
-    stale = [k for k, p in state["projects"].items()
-             if p.get("last_seen") and p["last_seen"] < cutoff]
+    """Drop projects not seen for `days` so state.json doesn't grow forever.
+
+    مقایسه روی datetime انجام میشود نه روی رشته — چون state قدیمی
+    `last_seen` را به وقت محلی و بدون timezone ذخیره میکرده و مقایسهی
+    رشتهای با timestamp آگاه از UTC میتوانست چند ساعت خطا بدهد.
+    """
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+    stale = []
+    for k, p in state["projects"].items():
+        seen = parse_dt(p.get("last_seen"))
+        if seen is not None and seen < cutoff:
+            stale.append(k)
     if stale:
         for k in stale:
             state["projects"].pop(k, None)
@@ -491,13 +637,17 @@ def prune_state(state: dict, days: int = 60):
 
 # ─── REPORT ────────────────────────────────────────────────
 
-def build_report(new_projects, updated, removed, categorized, state):
+def build_report(new_projects, updated, removed, categorized, state, failed_sources=None):
     lines = []
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     sep = "=" * 58
     lines.append(sep)
     lines.append(f"  DroperOG v2 — {now}")
     lines.append(sep)
+
+    if failed_sources:
+        lines.append(f"\n  ⚠ منبع خراب: {', '.join(failed_sources)} — این اسکن ناقص است"
+                     f" (نتایج ممکن است کم باشند)")
 
     if new_projects:
         lines.append(f"\n  \033[32mNEW ({len(new_projects)}):\033[0m")
@@ -525,7 +675,7 @@ def build_report(new_projects, updated, removed, categorized, state):
         lines.append(f"\n  \033[31mREMOVED ({len(removed)}):\033[0m {', '.join(removed[:10])}")
 
     lines.append(f"\n{'-' * 50}")
-    lines.append("  CATEGORIZED SUMMARY (Trust >= 65)")
+    lines.append("  CATEGORIZED SUMMARY (trust >= 65, otherwise top-5 shown)")
     lines.append(f"{'-' * 50}")
 
     for cat in ("testnet", "mainnet", "task_farmer"):
@@ -535,9 +685,12 @@ def build_report(new_projects, updated, removed, categorized, state):
         e = CAT_EMOJI.get(cat, "❓")
         l = CAT_LABEL.get(cat, cat)
         high = sorted([p for p in items if p["trust"] >= 65], key=lambda x: x["trust"], reverse=True)
-        if not high:
+        if high:
+            label = f"{len(items)} — {len(high)} with trust >= 65"
+        else:
             high = sorted(items, key=lambda x: x["trust"], reverse=True)[:5]
-        lines.append(f"\n{e} {l} ({len(items)} — showing {len(high)} high-trust):")
+            label = f"{len(items)} — none >= 65, showing top {len(high)}"
+        lines.append(f"\n{e} {l} ({label}):")
         for p in high[:20]:
             ch = ", ".join(p["chains"]) if p.get("chains") else "?"
             fund = p.get("funding", "")
@@ -586,82 +739,189 @@ def esc(s: object) -> str:
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def _truncate_html(text: str, limit: int = 3800) -> str:
-    """Cut at a newline boundary so Telegram HTML tags stay well-formed."""
-    if len(text) <= limit:
+ANSI_RE = re.compile(r"\x1b\[[0-9;]*m")
+
+
+def _strip_ansi(text: str) -> str:
+    """فایل گزارشی که کامیت میشود نباید کاراکترهای رنگی کنسول داشته باشد."""
+    return ANSI_RE.sub("", text)
+
+
+# Telegram counts a message in UTF-16 code units (an emoji is 2 units), so a
+# 3800 *character* budget can still blow past the 4096 limit.
+TELEGRAM_LIMIT = 4096
+MESSAGE_BUDGET = 3800
+
+_TAG_RE = re.compile(r"<(/?)([a-zA-Z]+)[^>]*>")
+
+
+def utf16_len(text: str) -> int:
+    return len(text.encode("utf-16-le")) // 2
+
+
+def _open_tags(text: str) -> list[str]:
+    stack: list[str] = []
+    for m in _TAG_RE.finditer(text):
+        closing, name = m.group(1), m.group(2).lower()
+        if closing:
+            if name in stack:
+                while stack:
+                    if stack.pop() == name:
+                        break
+        else:
+            stack.append(name)
+    return stack
+
+
+def _truncate_html(text: str, limit: int = MESSAGE_BUDGET) -> str:
+    """Cut at a line boundary, never inside a tag, and close what stays open."""
+    if utf16_len(text) <= limit:
         return text
-    cut = text.rfind("\n", 0, limit)
-    if cut < 0:
-        cut = limit
-    return text[:cut] + "\n…"
+    cut = text.rfind("\n", 0, min(limit, len(text)))
+    head = text[:cut] if cut > 0 else text[:limit]
+    lt = head.rfind("<")
+    if lt > head.rfind(">"):          # برش وسط یک تگ افتاده → تا قبل از تگ عقب برو
+        head = head[:lt]
+    tail = "\n…"
+    closers = "".join(f"</{t}>" for t in reversed(_open_tags(head)))
+    while head and utf16_len(head + closers + tail) > limit:
+        cut = head.rfind("\n")
+        head = head[:cut] if cut > 0 else head[:-1]
+        closers = "".join(f"</{t}>" for t in reversed(_open_tags(head)))
+    return head + closers + tail
 
 
-def send_telegram(new_projects: list, categorized: dict):
-    if not BOT_TOKEN or not CHAT_ID:
-        return
-    if not new_projects:
-        return
+def _plain_text(text: str) -> str:
+    """HTML را به متن ساده تبدیل میکند (fallback وقتی HTML رد شود)."""
+    text = re.sub(r"<br\s*/?>", "\n", text)
+    text = re.sub(r"</?(?:b|strong|i|em|u|s|code|pre|blockquote)(?:\s[^>]*)?>", "", text)
+    return (text.replace("&lt;", "<").replace("&gt;", ">").replace("&amp;", "&"))
 
-    # belt-and-suspenders dedup — merge_projects already guarantees unique names
+
+def split_messages(blocks: list[str], budget: int = MESSAGE_BUDGET) -> list[str]:
+    """بلوکهای متوازنتگ را در چند پیام میبندد تا سقف UTF-16 تلگرام رد نشود.
+    هیچ بلوکی نصف نمیشود، پس تگها همیشه متوازن میمانند."""
+    messages: list[str] = []
+    current: list[str] = []
+    size = 0
+    for block in blocks:
+        block = block if utf16_len(block) <= budget else _truncate_html(block, budget)
+        bsize = utf16_len(block) + 1
+        if current and size + bsize > budget:
+            messages.append("\n".join(current))
+            current, size = [], 0
+        current.append(block)
+        size += bsize
+    if current:
+        messages.append("\n".join(current))
+    return messages or [""]
+
+
+def _unique_by_name(projects: list) -> list:
     seen = set()
     uniq = []
-    for p in sorted(new_projects, key=lambda x: x["trust"], reverse=True):
+    for p in projects:
         k = (p.get("name") or "").strip().lower()
         if not k or k in seen:
             continue
         seen.add(k)
         uniq.append(p)
+    return uniq
 
-    lines = [f"🪂 <b>Airdrop Scan</b> — {datetime.now().strftime('%H:%M')}", ""]
-    lines.append(f"🆕 <b>New ({len(uniq)})</b>")
-    for p in uniq[:10]:
-        cat = categorize(p)
-        label = CAT_LABEL.get(cat, "?")
-        emoji = CAT_EMOJI.get(cat, "❓")
-        parts = []
-        if p.get("tasks"):
-            parts.append(", ".join(p["tasks"][:3]))
-        fund = p.get("funding") or ""
-        if fund and fund.strip().lower() not in ("undisclosed", "hidden"):
-            parts.append(f"💰 {fund}")
-        lines.append(f"<b>{esc(p['name'])}</b> {emoji} {label}")
-        lines.append(f"🔗 {p['url']}")
-        if parts:
-            lines.append(f"<blockquote>{esc(', '.join(parts))}</blockquote>")
-        lines.append("")
-    lines.append("📊 <b>Summary</b>")
-    for k, label in [("testnet", "Testnet"), ("mainnet", "Mainnet"), ("task_farmer", "Social Tasks")]:
-        lines.append(f"  {CAT_EMOJI[k]} {label}: {len(categorized.get(k, []))}")
-    lines.append(f"  ────────────────────")
-    lines.append(f"  <b>Total: {sum(len(v) for v in categorized.values())}</b>")
 
-    text = _truncate_html("\n".join(lines))
+def build_telegram_blocks(new_projects: list, categorized: dict,
+                          warning: str | None = None) -> list[str]:
+    """پیام تلگرام بهصورت بلوکهای متوازنتگ (هر بلوک یک واحد کامل HTML)."""
+    uniq = _unique_by_name(new_projects)
+    blocks = [f"🪂 <b>Airdrop Scan</b> — {datetime.now().strftime('%H:%M')}"]
+    if warning:
+        blocks.append(f"<b>{esc(warning)}</b>")
+    if uniq:
+        blocks.append(f"🆕 <b>New ({len(uniq)})</b>")
+        for p in sorted(uniq, key=lambda x: x["trust"], reverse=True)[:10]:
+            cat = categorize(p)
+            label = CAT_LABEL.get(cat, "?")
+            emoji = CAT_EMOJI.get(cat, "❓")
+            parts = []
+            if p.get("tasks"):
+                parts.append(", ".join(p["tasks"][:3]))
+            fund = p.get("funding") or ""
+            if fund and fund.strip().lower() not in ("undisclosed", "hidden"):
+                parts.append(f"💰 {fund}")
+            block = [f"<b>{esc(p['name'])}</b> {emoji} {label}"]
+            block.append(f"🔗 {esc(p.get('url') or '')}")
+            if parts:
+                block.append(f"<blockquote>{esc(', '.join(parts))}</blockquote>")
+            blocks.append("\n".join(block))
+        if len(uniq) > 10:
+            blocks.append(f"… و {len(uniq) - 10} مورد دیگر (گزارش کامل: data/last_report.txt)")
+    if categorized:
+        summary = ["📊 <b>Summary</b>"]
+        for k, label in [("testnet", "Testnet"), ("mainnet", "Mainnet"),
+                         ("task_farmer", "Social Tasks")]:
+            summary.append(f"  {CAT_EMOJI[k]} {label}: {len(categorized.get(k, []))}")
+        summary.append("  ────────────────────")
+        summary.append(f"  <b>Total: {sum(len(v) for v in categorized.values())}</b>")
+        blocks.append("\n".join(summary))
+    return blocks
+
+
+def _telegram_post(payload: dict) -> bool:
     try:
-        r = requests.post(
-            f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
-            json={"chat_id": CHAT_ID, "text": text, "parse_mode": "HTML",
-                  "disable_web_page_preview": True},
-            timeout=10,
-        )
-        ok = False
+        r = requests.post(f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
+                          json=payload, timeout=15)
         if r.status_code == 200:
             try:
-                ok = bool(r.json().get("ok"))
+                return bool(r.json().get("ok"))
             except Exception:
-                ok = False
-        if ok:
-            log("Telegram sent")
-        else:
-            log(f"Telegram error: HTTP {r.status_code}: {r.text[:200]}")
+                return False
+        log(f"Telegram error: HTTP {r.status_code}: {r.text[:200]}")
+        return False
     except Exception as e:
         log(f"Telegram error: {e}")
+        return False
+
+
+def deliver(blocks: list[str]) -> bool:
+    """ارسال چندبخشی + یک تلاش دوباره با متن ساده. True یعنی همهی بخشها تحویل شد."""
+    messages = split_messages(blocks)
+    total = len(messages)
+    for i, msg in enumerate(messages, 1):
+        body = msg if total == 1 else f"<i>({i}/{total})</i>\n{msg}"
+        ok = _telegram_post({"chat_id": CHAT_ID, "text": body, "parse_mode": "HTML",
+                             "disable_web_page_preview": True})
+        if not ok:
+            log(f"  Telegram: HTML بخش {i}/{total} رد شد — تلاش دوباره با متن ساده")
+            ok = _telegram_post({"chat_id": CHAT_ID, "text": _plain_text(body),
+                                 "disable_web_page_preview": True})
+        if not ok:
+            log(f"  Telegram: بخش {i}/{total} تحویل نشد (state ذخیره نمیشود)")
+            return False
+        if i < total:
+            time.sleep(0.6)          # مهربان با rate limit تلگرام
+    log(f"Telegram sent ({total} message(s))")
+    return True
+
+
+def send_telegram(new_projects: list, categorized: dict,
+                  warning: str | None = None) -> bool:
+    """True = تحویل شد، یا چیزی برای تحویل نبود (پس ذخیرهی state بیخطر است)."""
+    if not BOT_TOKEN or not CHAT_ID:
+        if new_projects or warning:
+            log("  Telegram تنظیم نشده (BOT_TOKEN/CHAT_ID) — پیام فرستاده نشد")
+        return True
+    if not new_projects and not warning:
+        return True
+    return deliver(build_telegram_blocks(new_projects, categorized, warning))
 
 
 # ─── MAIN ──────────────────────────────────────────────────
 
-def main():
+def main() -> int:
+    started = datetime.now(timezone.utc)
     log("DroperOG v2 starting...\n")
 
+    prev_status = load_status()
     state = load_state()
     migrate_state(state)
     prune_state(state)
@@ -677,10 +937,32 @@ def main():
         dj = f_dj.result()
     log(f"  AlphaDrops: {len(ad)} | CryptoRank: {len(cr)} | DropJet: {len(dj)}")
 
-    if FETCH_ERRORS:
-        log(f"  {len(FETCH_ERRORS)} fetch(es) failed — aborting scan.")
-        log("  Keeping previous state to avoid false REMOVED reports.")
-        return
+    failed = failed_source_names(FETCH_ERRORS)
+    warning = build_warning(failed, prev_status,
+                           delivered_prev=prev_status.get("telegram_delivered", True))
+    if alert_due(prev_status, warning):
+        alert = warning
+    else:
+        alert = None
+
+    # یک منبع خراب کل اسکن را نمیکشد — فقط وقتی هیچ منبعی داده ندهد لغو میشود
+    if not (ad or cr or dj):
+        log(f"  هیچ منبعی داده نداد (خطاها: {FETCH_ERRORS or 'هیچ'}) — اسکن لغو شد.")
+        alerted = False
+        if alert:
+            alerted = send_telegram([], {}, warning=alert)
+        now_iso = datetime.now(timezone.utc).isoformat()
+        save_status({
+            "status": "aborted", "failed_sources": failed,
+            "telegram_delivered": alerted,
+            "finished_at": now_iso,
+            "duration_s": round((datetime.now(timezone.utc) - started).total_seconds(), 1),
+            "last_success": prev_status.get("last_success"),
+            "last_alert": now_iso if alerted else prev_status.get("last_alert"),
+        })
+        return EXIT_ABORTED
+    if failed:
+        log(f"  ⚠ منابع خطادار: {', '.join(failed)} — با منابع سالم ادامه میدهیم")
 
     all_p = ad + cr + dj
 
@@ -708,23 +990,18 @@ def main():
                 updated.append({"name": p["name"], "change": f"Trust: {ot}% -> {p['trust']}%"})
 
     removed_p = []
+    failed_set = set(failed)
     for k in list(state["projects"].keys()):
         if k not in cur_names:
-            nm = state["projects"][k].get("name", "")
+            rec = state["projects"][k]
+            # اگر *همه* منابع این پروژه همین حالا خطا داده‌اند، ناپدیدشدنش
+            # نتیجه‌ی قطعی منبع است نه حذف واقعی پروژه → «REMOVED» اعلام نکن
+            srcs = _record_sources(rec)
+            if srcs and srcs <= failed_set:
+                continue
+            nm = rec.get("name", "")
             if nm and nm not in removed_p:
                 removed_p.append(nm)
-
-    # Update state
-    for p in deduped:
-        k = project_key(p)
-        state["projects"][k] = {
-            "name": p["name"], "trust": p["trust"], "category": categorize(p),
-            "categories": p.get("categories", []), "chains": p.get("chains", []),
-            "ids": p.get("ids") or [p["id"]],
-            "last_seen": datetime.now().isoformat(),
-        }
-    state["last_run"] = datetime.now(timezone.utc).isoformat()
-    save_state(state)
 
     # Categorize
     categorized = {"testnet": [], "task_farmer": [], "mainnet": []}
@@ -732,18 +1009,37 @@ def main():
         cat = categorize(p)
         categorized.setdefault(cat, []).append(p)
 
-    report = build_report(new_p, updated, removed_p, categorized, state)
+    report = build_report(new_p, updated, removed_p, categorized, state,
+                          failed_sources=failed)
     print("\n" + report)
-    REPORT_FILE.write_text(report, "utf-8")
+    REPORT_FILE.write_text(_strip_ansi(report), "utf-8")
     log(f"Report -> {REPORT_FILE}")
 
-    send_telegram(new_p, categorized)
+    # ارسال پیام *قبل* از ذخیره‌ی state: اگر پیام نرسد، خبر از دست نمیرود
+    delivered = send_telegram(new_p, categorized, warning=alert)
+
+    if delivered:
+        now_iso = datetime.now(timezone.utc).isoformat()
+        for p in deduped:
+            k = project_key(p)
+            prev = state["projects"].get(k, {})
+            state["projects"][k] = {
+                "name": p["name"], "trust": p["trust"], "category": categorize(p),
+                "ids": p.get("ids") or [p["id"]],
+                "first_seen": prev.get("first_seen") or now_iso,
+                "last_seen": now_iso,
+            }
+        state["last_run"] = now_iso
+        save_state(state)
+    else:
+        log("  ⚠ تلگرام تحویل نشد — state ذخیره نشد تا این خبر در اجرای بعد دوباره اعلام شود")
 
     # Write summary JSON for GitHub Pages
     try:
         summary = {
             "summary": {k: len(v) for k, v in categorized.items()},
             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M UTC"),
+            "sources_failed": failed,
         }
         pages_file = BASE / "docs" / "projects.json"
         pages_file.parent.mkdir(exist_ok=True)
@@ -752,6 +1048,29 @@ def main():
     except Exception as e:
         log(f"Pages JSON error: {e}")
 
+    finished = datetime.now(timezone.utc).isoformat()
+    healthy = delivered and not failed
+    status = {
+        "status": "ok" if healthy else "degraded",
+        "failed_sources": failed,
+        "telegram_delivered": delivered,
+        "projects": len(deduped),
+        "new_projects": len(new_p),
+        "finished_at": finished,
+        "duration_s": round((datetime.now(timezone.utc) - started).total_seconds(), 1),
+        # فقط اجرای کامل و سالم «آخرین اسکن موفق» را جلو میبرد
+        "last_success": finished if healthy else prev_status.get("last_success"),
+        "last_alert": finished if alert else prev_status.get("last_alert"),
+    }
+    save_status(status)
+    log(f"  status={status['status']}  sources_failed={failed or '-'}  "
+        f"telegram={'ok' if delivered else 'FAILED'}")
+
+    if healthy:
+        return EXIT_OK
+    log(f"  ⚠ اسکن ناقص — کد خروجی {EXIT_DEGRADED} (CI باید این را نشان دهد)")
+    return EXIT_DEGRADED
+
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
