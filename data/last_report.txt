@@ -1,70 +1,80 @@
 ==========================================================
-  DroperOG v2 — 2026-09-08 15:27:55
+  DroperOG v2 — 2026-09-21 14:44:05
 ==========================================================
 
-  [32mNo new projects[0m
+  ⚠ منبع خراب: cryptorank — این اسکن ناقص است (نتایج ممکن است کم باشند)
 
-  [31mREMOVED (31):[0m 01, Superform, T-Rex, AFK Fishing, Canopy Network, tren.ch, Trepa, Netrun, Bonk, 4AI
+  NEW (1):
+  🟢 World [Mainnet]  Trust: 55%
+     Chains: solana
+     Funding: Undisclosed
+     https://alphadrops.net/airdrops/world
+
+  UPDATED (25):
+  PopDEX: Trust: 65% -> 82%
+  Meridian: Trust: 65% -> 55%
+  Dreamcash: Trust: 65% -> 55%
+  Base: Trust: 70% -> 55%
+  Relay: Trust: 70% -> 55%
+  Optimism: Trust: 72% -> 60%
+  Perena: Trust: 68% -> 55%
+  Abstract: Trust: 70% -> 55%
+  DeBank: Trust: 75% -> 55%
+  Symbiotic: Trust: 75% -> 65%
+
+  REMOVED (3): 01, Stork, Superform
 
 --------------------------------------------------
-  CATEGORIZED SUMMARY (Trust >= 65)
+  CATEGORIZED SUMMARY (trust >= 65, otherwise top-5 shown)
 --------------------------------------------------
 
-🟣 Testnet (12 — showing 8 high-trust):
-  Rome Protocol — 83% | ? | $9,000,000 | Testnet, Getting a role
-  Spicenet — 78% | ? | $3,400,000 | Social, Bounty Platforms
-  Novastro Chain — 78% | ? | $3,200,000 | Bounty Platforms, Testnet
-  Tempo — 77% | ? | $500.00M | Use Testnet, Complete Quests
-  Turnkey — 77% | ? | $65,000,000 | Testnet
-  XO Market — 73% | ? | $6,500,000 | Predictions, Fill The Form
-  aura — 68% | ? | $5,500,000 | Testnet
-  GIWA — 65% | optimism | Bounty Platforms, Wallet Airdrop Status
+🟣 Testnet (4 — 1 with trust >= 65):
+  Tempo — 70% | ? | $500.00M | Use Testnet, Complete Quests
 
-🟢 Mainnet (114 — showing 62 high-trust):
+🟢 Mainnet (96 — 47 with trust >= 65):
   xStocks — 87% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
   Infinex — 85% | evm&svmchains | $65.29M | Explore Infinex app, Place a perps trade
-  Pharos — 83% | pharos | $8M | Explore Pharos Network app, Bridge to the network
-  dTelecom — 83% | optimism | $1,200,000 | Social, Wallet Airdrop Status
+  Pharos Network — 83% | pharos | $8M | Explore Pharos Network app, Bridge to the network
+  PopDEX — 82% | morphtachyon | $30.00M | Join Private Beta, Trade
+  Bulk — 80% | solana | $8M | Stake SOL, Trade Perps 
   N1 — 80% | n1 | $7M | Join Private Beta, Trade Perps
   Perpl — 80% | monad | $9.5M | Trade Perps, $1M Volume
-  Bulk — 80% | solana | $8M | Stake SOL, Trade Perps (NOT LIVE YET)
-  Blockscout — 78% | ? | $3M | Join the Merits program and collect points by completing tasks, using Swapscout, and inviting friend, Collect badges
-  Polymarket — 77% | polygon | $2.88B | Explore Polymarket, Trade Markets
-  Phantom — 77% | solana | NA | Use in-app swap feature
-  Rainbow — 77% | ? | $19.5M | Explore Rainbow app, Do one onchain action
-  Symbiotic — 75% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points
-  Super Protocol — 75% | ? | $14,100,000 | Bounty Platforms, Mainnet
-  Kintsu — 73% | monad | $4M | Stake $MON, Use sMON in DeFi
-  Ambient — 73% | ethereum, scroll | $6.5M | Trade, Provide Liquidity
-  Strata — 73% | ? | $3,000,000 | Liquidity
-  Li.Fi — 72% | arbitrum, avalanche, bnbchain, celo, cronos, ethereum, fantom, fuse, gnosis, harmony, moonbeam, mooniver, okc, optimism, polygon, zksync | $5.5M | Explore Li.Fi app, Bridge assets once
-  Optimism — 72% | ethl2, optimism | NA | Explore Optimism app, Bridge to the network
+  Zerion — 72% | arbitrum, aurora, avalanche, bnbchain, base, ethereum, fantom, gnosis, optimism, polygon, zksync | $33M | Explore Zerion app, Swap a token pair
+  Arcus — 70% | robinhood | Undisclosed | Join the waitlist, Trade Spot
+  Quote — 70% | hyperliquid | Undisclosed | Join , Trade
+  Ondo Perps — 70% | ethereum | Undisclosed | Trade Perps
+  Polymarket — 70% | polygon | $2.88B | Explore Polymarket, Trade Markets
+  Metamask — 70% | ethereum | $726M | Explore Metamask app, Swap a token pair
+  Rysk Finance — 70% | arbitrum | $1.4M | Explore Rysk Finance app, Do one onchain action
+  Swaap — 70% | ethereum, polygon | $4.5M | Explore Swaap app, Do one onchain action
+  dappOS — 70% | arbitrum, avalanche, bnbchain, ethereum, fantom, kava, polygon | NA | Use the apps supported on dappOS, Trade & provide liquidity on Perp
+  Based — 70% | arbitrum, hyperliquid | NA | Explore Based app, Place a perps trade
+  Vana — 70% | vana | Data Service, Layer 1
 
-🟡 Social Tasks (690 — showing 345 high-trust):
+🟡 Social Tasks (62 — 19 with trust >= 65):
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
-  Kadena — 80% | ? | $35,150,000 | Bounty Platforms
-  MetaCene — 80% | ? | $15,340,000 | Gaming
-  Ecosapiens — 78% | ? | $5,000,000 | Social, Bounty Platforms
-  Playfull (Earn Alliance) — 78% | ? | $8,010,000 | Social
-  OpenSea — 77% | ethereum, polygon, base, arbitrum, optimism, solana, bnbchain, linea, avalanche, abstract | $425.15M | Join the Voyage
-  Jupiter — 77% | ? | $172,500,000
-  Variational — 77% | ? | $61,800,000
-  Forte — 77% | ? | $910,000,000
-  Sui — 77% | sui | $405,370,000
-  Arc — 77% | ? | $222,000,000
-  Praxis Society — 77% | ? | $544,200,000
-  Immutable — 77% | ? | $322,380,000
-  Aztec — 77% | ? | $183,765,601.9424
-  Architect — 77% | ? | $52,000,000
-  Farcaster — 77% | base, ethereum, zora | $180,000,000 | Social
-  Blockchain.com — 77% | ? | $600,000,000
-  Canton Network — 77% | ton | $812,200,000
-  Doodles — 77% | ? | $54,500,000
-  Nous Research — 77% | ? | $70,000,000
+  Rainbow — 77% | ? | $19.5M | Explore Rainbow app, Do one onchain action
+  OpenSea — 70% | ethereum, polygon, base, arbitrum, optimism, solana, bnbchain, linea, avalanche, abstract | $425.15M | Join the Voyage
+  RateX — 70% | multi-chain | TBA
+  Stork Network — 68% | ? | $4M | Explore Stork Network app, Query or publish a data feed
+  Axis Robotics — 67% | ethereum | $12M | Sign up on Axis Hub, Complete simulation tasks
+  Upshift — 67% | ethereum, base, arbitrum, sui, solana | $10M
+  Fhenix — 67% | fhenix | $22M | Complete the quests in their Discord server
+  Pharos — 67% | pharos | Chain, Layer 1
+  Sign Protocol — 67% | movement | Blockchain Infrastructure, Dev Tools
+  TheoriqAI — 67% | ? | Artificial Intelligence (AI), Blockchain Infrastructure
+  Initia — 67% | initia | Blockchain Infrastructure, Chain
+  Burnt (XION) — 67% | xion | Blockchain Infrastructure, Chain
+  Symbiotic — 65% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points
+  Arch Network — 65% | bitcoin | $7M | Join the Incentivized Program and complete available quests
+  Farcaster — 65% | base, ethereum, zora | Social
+  Blackbird — 65% | base | Social
+  BlockLords — 65% | base, ethereum, immutable x, polygon | GameFi
+  CARV — 65% | linea, opbnb, polygon, ronin, zksync | Decentralized Autonomous Organization (DAO), GameFi
 
 --------------------------------------------------
-  Total: 816 | Testnet: 12 | Social Tasks: 690 | Mainnet: 114
-  Last run: 0 min ago
+  Total: 162 | Testnet: 4 | Social Tasks: 62 | Mainnet: 96
+  Last run: 18676 min ago
 ==========================================================

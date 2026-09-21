@@ -1,8 +1,11 @@
 {
   "summary": {
-    "testnet": 12,
-    "task_farmer": 690,
-    "mainnet": 114
+    "testnet": 4,
+    "task_farmer": 62,
+    "mainnet": 96
   },
-  "timestamp": "2026-09-08 15:27 UTC"
+  "timestamp": "2026-09-21 14:44 UTC",
+  "sources_failed": [
+    "cryptorank"
+  ]
 }
