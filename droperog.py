@@ -38,8 +38,13 @@ EXIT_ABORTED = 2      # هیچ منبعی داده نداد → هیچ گزار�
 FETCH_ERRORS: list[str] = []
 
 # یک منبع خراب نباید کل اسکن را بکشد؛ فقط وقتی *همه* منابع بمیرند اسکن لغو میشود
-SOURCE_HOSTS = {"alphadrops": "alphadrops.net", "cryptorank": "cryptorank.io",
-                "dropjet": "dropjet.co"}
+SOURCE_HOSTS = {"alphadrops": "alphadrops.net", "dropjet": "dropjet.co",
+                "defillama": "llama.fi"}
+
+# منابعی که از چرخه خارج شده‌اند ولی هنوز در state قدیمی id دارند.
+# CryptoRank از سپتامبر ۲۰۲۶ پشت Cloudflare است (HTTP 403) و جایگزین شده.
+# تابع fetch_cryptorank() عمداً نگه داشته شده تا اگر برگردد دوباره وصل شود.
+RETIRED_SOURCES = {"cryptorank"}
 
 # watchdog: اگر آخرین اسکن موفق قدیمیتر از این باشد (یا منبعی خراب باشد) هشدار میدهیم
 STALE_HOURS = float(os.environ.get("DROPEROG_STALE_HOURS", "12"))
@@ -304,6 +309,112 @@ def fetch_cryptorank() -> list[dict]:
             "cost": cost,
             "time": time_min,
             "reward_type": reward_type,
+        })
+    return result
+
+
+# ─── SOURCE: DEFILLAMA ──────────────────────────────────────
+# جایگزین CryptoRank. آدرس api.cryptorank.io از سپتامبر ۲۰۲۶ پشت Cloudflare
+# قفل شده (HTTP 403 حتی با هدر مرورگر)، ولی DeFiLlama هم آزاد است هم کلیدی
+# نمی‌خواهد و ~۸۴۰۰ پروتکل با زنجیره/دسته/میانگین‌بازار/ممیزی می‌دهد.
+
+DEFILLAMA_API = "https://api.llama.fi/protocols"
+
+# دسته‌هایی که پروژه‌شان «ایردراپ‌خور» است — بقیه (CEX، Bridge بین‌زنجیره‌ای
+# عمومی و...) ارزش پیگیری ایردراپ ندارند و فقط نویز می‌سازند.
+DEFILLAMA_SKIP_CATEGORIES = {"cex", "canonical bridge", "chain", "bridge",
+                             "oracle", "indexes", "index", "cdn", "rpc",
+                             "l2 infrastructure", "sidechain", "esports"}
+
+DEFILLAMA_TASK_CATEGORIES = {"social", "gaming", "gamefi", "meme",
+                             "nft marketplace", "nft lending"}
+
+
+def _defillama_tasks(cats: list[str], category: str) -> list[str]:
+    """از دسته‌های DeFiLlama، «تسک‌های اجتماعی» قابل انجام استخراج کن."""
+    out = [c for c in cats if c in DEFILLAMA_TASK_CATEGORIES]
+    if category in DEFILLAMA_TASK_CATEGORIES:
+        out.append(category)
+    return list(dict.fromkeys(out))
+
+
+def fetch_defillama(min_tvl: float = 5_000_000.0) -> list[dict]:
+    """DeFiLlama protocols — بزرگ‌ترین منابع جایگزین CryptoRank.
+
+    فقط پروتکل‌هایی که TVL معنادار دارند نگه داشته می‌شوند (ورودی ~۸۴۰۰
+    رکورد، خروجی چند صد پروژه واقعی) تا گزارش پر از پروژه مرده نشود.
+    """
+    data = fetch_json(DEFILLAMA_API, timeout=60)
+    if not isinstance(data, list):
+        return []
+
+    result = []
+    for p in data:
+        if not isinstance(p, dict):
+            continue
+        name = (p.get("name") or "").strip()
+        if not name or p.get("category", "").lower() in DEFILLAMA_SKIP_CATEGORIES:
+            continue
+        tvl = float(p.get("tvl") or 0)
+        if tvl < min_tvl and not p.get("mcap"):
+            continue
+
+        chains_raw = p.get("chains") or ([p["chain"]] if p.get("chain") else [])
+        chains = [str(c).lower().replace(" ", "") for c in chains_raw]
+        categories = [c for c in re.split(r"[,/]", (p.get("category") or "").lower()) if c.strip()]
+        cats = [c.strip() for c in categories]
+        category = (p.get("category") or "").strip()
+        desc = (p.get("description") or "").strip()[:300]
+        tasks = _defillama_tasks(cats, category.lower())
+        mcap = p.get("mcap") or 0
+
+        # trust: TVL و market cap واقعی سیگنال بهتری از ریتینگ هستند
+        trust = 50
+        if tvl >= 1_000_000_000: trust += 15
+        elif tvl >= 100_000_000: trust += 12
+        elif tvl >= 10_000_000: trust += 9
+        elif tvl >= 1_000_000: trust += 6
+        else: trust += 3
+        if mcap:
+            mc = float(mcap)
+            if mc >= 1_000_000_000: trust += 12
+            elif mc >= 100_000_000: trust += 9
+            elif mc >= 10_000_000: trust += 6
+            else: trust += 3
+        if p.get("audits") and str(p.get("audits")) not in ("0", "None"):
+            trust += 5
+        if p.get("twitter"):
+            trust += 3
+        if p.get("symbol"):
+            trust += 2
+        trust = min(trust, 95)
+
+        listed = p.get("listedAt")
+        date = ""
+        if isinstance(listed, (int, float)) and listed:
+            try:
+                date = datetime.fromtimestamp(float(listed), timezone.utc).isoformat()
+            except (ValueError, OSError, OverflowError):
+                date = ""
+
+        funding = f"${float(mcap):,.0f}" if mcap else (f"${tvl:,.0f} TVL" if tvl else "")
+
+        result.append({
+            "id": f"dl_{p.get('slug') or p.get('id', '')}",
+            "name": name,
+            "desc": desc,
+            "chains": list(dict.fromkeys(chains)),
+            "categories": cats,
+            "tasks": tasks or [category] if category else [],
+            "status_raw": category,
+            "funding": funding,
+            "url": p.get("url") or (f"https://defillama.com/protocol/{p['slug']}"
+                                    if p.get("slug") else ""),
+            "date": date,
+            "source": "DeFiLlama",
+            "trust": trust,
+            "tvl": tvl,
+            "mcap": float(mcap) if mcap else 0,
         })
     return result
 
@@ -613,6 +724,8 @@ def _record_sources(rec: dict) -> set[str]:
             srcs.add("cryptorank")
         elif i.startswith("dj_"):
             srcs.add("dropjet")
+        elif i.startswith("dl_"):
+            srcs.add("defillama")
     return srcs
 
 
@@ -927,15 +1040,15 @@ def main() -> int:
     prune_state(state)
 
     # Fetch all sources in parallel
-    with ThreadPoolExecutor(max_workers=3) as ex:
+    with ThreadPoolExecutor(max_workers=4) as ex:
         f_ad = ex.submit(fetch_alphadrops)
-        f_cr = ex.submit(fetch_cryptorank)
         f_dj = ex.submit(fetch_dropjet)
-        log("Fetching AlphaDrops + CryptoRank + DropJet in parallel...")
+        f_dl = ex.submit(fetch_defillama)
+        log("Fetching AlphaDrops + DropJet + DeFiLlama in parallel...")
         ad = f_ad.result()
-        cr = f_cr.result()
         dj = f_dj.result()
-    log(f"  AlphaDrops: {len(ad)} | CryptoRank: {len(cr)} | DropJet: {len(dj)}")
+        dl = f_dl.result()
+    log(f"  AlphaDrops: {len(ad)} | DropJet: {len(dj)} | DeFiLlama: {len(dl)}")
 
     failed = failed_source_names(FETCH_ERRORS)
     warning = build_warning(failed, prev_status,
@@ -946,7 +1059,7 @@ def main() -> int:
         alert = None
 
     # یک منبع خراب کل اسکن را نمیکشد — فقط وقتی هیچ منبعی داده ندهد لغو میشود
-    if not (ad or cr or dj):
+    if not (ad or dj or dl):
         log(f"  هیچ منبعی داده نداد (خطاها: {FETCH_ERRORS or 'هیچ'}) — اسکن لغو شد.")
         alerted = False
         if alert:
@@ -964,7 +1077,7 @@ def main() -> int:
     if failed:
         log(f"  ⚠ منابع خطادار: {', '.join(failed)} — با منابع سالم ادامه میدهیم")
 
-    all_p = ad + cr + dj
+    all_p = ad + dj + dl
 
     # Dedup by normalized name + merge records from all sources
     deduped = merge_projects(all_p)
@@ -995,9 +1108,11 @@ def main() -> int:
         if k not in cur_names:
             rec = state["projects"][k]
             # اگر *همه* منابع این پروژه همین حالا خطا داده‌اند، ناپدیدشدنش
-            # نتیجه‌ی قطعی منبع است نه حذف واقعی پروژه → «REMOVED» اعلام نکن
+            # نتیجه‌ی قطعی منبع است نه حذف واقعی پروژه → «REMOVED» اعلام نکن.
+            # منابع «بازنشسته» (CryptoRank) هم مثل منبع خطادار حساب می‌شوند:
+            # حذفشان از چرخه به معنی پاک شدن پروژه نیست.
             srcs = _record_sources(rec)
-            if srcs and srcs <= failed_set:
+            if srcs and srcs <= (failed_set | RETIRED_SOURCES):
                 continue
             nm = rec.get("name", "")
             if nm and nm not in removed_p:
@@ -1029,6 +1144,17 @@ def main() -> int:
                 "first_seen": prev.get("first_seen") or now_iso,
                 "last_seen": now_iso,
             }
+        # رکوردهایی که دیگر در هیچ منبع فعالی نیستند باید از state پاک شوند،
+        # وگرنه «REMOVED» هر اجرا بی‌نهایت تکرار می‌شود و state باد نمی‌کند.
+        # رکوردهایی که فقط از منابع خطادار/بازنشسته آمده‌اند حفظ می‌شوند تا
+        # وقتی منبع برگشت، دوباره «NEW» اعلام نشوند.
+        protected = {k for k, rec in state["projects"].items()
+                     if _record_sources(rec) & (failed_set | RETIRED_SOURCES)}
+        keep_only = cur_names | protected
+        dropped = len(state["projects"]) - len(keep_only)
+        if dropped:
+            log(f"  پاکسازی state: {dropped} رکورد منقضی حذف شد")
+        state["projects"] = {k: v for k, v in state["projects"].items() if k in keep_only}
         state["last_run"] = now_iso
         save_state(state)
     else:

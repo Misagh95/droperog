@@ -68,8 +68,12 @@ EXIT_DEGRADED = 1     # اسکن انجام شد ولی منبعی خراب بو
 EXIT_ABORTED = 2      # هیچ منبعی داده نداد
 
 # یک منبع خراب نباید کل اسکن را بکشد؛ فقط وقتی *هیچ* منبعی داده ندهد لغو میشود
-SOURCE_HOSTS = {"alphadrops": "alphadrops.net", "cryptorank": "cryptorank.io",
-                "dropjet": "dropjet.co", "news": "news.google.com"}
+SOURCE_HOSTS = {"alphadrops": "alphadrops.net", "dropjet": "dropjet.co",
+                "defillama": "llama.fi", "news": "news.google.com"}
+
+# منابع بازنشسته — از چرخه خارج شده‌اند (CryptoRank پشت Cloudflare است).
+# تابع fetch_crypto_rank_fresh() نگه داشته شده تا اگر منبع برگشت دوباره وصل شود.
+RETIRED_SOURCES = {"cryptorank"}
 
 STALE_HOURS = float(os.environ.get("HUNTER_STALE_HOURS", "12"))
 ALERT_COOLDOWN_HOURS = float(os.environ.get("HUNTER_ALERT_COOLDOWN_HOURS", "6"))
@@ -236,6 +240,80 @@ def fetch_alpha_drops_fresh(days: int = FRESH_DAYS) -> list[dict]:
             "cost": 0 if a.get("isFreeAccess") else None,
         })
     log(f"  alphadrops: {len(out)} fresh airdrops (last {days}d)")
+    return out
+
+
+# ─── 1b) DeFiLlama — جایگزین CryptoRank (پشت Cloudflare قفل شده) ───────────
+# listedAt همان معادل createdAt است: «تاریخ اولین لیست‌شدن در DefiLlama».
+
+DEFILLAMA_API = "https://api.llama.fi/protocols"
+DEFILLAMA_MIN_TVL = float(os.environ.get("HUNTER_DEFILLAMA_MIN_TVL", "5_000_000".replace("_", "")))
+DEFILLAMA_SKIP_CATEGORIES = {"cex", "canonical bridge", "chain", "bridge", "oracle",
+                             "indexes", "index", "cdn", "rpc", "sidechain", "esports"}
+DEFILLAMA_TASK_CATEGORIES = {"social", "gaming", "gamefi", "meme",
+                             "nft marketplace", "nft lending"}
+
+
+def categorize_defillama(category: str, desc: str) -> str:
+    text = f"{category} {desc}".lower()
+    if any(k in text for k in ("testnet", "devnet", "faucet", "sepolia")):
+        return "testnet"
+    if category.lower() in DEFILLAMA_TASK_CATEGORIES:
+        return "task"
+    if any(k in text for k in ("points", "season", "campaign", "quest")):
+        return "points"
+    if any(k in text for k in ("dex", "lending", "defi", "yield", "staking", "liquid staking",
+                               "derivative", "perp", "bridge", "mainnet", "trading", "swap",
+                               "launchpad", "cdp", "farm", "rwa", "stablecoin")):
+        return "mainnet"
+    return "newtracked"
+
+
+def fetch_defillama_fresh(days: int = FRESH_DAYS) -> list[dict]:
+    """پروتکل‌های DeFiLlama که در N روز اخیر لیست شده‌اند و TVL معنادار دارند."""
+    data = fetch_json(DEFILLAMA_API, timeout=60)
+    if not isinstance(data, list):
+        return []
+    cutoff_ts = (datetime.now(timezone.utc) - timedelta(days=days)).timestamp()
+    out = []
+    for p in data:
+        if not isinstance(p, dict):
+            continue
+        name = (p.get("name") or "").strip()
+        category = (p.get("category") or "").strip()
+        if not name or category.lower() in DEFILLAMA_SKIP_CATEGORIES:
+            continue
+        tvl = float(p.get("tvl") or 0)
+        mcap = float(p.get("mcap") or 0)
+        if tvl < DEFILLAMA_MIN_TVL and not mcap:
+            continue
+        listed = p.get("listedAt")
+        if not isinstance(listed, (int, float)) or not listed or float(listed) < cutoff_ts:
+            continue
+        added = datetime.fromtimestamp(float(listed), timezone.utc)
+        desc = (p.get("description") or "").strip()[:160]
+        chains = [str(c) for c in (p.get("chains") or [])][:4]
+        desc_parts = []
+        if mcap:
+            desc_parts.append(f"💰 ${mcap:,.0f}")
+        elif tvl:
+            desc_parts.append(f"🔒 ${tvl:,.0f} TVL")
+        if chains:
+            desc_parts.append("🔗 " + ", ".join(chains))
+        if p.get("twitter"):
+            desc_parts.append("𝕏")
+        out.append({
+            "id": f"dl_{p.get('slug') or p.get('id', '')}",
+            "name": name + (f" ({p['symbol']})" if p.get("symbol") else ""),
+            "category": categorize_defillama(category, desc),
+            "source": "defillama",
+            "url": p.get("url") or (f"https://defillama.com/protocol/{p['slug']}"
+                                    if p.get("slug") else ""),
+            "desc": " | ".join(desc_parts),
+            "date": added,
+            "cost": None,
+        })
+    log(f"  defillama: {len(out)} fresh protocols (last {days}d)")
     return out
 
 
@@ -971,19 +1049,19 @@ def main() -> int:
         log(f"  هرس حافظه: {pruned} شناسه‌ی قدیمی از seen حذف شد")
 
     log(f"Fetching 4 sources in parallel (AlphaDrops fresh {FRESH_DAYS}d, "
-        f"CryptoRank fresh {FRESH_DAYS}d, DropJet fresh {FRESH_DAYS}d, "
-        f"news fresh {NEWS_DAYS}d)...")
+        f"DropJet fresh {FRESH_DAYS}d, "
+        f"DeFiLlama fresh {FRESH_DAYS}d, news fresh {NEWS_DAYS}d)...")
     with ThreadPoolExecutor(max_workers=4) as ex:
         f_alpha = ex.submit(fetch_alpha_drops_fresh, days=FRESH_DAYS)
-        f_cr = ex.submit(fetch_crypto_rank_fresh, days=FRESH_DAYS)
         f_dj = ex.submit(fetch_dropjet_fresh, days=FRESH_DAYS)
+        f_dl = ex.submit(fetch_defillama_fresh, days=FRESH_DAYS)
         f_news = ex.submit(fetch_airdrop_news, days=NEWS_DAYS)
         alpha = f_alpha.result()
-        campaigns = f_cr.result()
         dropjet = f_dj.result()
+        defillama = f_dl.result()
         airdrop_news = f_news.result()
-    log(f"  AlphaDrops: {len(alpha)} | CryptoRank: {len(campaigns)} | "
-        f"DropJet: {len(dropjet)} | News: {len(airdrop_news)}")
+    log(f"  AlphaDrops: {len(alpha)} | DropJet: {len(dropjet)} | "
+        f"DeFiLlama: {len(defillama)} | News: {len(airdrop_news)}")
 
     failed = failed_source_names(FETCH_ERRORS)
     warning = build_warning(failed, prev_status,
@@ -991,7 +1069,7 @@ def main() -> int:
     alert = warning if alert_due(prev_status, warning) else None
 
     # یک منبع خراب کل اسکن را نمیکشد — فقط وقتی هیچ منبعی داده ندهد لغو میشود
-    if not (alpha or campaigns or dropjet or airdrop_news):
+    if not (alpha or dropjet or defillama or airdrop_news):
         log(f"  هیچ منبعی داده نداد (خطاها: {FETCH_ERRORS or 'هیچ'}) — اسکن لغو شد.")
         alerted = False
         if alert:
@@ -1009,7 +1087,7 @@ def main() -> int:
     if failed:
         log(f"  ⚠ منابع خطادار: {', '.join(failed)} — با منابع سالم ادامه میدهیم")
 
-    all_items = alpha + campaigns + dropjet + airdrop_news
+    all_items = alpha + dropjet + defillama + airdrop_news
 
     # فقط موارد واقعاً جدید برای ما (همهی آیتمها در seen ثبت میشوند)
     new_items = select_new_items(all_items, seen)
