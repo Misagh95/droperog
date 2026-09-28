@@ -1,4 +1,90 @@
-"""M1–M6: timestamps, categorize negations, safer name-merging, honest report."""
+"""Tests for the DeFiLlama source (CryptoRank replacement).
+
+api.cryptorank.io went behind Cloudflare (HTTP 403 on every endpoint), so
+DeFiLlama is what keeps the scan from returning near-zero projects.
+"""
+
+import pytest
+
+import droperog
+import hunter
+
+
+PROTOCOLS = [
+    {"id": "1", "slug": "aave", "name": "Aave", "category": "Lending",
+     "chains": ["Ethereum", "Arbitrum", "Solana"], "tvl": 1.5e10, "mcap": 1.8e10,
+     "audits": "2", "twitter": "aave", "symbol": "AAVE",
+     "description": "A lending protocol", "url": "https://aave.com",
+     "listedAt": 1669000000},
+    {"id": "2", "slug": "okx", "name": "OKX", "category": "CEX",
+     "chains": ["Ethereum"], "tvl": 3e10, "mcap": 2e9, "audits": "0",
+     "twitter": "okx", "symbol": "OKB", "description": "Exchange",
+     "url": "https://okx.com", "listedAt": 1669000000},
+    {"id": "3", "slug": "dust", "name": "Dusty", "category": "Dexs",
+     "chains": ["Ethereum"], "tvl": 12.0, "mcap": None, "audits": None,
+     "twitter": None, "symbol": None, "description": "", "url": "",
+     "listedAt": 1669000000},
+]
+
+
+@pytest.fixture
+def stub_api(monkeypatch):
+    monkeypatch.setattr(droperog, "fetch_json", lambda *a, **k: PROTOCOLS)
+    monkeypatch.setattr(droperog, "FETCH_ERRORS", [])
+    monkeypatch.setattr(hunter, "fetch_json", lambda *a, **k: PROTOCOLS)
+    monkeypatch.setattr(hunter, "FETCH_ERRORS", [])
+
+
+def test_defillama_drops_noise_keeps_real_protocols(stub_api):
+    out = droperog.fetch_defillama()
+    names = {p["name"] for p in out}
+    assert "Aave" in names
+    assert "OKX" not in names        # CEX ارزش پیگیری ایردراپ ندارد
+    assert "Dusty" not in names      # TVL ناچیز = پروژه مرده
+
+
+def test_defillama_normalizes_chains_and_builds_url(stub_api):
+    aave = next(p for p in droperog.fetch_defillama() if p["name"] == "Aave")
+    assert aave["chains"] == ["ethereum", "arbitrum", "solana"]
+    assert aave["url"] == "https://aave.com"
+    assert aave["id"].startswith("dl_")
+    assert aave["source"] == "DeFiLlama"
+    assert aave["trust"] >= 65
+    assert aave["date"]                     # listedAt به تاریخ ISO تبدیل شده
+
+
+def test_defillama_falls_back_to_defillama_url(monkeypatch):
+    rows = [dict(PROTOCOLS[0], url="")]
+    monkeypatch.setattr(droperog, "fetch_json", lambda *a, **k: rows)
+    aave = droperog.fetch_defillama()[0]
+    assert aave["url"] == "https://defillama.com/protocol/aave"
+
+
+def test_defillama_survives_bad_payload(monkeypatch):
+    monkeypatch.setattr(droperog, "fetch_json", lambda *a, **k: {"not": "a list"})
+    assert droperog.fetch_defillama() == []
+
+
+def test_defillama_source_is_tracked_for_removal_guard(stub_api):
+    assert droperog._record_sources({"ids": ["dl_aave"]}) == {"defillama"}
+
+
+def test_defillama_hunter_only_reports_recent_listings(monkeypatch):
+    # لیست ۲۰۲۲ → خارج از بازه «تازه» و نباید گزارش شود
+    monkeypatch.setattr(hunter, "fetch_json", lambda *a, **k: [PROTOCOLS[0]])
+    assert hunter.fetch_defillama_fresh(days=30) == []
+
+    # یک روز پیش → باید دیده شود
+    import time
+    fresh = dict(PROTOCOLS[0], listedAt=int(time.time()) - 86400)
+    monkeypatch.setattr(hunter, "fetch_json", lambda *a, **k: [fresh])
+    out = hunter.fetch_defillama_fresh(days=30)
+    assert len(out) == 1
+    assert out[0]["source"] == "defillama"
+    assert out[0]["id"].startswith("dl_")
+    assert out[0]["category"] == "mainnet"      # Lending → مین‌نت
+    assert out[0]["date"] is not None
+
 
 import json
 from datetime import datetime, timedelta, timezone

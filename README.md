@@ -16,7 +16,7 @@ python droperog.py
 
 ## Features
 
-- **3 data sources:** AlphaDrops + CryptoRank + DropJet (~800+ unique projects)
+- **4 data sources:** AlphaDrops + CryptoRank + DropJet + DeFiLlama (~1600 unique projects)
 - **Auto-categorization:** 🟣 Testnet / 🟡 Social Tasks / 🟢 Mainnet
 - **Change detection:** NEW 🆕 / UPDATED 🔄 / REMOVED 🗑️ shown on each run
 - **Trust Score:** 0-95% based on funding, rating, status, and metadata

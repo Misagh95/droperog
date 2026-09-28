@@ -28,8 +28,8 @@ def test_aborts_when_everything_fails(monkeypatch):
         return f
 
     monkeypatch.setattr(hunter, "fetch_alpha_drops_fresh", dead("alphadrops.net"))
-    monkeypatch.setattr(hunter, "fetch_crypto_rank_fresh", dead("api.cryptorank.io"))
     monkeypatch.setattr(hunter, "fetch_dropjet_fresh", dead("dropjet.co"))
+    monkeypatch.setattr(hunter, "fetch_defillama_fresh", dead("api.llama.fi"))
     monkeypatch.setattr(hunter, "fetch_airdrop_news", dead("news.google.com"))
     code = run_hunter(monkeypatch)
 
