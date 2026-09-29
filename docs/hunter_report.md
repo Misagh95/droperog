@@ -1,25 +1,28 @@
-# 🎯 DroperOG Hunter — 2026-09-29 16:42 (تهران)
+# 🎯 DroperOG Hunter — 2026-09-30 02:00 (تهران)
 
-🆕 **4 مورد تازه:**
+🆕 **5 مورد تازه:**
 
 ## 🟢 مین‌نت (3)
 
 - **BV-7X (BV7X)** (4d پیش)
   - https://bv7x.ai
-  - 💰 $1,443,442 | 🔗 Robinhood Chain | 𝕏
-- **Catch Exchange (CATCH)** (5d پیش)
+  - 💰 $1,393,583 | 🔗 Robinhood Chain | 𝕏
+- **Catch Exchange (CATCH)** (6d پیش)
   - https://catch.exchange/
-  - 💰 $331,434 | 🔗 Robinhood Chain | 𝕏
+  - 💰 $282,051 | 🔗 Robinhood Chain | 𝕏
 - **JustLend sTRX (JST)** (6d پیش)
   - https://app.justlend.org/strx?lang=en-US
-  - 🔒 $3,299,207,290 TVL | 🔗 Tron | 𝕏
+  - 🔒 $3,295,942,603 TVL | 🔗 Tron | 𝕏
 
-## 🆕 تازه در ترکر (1)
+## 🆕 تازه در ترکر (2)
 
+- **HoodLock (LOCK)** (4h پیش)
+  - https://hoodlock.tech
+  - 💰 $396,977 | 🔗 Robinhood Chain | 𝕏
 - **The Interfold (FOLD)** (4d پیش)
   - https://www.theinterfold.com/
-  - 💰 $21,900,863 | 🔗 Ethereum | 𝕏
+  - 💰 $21,728,606 | 🔗 Ethereum | 𝕏
 
 ---
 
-**چشم‌انداز:** 🟢 مین‌نت: 3 | 🆕 تازه در ترکر: 1
+**چشم‌انداز:** 🟢 مین‌نت: 3 | 🆕 تازه در ترکر: 2
