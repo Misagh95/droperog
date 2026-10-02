@@ -1,4 +1,4 @@
-# 🎯 DroperOG Hunter — 2026-10-02 16:29 (تهران)
+# 🎯 DroperOG Hunter — 2026-10-03 01:57 (تهران)
 
 🆕 **11 مورد تازه:**
 
@@ -7,42 +7,44 @@
 - **Note Systems Airdrop Guide: Earn Testnet Points and a Diamond Note NFT** (2d پیش)
   - https://news.google.com/rss/articles/CBMiW0FVX3lxTE1FZWZZWS1iZ2JCbVRqeTVxUkRQNHdCQk00M0NDSUFta0xmaHpWUU1VcU5sMDhHRXluSzE3X2lGQzZjdlFoQXZjbktjSHdiSUZrcG5wNUdNNlZTT28?oc=5
 
-## 🟢 مین‌نت (7)
+## 🟡 تسک/کمپین (1)
 
-- **Arrowfarm (ARROWFARM)** (13h پیش)
+- **Crypto Airdrops 2026: Free Tokens &amp; Live Tracker** (39h پیش)
+  - https://news.google.com/rss/articles/CBMiWEFVX3lxTFBsTGszMTFKOXFxQTQzOWxSUXdhaVEwZzc2bTBKOF9EUDBtc3c5SVlhc3NVRm1OUzJZVTZWeDFNUkRVUnc3Q21iY1JIaGJQUUp2NWVzUlV5Y20?oc=5
+
+## 🟢 مین‌نت (6)
+
+- **Arrowfarm (ARROWFARM)** (22h پیش)
   - https://defillama.com/protocol/arrowfarm
-  - 💰 $685,308 | 🔗 Robinhood Chain | 𝕏
-- **Faiyah Staking (-)** (19h پیش)
+  - 💰 $476,414 | 🔗 Robinhood Chain | 𝕏
+- **Faiyah Staking (-)** (29h پیش)
   - https://defillama.com/protocol/faiyah-staking
-  - 🔒 $5,446,833 TVL | 🔗 Xphere
-- **Definity Staked SOL (-)** (38h پیش)
+  - 🔒 $5,356,929 TVL | 🔗 Xphere
+- **Definity Staked SOL (-)** (2d پیش)
   - https://www.definity.finance/
-  - 🔒 $37,800,233 TVL | 🔗 Solana | 𝕏
-- **Forward Industries SOL (-)** (38h پیش)
+  - 🔒 $36,182,394 TVL | 🔗 Solana | 𝕏
+- **Forward Industries SOL (-)** (2d پیش)
   - https://www.forwardindustries.com/
-  - 🔒 $264,943,523 TVL | 🔗 Solana | 𝕏
-- **Nonce Capital (-)** (39h پیش)
+  - 🔒 $255,999,953 TVL | 🔗 Solana | 𝕏
+- **Nonce Capital (-)** (2d پیش)
   - https://nonce-capital.xyz/
-  - 🔒 $643,383,604 TVL | 🔗 Ethereum, Optimism | 𝕏
-- **Loopscale Curation (-)** (44h پیش)
+  - 🔒 $629,889,685 TVL | 🔗 Ethereum, Optimism | 𝕏
+- **Loopscale Curation (-)** (2d پیش)
   - https://loop.sl
-  - 🔒 $7,421,827 TVL | 🔗 Solana | 𝕏
-- **Haedal Lending Vault (HAEDAL)** (3d پیش)
-  - https://haedal.xyz/lending
-  - 🔒 $5,161,578 TVL | 🔗 Sui | 𝕏
+  - 🔒 $7,406,055 TVL | 🔗 Solana | 𝕏
 
 ## 🆕 تازه در ترکر (3)
 
-- **Orbio (ORBIO)** (13h پیش)
+- **Orbio (ORBIO)** (22h پیش)
   - https://www.orbio.so/
-  - 💰 $81,787,473 | 🔗 Robinhood Chain | 𝕏
-- **Crossbow Finance (XBOW)** (20h پیش)
+  - 💰 $73,655,697 | 🔗 Robinhood Chain | 𝕏
+- **Crossbow Finance (XBOW)** (29h پیش)
   - https://www.crossbow.finance/
-  - 💰 $2,209,438 | 🔗 Robinhood Chain | 𝕏
-- **HoodLock (LOCK)** (2d پیش)
+  - 💰 $1,947,470 | 🔗 Robinhood Chain | 𝕏
+- **HoodLock (LOCK)** (3d پیش)
   - https://hoodlock.tech
-  - 💰 $314,427 | 🔗 Robinhood Chain | 𝕏
+  - 💰 $515,874 | 🔗 Robinhood Chain | 𝕏
 
 ---
 
-**چشم‌انداز:** 🟣 تست‌نت: 1 | 🟢 مین‌نت: 7 | 🆕 تازه در ترکر: 3
+**چشم‌انداز:** 🟣 تست‌نت: 1 | 🟡 تسک/کمپین: 2 | 🟢 مین‌نت: 6 | 🆕 تازه در ترکر: 3
