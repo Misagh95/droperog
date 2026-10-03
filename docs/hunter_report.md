@@ -1,4 +1,4 @@
-# 🎯 DroperOG Hunter — 2026-10-03 20:05 (تهران)
+# 🎯 DroperOG Hunter — 2026-10-04 01:09 (تهران)
 
 🆕 **10 مورد تازه:**
 
@@ -9,36 +9,36 @@
 
 ## 🟢 مین‌نت (6)
 
-- **Arrowfarm (ARROWFARM)** (40h پیش)
+- **Arrowfarm (ARROWFARM)** (45h پیش)
   - https://defillama.com/protocol/arrowfarm
-  - 💰 $414,984 | 🔗 Robinhood Chain | 𝕏
+  - 💰 $340,990 | 🔗 Robinhood Chain | 𝕏
 - **Definity Staked SOL (-)** (2d پیش)
   - https://www.definity.finance/
-  - 🔒 $36,719,163 TVL | 🔗 Solana | 𝕏
+  - 🔒 $37,137,686 TVL | 🔗 Solana | 𝕏
 - **Forward Industries SOL (-)** (2d پیش)
   - https://www.forwardindustries.com/
-  - 🔒 $259,806,604 TVL | 🔗 Solana | 𝕏
-- **Nonce Capital (-)** (2d پیش)
+  - 🔒 $260,140,367 TVL | 🔗 Solana | 𝕏
+- **Nonce Capital (-)** (3d پیش)
   - https://nonce-capital.xyz/
-  - 🔒 $634,032,487 TVL | 🔗 Ethereum, Optimism | 𝕏
-- **Loopscale Curation (-)** (2d پیش)
+  - 🔒 $633,695,312 TVL | 🔗 Ethereum, Optimism | 𝕏
+- **Loopscale Curation (-)** (3d پیش)
   - https://loop.sl
-  - 🔒 $7,384,614 TVL | 🔗 Solana | 𝕏
+  - 🔒 $7,387,385 TVL | 🔗 Solana | 𝕏
 - **Haedal Lending Vault (HAEDAL)** (4d پیش)
   - https://haedal.xyz/lending
-  - 🔒 $5,424,314 TVL | 🔗 Sui | 𝕏
+  - 🔒 $5,489,484 TVL | 🔗 Sui | 𝕏
 
 ## 🆕 تازه در ترکر (3)
 
-- **Orbio (ORBIO)** (40h پیش)
+- **Orbio (ORBIO)** (46h پیش)
   - https://www.orbio.so/
-  - 💰 $90,426,018 | 🔗 Robinhood Chain | 𝕏
-- **Crossbow Finance (XBOW)** (47h پیش)
+  - 💰 $95,488,107 | 🔗 Robinhood Chain | 𝕏
+- **Crossbow Finance (XBOW)** (2d پیش)
   - https://www.crossbow.finance/
-  - 💰 $2,129,189 | 🔗 Robinhood Chain | 𝕏
-- **HoodLock (LOCK)** (3d پیش)
+  - 💰 $2,104,312 | 🔗 Robinhood Chain | 𝕏
+- **HoodLock (LOCK)** (4d پیش)
   - https://hoodlock.tech
-  - 💰 $459,286 | 🔗 Robinhood Chain | 𝕏
+  - 💰 $405,651 | 🔗 Robinhood Chain | 𝕏
 
 ---
 
