@@ -1,14 +1,10 @@
 ==========================================================
-  DroperOG v2 — 2026-10-03 02:31:13
+  DroperOG v2 — 2026-10-03 09:28:28
 ==========================================================
 
-  NEW (1):
-  🟢 Haedal Lending Vault [Mainnet]  Trust: 66%
-     Chains: sui
-     Funding: $5,107,589 TVL
-     https://haedal.xyz/lending
+  No new projects
 
-  REMOVED (2): Stork, Spectra MetaVaults Outside V2
+  REMOVED (1): Stork
 
 --------------------------------------------------
   CATEGORIZED SUMMARY (trust >= 65, otherwise top-5 shown)
@@ -16,53 +12,53 @@
 
 🟣 Testnet (6 — 2 with trust >= 65):
   Tempo — 70% | ? | $500.00M | Use Testnet, Complete Quests
-  Rubic — 66% | binance, kava | $282,696 | DEX Aggregator
+  Rubic — 66% | binance, kava | $282,802 | DEX Aggregator
 
-🟢 Mainnet (931 — 566 with trust >= 65):
+🟢 Mainnet (931 — 565 with trust >= 65):
   xStocks — 87% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
   Infinex — 85% | evm&svmchains | $65.29M | Explore Infinex app, Place a perps trade
-  Lido — 84% | ethereum, solana, terra, moonriver, moonbeam | $370,453,667 | Liquid Staking
-  Falcon Finance — 84% | ethereum | $389,930,363 | Basis Trading
-  Aave V2 — 84% | ethereum, polygon, avalanche | $2,785,688,765 | Lending
+  Lido — 84% | ethereum, solana, terra, moonriver, moonbeam | $369,448,039 | Liquid Staking
+  Falcon Finance — 84% | ethereum | $391,324,281 | Basis Trading
+  Aave V2 — 84% | ethereum, polygon, avalanche | $2,791,775,894 | Lending
   Pharos Network — 83% | pharos | $8M | Explore Pharos Network app, Bridge to the network
   PopDEX — 82% | morphtachyon | $30.00M | Join Private Beta, Trade
-  SSV Network — 81% | ethereum | $45,931,013 | Staking Pool
-  Rocket Pool — 81% | ethereum | $43,999,607 | Liquid Staking
-  cap — 81% | ethereum | $114,768,932 | Lending
-  Railgun — 81% | ethereum, arbitrum, binance, polygon | $169,454,207 | Privacy
-  Bitway Earn — 81% | binance | $3,790,331,301 | Basis Trading
-  Rain — 81% | arbitrum | $7,285,513,376 | Prediction Market
+  SSV Network — 81% | ethereum | $45,476,549 | Staking Pool
+  Rocket Pool — 81% | ethereum | $43,879,983 | Liquid Staking
+  cap — 81% | ethereum | $110,697,099 | Lending
+  Railgun — 81% | ethereum, arbitrum, binance, polygon | $170,161,563 | Privacy
+  Bitway Earn — 81% | binance | $3,916,135,428 | Basis Trading
+  Rain — 81% | arbitrum | $7,954,378,950 | Prediction Market
   Bulk — 80% | solana | $8M | Stake SOL, Trade Perps 
   N1 — 80% | n1 | $7M | Join Private Beta, Trade Perps
   Perpl — 80% | monad | $9.5M | Trade Perps, $1M Volume
-  Re — 78% | ethereum, base, arbitrum, avalanche | $80,054,054 | RWA
-  Dolomite — 78% | ethereum, arbitrum, berachain, mantle, xlayer, botanix, polygonzkevm | $15,401,189 | Lending
+  Re — 78% | ethereum, base, arbitrum, avalanche | $78,044,133 | RWA
+  Dolomite — 78% | ethereum, arbitrum, berachain, mantle, xlayer, botanix, polygonzkevm | $15,124,731 | Lending
 
 🟡 Social Tasks (665 — 339 with trust >= 65):
-  EigenCloud — 84% | ethereum | $240,236,199 | Restaking
+  EigenCloud — 84% | ethereum | $239,412,831 | Restaking
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
-  Convex Finance — 81% | ethereum, fraxtal, arbitrum, polygon | $208,807,017 | Yield
-  Tornado Cash — 78% | ethereum, binance, arbitrum, avalanche, polygon, xdai, optimism, ethereumclassic | $33,454,802 | Privacy
-  USD AI — 78% | arbitrum | $87,955,386 | RWA
+  Convex Finance — 81% | ethereum, fraxtal, arbitrum, polygon | $212,901,528 | Yield
+  Tornado Cash — 78% | ethereum, binance, arbitrum, avalanche, polygon, xdai, optimism, ethereumclassic | $33,447,589 | Privacy
+  USD AI — 78% | arbitrum | $85,875,321 | RWA
   Rainbow — 77% | ? | $19.5M | Explore Rainbow app, Do one onchain action
-  Babylon Protocol — 76% | bitcoin | $66,867,541 | Restaking
-  Nexus Mutual — 76% | ethereum | $112,962,863 | Insurance
-  Veda — 75% | ink, ethereum, optimism, hyperliquidl1, monad, plasma, arbitrum, base, berachain, sonic, binance, bob, scroll | $1,905,313,992 TVL | Onchain Capital Allocator
-  PancakeSwap AMM — 75% | binance, ethereum, aptos, base, arbitrum, zksyncera, op_bnb, robinhoodchain, linea, monad, polygonzkevm | $1,891,820,398 TVL | Dexs
-  Concrete — 75% | ethereum, stable, arbitrum, berachain, katana | $1,259,336,766 TVL | Onchain Capital Allocator
-  Uniswap V4 — 75% | ethereum, robinhoodchain, binance, base, arbitrum, monad, tempo, polygon, unichain, arc, soneium, optimism, avalanche, ink, worldchain, xlayer, megaeth, blast, zora | $1,241,953,351 TVL | Dexs
-  Beefy — 75% | ethereum, base, arbitrum, binance, monad, fraxtal, optimism, robinhoodchain, polygon, fantom, avalanche, cronos, plasma, hyperliquidl1, sonic, metis, linea, megaeth, kava, zksyncera, sei, aurora, xdai, berachain, fuse, celo, mantle, rsk, lisk, mode, oasis, scroll, manta, heco, polygonzkevm, moonbeam, moonriver, saga, canto, re.al, harmony | $5,536,646 | Yield Aggregator
-  Quickswap Dex — 75% | polygon, base | $6,773,841 | Dexs
-  Brickken — 75% | binance, ethereum, base, avalanche, polygon | $11,716,443 | RWA
-  MorpheusAI — 75% | ethereum, arbitrum, base | $12,128,421 | AI Agents
-  Anvil — 75% | ethereum | $60,454,132 | Collateral Management
-  Venice — 75% | base | $1,352,630,172 | Farm
+  Babylon Protocol — 76% | bitcoin | $65,224,480 | Restaking
+  Nexus Mutual — 76% | ethereum | $113,126,775 | Insurance
+  Veda — 75% | ink, ethereum, optimism, hyperliquidl1, monad, plasma, arbitrum, base, berachain, sonic, binance, bob, scroll | $1,903,329,756 TVL | Onchain Capital Allocator
+  PancakeSwap AMM — 75% | binance, ethereum, aptos, base, arbitrum, zksyncera, op_bnb, robinhoodchain, linea, monad, polygonzkevm | $1,872,652,887 TVL | Dexs
+  Concrete — 75% | ethereum, stable, arbitrum, berachain, katana | $1,257,716,249 TVL | Onchain Capital Allocator
+  Uniswap V4 — 75% | ethereum, robinhoodchain, binance, base, arbitrum, monad, tempo, polygon, unichain, arc, soneium, optimism, avalanche, ink, xlayer, worldchain, megaeth, blast, zora | $1,242,609,720 TVL | Dexs
+  Beefy — 75% | ethereum, base, arbitrum, binance, monad, fraxtal, optimism, robinhoodchain, polygon, fantom, avalanche, cronos, plasma, hyperliquidl1, sonic, metis, linea, megaeth, kava, zksyncera, sei, aurora, xdai, berachain, fuse, celo, mantle, rsk, lisk, mode, oasis, scroll, manta, heco, polygonzkevm, moonbeam, moonriver, saga, canto, re.al, harmony | $5,736,004 | Yield Aggregator
+  Quickswap Dex — 75% | polygon, base | $7,234,111 | Dexs
+  Brickken — 75% | binance, ethereum, base, avalanche, polygon | $11,485,701 | RWA
+  MorpheusAI — 75% | ethereum, arbitrum, base | $12,094,202 | AI Agents
+  Anvil — 75% | ethereum | $60,189,831 | Collateral Management
+  Venice — 75% | base | $1,328,930,956 | Farm
   PinkSale — 73% | binance, ethereum, polygon, cronos, avalanche, fantom | $19,894,685 | Launchpad
-  Zama — 73% | ethereum | $195,387,339 | Privacy
+  Zama — 73% | ethereum | $199,245,660 | Privacy
 
 --------------------------------------------------
   Total: 1602 | Testnet: 6 | Social Tasks: 665 | Mainnet: 931
-  Last run: 190 min ago
+  Last run: 417 min ago
 ==========================================================
