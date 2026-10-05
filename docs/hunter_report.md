@@ -1,4 +1,4 @@
-# 🎯 DroperOG Hunter — 2026-10-05 01:16 (تهران)
+# 🎯 DroperOG Hunter — 2026-10-05 09:32 (تهران)
 
 🆕 **10 مورد تازه:**
 
@@ -6,37 +6,37 @@
 
 - **Mamo (MAMO)** (2d پیش)
   - https://mamo.bot/
-  - 💰 $4,776,330 | 𝕏
-- **Arrowfarm (ARROWFARM)** (2d پیش)
+  - 💰 $4,964,067 | 𝕏
+- **Arrowfarm (ARROWFARM)** (3d پیش)
   - https://www.arrowfarm.io
-  - 💰 $276,434 | 🔗 Robinhood Chain | 𝕏
-- **Definity Staked SOL (-)** (3d پیش)
+  - 💰 $206,887 | 🔗 Robinhood Chain | 𝕏
+- **Definity Staked SOL (-)** (4d پیش)
   - https://www.definity.finance/
-  - 🔒 $37,520,526 TVL | 🔗 Solana | 𝕏
-- **Forward Industries SOL (-)** (3d پیش)
+  - 🔒 $37,245,295 TVL | 🔗 Solana | 𝕏
+- **Forward Industries SOL (-)** (4d پیش)
   - https://www.forwardindustries.com/
-  - 🔒 $263,953,314 TVL | 🔗 Solana | 𝕏
+  - 🔒 $261,456,518 TVL | 🔗 Solana | 𝕏
 - **Nonce Capital (-)** (4d پیش)
   - https://nonce-capital.xyz/
-  - 🔒 $637,811,782 TVL | 🔗 Ethereum, Optimism | 𝕏
+  - 🔒 $638,231,319 TVL | 🔗 Ethereum, Optimism | 𝕏
 - **Loopscale Curation (-)** (4d پیش)
   - https://loop.sl
-  - 🔒 $7,391,762 TVL | 🔗 Solana | 𝕏
-- **Haedal Lending Vault (HAEDAL)** (5d پیش)
+  - 🔒 $7,387,023 TVL | 🔗 Solana | 𝕏
+- **Haedal Lending Vault (HAEDAL)** (6d پیش)
   - https://haedal.xyz/lending
-  - 🔒 $5,551,817 TVL | 🔗 Sui | 𝕏
+  - 🔒 $5,806,819 TVL | 🔗 Sui | 𝕏
 
 ## 🆕 تازه در ترکر (3)
 
-- **Orbio (ORBIO)** (2d پیش)
+- **Orbio (ORBIO)** (3d پیش)
   - https://www.orbio.so/
-  - 💰 $88,941,372 | 🔗 Robinhood Chain | 𝕏
+  - 💰 $76,944,051 | 🔗 Robinhood Chain | 𝕏
 - **Crossbow Finance (XBOW)** (3d پیش)
   - https://www.crossbow.finance/
-  - 💰 $1,916,875 | 🔗 Robinhood Chain | 𝕏
+  - 💰 $1,915,911 | 🔗 Robinhood Chain | 𝕏
 - **HoodLock (LOCK)** (5d پیش)
   - https://hoodlock.tech
-  - 💰 $431,740 | 🔗 Robinhood Chain | 𝕏
+  - 💰 $386,650 | 🔗 Robinhood Chain | 𝕏
 
 ---
 
