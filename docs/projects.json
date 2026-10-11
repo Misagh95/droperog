@@ -1,9 +1,11 @@
 {
   "summary": {
-    "testnet": 6,
-    "task_farmer": 673,
-    "mainnet": 941
+    "testnet": 4,
+    "task_farmer": 630,
+    "mainnet": 923
   },
-  "timestamp": "2026-10-10 23:00 UTC",
-  "sources_failed": []
+  "timestamp": "2026-10-11 02:27 UTC",
+  "sources_failed": [
+    "dropjet"
+  ]
 }
