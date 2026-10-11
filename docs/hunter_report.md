@@ -1,22 +1,27 @@
-# 🎯 DroperOG Hunter — 2026-10-11 16:47 (تهران)
+# 🎯 DroperOG Hunter — 2026-10-12 01:47 (تهران)
 
-🆕 **8 مورد تازه:**
+🆕 **9 مورد تازه:**
+
+## 🟡 تسک/کمپین (1)
+
+- **DogeOS Airdrop Guide: How to Join the Grand Heist** (16h پیش)
+  - https://news.google.com/rss/articles/CBMiU0FVX3lxTE9RVkw0VFd3UmFxTGpWTjZETXk0NkhVU3BXT0x5R1gwem5NRkdhODRwODhSSW9DUDdpdkVrSEZGUlBNbzlFeExYbUpvMVRRcUJuT1VZ?oc=5
 
 ## 🟢 مین‌نت (5)
 
-- **Quotum (QUOTUM)** (19h پیش)
+- **Quotum (QUOTUM)** (28h پیش)
   - https://defillama.com/protocol/quotum
-  - 💰 $86,194 | 𝕏
+  - 💰 $64,749 | 𝕏
 - **Catalyst** (2d پیش)
   - https://catalyst.app/?r=gVe0u
   - AI, Perps, Predictions | $30M | رایگان | 🔗 Multichain
 - **Papertrade (PAPER)** (2d پیش)
   - https://papertrade.xyz
-  - 🔒 $80,878,913 TVL | 🔗 Hyperliquid L1 | 𝕏
-- **SunSwap V4 (SUN)** (2d پیش)
+  - 🔒 $67,747,746 TVL | 🔗 Hyperliquid L1 | 𝕏
+- **SunSwap V4 (SUN)** (3d پیش)
   - https://sun.io
-  - 🔒 $108,143,703 TVL | 🔗 Tron | 𝕏
-- **GVNR Diamond Hands (GVNR)** (4d پیش)
+  - 🔒 $108,069,560 TVL | 🔗 Tron | 𝕏
+- **GVNR Diamond Hands (GVNR)** (5d پیش)
   - https://defillama.com/protocol/gvnr-diamond-hands
   - 💰 $4,432,438 | 🔗 Ethereum, Bitcoin | 𝕏
 
@@ -24,14 +29,14 @@
 
 - **Derive V3 Options (DRV)** (3d پیش)
   - https://app.derive.xyz
-  - 🔒 $112,950,614 TVL | 🔗 Ethereum | 𝕏
-- **Mosh (BUN)** (3d پیش)
+  - 🔒 $112,672,937 TVL | 🔗 Ethereum | 𝕏
+- **Mosh (BUN)** (4d پیش)
   - https://defillama.com/protocol/mosh
-  - 💰 $11,172,531 | 🔗 Robinhood Chain | 𝕏
-- **Zipcoin (ZC)** (5d پیش)
+  - 💰 $10,051,032 | 🔗 Robinhood Chain | 𝕏
+- **Zipcoin (ZC)** (6d پیش)
   - https://www.zipcoin.cash
-  - 💰 $7,482,358 | 🔗 Ethereum | 𝕏
+  - 💰 $7,497,891 | 🔗 Ethereum | 𝕏
 
 ---
 
-**چشم‌انداز:** 🟢 مین‌نت: 5 | 🆕 تازه در ترکر: 3
+**چشم‌انداز:** 🟡 تسک/کمپین: 1 | 🟢 مین‌نت: 5 | 🆕 تازه در ترکر: 3
