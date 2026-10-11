@@ -1,4 +1,4 @@
-# 🎯 DroperOG Hunter — 2026-10-11 01:25 (تهران)
+# 🎯 DroperOG Hunter — 2026-10-11 09:41 (تهران)
 
 🆕 **9 مورد تازه:**
 
@@ -9,18 +9,18 @@
 
 ## 🟢 مین‌نت (5)
 
-- **Quotum (QUOTUM)** (4h پیش)
+- **Quotum (QUOTUM)** (12h پیش)
   - https://defillama.com/protocol/quotum
-  - 💰 $90,349 | 𝕏
-- **Catalyst** (34h پیش)
+  - 💰 $85,399 | 𝕏
+- **Catalyst** (42h پیش)
   - https://catalyst.app/?r=gVe0u
   - AI, Perps, Predictions | $30M | رایگان | 🔗 Multichain
-- **Papertrade (PAPER)** (38h پیش)
+- **Papertrade (PAPER)** (46h پیش)
   - https://papertrade.xyz
-  - 🔒 $125,636,068 TVL | 🔗 Hyperliquid L1 | 𝕏
+  - 🔒 $89,120,065 TVL | 🔗 Hyperliquid L1 | 𝕏
 - **SunSwap V4 (SUN)** (2d پیش)
   - https://sun.io
-  - 🔒 $108,196,649 TVL | 🔗 Tron | 𝕏
+  - 🔒 $108,130,097 TVL | 🔗 Tron | 𝕏
 - **GVNR Diamond Hands (GVNR)** (4d پیش)
   - https://defillama.com/protocol/gvnr-diamond-hands
   - 💰 $4,432,438 | 🔗 Ethereum, Bitcoin | 𝕏
@@ -29,13 +29,13 @@
 
 - **Derive V3 Options (DRV)** (2d پیش)
   - https://app.derive.xyz
-  - 🔒 $112,022,026 TVL | 🔗 Ethereum | 𝕏
+  - 🔒 $112,342,365 TVL | 🔗 Ethereum | 𝕏
 - **Mosh (BUN)** (3d پیش)
   - https://defillama.com/protocol/mosh
-  - 💰 $11,234,514 | 🔗 Robinhood Chain | 𝕏
+  - 💰 $11,212,532 | 🔗 Robinhood Chain | 𝕏
 - **Zipcoin (ZC)** (5d پیش)
   - https://www.zipcoin.cash
-  - 💰 $8,313,014 | 🔗 Ethereum | 𝕏
+  - 💰 $8,308,105 | 🔗 Ethereum | 𝕏
 
 ---
 
