@@ -1,4 +1,4 @@
-# 🎯 DroperOG Hunter — 2026-10-14 15:47 (تهران)
+# 🎯 DroperOG Hunter — 2026-10-14 20:58 (تهران)
 
 🆕 **8 مورد تازه:**
 
@@ -14,27 +14,27 @@
 
 ## 🟢 مین‌نت (4)
 
-- **Quotum (QUOTUM)** (3d پیش)
+- **Quotum (QUOTUM)** (4d پیش)
   - https://defillama.com/protocol/quotum
-  - 💰 $46,730 | 🔗 Robinhood Chain | 𝕏
+  - 💰 $51,091 | 🔗 Robinhood Chain | 𝕏
 - **Catalyst** (5d پیش)
   - https://catalyst.app/?r=gVe0u
   - AI, Perps, Predictions | $30M | رایگان | 🔗 Multichain
 - **Papertrade (PAPER)** (5d پیش)
   - https://papertrade.xyz
-  - 🔒 $66,731,593 TVL | 🔗 Hyperliquid L1 | 𝕏
+  - 🔒 $63,209,351 TVL | 🔗 Hyperliquid L1 | 𝕏
 - **SunSwap V4 (SUN)** (5d پیش)
   - https://sun.io
-  - 🔒 $108,723,419 TVL | 🔗 Tron | 𝕏
+  - 🔒 $108,666,634 TVL | 🔗 Tron | 𝕏
 
 ## 🆕 تازه در ترکر (2)
 
 - **Derive V3 Options (DRV)** (6d پیش)
   - https://app.derive.xyz
-  - 🔒 $139,404,717 TVL | 🔗 Ethereum | 𝕏
+  - 🔒 $138,939,623 TVL | 🔗 Ethereum | 𝕏
 - **Mosh (BUN)** (6d پیش)
   - https://defillama.com/protocol/mosh
-  - 💰 $11,652,467 | 🔗 Robinhood Chain | 𝕏
+  - 💰 $10,249,009 | 🔗 Robinhood Chain | 𝕏
 
 ---
 
