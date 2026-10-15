@@ -1,24 +1,30 @@
 ==========================================================
-  DroperOG v2 — 2026-10-15 19:34:15
+  DroperOG v2 — 2026-10-15 22:43:57
 ==========================================================
 
-  ⚠ منبع خراب: dropjet — این اسکن ناقص است (نتایج ممکن است کم باشند)
-
-  No new projects
+  NEW (2):
+  🟢 Mezo Swap [Mainnet]  Trust: 61%
+     Chains: mezo
+     Funding: $5,734,022 TVL
+     https://mezo.org/feature/earn/pools
+  🟡 PoWH3D [Social Tasks]  Trust: 61%
+     Chains: ethereum
+     Funding: $5,011,837 TVL
+     https://defillama.com/protocol/powh3d
 
   UPDATED (15):
-  Pharos: Trust: 67% -> 50%
-  Fraction AI: Trust: 62% -> 50%
-  TheoriqAI: Trust: 67% -> 50%
-  Vana: Trust: 70% -> 50%
-  Talus Network: Trust: 62% -> 50%
-  PIN AI: Trust: 62% -> 50%
-  Farcaster: Trust: 65% -> 50%
-  deBridge: Trust: 67% -> 50%
-  Moku: Trust: 61% -> 50%
-  Blackbird: Trust: 65% -> 50%
+  Pharos: Trust: 50% -> 67%
+  Fraction AI: Trust: 50% -> 62%
+  TheoriqAI: Trust: 50% -> 67%
+  Vana: Trust: 50% -> 70%
+  Talus Network: Trust: 50% -> 62%
+  PIN AI: Trust: 50% -> 62%
+  Farcaster: Trust: 50% -> 65%
+  deBridge: Trust: 50% -> 67%
+  Moku: Trust: 50% -> 61%
+  Blackbird: Trust: 50% -> 65%
 
-  REMOVED (1): Stork
+  REMOVED (3): Stork, Faiyah Staking, Wildcat Protocol
 
 --------------------------------------------------
   CATEGORIZED SUMMARY (trust >= 65, otherwise top-5 shown)
@@ -26,53 +32,53 @@
 
 🟣 Testnet (6 — 2 with trust >= 65):
   Tempo — 70% | ? | $500.00M | Use Testnet, Complete Quests
-  Rubic — 66% | binance, kava | $272,148 | DEX Aggregator
+  Rubic — 66% | binance, kava | $272,916 | DEX Aggregator
 
-🟢 Mainnet (926 — 554 with trust >= 65):
+🟢 Mainnet (926 — 556 with trust >= 65):
   xStocks — 87% | ethereum, solana, bnbchain, ink | $12.7M | Join xPoints, Hold xStocks
   Fomo — 85% | solana, base, ethereum, monad, robinhood | $94M | Join, Trade tokens
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
   Infinex — 85% | evm&svmchains | $65.29M | Explore Infinex app, Place a perps trade
-  Lido — 84% | ethereum, solana, terra, moonriver, moonbeam | $337,037,812 | Liquid Staking
-  Falcon Finance — 84% | ethereum | $384,559,032 | Basis Trading
-  Aave V2 — 84% | ethereum, polygon, avalanche | $2,403,879,378 | Lending
+  Lido — 84% | ethereum, solana, terra, moonriver, moonbeam | $337,273,587 | Liquid Staking
+  Falcon Finance — 84% | ethereum | $380,655,263 | Basis Trading
+  Aave V2 — 84% | ethereum, polygon, avalanche | $2,432,241,803 | Lending
   Pharos Network — 83% | pharos | $8M | Explore Pharos Network app, Bridge to the network
   PopDEX — 82% | morphtachyon | $30.00M | Join Private Beta, Trade
-  SSV Network — 81% | ethereum | $38,061,408 | Staking Pool
-  Rocket Pool — 81% | ethereum | $37,713,764 | Liquid Staking
-  cap — 81% | ethereum | $122,879,329 | Lending
-  Railgun — 81% | ethereum, arbitrum, binance, polygon | $156,316,778 | Privacy
-  Bitway Earn — 81% | binance | $2,866,652,812 | Basis Trading
-  Rain — 81% | arbitrum | $6,366,455,532 | Prediction Market
+  SSV Network — 81% | ethereum | $38,227,081 | Staking Pool
+  Rocket Pool — 81% | ethereum | $37,709,949 | Liquid Staking
+  cap — 81% | ethereum | $122,940,664 | Lending
+  Railgun — 81% | ethereum, arbitrum, binance, polygon | $157,321,710 | Privacy
+  Bitway Earn — 81% | binance | $2,879,201,009 | Basis Trading
+  Rain — 81% | arbitrum | $6,766,493,401 | Prediction Market
   Bulk — 80% | solana | $8M | Stake SOL, Trade Perps 
   N1 — 80% | n1 | $7M | Join Private Beta, Trade Perps
   Perpl — 80% | monad | $9.5M | Trade Perps, $1M Volume
-  Re — 78% | ethereum, base, arbitrum, avalanche | $66,429,240 | RWA
-  Dolomite — 78% | ethereum, arbitrum, berachain, mantle, xlayer, botanix, polygonzkevm | $13,058,536 | Lending
+  Re — 78% | ethereum, base, arbitrum, avalanche | $66,436,457 | RWA
+  Dolomite — 78% | ethereum, arbitrum, berachain, mantle, xlayer, botanix, polygonzkevm | $13,044,922 | Lending
 
-🟡 Social Tasks (668 — 322 with trust >= 65):
-  EigenCloud — 84% | ethereum | $243,415,660 | Restaking
+🟡 Social Tasks (669 — 331 with trust >= 65):
+  EigenCloud — 84% | ethereum | $243,149,844 | Restaking
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
-  Convex Finance — 81% | ethereum, fraxtal, arbitrum, polygon | $190,915,761 | Yield
-  Tornado Cash — 78% | ethereum, binance, arbitrum, avalanche, xdai, polygon, optimism, ethereumclassic | $33,641,975 | Privacy
-  Huma — 78% | solana, ethereum, stellar, monad | $56,704,261 | RWA
-  USD AI — 78% | arbitrum | $93,000,793 | RWA
-  Anvil — 78% | ethereum | $111,353,522 | Collateral Management
+  Convex Finance — 81% | ethereum, fraxtal, arbitrum, polygon | $189,468,110 | Yield
+  Tornado Cash — 78% | ethereum, binance, arbitrum, avalanche, xdai, polygon, optimism, ethereumclassic | $33,911,541 | Privacy
+  Huma — 78% | solana, ethereum, stellar, monad | $55,964,475 | RWA
+  USD AI — 78% | arbitrum | $93,740,423 | RWA
+  Anvil — 78% | ethereum | $118,620,417 | Collateral Management
   Rainbow — 77% | ? | $19.5M | Explore Rainbow app, Do one onchain action
-  Babylon Protocol — 76% | bitcoin | $61,911,401 | Restaking
-  Zama — 76% | ethereum | $189,166,202 | Privacy
-  Veda — 75% | ink, ethereum, optimism, monad, hyperliquidl1, plasma, arbitrum, base, berachain, sonic, binance, bob, scroll | $1,835,828,629 TVL | Onchain Capital Allocator
-  PancakeSwap AMM — 75% | binance, ethereum, aptos, base, arbitrum, zksyncera, robinhoodchain, op_bnb, linea, monad, polygonzkevm | $1,583,988,053 TVL | Dexs
+  Babylon Protocol — 76% | bitcoin | $62,091,280 | Restaking
+  Zama — 76% | ethereum | $188,123,958 | Privacy
+  Veda — 75% | ink, ethereum, optimism, monad, hyperliquidl1, plasma, arbitrum, base, berachain, sonic, binance, bob, scroll | $1,842,704,444 TVL | Onchain Capital Allocator
+  PancakeSwap AMM — 75% | binance, ethereum, aptos, base, arbitrum, zksyncera, robinhoodchain, op_bnb, linea, monad, polygonzkevm | $1,583,343,280 TVL | Dexs
   Uniswap V4 — 75% | ethereum, binance, robinhoodchain, base, arbitrum, monad, tempo, polygon, unichain, xlayer, ink, arc, soneium, optimism, avalanche, worldchain, megaeth, blast, zora | $1,365,691,080 TVL | Dexs
-  Concrete — 75% | ethereum, stable, arbitrum, berachain, katana | $1,168,909,582 TVL | Onchain Capital Allocator
-  Beefy — 75% | ethereum, base, arbitrum, binance, monad, fraxtal, optimism, robinhoodchain, polygon, avalanche, plasma, hyperliquidl1, metis, sonic, linea, megaeth, zksyncera, arc, sei, xdai, berachain, mantle, lisk, cronos, rsk, fuse, heco, manta, fantom, polygonzkevm, moonbeam, moonriver, kava, saga, canto, mode, celo, oasis, re.al, scroll, aurora, harmony | $5,346,323 | Yield Aggregator
-  Venice — 75% | base | $1,221,390,142 | Farm
+  Concrete — 75% | ethereum, stable, arbitrum, berachain, katana | $1,170,543,677 TVL | Onchain Capital Allocator
+  Beefy — 75% | ethereum, base, arbitrum, binance, monad, fraxtal, optimism, robinhoodchain, polygon, avalanche, plasma, hyperliquidl1, metis, sonic, linea, megaeth, zksyncera, arc, sei, xdai, berachain, mantle, lisk, cronos, rsk, fuse, heco, manta, fantom, polygonzkevm, moonbeam, moonriver, kava, saga, canto, mode, celo, oasis, re.al, scroll, aurora, harmony | $5,363,348 | Yield Aggregator
+  Venice — 75% | base | $1,215,800,582 | Farm
   PinkSale — 73% | binance, ethereum, polygon, cronos, avalanche, fantom | $18,637,069 | Launchpad
-  Chutes — 73% | bittensor | $115,900,754 | Decentralized AI
+  Chutes — 73% | bittensor | $116,220,746 | Decentralized AI
   Upshift — 72% | ethereum, base, arbitrum, sui, solana, flare, stellar, monad, fluent, hyperliquidl1, citrea, avalanche, plasma, binance, mezo, ink | $10M | Onchain Capital Allocator
   Symbiotic — 72% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points, Collateral Markets
 
 --------------------------------------------------
-  Total: 1600 | Testnet: 6 | Social Tasks: 668 | Mainnet: 926
-  Last run: 224 min ago
+  Total: 1601 | Testnet: 6 | Social Tasks: 669 | Mainnet: 926
+  Last run: 190 min ago
 ==========================================================
