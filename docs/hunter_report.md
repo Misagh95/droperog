@@ -1,25 +1,22 @@
-# 🎯 DroperOG Hunter — 2026-10-16 08:19 (تهران)
+# 🎯 DroperOG Hunter — 2026-10-16 15:19 (تهران)
 
-🆕 **5 مورد تازه:**
+🆕 **4 مورد تازه:**
 
-## 🟢 مین‌نت (5)
+## 🟢 مین‌نت (4)
 
-- **Mezo Swap (-)** (8h پیش)
+- **Mezo Swap (-)** (15h پیش)
   - https://mezo.org/feature/earn/pools
-  - 🔒 $5,733,349 TVL | 🔗 Mezo | 𝕏
+  - 🔒 $5,733,994 TVL | 🔗 Mezo | 𝕏
 - **Metric V1 (-)** (3d پیش)
   - https://www.metric.xyz/
-  - 🔒 $5,414,269 TVL | 🔗 Ethereum, Robinhood Chain, Binance, Base | 𝕏
+  - 🔒 $6,223,562 TVL | 🔗 Robinhood Chain, Ethereum, Binance, Base | 𝕏
 - **Quotum (QUOTUM)** (5d پیش)
   - https://defillama.com/protocol/quotum
-  - 💰 $63,521 | 🔗 Robinhood Chain | 𝕏
-- **Catalyst** (6d پیش)
+  - 💰 $53,144 | 🔗 Robinhood Chain | 𝕏
+- **Catalyst** (7d پیش)
   - https://catalyst.app/?r=gVe0u
   - AI, Perps, Predictions | $30M | رایگان | 🔗 Multichain
-- **Papertrade (PAPER)** (6d پیش)
-  - https://papertrade.xyz
-  - 🔒 $66,538,947 TVL | 🔗 Hyperliquid L1 | 𝕏
 
 ---
 
-**چشم‌انداز:** 🟢 مین‌نت: 5
+**چشم‌انداز:** 🟢 مین‌نت: 4
