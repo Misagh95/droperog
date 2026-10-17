@@ -1,28 +1,25 @@
-# 🎯 DroperOG Hunter — 2026-10-17 19:20 (تهران)
+# 🎯 DroperOG Hunter — 2026-10-18 00:19 (تهران)
 
-🆕 **6 مورد تازه:**
+🆕 **5 مورد تازه:**
 
-## 🟢 مین‌نت (6)
+## 🟢 مین‌نت (5)
 
-- **Borro (BORRO)** (20h پیش)
+- **Borro (BORRO)** (25h پیش)
   - https://defillama.com/protocol/borro
-  - 💰 $711,345 | 🔗 Robinhood Chain | 𝕏
-- **Priors (PRIORS)** (20h پیش)
+  - 💰 $705,165 | 🔗 Robinhood Chain | 𝕏
+- **Priors (PRIORS)** (25h پیش)
   - https://priors.trade
-  - 💰 $8,190,415 | 🔗 Robinhood Chain | 𝕏
-- **Metric** (28h پیش)
+  - 💰 $9,102,548 | 🔗 Robinhood Chain | 𝕏
+- **Metric** (32h پیش)
   - https://app.metric.xyz/r/alpha
   - DEX, RWA | NA | رایگان | 🔗 Ethereum, BNB Chain, Robinhood
-- **Mezo Swap (-)** (43h پیش)
+- **Mezo Swap (-)** (2d پیش)
   - https://mezo.org/feature/earn/pools
-  - 🔒 $5,534,656 TVL | 🔗 Mezo | 𝕏
+  - 🔒 $5,536,684 TVL | 🔗 Mezo | 𝕏
 - **Metric V1 (-)** (4d پیش)
   - https://www.metric.xyz/
-  - 🔒 $8,674,495 TVL | 🔗 Robinhood Chain, Binance, Ethereum, Base | 𝕏
-- **Quotum (QUOTUM)** (6d پیش)
-  - https://defillama.com/protocol/quotum
-  - 💰 $59,545 | 🔗 Robinhood Chain | 𝕏
+  - 🔒 $8,842,176 TVL | 🔗 Robinhood Chain, Binance, Ethereum, Base | 𝕏
 
 ---
 
-**چشم‌انداز:** 🟢 مین‌نت: 6
+**چشم‌انداز:** 🟢 مین‌نت: 5
