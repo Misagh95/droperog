@@ -1,4 +1,4 @@
-# 🎯 DroperOG Hunter — 2026-10-24 14:55 (تهران)
+# 🎯 DroperOG Hunter — 2026-10-24 19:39 (تهران)
 
 🆕 **11 مورد تازه:**
 
@@ -9,36 +9,36 @@
 
 ## 🟢 مین‌نت (10)
 
-- **Overcall (OVER)** (17h پیش)
+- **Overcall (OVER)** (22h پیش)
   - https://defillama.com/protocol/overcall
-  - 💰 $297,141 | 𝕏
+  - 💰 $293,900 | 𝕏
 - **RNT Lend (RNT)** (2d پیش)
   - https://app.reental.co/
-  - 🔒 $21,382,732 TVL | 🔗 Polygon | 𝕏
+  - 🔒 $21,396,182 TVL | 🔗 Polygon | 𝕏
 - **Stockereum (STOCKER)** (2d پیش)
   - https://defillama.com/protocol/stockereum
-  - 💰 $472,953 | 𝕏
+  - 💰 $391,891 | 𝕏
 - **Veil (VEIL)** (2d پیش)
   - https://veilit.xyz
-  - 💰 $1,896,658 | 🔗 Solana | 𝕏
+  - 💰 $1,799,847 | 🔗 Solana | 𝕏
 - **Lighter LLP (LIT)** (3d پیش)
   - https://app.lighter.xyz
   - 🔒 $96,862,201 TVL | 🔗 zkLighter | 𝕏
 - **Hyperliquid Earn (HYPE)** (3d پیش)
   - https://app.hyperliquid.xyz/earn
-  - 🔒 $1,413,423,616 TVL | 🔗 Hyperliquid L1 | 𝕏
+  - 🔒 $1,424,014,460 TVL | 🔗 Hyperliquid L1 | 𝕏
 - **Aero Basic (AERO)** (3d پیش)
   - https://aero.xyz/
-  - 🔒 $48,921,371 TVL | 🔗 Base, Optimism, Robinhood Chain, Ethereum | 𝕏
+  - 🔒 $49,029,423 TVL | 🔗 Base, Optimism, Robinhood Chain, Ethereum | 𝕏
 - **Sapling (SAPLING)** (3d پیش)
   - https://sapling.cash
-  - 💰 $1,321,587 | 𝕏
+  - 💰 $872,992 | 𝕏
 - **WormSwap (TANUKI)** (4d پیش)
   - https://defillama.com/protocol/wormswap
-  - 💰 $242,853 | 𝕏
+  - 💰 $238,398 | 𝕏
 - **CommunityV3 (-)** (4d پیش)
   - https://defillama.com/protocol/communityv3
-  - 🔒 $7,634,081 TVL | 🔗 Ethereum
+  - 🔒 $7,623,268 TVL | 🔗 Ethereum
 
 ---
 
