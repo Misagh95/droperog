@@ -1,11 +1,6 @@
-# 🎯 DroperOG Hunter — 2026-10-24 08:24 (تهران)
+# 🎯 DroperOG Hunter — 2026-10-24 14:55 (تهران)
 
-🆕 **12 مورد تازه:**
-
-## 🟣 تست‌نت (1)
-
-- **Arthur Hayes Says Flop Labs Testnet, Airdrop to Start Within Weeks** (2d پیش)
-  - https://news.google.com/rss/articles/CBMiVEFVX3lxTE9ZLVQ0UkxTdmdEMjcyRlY4cE5fS2dBSzNicWZ2TkFjN1l0UEZZY3FvTVMxbVg5MVppZkYzVU9POXZKakVSZlBnS1JUNmQtdWtZbHN3Qg?oc=5
+🆕 **11 مورد تازه:**
 
 ## 🟡 تسک/کمپین (1)
 
@@ -14,37 +9,37 @@
 
 ## 🟢 مین‌نت (10)
 
-- **Overcall (OVER)** (10h پیش)
+- **Overcall (OVER)** (17h پیش)
   - https://defillama.com/protocol/overcall
-  - 💰 $300,341 | 𝕏
+  - 💰 $297,141 | 𝕏
 - **RNT Lend (RNT)** (2d پیش)
   - https://app.reental.co/
-  - 🔒 $21,380,456 TVL | 🔗 Polygon | 𝕏
+  - 🔒 $21,382,732 TVL | 🔗 Polygon | 𝕏
 - **Stockereum (STOCKER)** (2d پیش)
   - https://defillama.com/protocol/stockereum
-  - 💰 $418,477 | 𝕏
+  - 💰 $472,953 | 𝕏
 - **Veil (VEIL)** (2d پیش)
   - https://veilit.xyz
-  - 💰 $1,961,293 | 🔗 Solana | 𝕏
-- **Lighter LLP (LIT)** (2d پیش)
+  - 💰 $1,896,658 | 🔗 Solana | 𝕏
+- **Lighter LLP (LIT)** (3d پیش)
   - https://app.lighter.xyz
   - 🔒 $96,862,201 TVL | 🔗 zkLighter | 𝕏
-- **Hyperliquid Earn (HYPE)** (2d پیش)
+- **Hyperliquid Earn (HYPE)** (3d پیش)
   - https://app.hyperliquid.xyz/earn
-  - 🔒 $1,436,864,375 TVL | 🔗 Hyperliquid L1 | 𝕏
+  - 🔒 $1,413,423,616 TVL | 🔗 Hyperliquid L1 | 𝕏
 - **Aero Basic (AERO)** (3d پیش)
   - https://aero.xyz/
-  - 🔒 $49,838,514 TVL | 🔗 Base, Optimism, Robinhood Chain, Ethereum | 𝕏
+  - 🔒 $48,921,371 TVL | 🔗 Base, Optimism, Robinhood Chain, Ethereum | 𝕏
 - **Sapling (SAPLING)** (3d پیش)
   - https://sapling.cash
-  - 💰 $1,315,236 | 𝕏
+  - 💰 $1,321,587 | 𝕏
 - **WormSwap (TANUKI)** (4d پیش)
   - https://defillama.com/protocol/wormswap
-  - 💰 $224,770 | 𝕏
+  - 💰 $242,853 | 𝕏
 - **CommunityV3 (-)** (4d پیش)
   - https://defillama.com/protocol/communityv3
-  - 🔒 $6,547,234 TVL | 🔗 Ethereum
+  - 🔒 $7,634,081 TVL | 🔗 Ethereum
 
 ---
 
-**چشم‌انداز:** 🟣 تست‌نت: 1 | 🟡 تسک/کمپین: 1 | 🟢 مین‌نت: 10
+**چشم‌انداز:** 🟡 تسک/کمپین: 1 | 🟢 مین‌نت: 10
