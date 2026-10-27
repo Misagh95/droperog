@@ -1,6 +1,6 @@
-# 🎯 DroperOG Hunter — 2026-10-27 02:19 (تهران)
+# 🎯 DroperOG Hunter — 2026-10-27 08:53 (تهران)
 
-🆕 **12 مورد تازه:**
+🆕 **13 مورد تازه:**
 
 ## 🟡 تسک/کمپین (2)
 
@@ -9,42 +9,45 @@
 - **Ongoing Crypto Airdrops 2026: Claim Free Token Rewards Today** (2d پیش)
   - https://news.google.com/rss/articles/CBMiY0FVX3lxTE1XWHhOTDZwWU9CYnFuRmtEOG9Ya2JZZlEtaElFNFRpVG9KMXBxUUt2Rlh4eUdFWEdOWHpHWHJadzlSWm0xTXBDU2paUlVvVS02WHJrS1ZPT1pmbFVXNnl2eGlZUQ?oc=5
 
-## 🟢 مین‌نت (9)
+## 🟢 مین‌نت (10)
 
-- **1K** (40h پیش)
+- **Xitcoin (XTC)** (5h پیش)
+  - https://defillama.com/protocol/xitcoin
+  - 💰 $919,212 | 🔗 Cronos | 𝕏
+- **1K** (46h پیش)
   - https://1k.markets/?ref=bza6sln3
   - DeFi, DEX | 🎯 پوینت فعال | رایگان | 🔗 Robinhood, Ethereum, Base
 - **Overcall (OVER)** (3d پیش)
   - https://defillama.com/protocol/overcall
-  - 💰 $280,228 | 🔗 Robinhood Chain | 𝕏
+  - 💰 $281,816 | 🔗 Robinhood Chain | 𝕏
 - **RNT Lend (RNT)** (5d پیش)
   - https://app.reental.co/
-  - 🔒 $21,354,118 TVL | 🔗 Polygon | 𝕏
+  - 🔒 $21,355,522 TVL | 🔗 Polygon | 𝕏
 - **Stockereum (STOCKER)** (5d پیش)
   - https://defillama.com/protocol/stockereum
-  - 💰 $357,376 | 🔗 Ethereum | 𝕏
+  - 💰 $406,107 | 🔗 Ethereum | 𝕏
 - **Veil (VEIL)** (5d پیش)
   - https://veilit.xyz
-  - 💰 $1,127,416 | 🔗 Solana | 𝕏
+  - 💰 $874,377 | 🔗 Solana | 𝕏
 - **Lighter LLP (LIT)** (5d پیش)
   - https://app.lighter.xyz
-  - 🔒 $98,430,092 TVL | 🔗 zkLighter | 𝕏
+  - 🔒 $102,272,745 TVL | 🔗 zkLighter | 𝕏
 - **Hyperliquid Earn (HYPE)** (5d پیش)
   - https://app.hyperliquid.xyz/earn
-  - 🔒 $1,437,459,652 TVL | 🔗 Hyperliquid L1 | 𝕏
+  - 🔒 $1,433,812,007 TVL | 🔗 Hyperliquid L1 | 𝕏
 - **Aero Basic (AERO)** (6d پیش)
   - https://aero.xyz/
-  - 🔒 $56,575,931 TVL | 🔗 Base, Optimism, Robinhood Chain, Ink | 𝕏
+  - 🔒 $56,579,974 TVL | 🔗 Base, Optimism, Robinhood Chain, Ink | 𝕏
 - **Sapling (SAPLING)** (6d پیش)
   - https://sapling.cash
-  - 💰 $973,068 | 𝕏
+  - 💰 $874,281 | 𝕏
 
 ## 🆕 تازه در ترکر (1)
 
 - **TETRAVAULT (TETRA)** (2d پیش)
   - https://defillama.com/protocol/tetravault
-  - 💰 $82,674 | 🔗 Robinhood Chain | 𝕏
+  - 💰 $41,292 | 🔗 Robinhood Chain | 𝕏
 
 ---
 
-**چشم‌انداز:** 🟡 تسک/کمپین: 3 | 🟢 مین‌نت: 9 | 🆕 تازه در ترکر: 1
+**چشم‌انداز:** 🟡 تسک/کمپین: 3 | 🟢 مین‌نت: 10 | 🆕 تازه در ترکر: 1
