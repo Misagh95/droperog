@@ -1,28 +1,25 @@
-# 🎯 DroperOG Hunter — 2026-10-29 02:15 (تهران)
+# 🎯 DroperOG Hunter — 2026-10-29 09:44 (تهران)
 
-🆕 **5 مورد تازه:**
+🆕 **4 مورد تازه:**
 
-## 🟢 مین‌نت (4)
+## 🟢 مین‌نت (3)
 
-- **Xitcoin (XTC)** (46h پیش)
+- **Xitcoin (XTC)** (2d پیش)
   - https://defillama.com/protocol/xitcoin
-  - 💰 $897,744 | 🔗 Cronos | 𝕏
+  - 💰 $873,134 | 🔗 Cronos | 𝕏
 - **1K** (3d پیش)
   - https://1k.markets/?ref=bza6sln3
   - DeFi, DEX | 🎯 پوینت فعال | رایگان | 🔗 Robinhood, Ethereum, Base
 - **Overcall (OVER)** (5d پیش)
   - https://defillama.com/protocol/overcall
-  - 💰 $300,742 | 🔗 Robinhood Chain | 𝕏
-- **Startale USD (-)** (6d پیش)
-  - https://usd.startale.com/
-  - 💰 $4,471,296 | 🔗 Soneium | 𝕏
+  - 💰 $279,811 | 🔗 Robinhood Chain | 𝕏
 
 ## 🆕 تازه در ترکر (1)
 
 - **TETRAVAULT (TETRA)** (4d پیش)
   - https://defillama.com/protocol/tetravault
-  - 💰 $41,787 | 🔗 Robinhood Chain | 𝕏
+  - 💰 $45,279 | 🔗 Robinhood Chain | 𝕏
 
 ---
 
-**چشم‌انداز:** 🟢 مین‌نت: 4 | 🆕 تازه در ترکر: 1
+**چشم‌انداز:** 🟢 مین‌نت: 3 | 🆕 تازه در ترکر: 1
