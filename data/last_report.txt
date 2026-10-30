@@ -1,10 +1,25 @@
 ==========================================================
-  DroperOG v2 — 2026-10-30 03:08:56
+  DroperOG v2 — 2026-10-30 10:30:23
 ==========================================================
 
-  No new projects
+  NEW (5):
+  🟢 Super Intelligent Beauty [Mainnet]  Trust: 67%
+     Chains: ?
+     https://coinpaprika.com/coins/sib-super-intelligent-beauty/
+  🟢 Super Pepe [Mainnet]  Trust: 67%
+     Chains: ?
+     https://coinpaprika.com/coins/sp-super-pepe/
+  🟢 Gang [Mainnet]  Trust: 64%
+     Chains: ?
+     https://coinpaprika.com/coins/gang-gang/
+  🟢 Inverse [Mainnet]  Trust: 61%
+     Chains: ?
+     https://coinpaprika.com/coins/inverse-inverse/
+  🟢 Backed By Belief [Mainnet]  Trust: 61%
+     Chains: ?
+     https://coinpaprika.com/coins/nothing-backed-by-belief/
 
-  REMOVED (8): Stork, 3Jane Lending, Tinyman, ABC Pool, Hydro Lending, DOOAR V2, Llama Airforce, Dinero (pxETH)
+  REMOVED (1): Stork
 
 --------------------------------------------------
   CATEGORIZED SUMMARY (trust >= 65, otherwise top-5 shown)
@@ -12,53 +27,53 @@
 
 🟣 Testnet (6 — 2 with trust >= 65):
   Tempo — 70% | ? | $500.00M | Use Testnet, Complete Quests
-  Rubic — 66% | binance, kava | $506,307 | DEX Aggregator
+  Rubic — 66% | binance, kava | $498,691 | DEX Aggregator
 
-🟢 Mainnet (920 — 546 with trust >= 65):
+🟢 Mainnet (927 — 548 with trust >= 65):
   Lighter — 85% | arbitrum, base, ethereum | $68M | Trade perps and spot, Trade $1M perps volume
   Infinex — 85% | evm&svmchains | $65.29M | Explore Infinex app, Place a perps trade
-  Lido — 84% | ethereum, solana, terra, moonriver, moonbeam | $258,845,839 | Liquid Staking
-  Falcon Finance — 84% | ethereum | $301,216,879 | Basis Trading
-  Aave V2 — 84% | ethereum, polygon, avalanche | $1,840,436,086 | Lending
+  Lido — 84% | ethereum, solana, terra, moonriver, moonbeam | $273,940,984 | Liquid Staking
+  Falcon Finance — 84% | ethereum | $302,948,872 | Basis Trading
+  Aave V2 — 84% | ethereum, polygon, avalanche | $1,927,545,588 | Lending
   PopDEX — 82% | morphtachyon | $30.00M | Join Private Beta, Trade
-  SSV Network — 81% | ethereum | $32,905,915 | Staking Pool
-  Rocket Pool — 81% | ethereum | $31,948,743 | Liquid Staking
-  cap — 81% | ethereum | $122,094,298 | Lending
-  Railgun — 81% | ethereum, arbitrum, binance, polygon | $129,137,622 | Privacy
-  Bitway Earn — 81% | binance | $2,259,573,081 | Basis Trading
-  Rain — 81% | arbitrum | $4,614,910,204 | Prediction Market
+  SSV Network — 81% | ethereum | $33,870,162 | Staking Pool
+  Rocket Pool — 81% | ethereum | $33,691,727 | Liquid Staking
+  cap — 81% | ethereum | $125,709,786 | Lending
+  Railgun — 81% | ethereum, arbitrum, binance, polygon | $134,731,678 | Privacy
+  Bitway Earn — 81% | binance | $2,217,125,660 | Basis Trading
+  Rain — 81% | arbitrum | $4,719,671,360 | Prediction Market
   Bulk — 80% | solana | $8M | Stake SOL, Trade Perps 
   N1 — 80% | n1 | $7M | Join Private Beta, Trade Perps
-  Re — 78% | ethereum, base, arbitrum, avalanche | $54,198,066 | RWA
-  Solstice — 78% | solana | $11,153,501 | Basis Trading
-  Dolomite — 78% | ethereum, arbitrum, berachain, mantle, xlayer, botanix, polygonzkevm | $11,117,536 | Lending
-  Renzo — 78% | ethereum, linea, arbitrum, solana, zircuit, mode, base, optimism, blast, fraxtal, binance, monad, sei | $35,355,646 | Liquid Restaking
-  THORChain DEX — 78% | thorchain, bitcoin, ethereum, binance, bitcoincash, avalanche, doge, ripple, litecoin, tron, cosmos, base, solana | $208,429,881 | Dexs
-  FlokiFi Locker — 78% | binance, ethereum, base, cronos, arbitrum, optimism, avalanche, fantom, polygon, kucoin, op_bnb, blast, evmos, dogechain, okexchain | $214,239,165 | Token Locker
+  Re — 78% | ethereum, base, arbitrum, avalanche | $57,265,955 | RWA
+  Solstice — 78% | solana | $11,045,702 | Basis Trading
+  Dolomite — 78% | ethereum, arbitrum, berachain, mantle, xlayer, botanix, polygonzkevm | $11,523,386 | Lending
+  Renzo — 78% | ethereum, linea, solana, arbitrum, zircuit, mode, base, optimism, blast, fraxtal, binance, monad, sei | $39,239,402 | Liquid Restaking
+  THORChain DEX — 78% | thorchain, bitcoin, ethereum, binance, bitcoincash, avalanche, doge, ripple, litecoin, tron, cosmos, base, solana | $217,414,541 | Dexs
+  FlokiFi Locker — 78% | binance, ethereum, base, cronos, arbitrum, optimism, avalanche, fantom, polygon, kucoin, op_bnb, blast, evmos, dogechain, okexchain | $219,391,930 | Token Locker
 
-🟡 Social Tasks (663 — 323 with trust >= 65):
-  EigenCloud — 84% | ethereum | $163,261,277 | Restaking
+🟡 Social Tasks (665 — 326 with trust >= 65):
+  EigenCloud — 84% | ethereum | $175,494,892 | Restaking
   Axis Robotics — 82% | ethereum | $12M | Sign up on Axis Hub, Complete simulation tasks
   ETHGAS — 82% | ethereum | $12.00M | Join the Points Program, Complete quests
-  Convex Finance — 81% | ethereum, fraxtal, arbitrum, polygon | $181,049,869 | Yield
-  Tornado Cash — 78% | ethereum, binance, arbitrum, xdai, avalanche, polygon, optimism, ethereumclassic | $28,510,636 | Privacy
-  Huma — 78% | solana, ethereum, stellar, monad | $49,471,637 | RWA
-  USD AI — 78% | arbitrum | $82,411,547 | RWA
-  Anvil — 78% | ethereum | $157,088,564 | Collateral Management
+  Convex Finance — 81% | ethereum, fraxtal, arbitrum, polygon | $177,874,208 | Yield
+  Tornado Cash — 78% | ethereum, binance, arbitrum, xdai, polygon, avalanche, optimism, ethereumclassic | $28,288,603 | Privacy
+  Huma — 78% | solana, ethereum, stellar, monad | $49,329,259 | RWA
+  USD AI — 78% | arbitrum | $85,143,426 | RWA
+  Anvil — 78% | ethereum | $155,304,797 | Collateral Management
   Rainbow — 77% | ? | $19.5M | Explore Rainbow app, Do one onchain action
-  Babylon Protocol — 76% | bitcoin | $58,909,471 | Restaking
-  Zama — 76% | ethereum | $161,374,933 | Privacy
-  Veda — 75% | ink, ethereum, optimism, monad, hyperliquidl1, plasma, arbitrum, base, berachain, sonic, binance, bob, scroll | $1,755,071,943 TVL | Onchain Capital Allocator
-  PancakeSwap AMM — 75% | binance, ethereum, aptos, base, arbitrum, zksyncera, robinhoodchain, op_bnb, linea, monad, polygonzkevm | $1,478,680,442 TVL | Dexs
-  Concrete — 75% | ethereum, stable, arbitrum, berachain, katana | $1,210,092,825 TVL | Onchain Capital Allocator
-  Uniswap V4 — 75% | ethereum, robinhoodchain, base, arbitrum, binance, monad, tempo, polygon, xlayer, unichain, ink, arc, soneium, optimism, avalanche, linea, celo, worldchain, megaeth, hyperliquidl1, zora, blast | $1,161,605,126 TVL | Dexs
-  Venice — 75% | base | $1,073,531,473 | Farm
+  Babylon Protocol — 76% | bitcoin | $60,796,172 | Restaking
+  Zama — 76% | ethereum | $168,585,672 | Privacy
+  Veda — 75% | ink, ethereum, optimism, monad, hyperliquidl1, plasma, arbitrum, base, berachain, sonic, binance, bob, scroll | $1,760,514,397 TVL | Onchain Capital Allocator
+  PancakeSwap AMM — 75% | binance, ethereum, aptos, base, arbitrum, zksyncera, robinhoodchain, op_bnb, linea, monad, polygonzkevm | $1,484,757,847 TVL | Dexs
+  Concrete — 75% | ethereum, stable, arbitrum, berachain, katana | $1,212,836,961 TVL | Onchain Capital Allocator
+  Uniswap V4 — 75% | ethereum, robinhoodchain, base, arbitrum, binance, monad, tempo, polygon, xlayer, unichain, ink, arc, soneium, optimism, avalanche, linea, celo, worldchain, megaeth, hyperliquidl1, zora, blast | $1,178,679,821 TVL | Dexs
+  Venice — 75% | base | $1,094,570,523 | Farm
   PinkSale — 73% | binance, ethereum, polygon, cronos, avalanche, fantom | $19,527,301 | Launchpad
   Upshift — 72% | ethereum, base, arbitrum, sui, solana, stellar, flare, hyperliquidl1, monad, fluent, avalanche, citrea, plasma, binance, mezo, ink | $10M | Onchain Capital Allocator
   Symbiotic — 72% | ethereum | $5.8M | Restake LSTs on Symbiotic to accumulate points, Collateral Markets
-  Lombard LBTC — 72% | bitcoin, ethereum | $556,878,517 TVL | Restaked BTC
+  Lombard LBTC — 72% | bitcoin, ethereum | $550,759,140 TVL | Restaked BTC
 
 --------------------------------------------------
-  Total: 1589 | Testnet: 6 | Social Tasks: 663 | Mainnet: 920
-  Last run: 208 min ago
+  Total: 1598 | Testnet: 6 | Social Tasks: 665 | Mainnet: 927
+  Last run: 441 min ago
 ==========================================================
