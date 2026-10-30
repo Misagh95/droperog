@@ -84,19 +84,23 @@ def _as_hunter_fetcher(value):
     return lambda days=7: []
 
 
-def run_droperog(monkeypatch, alpha=None, dropjet=None, defillama=None):
+def run_droperog(monkeypatch, alpha=None, dropjet=None, defillama=None,
+                  coinpaprika=None):
     monkeypatch.setattr(droperog, "fetch_alphadrops", _as_fetcher(alpha, [project()]))
     monkeypatch.setattr(droperog, "fetch_dropjet", _as_fetcher(dropjet, []))
     monkeypatch.setattr(droperog, "fetch_defillama", _as_fetcher(defillama, []))
+    monkeypatch.setattr(droperog, "fetch_coinpaprika", _as_fetcher(coinpaprika, []))
     monkeypatch.setattr(sys, "argv", ["droperog.py"])
     return droperog.main()
 
 
 def run_hunter(monkeypatch, alpha=None, dropjet=None, news=None,
-               defillama=None, argv=()):
+               defillama=None, airdropalert=None, airdropsio=None, argv=()):
     monkeypatch.setattr(hunter, "fetch_alpha_drops_fresh", _as_hunter_fetcher(alpha))
     monkeypatch.setattr(hunter, "fetch_dropjet_fresh", _as_hunter_fetcher(dropjet))
     monkeypatch.setattr(hunter, "fetch_airdrop_news", _as_hunter_fetcher(news))
     monkeypatch.setattr(hunter, "fetch_defillama_fresh", _as_hunter_fetcher(defillama))
+    monkeypatch.setattr(hunter, "fetch_airdropalert_fresh", _as_hunter_fetcher(airdropalert))
+    monkeypatch.setattr(hunter, "fetch_airdropsio_fresh", _as_hunter_fetcher(airdropsio))
     monkeypatch.setattr(sys, "argv", ["hunter.py", *argv])
     return hunter.main()

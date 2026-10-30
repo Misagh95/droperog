@@ -39,12 +39,17 @@ FETCH_ERRORS: list[str] = []
 
 # یک منبع خراب نباید کل اسکن را بکشد؛ فقط وقتی *همه* منابع بمیرند اسکن لغو میشود
 SOURCE_HOSTS = {"alphadrops": "alphadrops.net", "dropjet": "dropjet.co",
-                "defillama": "llama.fi"}
+                "defillama": "llama.fi", "coinpaprika": "coinpaprika.com"}
 
 # منابعی که از چرخه خارج شده‌اند ولی هنوز در state قدیمی id دارند.
 # CryptoRank از سپتامبر ۲۰۲۶ پشت Cloudflare است (HTTP 403) و جایگزین شده.
 # تابع fetch_cryptorank() عمداً نگه داشته شده تا اگر برگردد دوباره وصل شود.
 RETIRED_SOURCES = {"cryptorank"}
+
+# منابع «فیدی» فقط آخرین موارد را می‌دهند، نه کل کاتالوگ. ناپدید شدن رکوردِ
+# این منابع از گزارش بعدی به معنی حذف پروژه نیست (مثل منبع خطادار)، وگرنه
+# هر توکنِ تازه‌اضافه‌شدهی CoinPaprika بلافاصله «REMOVED» اعلام می‌شد.
+FEED_SOURCES = {"coinpaprika"}
 
 # watchdog: اگر آخرین اسکن موفق قدیمیتر از این باشد (یا منبعی خراب باشد) هشدار میدهیم
 STALE_HOURS = float(os.environ.get("DROPEROG_STALE_HOURS", "12"))
@@ -510,6 +515,63 @@ def fetch_dropjet() -> list[dict]:
     return result
 
 
+# ─── SOURCE: COINPAPRIKA ───────────────────────────────────
+# API عمومی CoinPaprika (بدون کلید، ۱ درخواست برای هر اجرا): کل سکه‌های
+# بازار با پرچم `is_new` برای توکن‌های تازه‌اضافه‌شده. فقط موارد تازه با
+# رتبه‌ی بازاری منطقی نگه داشته می‌شوند تا میم‌کوین‌های ریز گزارش را پر نکنند.
+# فیدی است (رکوردی که از `is_new` خارج شد REMOVED نمی‌شود — به کمک FEED_SOURCES).
+
+CP_API = "https://api.coinpaprika.com/v1/coins"
+CP_MAX_RANK = 2500          # رتبه‌ی بالاتر = مارکت‌کپ ناچیز = نویز
+
+
+def fetch_coinpaprika(max_rank: int = CP_MAX_RANK) -> list[dict]:
+    """CoinPaprika — توکن‌های تازه‌اضافه‌شده با رتبه‌ی بازاری معنادار."""
+    data = fetch_json(CP_API, timeout=60)
+    if not isinstance(data, list):
+        return []
+
+    result = []
+    for c in data:
+        if not isinstance(c, dict):
+            continue
+        if not c.get("is_new") or not c.get("is_active"):
+            continue
+        rank = c.get("rank")
+        if not isinstance(rank, int) or rank > max_rank:
+            continue
+        name = (c.get("name") or "").strip()
+        cid = c.get("id") or ""
+        if not name or not cid:
+            continue
+        sym = (c.get("symbol") or "").strip()
+
+        trust = 50
+        if rank <= 500: trust += 15
+        elif rank <= 1000: trust += 12
+        elif rank <= 1500: trust += 9
+        else: trust += 6
+        trust += 5                    # is_active = سکه‌ی فعال با داده‌ی قیمت
+        if c.get("type") == "coin": trust += 3   # سکه‌ی شبکه به‌جای توکن بی‌ارزش
+        trust = min(trust, 95)
+
+        result.append({
+            "id": f"cp_{cid}",
+            "name": name,
+            "desc": f"Newly listed {sym} (rank #{rank}) — trading on DEXs",
+            "chains": [],
+            "categories": ["new token", "coin"],
+            "tasks": [],
+            "status_raw": "new listing",
+            "funding": "",
+            "url": f"https://coinpaprika.com/coins/{cid}/",
+            "date": "",
+            "source": "CoinPaprika",
+            "trust": trust,
+        })
+    return result
+
+
 # ─── DATA QUALITY ─────────────────────────────────────────
 
 def funding_usd(funding: Any) -> float | None:
@@ -726,6 +788,8 @@ def _record_sources(rec: dict) -> set[str]:
             srcs.add("dropjet")
         elif i.startswith("dl_"):
             srcs.add("defillama")
+        elif i.startswith("cp_"):
+            srcs.add("coinpaprika")
     return srcs
 
 
@@ -1044,11 +1108,14 @@ def main() -> int:
         f_ad = ex.submit(fetch_alphadrops)
         f_dj = ex.submit(fetch_dropjet)
         f_dl = ex.submit(fetch_defillama)
-        log("Fetching AlphaDrops + DropJet + DeFiLlama in parallel...")
+        f_cp = ex.submit(fetch_coinpaprika)
+        log("Fetching AlphaDrops + DropJet + DeFiLlama + CoinPaprika in parallel...")
         ad = f_ad.result()
         dj = f_dj.result()
         dl = f_dl.result()
-    log(f"  AlphaDrops: {len(ad)} | DropJet: {len(dj)} | DeFiLlama: {len(dl)}")
+        cp = f_cp.result()
+    log(f"  AlphaDrops: {len(ad)} | DropJet: {len(dj)} | DeFiLlama: {len(dl)} | "
+        f"CoinPaprika: {len(cp)}")
 
     failed = failed_source_names(FETCH_ERRORS)
     warning = build_warning(failed, prev_status,
@@ -1059,7 +1126,7 @@ def main() -> int:
         alert = None
 
     # یک منبع خراب کل اسکن را نمیکشد — فقط وقتی هیچ منبعی داده ندهد لغو میشود
-    if not (ad or dj or dl):
+    if not (ad or dj or dl or cp):
         log(f"  هیچ منبعی داده نداد (خطاها: {FETCH_ERRORS or 'هیچ'}) — اسکن لغو شد.")
         alerted = False
         if alert:
@@ -1077,7 +1144,7 @@ def main() -> int:
     if failed:
         log(f"  ⚠ منابع خطادار: {', '.join(failed)} — با منابع سالم ادامه میدهیم")
 
-    all_p = ad + dj + dl
+    all_p = ad + dj + dl + cp
 
     # Dedup by normalized name + merge records from all sources
     deduped = merge_projects(all_p)
@@ -1114,6 +1181,10 @@ def main() -> int:
             srcs = _record_sources(rec)
             if srcs and srcs <= (failed_set | RETIRED_SOURCES):
                 continue
+            # منبع فیدی (CoinPaprika) فقط موارد تازه را می‌دهد؛ نبودنش در
+            # اسکن بعدی حذف واقعی پروژه نیست → «REMOVED» اعلام نکن.
+            if srcs and srcs <= FEED_SOURCES:
+                continue
             nm = rec.get("name", "")
             if nm and nm not in removed_p:
                 removed_p.append(nm)
@@ -1148,8 +1219,14 @@ def main() -> int:
         # وگرنه «REMOVED» هر اجرا بی‌نهایت تکرار می‌شود و state باد نمی‌کند.
         # رکوردهایی که فقط از منابع خطادار/بازنشسته آمده‌اند حفظ می‌شوند تا
         # وقتی منبع برگشت، دوباره «NEW» اعلام نشوند.
-        protected = {k for k, rec in state["projects"].items()
-                     if _record_sources(rec) & (failed_set | RETIRED_SOURCES)}
+        protected = set()
+        for k, rec in state["projects"].items():
+            srcs = _record_sources(rec)
+            # منابع خطادار/بازنشسته حفظ می‌شوند تا با برگشتشان دوباره NEW نشوند،
+            # و رکوردهای منابع فیدی هم حفظ می‌شوند تا توکنی که هنوز در فید
+            # است دوباره به‌عنوان NEW اعلام نشود (هر دو تا prune_state هرس می‌شوند).
+            if srcs and (srcs <= FEED_SOURCES or srcs & (failed_set | RETIRED_SOURCES)):
+                protected.add(k)
         keep_only = cur_names | protected
         dropped = len(state["projects"]) - len(keep_only)
         if dropped:

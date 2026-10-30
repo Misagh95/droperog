@@ -16,7 +16,8 @@ python droperog.py
 
 ## Features
 
-- **4 data sources:** AlphaDrops + CryptoRank + DropJet + DeFiLlama (~1600 unique projects)
+- **4 data sources:** AlphaDrops + DropJet + DeFiLlama + CoinPaprika (~1600 unique projects)
+  (CryptoRank retired — behind Cloudflare since Sep 2026)
 - **Auto-categorization:** 🟣 Testnet / 🟡 Social Tasks / 🟢 Mainnet
 - **Change detection:** NEW 🆕 / UPDATED 🔄 / REMOVED 🗑️ shown on each run
 - **Trust Score:** 0-95% based on funding, rating, status, and metadata

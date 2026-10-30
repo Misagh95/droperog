@@ -163,6 +163,30 @@ def test_removed_is_not_reported_forever(monkeypatch):
     assert "REMOVED" not in second
 
 
+def test_feed_source_records_are_never_reported_removed(monkeypatch):
+    """خروج رکورد از «فید» (CoinPaprika is_new) حذف واقعی نیست.
+
+    منبع فیدی فقط موارد تازه را می‌دهد؛ اگر مثل کاتالوگ رفتار کنیم، هر توکنِ
+    تازه‌اضافه‌شده در اجرای بعدی «REMOVED» اعلام و از state پاک می‌شد.
+    """
+    droperog.STATE_FILE.write_text(json.dumps({
+        "schema": droperog.STATE_SCHEMA,
+        "projects": {
+            "fresh coin": {"name": "Fresh Coin", "trust": 70, "ids": ["cp_fresh-coin"]},
+            "old project": {"name": "Old Project", "trust": 70, "ids": ["ad_y"]},
+        },
+        "last_run": None,
+    }), "utf-8")
+
+    run_droperog(monkeypatch, alpha=[project()])   # فید CoinPaprika خالی
+    rep = droperog._strip_ansi(droperog.REPORT_FILE.read_text("utf-8"))
+    assert "Fresh Coin" not in rep                 # نه NEW، نه REMOVED
+    saved = json.loads(droperog.STATE_FILE.read_text("utf-8"))["projects"]
+    assert "fresh coin" in saved                   # حفظ می‌شود تا دوباره NEW نشود
+    assert "Old Project" in rep                    # کاتالوگ غایب هنوز واقعاً REMOVED می‌شود
+    assert "old project" not in saved
+
+
 def test_state_keeps_records_from_failed_and_retired_sources(monkeypatch):
     """پروژه‌های منبع خطادار/بازنشسته در state می‌مانند تا دوباره «NEW» نشوند."""
     droperog.STATE_FILE.write_text(json.dumps({

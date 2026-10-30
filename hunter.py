@@ -26,6 +26,7 @@ v3 چی عوض شد؟
 
 import csv
 import hashlib
+import html
 import json
 import os
 import random
@@ -69,7 +70,8 @@ EXIT_ABORTED = 2      # هیچ منبعی داده نداد
 
 # یک منبع خراب نباید کل اسکن را بکشد؛ فقط وقتی *هیچ* منبعی داده ندهد لغو میشود
 SOURCE_HOSTS = {"alphadrops": "alphadrops.net", "dropjet": "dropjet.co",
-                "defillama": "llama.fi", "news": "news.google.com"}
+                "defillama": "llama.fi", "news": "news.google.com",
+                "airdropalert": "airdropalert.com", "airdrops.io": "airdrops.io"}
 
 # منابع بازنشسته — از چرخه خارج شده‌اند (CryptoRank پشت Cloudflare است).
 # تابع fetch_crypto_rank_fresh() نگه داشته شده تا اگر منبع برگشت دوباره وصل شود.
@@ -90,6 +92,9 @@ BROWSER_HEADERS = {
 
 FRESH_DAYS = int(os.environ.get("HUNTER_FRESH_DAYS", "7"))
 NEWS_DAYS = int(os.environ.get("HUNTER_NEWS_DAYS", "3"))
+# فیدهای کم‌بسامد (مثل airdrops.io که ماهی چند پست می‌گذارد) بازهی بزرگ‌تری
+# می‌خواهند؛ dedup از طریق `seen` جلوی اعلام تکراری را می‌گیرد، پس امن است.
+FEED_DAYS = int(os.environ.get("HUNTER_FEED_DAYS", "30"))
 
 
 def log(msg: str):
@@ -577,6 +582,95 @@ def _airdrop_query(q: str, cutoff: datetime) -> list[dict]:
     return out
 
 
+# ─── 4) AirdropAlert — پست‌های تازه (WP REST API عمومی، بدون کلید) ──────
+
+AIRDROPALERT_API = "https://airdropalert.com/wp-json/wp/v2/posts"
+
+# کلمه‌کلیدی که عنوان باید حداقل یکی را داشته باشد تا «خبر ایردراپ» حساب شود
+FEED_KEYWORDS = ("airdrop", "testnet", "points", "farm", "claim", "tge",
+                 "retroactive", "campaign", "quest", "faucet", "launch")
+
+
+def _feed_title(text: str) -> str:
+    """عنوان خام (HTML/entity) را به متن تمیز تبدیل کن."""
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", text or ""))).strip()
+
+
+def _feed_wanted(title: str) -> bool:
+    """عنوان باید مربوط به ایردراپ باشد و لیستیکل/پرومو نباشد."""
+    low = title.lower()
+    if not any(k in low for k in FEED_KEYWORDS):
+        return False
+    return not any(b in low for b in AIRDROP_BLOCKLIST)
+
+
+def fetch_airdropalert_fresh(days: int = NEWS_DAYS) -> list[dict]:
+    """AirdropAlert — پست‌های تازه سایت با تاریخ انتشار واقعی."""
+    out = []
+    data = fetch_json(AIRDROPALERT_API,
+                      params={"per_page": 50, "orderby": "date", "order": "desc",
+                              "_fields": "id,date,link,title"})
+    if not isinstance(data, list):
+        log("  airdropalert: no data")
+        return out
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+    for p in data:
+        if not isinstance(p, dict):
+            continue
+        title = _feed_title((p.get("title") or {}).get("rendered"))
+        if not title or not _feed_wanted(title):
+            continue
+        pub = parse_dt(p.get("date"))
+        if not pub or pub < cutoff:
+            continue
+        out.append({
+            "id": f"h_aa_{p.get('id', '')}",
+            "name": title,
+            "category": airdrop_news_category(title),
+            "source": "airdropalert",
+            "url": p.get("link") or "",
+            "desc": "",
+            "date": pub,
+            "cost": None,
+        })
+    log(f"  airdropalert: {len(out)} fresh posts (last {days}d)")
+    return out
+
+
+# ─── 5) airdrops.io — فید RSS راهنمای ایردراپ‌های تازه ─────────────────
+
+AIRDRIPSIO_FEED = "https://airdrops.io/feed/"
+
+
+def fetch_airdropsio_fresh(days: int = FEED_DAYS) -> list[dict]:
+    """airdrops.io — فید RSS کیوریت‌شده؛ کم‌بسامد است پس بازهی بزرگ‌تر."""
+    out = []
+    xml = fetch_text(AIRDRIPSIO_FEED)
+    if not xml:
+        log("  airdrops.io: no feed")
+        return out
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+    for it in parse_rss_items(xml):
+        title = _feed_title(strip_source(it.get("title") or ""))
+        if not title or not _feed_wanted(title):
+            continue
+        pub = parse_pubdate(it.get("pub") or "")
+        if not pub or pub < cutoff:
+            continue
+        out.append({
+            "id": f"h_ax_{stable_id(title)}",
+            "name": title,
+            "category": airdrop_news_category(title),
+            "source": "airdrops.io",
+            "url": it.get("url") or "",
+            "desc": "",
+            "date": pub,
+            "cost": None,
+        })
+    log(f"  airdrops.io: {len(out)} fresh feed items (last {days}d)")
+    return out
+
+
 # ─── دسته‌بندی / برچسب ────────────────────────────────────────────────
 
 CAT_LABEL = {
@@ -655,7 +749,9 @@ def select_new_items(all_items: list[dict], seen: dict) -> list[dict]:
         nm = (it.get("name") or "").strip()
         if not nm:
             continue
-        nm_key = nm.lower()[:45] if it.get("source") in ("gnews", "news") else nm.lower()
+        nm_key = nm.lower()[:45] if it.get("source") in ("gnews", "news",
+                                                          "airdropalert",
+                                                          "airdrops.io") else nm.lower()
         if nm_key in seen_names:
             continue
         seen_names.add(nm_key)
@@ -1048,20 +1144,26 @@ def main() -> int:
     if pruned:
         log(f"  هرس حافظه: {pruned} شناسه‌ی قدیمی از seen حذف شد")
 
-    log(f"Fetching 4 sources in parallel (AlphaDrops fresh {FRESH_DAYS}d, "
+    log(f"Fetching 6 sources in parallel (AlphaDrops fresh {FRESH_DAYS}d, "
         f"DropJet fresh {FRESH_DAYS}d, "
-        f"DeFiLlama fresh {FRESH_DAYS}d, news fresh {NEWS_DAYS}d)...")
-    with ThreadPoolExecutor(max_workers=4) as ex:
+        f"DeFiLlama fresh {FRESH_DAYS}d, news fresh {NEWS_DAYS}d, "
+        f"AirdropAlert {NEWS_DAYS}d, airdrops.io {FEED_DAYS}d)...")
+    with ThreadPoolExecutor(max_workers=6) as ex:
         f_alpha = ex.submit(fetch_alpha_drops_fresh, days=FRESH_DAYS)
         f_dj = ex.submit(fetch_dropjet_fresh, days=FRESH_DAYS)
         f_dl = ex.submit(fetch_defillama_fresh, days=FRESH_DAYS)
         f_news = ex.submit(fetch_airdrop_news, days=NEWS_DAYS)
+        f_aa = ex.submit(fetch_airdropalert_fresh, days=NEWS_DAYS)
+        f_ax = ex.submit(fetch_airdropsio_fresh, days=FEED_DAYS)
         alpha = f_alpha.result()
         dropjet = f_dj.result()
         defillama = f_dl.result()
         airdrop_news = f_news.result()
+        airdropalert = f_aa.result()
+        airdropsio = f_ax.result()
     log(f"  AlphaDrops: {len(alpha)} | DropJet: {len(dropjet)} | "
-        f"DeFiLlama: {len(defillama)} | News: {len(airdrop_news)}")
+        f"DeFiLlama: {len(defillama)} | News: {len(airdrop_news)} | "
+        f"AirdropAlert: {len(airdropalert)} | airdrops.io: {len(airdropsio)}")
 
     failed = failed_source_names(FETCH_ERRORS)
     warning = build_warning(failed, prev_status,
@@ -1069,7 +1171,8 @@ def main() -> int:
     alert = warning if alert_due(prev_status, warning) else None
 
     # یک منبع خراب کل اسکن را نمیکشد — فقط وقتی هیچ منبعی داده ندهد لغو میشود
-    if not (alpha or dropjet or defillama or airdrop_news):
+    if not (alpha or dropjet or defillama or airdrop_news
+            or airdropalert or airdropsio):
         log(f"  هیچ منبعی داده نداد (خطاها: {FETCH_ERRORS or 'هیچ'}) — اسکن لغو شد.")
         alerted = False
         if alert:
@@ -1087,7 +1190,7 @@ def main() -> int:
     if failed:
         log(f"  ⚠ منابع خطادار: {', '.join(failed)} — با منابع سالم ادامه میدهیم")
 
-    all_items = alpha + dropjet + defillama + airdrop_news
+    all_items = alpha + dropjet + defillama + airdrop_news + airdropalert + airdropsio
 
     # فقط موارد واقعاً جدید برای ما (همهی آیتمها در seen ثبت میشوند)
     new_items = select_new_items(all_items, seen)

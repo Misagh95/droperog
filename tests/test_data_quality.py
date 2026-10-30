@@ -188,5 +188,6 @@ def test_migrate_preserves_source_ids():
 def test_record_sources_maps_id_prefixes():
     assert droperog._record_sources({"ids": ["ad_1", "cr_x"]}) == {"alphadrops", "cryptorank"}
     assert droperog._record_sources({"ids": ["cr_x"]}) == {"cryptorank"}
+    assert droperog._record_sources({"ids": ["cp_btc-bitcoin"]}) == {"coinpaprika"}
     assert droperog._record_sources({"ids": ["normalized-name"]}) == set()
     assert droperog._record_sources({}) == set()
