@@ -1,33 +1,28 @@
-# 🎯 DroperOG Hunter — 2026-11-03 01:22 (تهران)
+# 🎯 DroperOG Hunter — 2026-11-03 10:36 (تهران)
 
-🆕 **6 مورد تازه:**
+🆕 **5 مورد تازه:**
 
-## 🟡 تسک/کمپین (1)
-
-- **Crypto Pre-Market Trading: How to Trade a Token Before It Launches** (39h پیش)
-  - https://airdropalert.com/blogs/crypto-pre-market-trading/
-
-## 🟢 مین‌نت (4)
+## 🟢 مین‌نت (3)
 
 - **Valantis stHYPE Restaking (-)** (3d پیش)
   - https://app.valantis.xyz
-  - 🔒 $8,551,833 TVL | 🔗 Hyperliquid L1 | 𝕏
+  - 🔒 $8,512,448 TVL | 🔗 Hyperliquid L1 | 𝕏
 - **GongFu (GF)** (4d پیش)
   - https://defillama.com/protocol/gongfu
-  - 💰 $4,041,909 | 🔗 Robinhood Chain | 𝕏
+  - 💰 $3,901,615 | 🔗 Robinhood Chain | 𝕏
 - **OTC (OTC)** (4d پیش)
   - https://otcdesks.cash
-  - 💰 $4,801,381 | 𝕏
-- **Xitcoin (XTC)** (6d پیش)
-  - https://defillama.com/protocol/xitcoin
-  - 💰 $826,978 | 🔗 Cronos | 𝕏
+  - 💰 $4,932,312 | 𝕏
 
-## 🆕 تازه در ترکر (1)
+## 🆕 تازه در ترکر (2)
 
+- **BOND Capital (BOND)** (9h پیش)
+  - https://defillama.com/protocol/bond-capital
+  - 💰 $69,039 | 🔗 Arbitrum | 𝕏
 - **NAVI Curator (NAVX)** (5d پیش)
   - https://www.naviprotocol.io/
-  - 🔒 $18,977,360 TVL | 🔗 Sui, Ethereum | 𝕏
+  - 🔒 $19,098,624 TVL | 🔗 Sui, Ethereum | 𝕏
 
 ---
 
-**چشم‌انداز:** 🟡 تسک/کمپین: 1 | 🟢 مین‌نت: 4 | 🆕 تازه در ترکر: 1
+**چشم‌انداز:** 🟢 مین‌نت: 3 | 🆕 تازه در ترکر: 2
