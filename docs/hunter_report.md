@@ -1,12 +1,12 @@
-# 🎯 DroperOG Hunter — 2026-11-15 22:31 (تهران)
+# 🎯 DroperOG Hunter — 2026-11-16 10:33 (تهران)
 
 🆕 **8 مورد تازه:**
 
 ## 🟣 تست‌نت (4)
 
-- **Hayes-Led Flop Labs to Launch FLOP Token, With Testnet and Airdrop Both Set for November 24** (37h پیش)
+- **Hayes-Led Flop Labs to Launch FLOP Token, With Testnet and Airdrop Both Set for November 24** (2d پیش)
   - https://news.google.com/rss/articles/CBMidkFVX3lxTE9OcndrMG9vSlVlS2E1SF9qWWRkM0QtSDN0MlFubk9IOVJzaVJRYUVOX0FOa2I2UkNDYllxcTJCYkQ1cTZoMTdJZHBpb2RvYU1Cell2NWFMVzIwSDd0Yk5QeXBvZFVaSS0yMkFzYks0TXRxOUNDc1E?oc=5
-- **Arthur Hayes Sets November 24 Date for FLOP Testnet and Airdrop** (44h پیش)
+- **Arthur Hayes Sets November 24 Date for FLOP Testnet and Airdrop** (2d پیش)
   - https://news.google.com/rss/articles/CBMilgFBVV95cUxOVzRCbjhVV0ZjdnNWaUJnY3F6LXpzcHE4ZTc2UkVoSXpQczQzX2M4b1VKSzNCZmFjc3hLUC02ZUpBelBpTHhxTzBlUWVCZXRsWHNsTElrSmlFNGc5alIwVTNRMmlNcUlYWTNqanh4XzZ4N0tCRnRzVV8yTVV5UUxjaVp2RzJUbW1uX2hqVWxaUGhNanZoZFE?oc=5
 - **Flop Labs Testnet Nov. 24: Airdrop, 42.space 1.5x [2026]** (2d پیش)
   - https://news.google.com/rss/articles/CBMihwFBVV95cUxNQWx0d241a0ptSkl1eEVWNDNmT0pidzZneTJtSGpBM0tJUHo4Mi1WUDZuZXVybzc0TTl0aWlGNjZEX1ZjaVNvNzd6M0tNZ25jMHU2alJ3cGZ2TFpJOEExVlkyX3YtWW44WXpJeGZGZUZMUk43S1p6SFpQM1E5Sm04ZWlYcDZzc28?oc=5
@@ -15,19 +15,19 @@
 
 ## 🟡 تسک/کمپین (2)
 
-- **Airdrop Capital Allocation: How I Split My Money Across Farms** (39h پیش)
+- **Exchange Protection Funds Explained: SAFU, Bitget’s Fund and Who Actually Pays You Back** (2h پیش)
+  - https://airdropalert.com/blogs/exchange-protection-funds-explained/
+- **Airdrop Capital Allocation: How I Split My Money Across Farms** (2d پیش)
   - https://airdropalert.com/blogs/airdrop-capital-allocation/
-- **Sui Airdrop Checker: How to Find Airdrops in Your Sui Wallet** (2d پیش)
-  - https://airdropalert.com/blogs/sui-airdrop-checker/
 
 ## 🟢 مین‌نت (2)
 
 - **Swan DAO (-)** (3d پیش)
   - https://www.swanusd.com/
-  - 🔒 $6,813,236 TVL | 🔗 Ethereum | 𝕏
-- **Pendle Loop (PENDLE)** (4d پیش)
+  - 🔒 $6,811,656 TVL | 🔗 Ethereum | 𝕏
+- **Pendle Loop (PENDLE)** (5d پیش)
   - https://app.pendle.finance/trade/loop/
-  - 🔒 $39,540,758 TVL | 🔗 Ethereum, Monad, Base, Plasma | 𝕏
+  - 🔒 $34,164,814 TVL | 🔗 Ethereum, Monad, Base, Plasma | 𝕏
 
 ---
 
