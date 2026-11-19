@@ -1,20 +1,18 @@
-# 🎯 DroperOG Hunter — 2026-11-19 11:16 (تهران)
+# 🎯 DroperOG Hunter — 2026-11-20 00:23 (تهران)
 
-🆕 **3 مورد تازه:**
+🆕 **4 مورد تازه:**
 
-## 🟡 تسک/کمپین (2)
+## 🟡 تسک/کمپین (4)
 
-- **Trezor Skladon Breach, WLFI Buyback, CoinGecko Deal and Airdrop Updates** (38h پیش)
+- **Crypto Airdrops 2026: Verified Airdrop List &amp; Live Tracker** (39h پیش)
+  - https://news.google.com/rss/articles/CBMiWEFVX3lxTFBsTGszMTFKOXFxQTQzOWxSUXdhaVEwZzc2bTBKOF9EUDBtc3c5SVlhc3NVRm1OUzJZVTZWeDFNUkRVUnc3Q21iY1JIaGJQUUp2NWVzUlV5Y20?oc=5
+- **Ongoing Crypto Airdrops 2026: Claim Free Token Rewards Today** (39h پیش)
+  - https://news.google.com/rss/articles/CBMiY0FVX3lxTE1XWHhOTDZwWU9CYnFuRmtEOG9Ya2JZZlEtaElFNFRpVG9KMXBxUUt2Rlh4eUdFWEdOWHpHWHJadzlSWm0xTXBDU2paUlVvVS02WHJrS1ZPT1pmbFVXNnl2eGlZUQ?oc=5
+- **Trezor Skladon Breach, WLFI Buyback, CoinGecko Deal and Airdrop Updates** (2d پیش)
   - https://airdropalert.com/blogs/trezor-skladon-breach-airdrop-updates/
 - **OKX Referral Code: airdropalert for Welcome Rewards and a Fee Rebate** (2d پیش)
   - https://airdropalert.com/blogs/okx-referral-code/
 
-## 🟢 مین‌نت (1)
-
-- **Swan DAO (-)** (6d پیش)
-  - https://www.swanusd.com/
-  - 🔒 $8,020,282 TVL | 🔗 Ethereum | 𝕏
-
 ---
 
-**چشم‌انداز:** 🟡 تسک/کمپین: 2 | 🟢 مین‌نت: 1
+**چشم‌انداز:** 🟡 تسک/کمپین: 5
