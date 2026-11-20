@@ -1,23 +1,19 @@
-# 🎯 DroperOG Hunter — 2026-11-20 11:08 (تهران)
+# 🎯 DroperOG Hunter — 2026-11-21 00:08 (تهران)
 
-🆕 **5 مورد تازه:**
+🆕 **3 مورد تازه:**
 
-## 🔵 پوینت (1)
+## 🟣 تست‌نت (1)
 
-- **Variational Points: What Is One Point Worth After the $1.5 Billion Raise?** (16h پیش)
-  - https://airdropalert.com/blogs/variational-points/
+- **FLOP Labs Testnet/Airdrop Launches in Four Days, Community** (10h پیش)
+  - https://news.google.com/rss/articles/CBMiigFBVV95cUxQcEVzVDREMFUwbi1Ed2U2TzFUYWpNelVtWGNxWUdhRDV1RGQ2NUR3aFNJZ0xIY0xZWl9TNWtVZVlLYmxMY0l2V25fYldkckNZOWxKQnpocEpMVXl0NzMxVVdoMXQxem5VYjNpajg5aFhMdEwxejR4cVFmLXZLVjJUYkN0cmd6cWR4aXc?oc=5
 
-## 🟡 تسک/کمپین (4)
+## 🟡 تسک/کمپین (2)
 
-- **Cosmos Airdrop Checker: How to Check Your ATOM, OSMO and TIA Wallets** (19h پیش)
-  - https://airdropalert.com/blogs/cosmos-airdrop-checker/
 - **Crypto Airdrops 2026: Verified Airdrop List &amp; Live Tracker** (2d پیش)
   - https://news.google.com/rss/articles/CBMiWEFVX3lxTFBsTGszMTFKOXFxQTQzOWxSUXdhaVEwZzc2bTBKOF9EUDBtc3c5SVlhc3NVRm1OUzJZVTZWeDFNUkRVUnc3Q21iY1JIaGJQUUp2NWVzUlV5Y20?oc=5
 - **Ongoing Crypto Airdrops 2026: Claim Free Token Rewards Today** (2d پیش)
   - https://news.google.com/rss/articles/CBMiY0FVX3lxTE1XWHhOTDZwWU9CYnFuRmtEOG9Ya2JZZlEtaElFNFRpVG9KMXBxUUt2Rlh4eUdFWEdOWHpHWHJadzlSWm0xTXBDU2paUlVvVS02WHJrS1ZPT1pmbFVXNnl2eGlZUQ?oc=5
-- **Trezor Skladon Breach, WLFI Buyback, CoinGecko Deal and Airdrop Updates** (2d پیش)
-  - https://airdropalert.com/blogs/trezor-skladon-breach-airdrop-updates/
 
 ---
 
-**چشم‌انداز:** 🔵 پوینت: 1 | 🟡 تسک/کمپین: 5
+**چشم‌انداز:** 🟣 تست‌نت: 1 | 🟡 تسک/کمپین: 3
