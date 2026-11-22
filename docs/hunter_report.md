@@ -1,14 +1,12 @@
-# 🎯 DroperOG Hunter — 2026-11-21 23:08 (تهران)
+# 🎯 DroperOG Hunter — 2026-11-22 10:46 (تهران)
 
-🆕 **2 مورد تازه:**
+🆕 **1 مورد تازه:**
 
-## 🟡 تسک/کمپین (2)
+## 🟣 تست‌نت (1)
 
-- **Who Is ICObeast? From Airdrop Farmer to Kalshi’s Crypto Lead** (16h پیش)
-  - https://airdropalert.com/blogs/who-is-icobeast-guide/
-- **Starknet Airdrop Checker: How to Check Your Wallet for STRK and Starknet Airdrops** (18h پیش)
-  - https://airdropalert.com/blogs/starknet-airdrop-checker/
+- **FLOP Labs Testnet/Airdrop Launches in Four Days, Community** (31h پیش)
+  - https://news.google.com/rss/articles/CBMiWkFVX3lxTE83cENib3pzVWpFOTVRUlVLWjNlOXh2dktZTkg2MXVlbTd4bUlaUkRiNkQ0M1pEa0dTYTU1VWFNMncweUxLWmhscFpSb2VFSERHUFlELVBLNGN6UQ?oc=5
 
 ---
 
-**چشم‌انداز:** 🟣 تست‌نت: 1 | 🔵 پوینت: 1 | 🟡 تسک/کمپین: 3
+**چشم‌انداز:** 🟣 تست‌نت: 1
