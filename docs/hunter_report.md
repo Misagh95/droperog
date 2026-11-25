@@ -1,21 +1,27 @@
-# 🎯 DroperOG Hunter — 2026-11-25 12:28 (تهران)
+# 🎯 DroperOG Hunter — 2026-11-26 01:25 (تهران)
 
-🆕 **4 مورد تازه:**
+🆕 **5 مورد تازه:**
 
-## 🟣 تست‌نت (2)
+## 🟣 تست‌نت (3)
 
-- **FLOP Testnet and Airdrop Launches Soon** (30h پیش)
+- **FLOP Network Testnet: How to Participate and Qualify for Rewards** (32h پیش)
+  - https://news.google.com/rss/articles/CBMimAFBVV95cUxOc29uZWRlN1Nab2FXc1VHSGl3MWxRNVY2RVFMNDVnQWRmenNiVEhmUVI4Q0Z2cVRjWWJwOUl3SWgxdHJLNVFOVzBKckxMa01zQzdtZHp3bUtTYU15b254dFBzUEhkMXpONmtWeElSX2l1NGtVS19lMVc3SzN5Y0dySi14eEhNT0lveWoxSXFPYjFoUDRWNWh2bg?oc=5
+- **FLOP Testnet and Airdrop Launches Soon** (43h پیش)
   - https://news.google.com/rss/articles/CBMicEFVX3lxTE1EczAwNGt3UHNuUXNfTU55SHA0YVNMS2s1VmI5Yi1MdTJQdzVjU01oc2lBOHBwWXhzX0VHYi1Jazlybk9CWVMyYjhKRXFVZ3JzVFZKMTZFQUEtTENfUTMtZU5RUmN4cm0wY2g2bGF1Sm4?oc=5
 - **Flop Labs Devnet Activity Surges: Is Testnet Launching Tomorrow?** (2d پیش)
   - https://news.google.com/rss/articles/CBMilwFBVV95cUxOemtFa0lTeWxsNjZqN3NkN01rbFFNaXVheXc2T0t4RjlHZk1WVk40cXlkaDl5ZmxIN0tnc1NYTDZVTF82aXpNTzhGZ2F6OHU4T01WVWFGOGZKLWMwOWd3SHI5YVhMTFFyWEhIUG5ucS1ZcDUwSVBVQmF3aTVoOVAzakh2Rm5zcG51bzBtYTMxNlpOcGxBdFJ3?oc=5
 
-## 🟡 تسک/کمپین (2)
+## 🟡 تسک/کمپین (1)
 
-- **Crypto Airdrops 2026: Verified Airdrop List &amp; Live Tracker** (2d پیش)
-  - https://news.google.com/rss/articles/CBMiWEFVX3lxTFBsTGszMTFKOXFxQTQzOWxSUXdhaVEwZzc2bTBKOF9EUDBtc3c5SVlhc3NVRm1OUzJZVTZWeDFNUkRVUnc3Q21iY1JIaGJQUUp2NWVzUlV5Y20?oc=5
-- **Ongoing Crypto Airdrops 2026: Claim Free Token Rewards Today** (2d پیش)
-  - https://news.google.com/rss/articles/CBMiY0FVX3lxTE1XWHhOTDZwWU9CYnFuRmtEOG9Ya2JZZlEtaElFNFRpVG9KMXBxUUt2Rlh4eUdFWEdOWHpHWHJadzlSWm0xTXBDU2paUlVvVS02WHJrS1ZPT1pmbFVXNnl2eGlZUQ?oc=5
+- **When to Quit an Airdrop Farm (and When to Stay)** (2d پیش)
+  - https://airdropalert.com/blogs/when-to-quit-an-airdrop-farm/
+
+## 🟢 مین‌نت (1)
+
+- **QHooks (QHOOKS)** (11h پیش)
+  - https://defillama.com/protocol/qhooks
+  - 💰 $204,685 | 🔗 Robinhood Chain, Solana, Elysium Kinetiq, Base | 𝕏
 
 ---
 
-**چشم‌انداز:** 🟣 تست‌نت: 2 | 🟡 تسک/کمپین: 2
+**چشم‌انداز:** 🟣 تست‌نت: 3 | 🟡 تسک/کمپین: 1 | 🟢 مین‌نت: 1
