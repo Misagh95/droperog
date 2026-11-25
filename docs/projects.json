@@ -1,10 +1,10 @@
 {
   "summary": {
     "testnet": 4,
-    "task_farmer": 641,
-    "mainnet": 822
+    "task_farmer": 640,
+    "mainnet": 821
   },
-  "timestamp": "2026-11-24 19:09 UTC",
+  "timestamp": "2026-11-25 03:12 UTC",
   "sources_failed": [
     "alphadrops"
   ]
